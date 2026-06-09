@@ -9,7 +9,7 @@ use FoundryCo\Cloudflare\Generator\Ir\IrResource;
 
 class ResourceGrouper
 {
-    private const BASE_NAMESPACE = 'Foundry\\Cloudflare\\Resources';
+    private const BASE_NAMESPACE = 'FoundryCo\\Cloudflare\\Resources';
 
     /**
      * Group operations by tag, detect scope, build parent-child relationships.

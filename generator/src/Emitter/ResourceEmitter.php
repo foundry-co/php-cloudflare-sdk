@@ -11,8 +11,8 @@ use Nette\PhpGenerator\PhpFile;
 
 class ResourceEmitter
 {
-    private const HTTP_CLIENT_CLASS = 'Foundry\\Cloudflare\\Http\\HttpClient';
-    private const PAGINATED_CLASS   = 'Foundry\\Cloudflare\\Support\\PaginatedResponse';
+    private const HTTP_CLIENT_CLASS = 'FoundryCo\\Cloudflare\\Http\\HttpClient';
+    private const PAGINATED_CLASS   = 'FoundryCo\\Cloudflare\\Support\\PaginatedResponse';
 
     public function __construct(
         private readonly string $specUrl,
@@ -260,7 +260,7 @@ class ResourceEmitter
 
     private function resolveOutputPath(string $outputDir, string $namespace, string $name): string
     {
-        $relative = str_replace('Foundry\\Cloudflare\\', '', $namespace);
+        $relative = str_replace('FoundryCo\\Cloudflare\\', '', $namespace);
         $relative = str_replace('\\', DIRECTORY_SEPARATOR, $relative);
         $dir      = rtrim($outputDir, '/') . '/' . $relative;
 

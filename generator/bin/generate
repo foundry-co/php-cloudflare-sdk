@@ -24,7 +24,7 @@ if (!$loaded) {
     exit(1);
 }
 
-use Foundry\Cloudflare\Generator\GenerateCommand;
+use FoundryCo\Cloudflare\Generator\GenerateCommand;
 use Symfony\Component\Console\Application;
 
 $app = new Application('Cloudflare SDK Generator', '1.0.0');

@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-09 21:41:47 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Resources;
+
+class SmartTieredCacheResource
+{
+	public function __construct(
+		private readonly \FoundryCo\Cloudflare\Http\HttpClient $client,
+		private readonly ?string $zoneId = null,
+	) {
+	}
+
+
+	/**
+	 * Get Smart Tiered Cache setting
+	 */
+	public function list(): \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting
+	{
+		return $this->client->get('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting::class, []);
+	}
+
+
+	/**
+	 * Create Smart Tiered Cache setting
+	 */
+	public function create(
+		\FoundryCo\Cloudflare\Requests\SmartTieredCacheCreateSmartTieredCacheSettingRequest $request,
+	): \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting
+	{
+		return $this->client->post('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting::class, $request);
+	}
+
+
+	/**
+	 * Patch Smart Tiered Cache setting
+	 */
+	public function update(
+		\FoundryCo\Cloudflare\Requests\SmartTieredCachePatchSmartTieredCacheSettingRequest $request,
+	): \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting
+	{
+		return $this->client->patch('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting::class, $request);
+	}
+
+
+	/**
+	 * Delete Smart Tiered Cache setting
+	 */
+	public function delete(): void
+	{
+		$this->client->delete('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable');
+	}
+}

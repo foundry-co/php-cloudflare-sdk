@@ -11,7 +11,7 @@ use FoundryCo\Cloudflare\Generator\Ir\IrProperty;
 
 class OperationParser
 {
-    private const BASE_NAMESPACE = 'Foundry\\Cloudflare';
+    private const BASE_NAMESPACE = 'FoundryCo\\Cloudflare';
 
     public function __construct(
         private readonly SchemaParser $schemaParser,

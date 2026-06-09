@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-09 21:41:47 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class R2PutEventNotificationConfigRequestRulesItem
+{
+	public function __construct(
+		/** Array of R2 object actions that will trigger notifications. */
+		public array $actions,
+		/** A description that can be used to identify the event notification rule after creation. */
+		public ?string $description = null,
+		/** Notifications will be sent only for objects with this prefix. */
+		public ?string $prefix = null,
+		/** Notifications will be sent only for objects with this suffix. */
+		public ?string $suffix = null,
+	) {
+	}
+}

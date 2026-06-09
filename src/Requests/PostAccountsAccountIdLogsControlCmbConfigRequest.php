@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-09 21:41:47 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Requests;
+
+/**
+ * Update CMB config
+ */
+readonly class PostAccountsAccountIdLogsControlCmbConfigRequest
+{
+	public function __construct(
+		/** Allow out of region access */
+		public ?bool $allowOutOfRegionAccess = null,
+		/** Name of the region. */
+		public ?string $regions = null,
+	) {
+	}
+
+
+	public function toArray(): array
+	{
+		return array_filter([
+		    'allow_out_of_region_access' => $this->allowOutOfRegionAccess,
+		    'regions' => $this->regions,
+		], fn ($v) => $v !== null);
+	}
+}

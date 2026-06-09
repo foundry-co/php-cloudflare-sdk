@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-09 21:41:47 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class PostV4AccountsByAccountIdPipelinesDeprecatedRequestDestinationCredentials
+{
+	public function __construct(
+		/** Specifies the R2 Bucket Access Key Id. */
+		public string $accessKeyId,
+		/** Specifies the R2 Endpoint. */
+		public string $endpoint,
+		/** Specifies the R2 Bucket Secret Access Key. */
+		public string $secretAccessKey,
+	) {
+	}
+}

@@ -32,7 +32,6 @@
         }
     },
     "scripts": {
-        "generate": "generator/bin/generate",
         "test": "pest"
     },
     "config": {

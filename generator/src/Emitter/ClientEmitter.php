@@ -9,7 +9,7 @@ use Nette\PhpGenerator\PhpFile;
 
 class ClientEmitter
 {
-    private const HTTP_CLIENT_CLASS = 'Foundry\\Cloudflare\\Http\\HttpClient';
+    private const HTTP_CLIENT_CLASS = 'FoundryCo\\Cloudflare\\Http\\HttpClient';
 
     public function __construct(
         private readonly string $specUrl,
@@ -24,7 +24,7 @@ class ClientEmitter
         $file = new PhpFile();
         $file->setStrictTypes();
 
-        $class = $file->addClass('Foundry\\Cloudflare\\CloudflareClient');
+        $class = $file->addClass('FoundryCo\\Cloudflare\\CloudflareClient');
 
         $constructor = $class->addMethod('__construct');
         $constructor->addParameter('apiToken')->setType('string');

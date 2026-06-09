@@ -63,7 +63,7 @@ class EnumEmitter
 
     private function resolveOutputPath(string $outputDir, string $namespace, string $name): string
     {
-        $relative = str_replace('Foundry\\Cloudflare\\', '', $namespace);
+        $relative = str_replace('FoundryCo\\Cloudflare\\', '', $namespace);
         $relative = str_replace('\\', DIRECTORY_SEPARATOR, $relative);
         $dir      = rtrim($outputDir, '/') . '/' . $relative;
 

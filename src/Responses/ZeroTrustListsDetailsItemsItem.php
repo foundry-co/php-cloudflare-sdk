@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-09 21:41:47 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class ZeroTrustListsDetailsItemsItem
+{
+	public function __construct(
+		public ?\DateTimeImmutable $createdAt = null,
+		/** Provide the list item description (optional). */
+		public ?string $description = null,
+		/** Specify the item value. */
+		public ?string $value = null,
+	) {
+	}
+}

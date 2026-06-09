@@ -14,7 +14,7 @@ use FoundryCo\Cloudflare\Generator\Ir\IrProperty;
  */
 class SchemaParser
 {
-    private const BASE_NAMESPACE = 'Foundry\\Cloudflare';
+    private const BASE_NAMESPACE = 'FoundryCo\\Cloudflare';
 
     /** @var IrEnum[] keyed by FQN */
     private array $enums = [];
