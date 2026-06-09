@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+// Support running from project root or directly
+$autoloadPaths = [
+    __DIR__ . '/../../vendor/autoload.php',
+    __DIR__ . '/../../../vendor/autoload.php',
+    __DIR__ . '/../../../../vendor/autoload.php',
+];
+
+$loaded = false;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        require $path;
+        $loaded = true;
+        break;
+    }
+}
+
+if (!$loaded) {
+    fwrite(STDERR, "Could not find autoloader. Run `composer install` first.\n");
+    exit(1);
+}
+
+use Foundry\Cloudflare\Generator\GenerateCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('Cloudflare SDK Generator', '1.0.0');
+$app->add(new GenerateCommand());
+$app->setDefaultCommand('generate', true);
+$app->run();
