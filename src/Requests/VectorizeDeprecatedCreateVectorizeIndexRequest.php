@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -16,7 +16,7 @@ namespace FoundryCo\Cloudflare\Requests;
 readonly class VectorizeDeprecatedCreateVectorizeIndexRequest
 {
 	public function __construct(
-		public mixed $config,
+		public \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedCreateVectorizeIndexRequestConfig $config,
 		public string $name,
 		/** Specifies the description of the index. */
 		public ?string $description = null,
@@ -27,7 +27,7 @@ readonly class VectorizeDeprecatedCreateVectorizeIndexRequest
 	public function toArray(): array
 	{
 		return array_filter([
-		    'config' => $this->config,
+		    'config' => $this->config->toArray(),
 		    'name' => $this->name,
 		    'description' => $this->description,
 		], fn ($v) => $v !== null);

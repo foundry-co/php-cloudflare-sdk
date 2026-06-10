@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,9 +29,9 @@ class RadarBotsResource
 		?\FoundryCo\Cloudflare\Enums\RadarBotsKind $kind = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBotsBotVerificationStatus $botVerificationStatus = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBotsBots
+	): mixed
 	{
-		return $this->client->get('/radar/bots', \FoundryCo\Cloudflare\Responses\RadarBotsBots::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'botCategory' => $botCategory ?? null, 'botOperator' => $botOperator ?? null, 'kind' => $kind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bots', \FoundryCo\Cloudflare\Responses\RadarGetBots::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'botCategory' => $botCategory ?? null, 'botOperator' => $botOperator ?? null, 'kind' => $kind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -54,9 +54,9 @@ class RadarBotsResource
 		?array $botKind = null,
 		?array $botVerificationStatus = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBotsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/bots/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarBotsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'bot' => $bot ?? null, 'botOperator' => $botOperator ?? null, 'botCategory' => $botCategory ?? null, 'botKind' => $botKind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bots/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetBotsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'bot' => $bot ?? null, 'botOperator' => $botOperator ?? null, 'botCategory' => $botCategory ?? null, 'botKind' => $botKind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -78,9 +78,9 @@ class RadarBotsResource
 		?array $botKind = null,
 		?array $botVerificationStatus = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBotsTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/bots/timeseries', \FoundryCo\Cloudflare\Responses\RadarBotsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'bot' => $bot ?? null, 'botOperator' => $botOperator ?? null, 'botCategory' => $botCategory ?? null, 'botKind' => $botKind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bots/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetBotsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'bot' => $bot ?? null, 'botOperator' => $botOperator ?? null, 'botCategory' => $botCategory ?? null, 'botKind' => $botKind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -104,20 +104,17 @@ class RadarBotsResource
 		?array $botKind = null,
 		?array $botVerificationStatus = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBotsGroup
+	): mixed
 	{
-		return $this->client->get('/radar/bots/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarBotsGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'bot' => $bot ?? null, 'botOperator' => $botOperator ?? null, 'botCategory' => $botCategory ?? null, 'botKind' => $botKind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bots/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetBotsTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'bot' => $bot ?? null, 'botOperator' => $botOperator ?? null, 'botCategory' => $botCategory ?? null, 'botKind' => $botKind ?? null, 'botVerificationStatus' => $botVerificationStatus ?? null, 'format' => $format ?? null]);
 	}
 
 
 	/**
 	 * Get bot details
 	 */
-	public function getGet(
-		string $botSlug,
-		?\FoundryCo\Cloudflare\Enums\RadarBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBotsDetails
+	public function getGet(string $botSlug, ?\FoundryCo\Cloudflare\Enums\RadarBotsFormat $format = null): mixed
 	{
-		return $this->client->get('/radar/bots/' . $botSlug, \FoundryCo\Cloudflare\Responses\RadarBotsDetails::class, ['format' => $format ?? null]);
+		return $this->client->get('/radar/bots/' . $botSlug, \FoundryCo\Cloudflare\Responses\RadarGetBotDetails::class, ['format' => $format ?? null]);
 	}
 }

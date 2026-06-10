@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class RadarQualityResource
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityMetric $metric = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarQualitySummary
+	): mixed
 	{
-		return $this->client->get('/radar/quality/iqi/summary', \FoundryCo\Cloudflare\Responses\RadarQualitySummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'metric' => $metric ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/quality/iqi/summary', \FoundryCo\Cloudflare\Responses\RadarGetQualityIndexSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'metric' => $metric ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -52,9 +52,9 @@ class RadarQualityResource
 		?bool $interpolation = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityMetric $metric = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarQualityGroup
+	): mixed
 	{
-		return $this->client->get('/radar/quality/iqi/timeseries_groups', \FoundryCo\Cloudflare\Responses\RadarQualityGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'interpolation' => $interpolation ?? null, 'metric' => $metric ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/quality/iqi/timeseries_groups', \FoundryCo\Cloudflare\Responses\RadarGetQualityIndexTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'interpolation' => $interpolation ?? null, 'metric' => $metric ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -70,9 +70,9 @@ class RadarQualityResource
 		?int $bucketSize = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityMetricGroup $metricGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarQualityHistogram
+	): mixed
 	{
-		return $this->client->get('/radar/quality/speed/histogram', \FoundryCo\Cloudflare\Responses\RadarQualityHistogram::class, ['name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'bucketSize' => $bucketSize ?? null, 'metricGroup' => $metricGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/quality/speed/histogram', \FoundryCo\Cloudflare\Responses\RadarGetQualitySpeedHistogram::class, ['name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'bucketSize' => $bucketSize ?? null, 'metricGroup' => $metricGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -86,9 +86,9 @@ class RadarQualityResource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarQualitySummary
+	): mixed
 	{
-		return $this->client->get('/radar/quality/speed/summary', \FoundryCo\Cloudflare\Responses\RadarQualitySummary::class, ['name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/quality/speed/summary', \FoundryCo\Cloudflare\Responses\RadarGetQualitySpeedSummary::class, ['name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -105,9 +105,9 @@ class RadarQualityResource
 		?\FoundryCo\Cloudflare\Enums\RadarQualityOrderBy $orderBy = null,
 		?bool $reverse = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarQualityAses
+	): mixed
 	{
-		return $this->client->get('/radar/quality/speed/top/ases', \FoundryCo\Cloudflare\Responses\RadarQualityAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'orderBy' => $orderBy ?? null, 'reverse' => $reverse ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/quality/speed/top/ases', \FoundryCo\Cloudflare\Responses\RadarGetQualitySpeedTopAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'orderBy' => $orderBy ?? null, 'reverse' => $reverse ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -124,8 +124,8 @@ class RadarQualityResource
 		?\FoundryCo\Cloudflare\Enums\RadarQualityOrderBy $orderBy = null,
 		?bool $reverse = null,
 		?\FoundryCo\Cloudflare\Enums\RadarQualityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarQualityLocations
+	): mixed
 	{
-		return $this->client->get('/radar/quality/speed/top/locations', \FoundryCo\Cloudflare\Responses\RadarQualityLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'orderBy' => $orderBy ?? null, 'reverse' => $reverse ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/quality/speed/top/locations', \FoundryCo\Cloudflare\Responses\RadarGetQualitySpeedTopLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'orderBy' => $orderBy ?? null, 'reverse' => $reverse ?? null, 'format' => $format ?? null]);
 	}
 }

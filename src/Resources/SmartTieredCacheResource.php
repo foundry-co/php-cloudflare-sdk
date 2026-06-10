@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class SmartTieredCacheResource
 	/**
 	 * Get Smart Tiered Cache setting
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheGetSmartTieredCacheSetting::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class SmartTieredCacheResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\SmartTieredCacheCreateSmartTieredCacheSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheCreateSmartTieredCacheSetting::class, $request);
 	}
 
 
@@ -44,9 +44,9 @@ class SmartTieredCacheResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\SmartTieredCachePatchSmartTieredCacheSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCacheSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/cache/tiered_cache_smart_topology_enable', \FoundryCo\Cloudflare\Responses\SmartTieredCachePatchSmartTieredCacheSetting::class, $request);
 	}
 
 

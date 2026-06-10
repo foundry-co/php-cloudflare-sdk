@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class OriginCloudRegionsList
 {
 	public function __construct(
 		/** Whether the setting can be modified by the current user. */
-		public bool $editable,
-		public \FoundryCo\Cloudflare\Enums\OriginCloudRegionsListId $id,
-		public array $value,
+		public ?bool $editable = null,
+		public ?\FoundryCo\Cloudflare\Enums\OriginCloudRegionsListId $id = null,
+		public ?array $value = null,
 		/** Time the mapping set was last modified. Null when no mappings exist. */
 		public ?\DateTimeImmutable $modifiedOn = null,
 	) {

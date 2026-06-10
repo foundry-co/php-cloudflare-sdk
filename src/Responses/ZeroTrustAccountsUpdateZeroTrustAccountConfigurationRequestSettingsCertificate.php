@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class ZeroTrustAccountsUpdateZeroTrustAccountConfigurationRequestSettin
 {
 	public function __construct(
 		/** Specify the UUID of the certificate used for interception. Ensure the certificate is available at the edge(previously called 'active'). A nil UUID directs Cloudflare to use the Root CA. */
-		public string $id,
+		public ?string $id = null,
 	) {
 	}
 }

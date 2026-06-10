@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-10 02:24:37 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class Workersdomainsget
+{
+	public function __construct(
+		/** ID of the TLS certificate issued for the domain. */
+		public ?string $certId = null,
+		/** Worker environment associated with the domain. */
+		public ?string $environment = null,
+		/** Hostname of the domain. Can be either the zone apex or a subdomain of the zone. Requests to this hostname will be routed to the configured Worker. */
+		public ?string $hostname = null,
+		/** Immutable ID of the domain. */
+		public ?string $id = null,
+		/** Name of the Worker associated with the domain. Requests to the configured hostname will be routed to this Worker. */
+		public ?string $service = null,
+		/** ID of the zone containing the domain hostname. */
+		public ?string $zoneId = null,
+		/** Name of the zone containing the domain hostname. */
+		public ?string $zoneName = null,
+	) {
+	}
+}

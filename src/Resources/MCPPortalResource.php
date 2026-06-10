@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,45 +22,36 @@ class MCPPortalResource
 	/**
 	 * List MCP Portals
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\MCPPortalPortals
+	public function list(?int $page = null, ?int $perPage = null, ?string $search = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals', \FoundryCo\Cloudflare\Responses\MCPPortalPortals::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals', \FoundryCo\Cloudflare\Responses\McpPortalsApiListPortals::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Create a new MCP Portal
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\McpPortalsApiCreatePortalsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MCPPortalPortals
+	public function create(\FoundryCo\Cloudflare\Requests\McpPortalsApiCreatePortalsRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals', \FoundryCo\Cloudflare\Responses\MCPPortalPortals::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals', \FoundryCo\Cloudflare\Responses\McpPortalsApiCreatePortals::class, $request);
 	}
 
 
 	/**
 	 * Read details of an MCP Portal
 	 */
-	public function get(string $id): \FoundryCo\Cloudflare\Responses\MCPPortalGateways
+	public function get(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals/' . $id, \FoundryCo\Cloudflare\Responses\MCPPortalGateways::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals/' . $id, \FoundryCo\Cloudflare\Responses\McpPortalsApiFetchGateways::class, []);
 	}
 
 
 	/**
 	 * Update a MCP Portal
 	 */
-	public function update(
-		string $id,
-		\FoundryCo\Cloudflare\Requests\McpPortalsApiUpdatePortalsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MCPPortalPortals
+	public function update(string $id, \FoundryCo\Cloudflare\Requests\McpPortalsApiUpdatePortalsRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals/' . $id, \FoundryCo\Cloudflare\Responses\MCPPortalPortals::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/ai-controls/mcp/portals/' . $id, \FoundryCo\Cloudflare\Responses\McpPortalsApiUpdatePortals::class, $request);
 	}
 
 

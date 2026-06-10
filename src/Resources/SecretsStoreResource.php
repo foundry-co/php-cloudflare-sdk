@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,7 +21,7 @@ class SecretsStoreResource
 	/**
 	 * View secret usage
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SecretsStoreQuota
+	public function list(): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/quota', \FoundryCo\Cloudflare\Responses\SecretsStoreQuota::class, []);
 	}
@@ -35,7 +35,7 @@ class SecretsStoreResource
 		?int $page = null,
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\SecretsStoreOrder $order = null,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreList
+	): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores', \FoundryCo\Cloudflare\Responses\SecretsStoreList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null]);
 	}
@@ -44,9 +44,7 @@ class SecretsStoreResource
 	/**
 	 * Create a store
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SecretsStoreCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreCreate
+	public function create(\FoundryCo\Cloudflare\Requests\SecretsStoreCreateRequest $request): mixed
 	{
 		return $this->client->post('/accounts/' . $this->accountId . '/secrets_store/stores', \FoundryCo\Cloudflare\Responses\SecretsStoreCreate::class, $request);
 	}
@@ -55,9 +53,9 @@ class SecretsStoreResource
 	/**
 	 * Get a store by ID
 	 */
-	public function get(string $storeId): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	public function get(string $storeId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId, \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId, \FoundryCo\Cloudflare\Responses\SecretsStoreGetStoreById::class, []);
 	}
 
 
@@ -81,18 +79,18 @@ class SecretsStoreResource
 		?string $search = null,
 		?\FoundryCo\Cloudflare\Enums\SecretsStoreOrder $order = null,
 		?array $scopes = null,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'scopes' => $scopes ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreSecretsList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'scopes' => $scopes ?? null]);
 	}
 
 
 	/**
 	 * Create a secret
 	 */
-	public function secretsStoreSecretCreate(string $storeId): \FoundryCo\Cloudflare\Responses\SecretsStoreCreate
+	public function secretsStoreSecretCreate(string $storeId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreCreate::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreSecretCreate::class, null);
 	}
 
 
@@ -111,12 +109,9 @@ class SecretsStoreResource
 	/**
 	 * Get a secret by ID
 	 */
-	public function secretsStoreGetById(
-		string $storeId,
-		string $secretId,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	public function secretsStoreGetById(string $storeId, string $secretId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreGetById::class, []);
 	}
 
 
@@ -127,9 +122,9 @@ class SecretsStoreResource
 		string $storeId,
 		string $secretId,
 		\FoundryCo\Cloudflare\Requests\SecretsStorePatchByIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStorePatchById::class, $request);
 	}
 
 
@@ -149,9 +144,9 @@ class SecretsStoreResource
 		string $storeId,
 		string $secretId,
 		\FoundryCo\Cloudflare\Requests\SecretsStoreDuplicateByIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets/' . $secretId . '/duplicate', \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/secrets_store/stores/' . $storeId . '/secrets/' . $secretId . '/duplicate', \FoundryCo\Cloudflare\Responses\SecretsStoreDuplicateById::class, $request);
 	}
 
 
@@ -164,9 +159,9 @@ class SecretsStoreResource
 		?int $page = null,
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\SecretsStoreOrder $order = null,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreList
+	): mixed
 	{
-		return $this->client->get('/system/accounts/' . $accountTag . '/stores', \FoundryCo\Cloudflare\Responses\SecretsStoreList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/system/accounts/' . $accountTag . '/stores', \FoundryCo\Cloudflare\Responses\SecretsStoreSystemList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null]);
 	}
 
 
@@ -176,21 +171,18 @@ class SecretsStoreResource
 	public function secretsStoreSystemCreate(
 		string $accountTag,
 		\FoundryCo\Cloudflare\Requests\SecretsStoreSystemCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreCreate
+	): mixed
 	{
-		return $this->client->post('/system/accounts/' . $accountTag . '/stores', \FoundryCo\Cloudflare\Responses\SecretsStoreCreate::class, $request);
+		return $this->client->post('/system/accounts/' . $accountTag . '/stores', \FoundryCo\Cloudflare\Responses\SecretsStoreSystemCreate::class, $request);
 	}
 
 
 	/**
 	 * Get a store by ID (System)
 	 */
-	public function secretsStoreSystemGetStoreById(
-		string $accountTag,
-		string $storeId,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	public function secretsStoreSystemGetStoreById(string $accountTag, string $storeId): mixed
 	{
-		return $this->client->get('/system/accounts/' . $accountTag . '/stores/' . $storeId, \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, []);
+		return $this->client->get('/system/accounts/' . $accountTag . '/stores/' . $storeId, \FoundryCo\Cloudflare\Responses\SecretsStoreSystemGetStoreById::class, []);
 	}
 
 
@@ -215,21 +207,18 @@ class SecretsStoreResource
 		?string $search = null,
 		?\FoundryCo\Cloudflare\Enums\SecretsStoreOrder $order = null,
 		?array $scopes = null,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreList
+	): mixed
 	{
-		return $this->client->get('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'scopes' => $scopes ?? null]);
+		return $this->client->get('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreSystemSecretsList::class, ['direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'scopes' => $scopes ?? null]);
 	}
 
 
 	/**
 	 * Create secrets (System)
 	 */
-	public function secretsStoreSystemSecretCreate(
-		string $accountTag,
-		string $storeId,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreCreate
+	public function secretsStoreSystemSecretCreate(string $accountTag, string $storeId): mixed
 	{
-		return $this->client->post('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreCreate::class, null);
+		return $this->client->post('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets', \FoundryCo\Cloudflare\Responses\SecretsStoreSystemSecretCreate::class, null);
 	}
 
 
@@ -249,13 +238,9 @@ class SecretsStoreResource
 	/**
 	 * Get a secret by ID (System)
 	 */
-	public function secretsStoreSystemGetById(
-		string $accountTag,
-		string $storeId,
-		string $secretId,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	public function secretsStoreSystemGetById(string $accountTag, string $storeId, string $secretId): mixed
 	{
-		return $this->client->get('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, []);
+		return $this->client->get('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreSystemGetById::class, []);
 	}
 
 
@@ -267,9 +252,9 @@ class SecretsStoreResource
 		string $storeId,
 		string $secretId,
 		\FoundryCo\Cloudflare\Requests\SecretsStoreSystemPatchByIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	): mixed
 	{
-		return $this->client->patch('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, $request);
+		return $this->client->patch('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets/' . $secretId, \FoundryCo\Cloudflare\Responses\SecretsStoreSystemPatchById::class, $request);
 	}
 
 
@@ -290,8 +275,8 @@ class SecretsStoreResource
 		string $storeId,
 		string $secretId,
 		\FoundryCo\Cloudflare\Requests\SecretsStoreSystemDuplicateByIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecretsStoreId
+	): mixed
 	{
-		return $this->client->post('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets/' . $secretId . '/duplicate', \FoundryCo\Cloudflare\Responses\SecretsStoreId::class, $request);
+		return $this->client->post('/system/accounts/' . $accountTag . '/stores/' . $storeId . '/secrets/' . $secretId . '/duplicate', \FoundryCo\Cloudflare\Responses\SecretsStoreSystemDuplicateById::class, $request);
 	}
 }

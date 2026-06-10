@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class QueriespatchRequestParametersOrderBy
 {
 	public function __construct(
 		/** Configure which Calculation to order the results by. */
-		public string $value,
+		public ?string $value = null,
 		/** Set the order of the results */
 		public ?\FoundryCo\Cloudflare\Enums\QueriespatchRequestParametersOrderByOrder $order = null,
 	) {

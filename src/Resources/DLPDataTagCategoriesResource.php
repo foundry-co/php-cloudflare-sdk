@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class DLPDataTagCategoriesResource
 	/**
 	 * Retrieve all data tag categories in an account
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories', \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories', \FoundryCo\Cloudflare\Responses\DlpDataTagCategoriesList::class, []);
 	}
 
 
 	/**
 	 * Creates a new data tag category.
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpDataTagCategoriesCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesCreate
+	public function create(\FoundryCo\Cloudflare\Requests\DlpDataTagCategoriesCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/data_tag_categories', \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/data_tag_categories', \FoundryCo\Cloudflare\Responses\DlpDataTagCategoriesCreate::class, $request);
 	}
 
 
 	/**
 	 * Retrieve a specific data tag category.
 	 */
-	public function get(string $categoryId): \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesRead
+	public function get(string $categoryId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId, \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId, \FoundryCo\Cloudflare\Responses\DlpDataTagCategoriesRead::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class DLPDataTagCategoriesResource
 	public function update(
 		string $categoryId,
 		\FoundryCo\Cloudflare\Requests\DlpDataTagCategoriesUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId, \FoundryCo\Cloudflare\Responses\DLPDataTagCategoriesUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId, \FoundryCo\Cloudflare\Responses\DlpDataTagCategoriesUpdate::class, $request);
 	}
 
 

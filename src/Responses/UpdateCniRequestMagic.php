@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,9 +13,9 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class UpdateCniRequestMagic
 {
 	public function __construct(
-		public string $conduitName,
-		public string $description,
-		public int $mtu,
+		public ?string $conduitName = null,
+		public ?string $description = null,
+		public ?int $mtu = null,
 	) {
 	}
 }

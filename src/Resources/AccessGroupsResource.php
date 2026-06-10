@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class AccessGroupsResource
 	/**
 	 * List Access groups
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroups
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/groups', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroups::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/groups', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsListAccessGroups::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class AccessGroupsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessGroupsCreateAnAccessGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroup
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/groups', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroup::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/groups', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsCreateAnAccessGroup::class, $request);
 	}
 
 
 	/**
 	 * Get an Access group
 	 */
-	public function get(string $groupId): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroup
+	public function get(string $groupId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/groups/' . $groupId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroup::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/groups/' . $groupId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGetAnAccessGroup::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class AccessGroupsResource
 	public function update(
 		string $groupId,
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessGroupsUpdateAnAccessGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroup
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/access/groups/' . $groupId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsGroup::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/access/groups/' . $groupId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessGroupsUpdateAnAccessGroup::class, $request);
 	}
 
 

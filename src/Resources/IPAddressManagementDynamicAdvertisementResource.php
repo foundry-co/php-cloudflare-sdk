@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class IPAddressManagementDynamicAdvertisementResource
 	/**
 	 * Get Advertisement Status
 	 */
-	public function get(string $prefixId): \FoundryCo\Cloudflare\Responses\IPAddressManagementDynamicAdvertisementStatus
+	public function get(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/status', \FoundryCo\Cloudflare\Responses\IPAddressManagementDynamicAdvertisementStatus::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/status', \FoundryCo\Cloudflare\Responses\IpAddressManagementDynamicAdvertisementGetAdvertisementStatus::class, []);
 	}
 
 
@@ -34,8 +34,8 @@ class IPAddressManagementDynamicAdvertisementResource
 	public function update(
 		string $prefixId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementDynamicAdvertisementUpdatePrefixDynamicAdvertisementStatusRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementDynamicAdvertisementStatus
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/status', \FoundryCo\Cloudflare\Responses\IPAddressManagementDynamicAdvertisementStatus::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/status', \FoundryCo\Cloudflare\Responses\IpAddressManagementDynamicAdvertisementUpdatePrefixDynamicAdvertisementStatus::class, $request);
 	}
 }

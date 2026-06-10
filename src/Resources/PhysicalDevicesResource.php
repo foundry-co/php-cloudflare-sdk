@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,18 +34,18 @@ class PhysicalDevicesResource
 		?\FoundryCo\Cloudflare\Enums\PhysicalDevicesActiveRegistrations $activeRegistrations = null,
 		?array $id = null,
 		?string $include = null,
-	): \FoundryCo\Cloudflare\Responses\PhysicalDevicesDevices
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/physical-devices', \FoundryCo\Cloudflare\Responses\PhysicalDevicesDevices::class, ['cursor' => $cursor ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'lastSeenUseremail' => $lastSeenUseremail ?? null, 'seenAfter' => $seenAfter ?? null, 'seenBefore' => $seenBefore ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'activeRegistrations' => $activeRegistrations ?? null, 'id' => $id ?? null, 'include' => $include ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/physical-devices', \FoundryCo\Cloudflare\Responses\ListDevices::class, ['cursor' => $cursor ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'lastSeenUseremail' => $lastSeenUseremail ?? null, 'seenAfter' => $seenAfter ?? null, 'seenBefore' => $seenBefore ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'activeRegistrations' => $activeRegistrations ?? null, 'id' => $id ?? null, 'include' => $include ?? null]);
 	}
 
 
 	/**
 	 * Get device
 	 */
-	public function get(string $deviceId, ?string $include = null): \FoundryCo\Cloudflare\Responses\PhysicalDevicesDevice
+	public function get(string $deviceId, ?string $include = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/physical-devices/' . $deviceId, \FoundryCo\Cloudflare\Responses\PhysicalDevicesDevice::class, ['include' => $include ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/physical-devices/' . $deviceId, \FoundryCo\Cloudflare\Responses\GetDevice::class, ['include' => $include ?? null]);
 	}
 
 

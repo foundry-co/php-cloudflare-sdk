@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,11 +17,11 @@ readonly class CreateApplicationRolloutRequestTargetConfigurationSecretsItem
 {
 	public function __construct(
 		/** The name of the secret within the container */
-		public string $name,
+		public ?string $name = null,
 		/** Corresponding secret name from the account */
-		public string $secret,
+		public ?string $secret = null,
 		/** The secret access type denotes how a secret is made available within a container. Available Options are "env". */
-		public \FoundryCo\Cloudflare\Enums\CreateApplicationRolloutRequestTargetConfigurationSecretsItemType $type,
+		public ?\FoundryCo\Cloudflare\Enums\CreateApplicationRolloutRequestTargetConfigurationSecretsItemType $type = null,
 	) {
 	}
 }

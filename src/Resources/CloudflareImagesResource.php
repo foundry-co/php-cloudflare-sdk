@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,27 +31,27 @@ class CloudflareImagesResource
 	/**
 	 * Upload an image
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\CloudflareImagesUrl
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/images/v1', \FoundryCo\Cloudflare\Responses\CloudflareImagesUrl::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/images/v1', \FoundryCo\Cloudflare\Responses\CloudflareImagesUploadAnImageViaUrl::class, null);
 	}
 
 
 	/**
 	 * Images usage statistics
 	 */
-	public function stats(): \FoundryCo\Cloudflare\Responses\CloudflareImagesStatistics
+	public function stats(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/stats', \FoundryCo\Cloudflare\Responses\CloudflareImagesStatistics::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/stats', \FoundryCo\Cloudflare\Responses\CloudflareImagesImagesUsageStatistics::class, []);
 	}
 
 
 	/**
 	 * Image details
 	 */
-	public function get(string $imageId): \FoundryCo\Cloudflare\Responses\CloudflareImagesDetails
+	public function get(string $imageId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/' . $imageId, \FoundryCo\Cloudflare\Responses\CloudflareImagesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/' . $imageId, \FoundryCo\Cloudflare\Responses\CloudflareImagesImageDetails::class, []);
 	}
 
 
@@ -61,9 +61,9 @@ class CloudflareImagesResource
 	public function update(
 		string $imageId,
 		\FoundryCo\Cloudflare\Requests\CloudflareImagesUpdateImageRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudflareImagesImage
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/images/v1/' . $imageId, \FoundryCo\Cloudflare\Responses\CloudflareImagesImage::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/images/v1/' . $imageId, \FoundryCo\Cloudflare\Responses\CloudflareImagesUpdateImage::class, $request);
 	}
 
 
@@ -94,17 +94,17 @@ class CloudflareImagesResource
 		?\FoundryCo\Cloudflare\Enums\CloudflareImagesSortOrder $sortOrder = null,
 		?string $creator = null,
 		?string $metafieldoperator = null,
-	): \FoundryCo\Cloudflare\Responses\CloudflareImagesV2
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/images/v2', \FoundryCo\Cloudflare\Responses\CloudflareImagesV2::class, ['continuationToken' => $continuationToken ?? null, 'perPage' => $perPage ?? null, 'sortOrder' => $sortOrder ?? null, 'creator' => $creator ?? null, 'metafieldoperator' => $metafieldoperator ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/images/v2', \FoundryCo\Cloudflare\Responses\CloudflareImagesListImagesV2::class, ['continuationToken' => $continuationToken ?? null, 'perPage' => $perPage ?? null, 'sortOrder' => $sortOrder ?? null, 'creator' => $creator ?? null, 'metafieldoperator' => $metafieldoperator ?? null]);
 	}
 
 
 	/**
 	 * Create authenticated direct upload URL V2
 	 */
-	public function directUpload(): \FoundryCo\Cloudflare\Responses\CloudflareImages2
+	public function directUpload(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/images/v2/direct_upload', \FoundryCo\Cloudflare\Responses\CloudflareImages2::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/images/v2/direct_upload', \FoundryCo\Cloudflare\Responses\CloudflareImagesCreateAuthenticatedDirectUploadUrlV2::class, null);
 	}
 }

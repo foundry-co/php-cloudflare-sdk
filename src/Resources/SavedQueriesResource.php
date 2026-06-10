@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,41 +27,36 @@ class SavedQueriesResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\SavedQueriesOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\SavedQueriesOrderBy $orderBy = null,
-	): \FoundryCo\Cloudflare\Responses\SavedQueriesQuerieslist
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/observability/queries', \FoundryCo\Cloudflare\Responses\SavedQueriesQuerieslist::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'orderBy' => $orderBy ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/observability/queries', \FoundryCo\Cloudflare\Responses\Querieslist::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'orderBy' => $orderBy ?? null]);
 	}
 
 
 	/**
 	 * Save query
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\QueriespostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SavedQueriesQueriespost
+	public function create(\FoundryCo\Cloudflare\Requests\QueriespostRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/queries', \FoundryCo\Cloudflare\Responses\SavedQueriesQueriespost::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/queries', \FoundryCo\Cloudflare\Responses\Queriespost::class, $request);
 	}
 
 
 	/**
 	 * Get query
 	 */
-	public function get(string $queryId): \FoundryCo\Cloudflare\Responses\SavedQueriesQueriesget
+	public function get(string $queryId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/observability/queries/' . $queryId, \FoundryCo\Cloudflare\Responses\SavedQueriesQueriesget::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/observability/queries/' . $queryId, \FoundryCo\Cloudflare\Responses\Queriesget::class, []);
 	}
 
 
 	/**
 	 * Update query
 	 */
-	public function update(
-		string $queryId,
-		\FoundryCo\Cloudflare\Requests\QueriespatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SavedQueriesQueriespatch
+	public function update(string $queryId, \FoundryCo\Cloudflare\Requests\QueriespatchRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/observability/queries/' . $queryId, \FoundryCo\Cloudflare\Responses\SavedQueriesQueriespatch::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/observability/queries/' . $queryId, \FoundryCo\Cloudflare\Responses\Queriespatch::class, $request);
 	}
 
 

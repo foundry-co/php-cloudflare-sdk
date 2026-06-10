@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,34 +21,27 @@ class OriginCAResource
 	/**
 	 * List Certificates
 	 */
-	public function list(
-		?float $page = null,
-		?float $perPage = null,
-		?int $limit = null,
-		?int $offset = null,
-	): \FoundryCo\Cloudflare\Responses\OriginCACertificates
+	public function list(?float $page = null, ?float $perPage = null, ?int $limit = null, ?int $offset = null): mixed
 	{
-		return $this->client->get('/certificates', \FoundryCo\Cloudflare\Responses\OriginCACertificates::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null]);
+		return $this->client->get('/certificates', \FoundryCo\Cloudflare\Responses\OriginCaListCertificates::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null]);
 	}
 
 
 	/**
 	 * Create Certificate
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\OriginCaCreateCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OriginCACertificate
+	public function create(\FoundryCo\Cloudflare\Requests\OriginCaCreateCertificateRequest $request): mixed
 	{
-		return $this->client->post('/certificates', \FoundryCo\Cloudflare\Responses\OriginCACertificate::class, $request);
+		return $this->client->post('/certificates', \FoundryCo\Cloudflare\Responses\OriginCaCreateCertificate::class, $request);
 	}
 
 
 	/**
 	 * Get Certificate
 	 */
-	public function get(string $certificateId): \FoundryCo\Cloudflare\Responses\OriginCACertificate
+	public function get(string $certificateId): mixed
 	{
-		return $this->client->get('/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\OriginCACertificate::class, []);
+		return $this->client->get('/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\OriginCaGetCertificate::class, []);
 	}
 
 

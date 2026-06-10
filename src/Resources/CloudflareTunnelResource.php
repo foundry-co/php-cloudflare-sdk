@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,9 +34,9 @@ class CloudflareTunnelResource
 		?\FoundryCo\Cloudflare\Enums\CloudflareTunnelStatus $status = null,
 		?float $perPage = null,
 		?float $page = null,
-	): \FoundryCo\Cloudflare\Responses\CloudflareTunnelTunnels
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cfd_tunnel', \FoundryCo\Cloudflare\Responses\CloudflareTunnelTunnels::class, ['name' => $name ?? null, 'isDeleted' => $isDeleted ?? null, 'existedAt' => $existedAt ?? null, 'uuid' => $uuid ?? null, 'wasActiveAt' => $wasActiveAt ?? null, 'wasInactiveAt' => $wasInactiveAt ?? null, 'includePrefix' => $includePrefix ?? null, 'excludePrefix' => $excludePrefix ?? null, 'status' => $status ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/cfd_tunnel', \FoundryCo\Cloudflare\Responses\CloudflareTunnelListCloudflareTunnels::class, ['name' => $name ?? null, 'isDeleted' => $isDeleted ?? null, 'existedAt' => $existedAt ?? null, 'uuid' => $uuid ?? null, 'wasActiveAt' => $wasActiveAt ?? null, 'wasInactiveAt' => $wasInactiveAt ?? null, 'includePrefix' => $includePrefix ?? null, 'excludePrefix' => $excludePrefix ?? null, 'status' => $status ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
 	}
 
 
@@ -82,9 +82,9 @@ class CloudflareTunnelResource
 	/**
 	 * List Cloudflare Tunnel connections
 	 */
-	public function connections(string $tunnelId): \FoundryCo\Cloudflare\Responses\CloudflareTunnelConnections
+	public function connections(string $tunnelId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cfd_tunnel/' . $tunnelId . '/connections', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConnections::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cfd_tunnel/' . $tunnelId . '/connections', \FoundryCo\Cloudflare\Responses\CloudflareTunnelListCloudflareTunnelConnections::class, []);
 	}
 
 
@@ -164,9 +164,9 @@ class CloudflareTunnelResource
 		?\FoundryCo\Cloudflare\Enums\CloudflareTunnelStatus $status = null,
 		?float $perPage = null,
 		?float $page = null,
-	): \FoundryCo\Cloudflare\Responses\CloudflareTunnelTunnels
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/warp_connector', \FoundryCo\Cloudflare\Responses\CloudflareTunnelTunnels::class, ['name' => $name ?? null, 'isDeleted' => $isDeleted ?? null, 'existedAt' => $existedAt ?? null, 'uuid' => $uuid ?? null, 'wasActiveAt' => $wasActiveAt ?? null, 'wasInactiveAt' => $wasInactiveAt ?? null, 'includePrefix' => $includePrefix ?? null, 'excludePrefix' => $excludePrefix ?? null, 'status' => $status ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/warp_connector', \FoundryCo\Cloudflare\Responses\CloudflareTunnelListWarpConnectorTunnels::class, ['name' => $name ?? null, 'isDeleted' => $isDeleted ?? null, 'existedAt' => $existedAt ?? null, 'uuid' => $uuid ?? null, 'wasActiveAt' => $wasActiveAt ?? null, 'wasInactiveAt' => $wasInactiveAt ?? null, 'includePrefix' => $includePrefix ?? null, 'excludePrefix' => $excludePrefix ?? null, 'status' => $status ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
 	}
 
 
@@ -214,11 +214,9 @@ class CloudflareTunnelResource
 	/**
 	 * List WARP Connector Tunnel connections
 	 */
-	public function cloudflareTunnelListWarpConnectorTunnelConnections(
-		string $tunnelId,
-	): \FoundryCo\Cloudflare\Responses\CloudflareTunnelConnections
+	public function cloudflareTunnelListWarpConnectorTunnelConnections(string $tunnelId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/warp_connector/' . $tunnelId . '/connections', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConnections::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/warp_connector/' . $tunnelId . '/connections', \FoundryCo\Cloudflare\Responses\CloudflareTunnelListWarpConnectorTunnelConnections::class, []);
 	}
 
 

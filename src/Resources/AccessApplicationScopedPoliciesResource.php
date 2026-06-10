@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,13 +22,9 @@ class AccessApplicationScopedPoliciesResource
 	/**
 	 * List Access application policies
 	 */
-	public function get(
-		string $appId,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicies
+	public function get(string $appId, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicies::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\AccessPoliciesListAccessAppPolicies::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -38,21 +34,18 @@ class AccessApplicationScopedPoliciesResource
 	public function create(
 		string $appId,
 		\FoundryCo\Cloudflare\Requests\AccessPoliciesCreateAnAccessPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicy
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicy::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\AccessPoliciesCreateAnAccessPolicy::class, $request);
 	}
 
 
 	/**
 	 * Get an Access application policy
 	 */
-	public function policies(
-		string $appId,
-		string $policyId,
-	): \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicy
+	public function policies(string $appId, string $policyId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicy::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessPoliciesGetAnAccessPolicy::class, []);
 	}
 
 
@@ -63,9 +56,9 @@ class AccessApplicationScopedPoliciesResource
 		string $appId,
 		string $policyId,
 		\FoundryCo\Cloudflare\Requests\AccessPoliciesUpdateAnAccessPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicy
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesPolicy::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessPoliciesUpdateAnAccessPolicy::class, $request);
 	}
 
 
@@ -81,11 +74,8 @@ class AccessApplicationScopedPoliciesResource
 	/**
 	 * Convert an Access application policy to a reusable policy
 	 */
-	public function makeReusable(
-		string $appId,
-		string $policyId,
-	): \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesReusable
+	public function makeReusable(string $appId, string $policyId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies/' . $policyId . '/make_reusable', \FoundryCo\Cloudflare\Responses\AccessApplicationScopedPoliciesReusable::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/apps/' . $appId . '/policies/' . $policyId . '/make_reusable', \FoundryCo\Cloudflare\Responses\AccessPoliciesConvertReusable::class, null);
 	}
 }

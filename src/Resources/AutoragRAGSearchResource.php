@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,23 +22,17 @@ class AutoragRAGSearchResource
 	/**
 	 * AI Search
 	 */
-	public function create(
-		string $id,
-		\FoundryCo\Cloudflare\Requests\AutoragConfigAiSearchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AutoRAGRAGSearchSearch
+	public function create(string $id, \FoundryCo\Cloudflare\Requests\AutoragConfigAiSearchRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/ai-search', \FoundryCo\Cloudflare\Responses\AutoRAGRAGSearchSearch::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/ai-search', \FoundryCo\Cloudflare\Responses\AutoragConfigAiSearch::class, $request);
 	}
 
 
 	/**
 	 * Search
 	 */
-	public function search(
-		string $id,
-		\FoundryCo\Cloudflare\Requests\AutoragConfigSearchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AutoRAGRAGSearchSearch
+	public function search(string $id, \FoundryCo\Cloudflare\Requests\AutoragConfigSearchRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/search', \FoundryCo\Cloudflare\Responses\AutoRAGRAGSearchSearch::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/search', \FoundryCo\Cloudflare\Responses\AutoragConfigSearch::class, $request);
 	}
 }

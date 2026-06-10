@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,30 +22,26 @@ class ZoneSubscriptionResource
 	/**
 	 * Zone Subscription Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneSubscriptionDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/subscription', \FoundryCo\Cloudflare\Responses\ZoneSubscriptionDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/subscription', \FoundryCo\Cloudflare\Responses\ZoneSubscriptionZoneSubscriptionDetails::class, []);
 	}
 
 
 	/**
 	 * Create Zone Subscription
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZoneSubscriptionCreateZoneSubscriptionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSubscriptionSubscription
+	public function create(\FoundryCo\Cloudflare\Requests\ZoneSubscriptionCreateZoneSubscriptionRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/subscription', \FoundryCo\Cloudflare\Responses\ZoneSubscriptionSubscription::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/subscription', \FoundryCo\Cloudflare\Responses\ZoneSubscriptionCreateZoneSubscription::class, $request);
 	}
 
 
 	/**
 	 * Update Zone Subscription
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\ZoneSubscriptionUpdateZoneSubscriptionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSubscriptionSubscription
+	public function update(\FoundryCo\Cloudflare\Requests\ZoneSubscriptionUpdateZoneSubscriptionRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/subscription', \FoundryCo\Cloudflare\Responses\ZoneSubscriptionSubscription::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/subscription', \FoundryCo\Cloudflare\Responses\ZoneSubscriptionUpdateZoneSubscription::class, $request);
 	}
 }

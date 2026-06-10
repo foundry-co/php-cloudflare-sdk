@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,24 +22,18 @@ class AIGatewayGatewaysResource
 	/**
 	 * List Gateways
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway
+	public function list(?int $page = null, ?int $perPage = null, ?string $search = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways', \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways', \FoundryCo\Cloudflare\Responses\AigConfigListGateway::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Create a new Gateway
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AigConfigCreateGatewayRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway
+	public function create(\FoundryCo\Cloudflare\Requests\AigConfigCreateGatewayRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways', \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways', \FoundryCo\Cloudflare\Responses\AigConfigCreateGateway::class, $request);
 	}
 
 
@@ -55,21 +49,18 @@ class AIGatewayGatewaysResource
 	/**
 	 * Fetch a Gateway
 	 */
-	public function gateways(string $id): \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway
+	public function gateways(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigFetchGateway::class, []);
 	}
 
 
 	/**
 	 * Update a Gateway
 	 */
-	public function update(
-		string $id,
-		\FoundryCo\Cloudflare\Requests\AigConfigUpdateGatewayRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway
+	public function update(string $id, \FoundryCo\Cloudflare\Requests\AigConfigUpdateGatewayRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayGatewaysGateway::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigUpdateGateway::class, $request);
 	}
 
 

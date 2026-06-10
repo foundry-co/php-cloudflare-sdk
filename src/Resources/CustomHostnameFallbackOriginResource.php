@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class CustomHostnameFallbackOriginResource
 	/**
 	 * Get Fallback Origin for Custom Hostnames
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\CustomHostnameFallbackOriginForAZoneHostnames
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_hostnames/fallback_origin', \FoundryCo\Cloudflare\Responses\CustomHostnameFallbackOriginForAZoneHostnames::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_hostnames/fallback_origin', \FoundryCo\Cloudflare\Responses\CustomHostnameFallbackOriginForAZoneGetFallbackOriginForCustomHostnames::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class CustomHostnameFallbackOriginResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\CustomHostnameFallbackOriginForAZoneUpdateFallbackOriginForCustomHostnamesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomHostnameFallbackOriginForAZoneHostnames
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/custom_hostnames/fallback_origin', \FoundryCo\Cloudflare\Responses\CustomHostnameFallbackOriginForAZoneHostnames::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/custom_hostnames/fallback_origin', \FoundryCo\Cloudflare\Responses\CustomHostnameFallbackOriginForAZoneUpdateFallbackOriginForCustomHostnames::class, $request);
 	}
 
 

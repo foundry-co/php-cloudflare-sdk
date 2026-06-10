@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class SSOResource
 	/**
 	 * Get all SSO connectors
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SSOConnectors
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/sso_connectors', \FoundryCo\Cloudflare\Responses\SSOConnectors::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/sso_connectors', \FoundryCo\Cloudflare\Responses\GetAllSsoConnectors::class, []);
 	}
 
 
 	/**
 	 * Initialize new SSO connector
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\InitNewSsoConnectorRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SSOConnector
+	public function create(\FoundryCo\Cloudflare\Requests\InitNewSsoConnectorRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/sso_connectors', \FoundryCo\Cloudflare\Responses\SSOConnector::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/sso_connectors', \FoundryCo\Cloudflare\Responses\InitNewSsoConnector::class, $request);
 	}
 
 
 	/**
 	 * Get single SSO connector
 	 */
-	public function get(mixed $ssoConnectorId): \FoundryCo\Cloudflare\Responses\SSOConnector
+	public function get(mixed $ssoConnectorId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/sso_connectors/' . $ssoConnectorId, \FoundryCo\Cloudflare\Responses\SSOConnector::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/sso_connectors/' . $ssoConnectorId, \FoundryCo\Cloudflare\Responses\GetSsoConnector::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class SSOResource
 	public function update(
 		mixed $ssoConnectorId,
 		\FoundryCo\Cloudflare\Requests\UpdateSsoConnectorStateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SSOState
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/sso_connectors/' . $ssoConnectorId, \FoundryCo\Cloudflare\Responses\SSOState::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/sso_connectors/' . $ssoConnectorId, \FoundryCo\Cloudflare\Responses\UpdateSsoConnectorState::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,8 +29,8 @@ class NamespaceManagementResource
 		?string $parent = null,
 		?bool $returnUuids = null,
 		?bool $returnDetails = null,
-	): \FoundryCo\Cloudflare\Responses\NamespaceManagementNamespaces
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/namespaces', \FoundryCo\Cloudflare\Responses\NamespaceManagementNamespaces::class, ['pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null, 'parent' => $parent ?? null, 'returnUuids' => $returnUuids ?? null, 'returnDetails' => $returnDetails ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/namespaces', \FoundryCo\Cloudflare\Responses\ListNamespaces::class, ['pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null, 'parent' => $parent ?? null, 'returnUuids' => $returnUuids ?? null, 'returnDetails' => $returnDetails ?? null]);
 	}
 }

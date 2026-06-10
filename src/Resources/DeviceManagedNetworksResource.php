@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class DeviceManagedNetworksResource
 	/**
 	 * List your device managed networks
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksNetworks
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/networks', \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksNetworks::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/networks', \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksListDeviceManagedNetworks::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class DeviceManagedNetworksResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\DeviceManagedNetworksCreateDeviceManagedNetworkRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksNetwork
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/devices/networks', \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksNetwork::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/devices/networks', \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksCreateDeviceManagedNetwork::class, $request);
 	}
 
 
 	/**
 	 * Get device managed network details
 	 */
-	public function get(string $networkId): \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksDetails
+	public function get(string $networkId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/networks/' . $networkId, \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/networks/' . $networkId, \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksDeviceManagedNetworkDetails::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class DeviceManagedNetworksResource
 	public function update(
 		string $networkId,
 		\FoundryCo\Cloudflare\Requests\DeviceManagedNetworksUpdateDeviceManagedNetworkRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksNetwork
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/devices/networks/' . $networkId, \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksNetwork::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/devices/networks/' . $networkId, \FoundryCo\Cloudflare\Responses\DeviceManagedNetworksUpdateDeviceManagedNetwork::class, $request);
 	}
 
 

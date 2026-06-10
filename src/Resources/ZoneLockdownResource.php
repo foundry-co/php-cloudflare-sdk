@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,29 +34,27 @@ class ZoneLockdownResource
 		?\DateTimeImmutable $createdOn = null,
 		?string $descriptionSearch = null,
 		?string $ipSearch = null,
-	): \FoundryCo\Cloudflare\Responses\ZoneLockdownRules
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/lockdowns', \FoundryCo\Cloudflare\Responses\ZoneLockdownRules::class, ['page' => $page ?? null, 'description' => $description ?? null, 'modifiedOn' => $modifiedOn ?? null, 'ip' => $ip ?? null, 'priority' => $priority ?? null, 'uriSearch' => $uriSearch ?? null, 'ipRangeSearch' => $ipRangeSearch ?? null, 'perPage' => $perPage ?? null, 'createdOn' => $createdOn ?? null, 'descriptionSearch' => $descriptionSearch ?? null, 'ipSearch' => $ipSearch ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/lockdowns', \FoundryCo\Cloudflare\Responses\ZoneLockdownListZoneLockdownRules::class, ['page' => $page ?? null, 'description' => $description ?? null, 'modifiedOn' => $modifiedOn ?? null, 'ip' => $ip ?? null, 'priority' => $priority ?? null, 'uriSearch' => $uriSearch ?? null, 'ipRangeSearch' => $ipRangeSearch ?? null, 'perPage' => $perPage ?? null, 'createdOn' => $createdOn ?? null, 'descriptionSearch' => $descriptionSearch ?? null, 'ipSearch' => $ipSearch ?? null]);
 	}
 
 
 	/**
 	 * Create a Zone Lockdown rule
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZoneLockdownCreateAZoneLockdownRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLockdownRule
+	public function create(\FoundryCo\Cloudflare\Requests\ZoneLockdownCreateAZoneLockdownRuleRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/firewall/lockdowns', \FoundryCo\Cloudflare\Responses\ZoneLockdownRule::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/firewall/lockdowns', \FoundryCo\Cloudflare\Responses\ZoneLockdownCreateAZoneLockdownRule::class, $request);
 	}
 
 
 	/**
 	 * Get a Zone Lockdown rule
 	 */
-	public function get(string $lockDownsId): \FoundryCo\Cloudflare\Responses\ZoneLockdownRule
+	public function get(string $lockDownsId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/lockdowns/' . $lockDownsId, \FoundryCo\Cloudflare\Responses\ZoneLockdownRule::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/lockdowns/' . $lockDownsId, \FoundryCo\Cloudflare\Responses\ZoneLockdownGetAZoneLockdownRule::class, []);
 	}
 
 
@@ -66,9 +64,9 @@ class ZoneLockdownResource
 	public function update(
 		string $lockDownsId,
 		\FoundryCo\Cloudflare\Requests\ZoneLockdownUpdateAZoneLockdownRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLockdownRule
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/firewall/lockdowns/' . $lockDownsId, \FoundryCo\Cloudflare\Responses\ZoneLockdownRule::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/firewall/lockdowns/' . $lockDownsId, \FoundryCo\Cloudflare\Responses\ZoneLockdownUpdateAZoneLockdownRule::class, $request);
 	}
 
 

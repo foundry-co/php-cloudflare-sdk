@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -83,9 +83,9 @@ class R2BucketResource
 		?\FoundryCo\Cloudflare\Enums\R2BucketDirection $direction = null,
 		?string $cursor = null,
 		?\FoundryCo\Cloudflare\Enums\R2BucketCfR2Jurisdiction $cfR2Jurisdiction = null,
-	): \FoundryCo\Cloudflare\Responses\R2BucketBuckets
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2/buckets', \FoundryCo\Cloudflare\Responses\R2BucketBuckets::class, ['nameContains' => $nameContains ?? null, 'startAfter' => $startAfter ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'cursor' => $cursor ?? null, 'cfR2Jurisdiction' => $cfR2Jurisdiction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2/buckets', \FoundryCo\Cloudflare\Responses\R2ListBuckets::class, ['nameContains' => $nameContains ?? null, 'startAfter' => $startAfter ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'cursor' => $cursor ?? null, 'cfR2Jurisdiction' => $cfR2Jurisdiction ?? null]);
 	}
 
 

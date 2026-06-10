@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,9 +30,9 @@ class RadarTCPResetsAndTimeoutsResource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTCPResetsAndTimeoutsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTCPResetsAndTimeoutsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/tcp_resets_timeouts/summary', \FoundryCo\Cloudflare\Responses\RadarTCPResetsAndTimeoutsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/tcp_resets_timeouts/summary', \FoundryCo\Cloudflare\Responses\RadarGetTcpResetsTimeoutsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -49,8 +49,8 @@ class RadarTCPResetsAndTimeoutsResource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTCPResetsAndTimeoutsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTCPResetsAndTimeoutsGroup
+	): mixed
 	{
-		return $this->client->get('/radar/tcp_resets_timeouts/timeseries_groups', \FoundryCo\Cloudflare\Responses\RadarTCPResetsAndTimeoutsGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/tcp_resets_timeouts/timeseries_groups', \FoundryCo\Cloudflare\Responses\RadarGetTcpResetsTimeoutsTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 }

@@ -42,7 +42,8 @@ class DtoEmitter
 
             $type = $this->normalizeType($prop->phpType);
 
-            if ($prop->nullable) {
+            // Response DTOs always use nullable types — the API can return null for any field
+            if ($prop->nullable || !$dto->isRequest) {
                 $param->setType('?' . $type);
                 $param->setDefaultValue(null);
             } else {

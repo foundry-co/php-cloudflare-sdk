@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,13 +22,9 @@ class VersionsResource
 	/**
 	 * List Versions
 	 */
-	public function get(
-		string $workerId,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\VersionsListWorkerVersions
+	public function get(string $workerId, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers/' . $workerId . '/versions', \FoundryCo\Cloudflare\Responses\VersionsListWorkerVersions::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers/' . $workerId . '/versions', \FoundryCo\Cloudflare\Responses\ListWorkerVersions::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -39,9 +35,9 @@ class VersionsResource
 		string $workerId,
 		\FoundryCo\Cloudflare\Requests\CreateWorkerVersionRequest $request,
 		?bool $deploy = null,
-	): \FoundryCo\Cloudflare\Responses\VersionsCreateWorkerVersion
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/workers/' . $workerId . '/versions', \FoundryCo\Cloudflare\Responses\VersionsCreateWorkerVersion::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/workers/' . $workerId . '/versions', \FoundryCo\Cloudflare\Responses\CreateWorkerVersion::class, $request);
 	}
 
 
@@ -52,9 +48,9 @@ class VersionsResource
 		string $workerId,
 		string $versionId,
 		?\FoundryCo\Cloudflare\Enums\VersionsInclude $include = null,
-	): \FoundryCo\Cloudflare\Responses\VersionsGetWorkerVersion
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers/' . $workerId . '/versions/' . $versionId, \FoundryCo\Cloudflare\Responses\VersionsGetWorkerVersion::class, ['include' => $include ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers/' . $workerId . '/versions/' . $versionId, \FoundryCo\Cloudflare\Responses\GetWorkerVersion::class, ['include' => $include ?? null]);
 	}
 
 

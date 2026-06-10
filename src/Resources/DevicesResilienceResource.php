@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,19 +22,17 @@ class DevicesResilienceResource
 	/**
 	 * Retrieve Global WARP override state
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DevicesResilienceOverride
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/resilience/disconnect', \FoundryCo\Cloudflare\Responses\DevicesResilienceOverride::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/resilience/disconnect', \FoundryCo\Cloudflare\Responses\DevicesResilienceRetrieveGlobalWarpOverride::class, []);
 	}
 
 
 	/**
 	 * Set Global WARP override state
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DevicesResilienceSetGlobalWarpOverrideRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicesResilienceOverride
+	public function create(\FoundryCo\Cloudflare\Requests\DevicesResilienceSetGlobalWarpOverrideRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/devices/resilience/disconnect', \FoundryCo\Cloudflare\Responses\DevicesResilienceOverride::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/devices/resilience/disconnect', \FoundryCo\Cloudflare\Responses\DevicesResilienceSetGlobalWarpOverride::class, $request);
 	}
 }

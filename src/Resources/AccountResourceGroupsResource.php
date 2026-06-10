@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class AccountResourceGroupsResource
 	/**
 	 * List Resource Groups
 	 */
-	public function list(
-		mixed $id = null,
-		?string $name = null,
-	): \FoundryCo\Cloudflare\Responses\AccountResourceGroupsList
+	public function list(mixed $id = null, ?string $name = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/resource_groups', \FoundryCo\Cloudflare\Responses\AccountResourceGroupsList::class, ['id' => $id ?? null, 'name' => $name ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/resource_groups', \FoundryCo\Cloudflare\Responses\AccountResourceGroupList::class, ['id' => $id ?? null, 'name' => $name ?? null]);
 	}
 
 
 	/**
 	 * Create Resource Group
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccountResourceGroupCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountResourceGroupsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\AccountResourceGroupCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/iam/resource_groups', \FoundryCo\Cloudflare\Responses\AccountResourceGroupsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/iam/resource_groups', \FoundryCo\Cloudflare\Responses\AccountResourceGroupCreate::class, $request);
 	}
 
 
 	/**
 	 * Resource Group Details
 	 */
-	public function get(mixed $resourceGroupId): \FoundryCo\Cloudflare\Responses\AccountResourceGroupsDetails
+	public function get(mixed $resourceGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/resource_groups/' . $resourceGroupId, \FoundryCo\Cloudflare\Responses\AccountResourceGroupsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/resource_groups/' . $resourceGroupId, \FoundryCo\Cloudflare\Responses\AccountResourceGroupDetails::class, []);
 	}
 
 
@@ -57,9 +52,9 @@ class AccountResourceGroupsResource
 	public function update(
 		mixed $resourceGroupId,
 		\FoundryCo\Cloudflare\Requests\AccountResourceGroupUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountResourceGroupsUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/iam/resource_groups/' . $resourceGroupId, \FoundryCo\Cloudflare\Responses\AccountResourceGroupsUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/iam/resource_groups/' . $resourceGroupId, \FoundryCo\Cloudflare\Responses\AccountResourceGroupUpdate::class, $request);
 	}
 
 

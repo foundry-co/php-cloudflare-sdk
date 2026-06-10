@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,9 +26,9 @@ class RadarInternetServicesRankingResource
 		?array $name = null,
 		?array $date = null,
 		?\FoundryCo\Cloudflare\Enums\RadarInternetServicesRankingFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarInternetServicesRankingCategories
+	): mixed
 	{
-		return $this->client->get('/radar/ranking/internet_services/categories', \FoundryCo\Cloudflare\Responses\RadarInternetServicesRankingCategories::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ranking/internet_services/categories', \FoundryCo\Cloudflare\Responses\RadarGetRankingInternetServicesCategories::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -43,9 +43,9 @@ class RadarInternetServicesRankingResource
 		?array $dateStart = null,
 		?array $dateEnd = null,
 		?\FoundryCo\Cloudflare\Enums\RadarInternetServicesRankingFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarInternetServicesRankingTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/ranking/internet_services/timeseries_groups', \FoundryCo\Cloudflare\Responses\RadarInternetServicesRankingTimeseries::class, ['serviceCategory' => $serviceCategory ?? null, 'limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ranking/internet_services/timeseries_groups', \FoundryCo\Cloudflare\Responses\RadarGetRankingInternetServicesTimeseries::class, ['serviceCategory' => $serviceCategory ?? null, 'limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -58,8 +58,8 @@ class RadarInternetServicesRankingResource
 		?array $name = null,
 		?array $date = null,
 		?\FoundryCo\Cloudflare\Enums\RadarInternetServicesRankingFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarInternetServicesRankingServices
+	): mixed
 	{
-		return $this->client->get('/radar/ranking/internet_services/top', \FoundryCo\Cloudflare\Responses\RadarInternetServicesRankingServices::class, ['serviceCategory' => $serviceCategory ?? null, 'limit' => $limit ?? null, 'name' => $name ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ranking/internet_services/top', \FoundryCo\Cloudflare\Responses\RadarGetRankingTopInternetServices::class, ['serviceCategory' => $serviceCategory ?? null, 'limit' => $limit ?? null, 'name' => $name ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
 	}
 }

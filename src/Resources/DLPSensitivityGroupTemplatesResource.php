@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,17 +22,17 @@ class DLPSensitivityGroupTemplatesResource
 	/**
 	 * Retrieve all sensitivity group templates in an account
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLPSensitivityGroupTemplatesList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/templates', \FoundryCo\Cloudflare\Responses\DLPSensitivityGroupTemplatesList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/templates', \FoundryCo\Cloudflare\Responses\DlpSensitivityGroupTemplatesList::class, []);
 	}
 
 
 	/**
 	 * Retrieve a specific sensitivity group template.
 	 */
-	public function get(string $templateId): \FoundryCo\Cloudflare\Responses\DLPSensitivityGroupTemplatesRead
+	public function get(string $templateId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/templates/' . $templateId, \FoundryCo\Cloudflare\Responses\DLPSensitivityGroupTemplatesRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/templates/' . $templateId, \FoundryCo\Cloudflare\Responses\DlpSensitivityGroupTemplateRead::class, []);
 	}
 }

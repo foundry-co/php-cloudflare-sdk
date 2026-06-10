@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,38 +29,36 @@ class FirewallRulesResource
 		?float $perPage = null,
 		?string $id = null,
 		?bool $paused = null,
-	): \FoundryCo\Cloudflare\Responses\FirewallRulesRules
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesRules::class, ['description' => $description ?? null, 'action' => $action ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'id' => $id ?? null, 'paused' => $paused ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesListFirewallRules::class, ['description' => $description ?? null, 'action' => $action ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'id' => $id ?? null, 'paused' => $paused ?? null]);
 	}
 
 
 	/**
 	 * Create firewall rules
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\FirewallRulesCreateFirewallRulesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\FirewallRulesRules
+	public function create(\FoundryCo\Cloudflare\Requests\FirewallRulesCreateFirewallRulesRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesRules::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesCreateFirewallRules::class, $request);
 	}
 
 
 	/**
 	 * Update firewall rules
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\FirewallRulesRules
+	public function update(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesRules::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesUpdateFirewallRules::class, null);
 	}
 
 
 	/**
 	 * Update priority of firewall rules
 	 */
-	public function rules(): \FoundryCo\Cloudflare\Responses\FirewallRulesRules
+	public function rules(): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesRules::class, null);
+		return $this->client->patch('/zones/' . $this->zoneId . '/firewall/rules', \FoundryCo\Cloudflare\Responses\FirewallRulesUpdatePriorityOfFirewallRules::class, null);
 	}
 
 
@@ -76,9 +74,9 @@ class FirewallRulesResource
 	/**
 	 * Get a firewall rule
 	 */
-	public function get(string $ruleId, mixed $id = null): \FoundryCo\Cloudflare\Responses\FirewallRulesRule
+	public function get(string $ruleId, mixed $id = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\FirewallRulesRule::class, ['id' => $id ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\FirewallRulesGetAFirewallRule::class, ['id' => $id ?? null]);
 	}
 
 
@@ -88,9 +86,9 @@ class FirewallRulesResource
 	public function firewallRulesUpdateAFirewallRule(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\FirewallRulesUpdateAFirewallRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\FirewallRulesRule
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/firewall/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\FirewallRulesRule::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/firewall/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\FirewallRulesUpdateAFirewallRule::class, $request);
 	}
 
 
@@ -100,9 +98,9 @@ class FirewallRulesResource
 	public function firewallRulesUpdatePriorityOfAFirewallRule(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\FirewallRulesUpdatePriorityOfAFirewallRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\FirewallRulesRule
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/firewall/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\FirewallRulesRule::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/firewall/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\FirewallRulesUpdatePriorityOfAFirewallRule::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,18 +30,18 @@ class APIShieldLabelsResource
 		?\FoundryCo\Cloudflare\Enums\APIShieldLabelsSource $source = null,
 		?string $filter = null,
 		?bool $withMappedResourceCounts = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabels
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/labels', \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabels::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'source' => $source ?? null, 'filter' => $filter ?? null, 'withMappedResourceCounts' => $withMappedResourceCounts ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/labels', \FoundryCo\Cloudflare\Responses\ApiShieldLabelsGetLabels::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'source' => $source ?? null, 'filter' => $filter ?? null, 'withMappedResourceCounts' => $withMappedResourceCounts ?? null]);
 	}
 
 
 	/**
 	 * Retrieve managed label
 	 */
-	public function get(?bool $withMappedResourceCounts = null): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel
+	public function get(?bool $withMappedResourceCounts = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/labels/managed/' . $name, \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel::class, ['withMappedResourceCounts' => $withMappedResourceCounts ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/labels/managed/' . $name, \FoundryCo\Cloudflare\Responses\ApiShieldLabelsGetManagedLabel::class, ['withMappedResourceCounts' => $withMappedResourceCounts ?? null]);
 	}
 
 
@@ -50,18 +50,18 @@ class APIShieldLabelsResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ApiShieldLabelsReplaceOperationsAttachedToManagedLabelRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/labels/managed/' . $name . '/resources/operation', \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/labels/managed/' . $name . '/resources/operation', \FoundryCo\Cloudflare\Responses\ApiShieldLabelsReplaceOperationsAttachedToManagedLabel::class, $request);
 	}
 
 
 	/**
 	 * Create user labels
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabels
+	public function create(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/labels/user', \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabels::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/labels/user', \FoundryCo\Cloudflare\Responses\ApiShieldLabelsCreateUserLabels::class, null);
 	}
 
 
@@ -77,20 +77,18 @@ class APIShieldLabelsResource
 	/**
 	 * Retrieve user label
 	 */
-	public function user(?bool $withMappedResourceCounts = null): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel
+	public function user(?bool $withMappedResourceCounts = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name, \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel::class, ['withMappedResourceCounts' => $withMappedResourceCounts ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name, \FoundryCo\Cloudflare\Responses\ApiShieldLabelsGetUserLabel::class, ['withMappedResourceCounts' => $withMappedResourceCounts ?? null]);
 	}
 
 
 	/**
 	 * Update user label
 	 */
-	public function apiShieldPutUserLabel(
-		\FoundryCo\Cloudflare\Requests\ApiShieldPutUserLabelRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel
+	public function apiShieldPutUserLabel(\FoundryCo\Cloudflare\Requests\ApiShieldPutUserLabelRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name, \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name, \FoundryCo\Cloudflare\Responses\ApiShieldPutUserLabel::class, $request);
 	}
 
 
@@ -99,9 +97,9 @@ class APIShieldLabelsResource
 	 */
 	public function apiShieldPatchUserLabel(
 		\FoundryCo\Cloudflare\Requests\ApiShieldPatchUserLabelRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name, \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name, \FoundryCo\Cloudflare\Responses\ApiShieldPatchUserLabel::class, $request);
 	}
 
 
@@ -119,9 +117,9 @@ class APIShieldLabelsResource
 	 */
 	public function operation(
 		\FoundryCo\Cloudflare\Requests\ApiShieldLabelsReplaceOperationsAttachedToUserLabelRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name . '/resources/operation', \FoundryCo\Cloudflare\Responses\APIShieldLabelsLabel::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/labels/user/' . $name . '/resources/operation', \FoundryCo\Cloudflare\Responses\ApiShieldLabelsReplaceOperationsAttachedToUserLabel::class, $request);
 	}
 
 
@@ -130,9 +128,9 @@ class APIShieldLabelsResource
 	 */
 	public function labels(
 		\FoundryCo\Cloudflare\Requests\ApiShieldOperationsBulkPostLabelsToOperationsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperations
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations/labels', \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperations::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations/labels', \FoundryCo\Cloudflare\Responses\ApiShieldOperationsBulkPostLabelsToOperations::class, $request);
 	}
 
 
@@ -141,9 +139,9 @@ class APIShieldLabelsResource
 	 */
 	public function apiShieldOperationsBulkPutLabelsToOperations(
 		\FoundryCo\Cloudflare\Requests\ApiShieldOperationsBulkPutLabelsToOperationsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperations
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/operations/labels', \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperations::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/operations/labels', \FoundryCo\Cloudflare\Responses\ApiShieldOperationsBulkPutLabelsToOperations::class, $request);
 	}
 
 
@@ -163,9 +161,9 @@ class APIShieldLabelsResource
 	 */
 	public function apiShieldOperationsPostLabelsToOperation(
 		\FoundryCo\Cloudflare\Requests\ApiShieldOperationsPostLabelsToOperationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperation
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations/' . $operationId . '/labels', \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperation::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations/' . $operationId . '/labels', \FoundryCo\Cloudflare\Responses\ApiShieldOperationsPostLabelsToOperation::class, $request);
 	}
 
 
@@ -174,9 +172,9 @@ class APIShieldLabelsResource
 	 */
 	public function apiShieldOperationsPutLabelsToOperation(
 		\FoundryCo\Cloudflare\Requests\ApiShieldOperationsPutLabelsToOperationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperation
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/operations/' . $operationId . '/labels', \FoundryCo\Cloudflare\Responses\APIShieldLabelsOperation::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/operations/' . $operationId . '/labels', \FoundryCo\Cloudflare\Responses\ApiShieldOperationsPutLabelsToOperation::class, $request);
 	}
 
 

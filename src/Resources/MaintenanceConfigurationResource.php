@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MaintenanceConfigurationResource
 	/**
 	 * Get catalog maintenance configuration
 	 */
-	public function get(string $bucketName): \FoundryCo\Cloudflare\Responses\MaintenanceConfigurationConfig
+	public function get(string $bucketName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\MaintenanceConfigurationConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\GetMaintenanceConfig::class, []);
 	}
 
 
@@ -34,8 +34,8 @@ class MaintenanceConfigurationResource
 	public function create(
 		string $bucketName,
 		\FoundryCo\Cloudflare\Requests\UpdateMaintenanceConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MaintenanceConfigurationConfig
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\MaintenanceConfigurationConfig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\UpdateMaintenanceConfig::class, $request);
 	}
 }

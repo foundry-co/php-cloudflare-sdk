@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class WarpTeamsDeviceApiOtherResource
 	/**
 	 * Get override codes
 	 */
-	public function get(string $registrationId): \FoundryCo\Cloudflare\Responses\WarpTeamsDeviceApiOtherCodes
+	public function get(string $registrationId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/registrations/' . $registrationId . '/override_codes', \FoundryCo\Cloudflare\Responses\WarpTeamsDeviceApiOtherCodes::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/registrations/' . $registrationId . '/override_codes', \FoundryCo\Cloudflare\Responses\GetRegistrationOverrideCodes::class, []);
 	}
 }

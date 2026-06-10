@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,9 +13,9 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class AigConfigUpdateGatewayRequestSpendLimitsRulesItem
 {
 	public function __construct(
-		public float $limit,
-		public \FoundryCo\Cloudflare\Enums\AigConfigUpdateGatewayRequestSpendLimitsRulesItemLimitType $limitType,
-		public int $window,
+		public ?float $limit = null,
+		public ?\FoundryCo\Cloudflare\Enums\AigConfigUpdateGatewayRequestSpendLimitsRulesItemLimitType $limitType = null,
+		public ?int $window = null,
 		public ?bool $enabled = null,
 		public ?string $id = null,
 		public ?array $metadata = null,

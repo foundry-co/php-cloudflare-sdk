@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,30 +22,27 @@ class MagicSiteWansResource
 	/**
 	 * List Site WANs
 	 */
-	public function get(string $siteId): \FoundryCo\Cloudflare\Responses\MagicSiteWANsWans
+	public function get(string $siteId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans', \FoundryCo\Cloudflare\Responses\MagicSiteWANsWans::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans', \FoundryCo\Cloudflare\Responses\MagicSiteWansListWans::class, []);
 	}
 
 
 	/**
 	 * Create a new Site WAN
 	 */
-	public function create(
-		string $siteId,
-		\FoundryCo\Cloudflare\Requests\MagicSiteWansCreateWanRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteWANsWan
+	public function create(string $siteId, \FoundryCo\Cloudflare\Requests\MagicSiteWansCreateWanRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans', \FoundryCo\Cloudflare\Responses\MagicSiteWANsWan::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans', \FoundryCo\Cloudflare\Responses\MagicSiteWansCreateWan::class, $request);
 	}
 
 
 	/**
 	 * Site WAN Details
 	 */
-	public function wans(string $siteId, string $wanId): \FoundryCo\Cloudflare\Responses\MagicSiteWANsDetails
+	public function wans(string $siteId, string $wanId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans/' . $wanId, \FoundryCo\Cloudflare\Responses\MagicSiteWANsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans/' . $wanId, \FoundryCo\Cloudflare\Responses\MagicSiteWansWanDetails::class, []);
 	}
 
 
@@ -56,9 +53,9 @@ class MagicSiteWansResource
 		string $siteId,
 		string $wanId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteWansUpdateWanRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteWANsWan
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans/' . $wanId, \FoundryCo\Cloudflare\Responses\MagicSiteWANsWan::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans/' . $wanId, \FoundryCo\Cloudflare\Responses\MagicSiteWansUpdateWan::class, $request);
 	}
 
 
@@ -69,9 +66,9 @@ class MagicSiteWansResource
 		string $siteId,
 		string $wanId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteWansPatchWanRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteWANsWan
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans/' . $wanId, \FoundryCo\Cloudflare\Responses\MagicSiteWANsWan::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/wans/' . $wanId, \FoundryCo\Cloudflare\Responses\MagicSiteWansPatchWan::class, $request);
 	}
 
 

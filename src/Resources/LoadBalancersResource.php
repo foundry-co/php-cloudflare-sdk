@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class LoadBalancersResource
 	/**
 	 * List Load Balancers
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\LoadBalancersBalancers
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/load_balancers', \FoundryCo\Cloudflare\Responses\LoadBalancersBalancers::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/load_balancers', \FoundryCo\Cloudflare\Responses\LoadBalancersListLoadBalancers::class, []);
 	}
 
 
 	/**
 	 * Create Load Balancer
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\LoadBalancersCreateLoadBalancerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancersBalancer
+	public function create(\FoundryCo\Cloudflare\Requests\LoadBalancersCreateLoadBalancerRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/load_balancers', \FoundryCo\Cloudflare\Responses\LoadBalancersBalancer::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/load_balancers', \FoundryCo\Cloudflare\Responses\LoadBalancersCreateLoadBalancer::class, $request);
 	}
 
 
 	/**
 	 * Load Balancer Details
 	 */
-	public function get(string $loadBalancerId): \FoundryCo\Cloudflare\Responses\LoadBalancersDetails
+	public function get(string $loadBalancerId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/load_balancers/' . $loadBalancerId, \FoundryCo\Cloudflare\Responses\LoadBalancersDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/load_balancers/' . $loadBalancerId, \FoundryCo\Cloudflare\Responses\LoadBalancersLoadBalancerDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class LoadBalancersResource
 	public function update(
 		string $loadBalancerId,
 		\FoundryCo\Cloudflare\Requests\LoadBalancersUpdateLoadBalancerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancersBalancer
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/load_balancers/' . $loadBalancerId, \FoundryCo\Cloudflare\Responses\LoadBalancersBalancer::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/load_balancers/' . $loadBalancerId, \FoundryCo\Cloudflare\Responses\LoadBalancersUpdateLoadBalancer::class, $request);
 	}
 
 
@@ -66,9 +64,9 @@ class LoadBalancersResource
 	public function loadBalancers(
 		string $loadBalancerId,
 		\FoundryCo\Cloudflare\Requests\LoadBalancersPatchLoadBalancerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancersBalancer
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/load_balancers/' . $loadBalancerId, \FoundryCo\Cloudflare\Responses\LoadBalancersBalancer::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/load_balancers/' . $loadBalancerId, \FoundryCo\Cloudflare\Responses\LoadBalancersPatchLoadBalancer::class, $request);
 	}
 
 

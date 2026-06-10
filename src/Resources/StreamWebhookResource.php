@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class StreamWebhookResource
 	/**
 	 * View webhooks
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\StreamWebhookWebhooks
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/webhook', \FoundryCo\Cloudflare\Responses\StreamWebhookWebhooks::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/webhook', \FoundryCo\Cloudflare\Responses\StreamWebhookViewWebhooks::class, []);
 	}
 
 
 	/**
 	 * Create webhooks
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\StreamWebhookCreateWebhooksRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamWebhookWebhooks
+	public function update(\FoundryCo\Cloudflare\Requests\StreamWebhookCreateWebhooksRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/stream/webhook', \FoundryCo\Cloudflare\Responses\StreamWebhookWebhooks::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/stream/webhook', \FoundryCo\Cloudflare\Responses\StreamWebhookCreateWebhooks::class, $request);
 	}
 
 

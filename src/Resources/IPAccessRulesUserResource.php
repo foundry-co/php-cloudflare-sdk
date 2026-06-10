@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class IPAccessRulesUserResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\IPAccessRulesForAUserOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\IPAccessRulesForAUserDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRules
+	): mixed
 	{
-		return $this->client->get('/user/firewall/access_rules/rules', \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRules::class, ['mode' => $mode ?? null, 'configurationtarget' => $configurationtarget ?? null, 'configurationvalue' => $configurationvalue ?? null, 'notes' => $notes ?? null, 'match' => $match ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/user/firewall/access_rules/rules', \FoundryCo\Cloudflare\Responses\IpAccessRulesForAUserListIpAccessRules::class, ['mode' => $mode ?? null, 'configurationtarget' => $configurationtarget ?? null, 'configurationvalue' => $configurationvalue ?? null, 'notes' => $notes ?? null, 'match' => $match ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -42,18 +42,18 @@ class IPAccessRulesUserResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\IpAccessRulesForAUserCreateAnIpAccessRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRule
+	): mixed
 	{
-		return $this->client->post('/user/firewall/access_rules/rules', \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRule::class, $request);
+		return $this->client->post('/user/firewall/access_rules/rules', \FoundryCo\Cloudflare\Responses\IpAccessRulesForAUserCreateAnIpAccessRule::class, $request);
 	}
 
 
 	/**
 	 * Get an IP Access rule
 	 */
-	public function get(string $ruleId): \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRule
+	public function get(string $ruleId): mixed
 	{
-		return $this->client->get('/user/firewall/access_rules/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRule::class, []);
+		return $this->client->get('/user/firewall/access_rules/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\IpAccessRulesForAUserGetAnIpAccessRule::class, []);
 	}
 
 
@@ -63,9 +63,9 @@ class IPAccessRulesUserResource
 	public function update(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\IpAccessRulesForAUserUpdateAnIpAccessRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRule
+	): mixed
 	{
-		return $this->client->patch('/user/firewall/access_rules/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\IPAccessRulesForAUserRule::class, $request);
+		return $this->client->patch('/user/firewall/access_rules/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\IpAccessRulesForAUserUpdateAnIpAccessRule::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -32,38 +32,36 @@ class TokenValidationTokenRulesResource
 		mixed $ruleId = null,
 		?string $host = null,
 		?string $hostname = null,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesList
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/rules', \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesList::class, ['perPage' => $perPage ?? null, 'page' => $page ?? null, 'tokenConfiguration' => $tokenConfiguration ?? null, 'action' => $action ?? null, 'enabled' => $enabled ?? null, 'id' => $id ?? null, 'ruleId' => $ruleId ?? null, 'host' => $host ?? null, 'hostname' => $hostname ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/rules', \FoundryCo\Cloudflare\Responses\TokenValidationRulesList::class, ['perPage' => $perPage ?? null, 'page' => $page ?? null, 'tokenConfiguration' => $tokenConfiguration ?? null, 'action' => $action ?? null, 'enabled' => $enabled ?? null, 'id' => $id ?? null, 'ruleId' => $ruleId ?? null, 'host' => $host ?? null, 'hostname' => $hostname ?? null]);
 	}
 
 
 	/**
 	 * Create a token validation rule
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\TokenValidationRulesCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesCreate
+	public function create(\FoundryCo\Cloudflare\Requests\TokenValidationRulesCreateRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/rules', \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesCreate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/rules', \FoundryCo\Cloudflare\Responses\TokenValidationRulesCreate::class, $request);
 	}
 
 
 	/**
 	 * Bulk create token validation rules
 	 */
-	public function bulk(): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesCreate
+	public function bulk(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/rules/bulk', \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesCreate::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/rules/bulk', \FoundryCo\Cloudflare\Responses\TokenValidationRulesBulkCreate::class, null);
 	}
 
 
 	/**
 	 * Bulk edit token validation rules
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesEdit
+	public function update(): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/token_validation/rules/bulk', \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesEdit::class, null);
+		return $this->client->patch('/zones/' . $this->zoneId . '/token_validation/rules/bulk', \FoundryCo\Cloudflare\Responses\TokenValidationRulesBulkEdit::class, null);
 	}
 
 
@@ -79,29 +77,27 @@ class TokenValidationTokenRulesResource
 		?array $hostname = null,
 		?array $method = null,
 		?array $endpoint = null,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesPreview
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/rules/preview', \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesPreview::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/rules/preview', \FoundryCo\Cloudflare\Responses\TokenValidationRulesPreview::class, $request);
 	}
 
 
 	/**
 	 * Get a zone token validation rule
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesGet
+	public function get(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesGet::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\TokenValidationRulesGet::class, []);
 	}
 
 
 	/**
 	 * Edit a zone token validation rule
 	 */
-	public function rules(
-		\FoundryCo\Cloudflare\Requests\TokenValidationRulesEditRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesEdit
+	public function rules(\FoundryCo\Cloudflare\Requests\TokenValidationRulesEditRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/token_validation/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\TokenValidationTokenRulesEdit::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/token_validation/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\TokenValidationRulesEdit::class, $request);
 	}
 
 

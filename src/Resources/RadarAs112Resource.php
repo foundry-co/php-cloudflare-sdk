@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -32,9 +32,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Dnssec
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/dnssec', \FoundryCo\Cloudflare\Responses\RadarAS112Dnssec::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/dnssec', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesByDnssec::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -52,9 +52,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Edns
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/edns', \FoundryCo\Cloudflare\Responses\RadarAS112Edns::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/edns', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesByEdns::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -72,9 +72,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Version
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarAS112Version::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesByIpVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -91,9 +91,9 @@ class RadarAs112Resource
 		?array $queryType = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Protocol
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/protocol', \FoundryCo\Cloudflare\Responses\RadarAS112Protocol::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/protocol', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesByProtocol::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -111,9 +111,9 @@ class RadarAs112Resource
 		?array $responseCode = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Type
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/query_type', \FoundryCo\Cloudflare\Responses\RadarAS112Type::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/query_type', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesByQueryType::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -131,9 +131,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Codes
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/response_codes', \FoundryCo\Cloudflare\Responses\RadarAS112Codes::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/response_codes', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesByResponseCodes::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -153,9 +153,9 @@ class RadarAs112Resource
 		?array $responseCode = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Summary
+	): mixed
 	{
-		return $this->client->get('/radar/as112/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAS112Summary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112Summary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -174,9 +174,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Timeseries
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries', \FoundryCo\Cloudflare\Responses\RadarAS112Timeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112Timeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -195,9 +195,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Dnssec
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/dnssec', \FoundryCo\Cloudflare\Responses\RadarAS112Dnssec::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/dnssec', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroupByDnssec::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -216,9 +216,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Edns
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/edns', \FoundryCo\Cloudflare\Responses\RadarAS112Edns::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/edns', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroupByEdns::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -237,9 +237,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Version
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarAS112Version::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroupByIpVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -257,9 +257,9 @@ class RadarAs112Resource
 		?array $queryType = null,
 		?array $responseCode = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Protocol
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/protocol', \FoundryCo\Cloudflare\Responses\RadarAS112Protocol::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/protocol', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroupByProtocol::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -278,9 +278,9 @@ class RadarAs112Resource
 		?array $responseCode = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Type
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/query_type', \FoundryCo\Cloudflare\Responses\RadarAS112Type::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/query_type', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroupByQueryType::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -299,9 +299,9 @@ class RadarAs112Resource
 		?array $protocol = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Codes
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/response_codes', \FoundryCo\Cloudflare\Responses\RadarAS112Codes::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/response_codes', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroupByResponseCodes::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -322,9 +322,9 @@ class RadarAs112Resource
 		?array $responseCode = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Group
+	): mixed
 	{
-		return $this->client->get('/radar/as112/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAS112Group::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -340,9 +340,9 @@ class RadarAs112Resource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Locations
+	): mixed
 	{
-		return $this->client->get('/radar/as112/top/locations', \FoundryCo\Cloudflare\Responses\RadarAS112Locations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/top/locations', \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TopLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -359,9 +359,9 @@ class RadarAs112Resource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Dnssec
+	): mixed
 	{
-		return $this->client->get('/radar/as112/top/locations/dnssec/' . $dnssec, \FoundryCo\Cloudflare\Responses\RadarAS112Dnssec::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/top/locations/dnssec/' . $dnssec, \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TopLocationsByDnssec::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -378,9 +378,9 @@ class RadarAs112Resource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Edns
+	): mixed
 	{
-		return $this->client->get('/radar/as112/top/locations/edns/' . $edns, \FoundryCo\Cloudflare\Responses\RadarAS112Edns::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/top/locations/edns/' . $edns, \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TopLocationsByEdns::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -397,8 +397,8 @@ class RadarAs112Resource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAS112Format $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAS112Version
+	): mixed
 	{
-		return $this->client->get('/radar/as112/top/locations/ip_version/' . $ipVersion, \FoundryCo\Cloudflare\Responses\RadarAS112Version::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/as112/top/locations/ip_version/' . $ipVersion, \FoundryCo\Cloudflare\Responses\RadarGetDnsAs112TopLocationsByIpVersion::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 }

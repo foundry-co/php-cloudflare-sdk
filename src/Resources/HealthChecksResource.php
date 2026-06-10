@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,40 +22,36 @@ class HealthChecksResource
 	/**
 	 * List Health Checks
 	 */
-	public function list(?float $page = null, ?float $perPage = null): \FoundryCo\Cloudflare\Responses\HealthChecksChecks
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/healthchecks', \FoundryCo\Cloudflare\Responses\HealthChecksChecks::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/healthchecks', \FoundryCo\Cloudflare\Responses\HealthChecksListHealthChecks::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create Health Check
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\HealthChecksCreateHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	public function create(\FoundryCo\Cloudflare\Requests\HealthChecksCreateHealthCheckRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/healthchecks', \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/healthchecks', \FoundryCo\Cloudflare\Responses\HealthChecksCreateHealthCheck::class, $request);
 	}
 
 
 	/**
 	 * Create Preview Health Check
 	 */
-	public function preview(
-		\FoundryCo\Cloudflare\Requests\HealthChecksCreatePreviewHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	public function preview(\FoundryCo\Cloudflare\Requests\HealthChecksCreatePreviewHealthCheckRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/healthchecks/preview', \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/healthchecks/preview', \FoundryCo\Cloudflare\Responses\HealthChecksCreatePreviewHealthCheck::class, $request);
 	}
 
 
 	/**
 	 * Health Check Preview Details
 	 */
-	public function get(string $healthcheckId): \FoundryCo\Cloudflare\Responses\HealthChecksDetails
+	public function get(string $healthcheckId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/healthchecks/preview/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/healthchecks/preview/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksHealthCheckPreviewDetails::class, []);
 	}
 
 
@@ -71,9 +67,9 @@ class HealthChecksResource
 	/**
 	 * Health Check Details
 	 */
-	public function healthchecks(string $healthcheckId): \FoundryCo\Cloudflare\Responses\HealthChecksDetails
+	public function healthchecks(string $healthcheckId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksHealthCheckDetails::class, []);
 	}
 
 
@@ -83,9 +79,9 @@ class HealthChecksResource
 	public function update(
 		string $healthcheckId,
 		\FoundryCo\Cloudflare\Requests\HealthChecksUpdateHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksUpdateHealthCheck::class, $request);
 	}
 
 
@@ -95,9 +91,9 @@ class HealthChecksResource
 	public function healthChecksPatchHealthCheck(
 		string $healthcheckId,
 		\FoundryCo\Cloudflare\Requests\HealthChecksPatchHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksPatchHealthCheck::class, $request);
 	}
 
 
@@ -113,12 +109,9 @@ class HealthChecksResource
 	/**
 	 * List Health Checks
 	 */
-	public function smartShieldListHealthChecks(
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksChecks
+	public function smartShieldListHealthChecks(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/smart_shield/healthchecks', \FoundryCo\Cloudflare\Responses\HealthChecksChecks::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/smart_shield/healthchecks', \FoundryCo\Cloudflare\Responses\SmartShieldListHealthChecks::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -127,20 +120,18 @@ class HealthChecksResource
 	 */
 	public function smartShieldCreateHealthCheck(
 		\FoundryCo\Cloudflare\Requests\SmartShieldCreateHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/smart_shield/healthchecks', \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/smart_shield/healthchecks', \FoundryCo\Cloudflare\Responses\SmartShieldCreateHealthCheck::class, $request);
 	}
 
 
 	/**
 	 * Health Check Details
 	 */
-	public function smartShieldHealthCheckDetails(
-		string $healthcheckId,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksDetails
+	public function smartShieldHealthCheckDetails(string $healthcheckId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/smart_shield/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/smart_shield/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\SmartShieldHealthCheckDetails::class, []);
 	}
 
 
@@ -150,9 +141,9 @@ class HealthChecksResource
 	public function smartShieldUpdateHealthCheck(
 		string $healthcheckId,
 		\FoundryCo\Cloudflare\Requests\SmartShieldUpdateHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/smart_shield/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/smart_shield/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\SmartShieldUpdateHealthCheck::class, $request);
 	}
 
 
@@ -162,9 +153,9 @@ class HealthChecksResource
 	public function smartShieldPatchHealthCheck(
 		string $healthcheckId,
 		\FoundryCo\Cloudflare\Requests\SmartShieldPatchHealthCheckRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HealthChecksCheck
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/smart_shield/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\HealthChecksCheck::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/smart_shield/healthchecks/' . $healthcheckId, \FoundryCo\Cloudflare\Responses\SmartShieldPatchHealthCheck::class, $request);
 	}
 
 

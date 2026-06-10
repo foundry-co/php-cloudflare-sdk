@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,13 +17,13 @@ readonly class PostPresetsRequestPermissionsPlugins
 {
 	public function __construct(
 		/** Can close plugins that are already open */
-		public bool $canClose,
+		public ?bool $canClose = null,
 		/** Can edit plugin config */
-		public bool $canEditConfig,
+		public ?bool $canEditConfig = null,
 		/** Can start plugins */
-		public bool $canStart,
+		public ?bool $canStart = null,
 		/** Plugin configuration keyed by plugin UUID. */
-		public array $config,
+		public ?array $config = null,
 	) {
 	}
 }

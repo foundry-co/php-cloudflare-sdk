@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,19 +22,17 @@ class AutomaticSsltlsResource
 	/**
 	 * Get Automatic SSL/TLS enrollment status for the given zone
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\AutomaticSSLTLSEnrollment
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/ssl_automatic_mode', \FoundryCo\Cloudflare\Responses\AutomaticSSLTLSEnrollment::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/ssl_automatic_mode', \FoundryCo\Cloudflare\Responses\SslDetectorAutomaticModeGetEnrollment::class, []);
 	}
 
 
 	/**
 	 * Patch Automatic SSL/TLS Enrollment status for given zone
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\SslDetectorAutomaticModePatchEnrollmentRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AutomaticSSLTLSEnrollment
+	public function update(\FoundryCo\Cloudflare\Requests\SslDetectorAutomaticModePatchEnrollmentRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/settings/ssl_automatic_mode', \FoundryCo\Cloudflare\Responses\AutomaticSSLTLSEnrollment::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/settings/ssl_automatic_mode', \FoundryCo\Cloudflare\Responses\SslDetectorAutomaticModePatchEnrollment::class, $request);
 	}
 }

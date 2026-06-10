@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class DLPSensitivityLevelsResource
 	/**
 	 * Retrieve all sensitivity levels in a sensitivity group
 	 */
-	public function get(string $sensitivityGroupId): \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsList
+	public function get(string $sensitivityGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels', \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels', \FoundryCo\Cloudflare\Responses\DlpSensitivityLevelsList::class, []);
 	}
 
 
@@ -34,21 +34,18 @@ class DLPSensitivityLevelsResource
 	public function create(
 		string $sensitivityGroupId,
 		\FoundryCo\Cloudflare\Requests\DlpSensitivityLevelsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsCreate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels', \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels', \FoundryCo\Cloudflare\Responses\DlpSensitivityLevelsCreate::class, $request);
 	}
 
 
 	/**
 	 * Retrieve a specific sensitivity level.
 	 */
-	public function levels(
-		string $sensitivityGroupId,
-		string $sensitivityLevelId,
-	): \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsRead
+	public function levels(string $sensitivityGroupId, string $sensitivityLevelId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels/' . $sensitivityLevelId, \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels/' . $sensitivityLevelId, \FoundryCo\Cloudflare\Responses\DlpSensitivityLevelsRead::class, []);
 	}
 
 
@@ -59,9 +56,9 @@ class DLPSensitivityLevelsResource
 		string $sensitivityGroupId,
 		string $sensitivityLevelId,
 		\FoundryCo\Cloudflare\Requests\DlpSensitivityLevelsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels/' . $sensitivityLevelId, \FoundryCo\Cloudflare\Responses\DLPSensitivityLevelsUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/sensitivity_groups/' . $sensitivityGroupId . '/levels/' . $sensitivityLevelId, \FoundryCo\Cloudflare\Responses\DlpSensitivityLevelsUpdate::class, $request);
 	}
 
 

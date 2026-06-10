@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class OriginPostQuantumResource
 	/**
 	 * Get Origin Post-Quantum Encryption setting
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\OriginPostQuantumSetting
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/cache/origin_post_quantum_encryption', \FoundryCo\Cloudflare\Responses\OriginPostQuantumSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/cache/origin_post_quantum_encryption', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsGetOriginPostQuantumEncryptionSetting::class, []);
 	}
 
 
@@ -33,8 +33,8 @@ class OriginPostQuantumResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ZoneCacheSettingsChangeOriginPostQuantumEncryptionSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OriginPostQuantumSetting
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/cache/origin_post_quantum_encryption', \FoundryCo\Cloudflare\Responses\OriginPostQuantumSetting::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/cache/origin_post_quantum_encryption', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsChangeOriginPostQuantumEncryptionSetting::class, $request);
 	}
 }

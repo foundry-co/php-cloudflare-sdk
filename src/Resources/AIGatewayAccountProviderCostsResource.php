@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,29 +30,27 @@ class AIGatewayAccountProviderCostsResource
 		?\FoundryCo\Cloudflare\Enums\AIGatewayAccountProviderCostsModelRule $modelRule = null,
 		?string $costType = null,
 		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs', \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'enable' => $enable ?? null, 'accountProviderId' => $accountProviderId ?? null, 'modelRule' => $modelRule ?? null, 'costType' => $costType ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs', \FoundryCo\Cloudflare\Responses\AigConfigListAccountProviderCost::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'enable' => $enable ?? null, 'accountProviderId' => $accountProviderId ?? null, 'modelRule' => $modelRule ?? null, 'costType' => $costType ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Create a new Account Provider Cost
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AigConfigCreateAccountProviderCostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost
+	public function create(\FoundryCo\Cloudflare\Requests\AigConfigCreateAccountProviderCostRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs', \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs', \FoundryCo\Cloudflare\Responses\AigConfigCreateAccountProviderCost::class, $request);
 	}
 
 
 	/**
 	 * Fetch a Account Provider Cost
 	 */
-	public function get(string $id): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost
+	public function get(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigFetchAccountProviderCost::class, []);
 	}
 
 
@@ -62,9 +60,9 @@ class AIGatewayAccountProviderCostsResource
 	public function update(
 		string $id,
 		\FoundryCo\Cloudflare\Requests\AigConfigUpdateAccountProviderCostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayAccountProviderCostsCost::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/costs/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigUpdateAccountProviderCost::class, $request);
 	}
 
 

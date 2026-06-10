@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,32 +21,27 @@ class WaitingRoomResource
 	/**
 	 * List waiting rooms for account
 	 */
-	public function list(?float $page = null, ?float $perPage = null): \FoundryCo\Cloudflare\Responses\WaitingRoomAccount
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/waiting_rooms', \FoundryCo\Cloudflare\Responses\WaitingRoomAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/waiting_rooms', \FoundryCo\Cloudflare\Responses\WaitingRoomListWaitingRoomsAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * List waiting rooms for zone
 	 */
-	public function waitingRooms(
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRooms
+	public function waitingRooms(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms', \FoundryCo\Cloudflare\Responses\WaitingRoomRooms::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms', \FoundryCo\Cloudflare\Responses\WaitingRoomListWaitingRooms::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create waiting room
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\WaitingRoomCreateWaitingRoomRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRoom
+	public function create(\FoundryCo\Cloudflare\Requests\WaitingRoomCreateWaitingRoomRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms', \FoundryCo\Cloudflare\Responses\WaitingRoomRoom::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms', \FoundryCo\Cloudflare\Responses\WaitingRoomCreateWaitingRoom::class, $request);
 	}
 
 
@@ -55,29 +50,27 @@ class WaitingRoomResource
 	 */
 	public function preview(
 		\FoundryCo\Cloudflare\Requests\WaitingRoomCreateACustomWaitingRoomPagePreviewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomPreview
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms/preview', \FoundryCo\Cloudflare\Responses\WaitingRoomPreview::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms/preview', \FoundryCo\Cloudflare\Responses\WaitingRoomCreateACustomWaitingRoomPagePreview::class, $request);
 	}
 
 
 	/**
 	 * Get zone-level Waiting Room settings
 	 */
-	public function settings(): \FoundryCo\Cloudflare\Responses\WaitingRoomSettings
+	public function settings(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/settings', \FoundryCo\Cloudflare\Responses\WaitingRoomSettings::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/settings', \FoundryCo\Cloudflare\Responses\WaitingRoomGetZoneSettings::class, []);
 	}
 
 
 	/**
 	 * Update zone-level Waiting Room settings
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\WaitingRoomUpdateZoneSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomSettings
+	public function update(\FoundryCo\Cloudflare\Requests\WaitingRoomUpdateZoneSettingsRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/settings', \FoundryCo\Cloudflare\Responses\WaitingRoomSettings::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/settings', \FoundryCo\Cloudflare\Responses\WaitingRoomUpdateZoneSettings::class, $request);
 	}
 
 
@@ -86,18 +79,18 @@ class WaitingRoomResource
 	 */
 	public function waitingRoomPatchZoneSettings(
 		\FoundryCo\Cloudflare\Requests\WaitingRoomPatchZoneSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomSettings
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/settings', \FoundryCo\Cloudflare\Responses\WaitingRoomSettings::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/settings', \FoundryCo\Cloudflare\Responses\WaitingRoomPatchZoneSettings::class, $request);
 	}
 
 
 	/**
 	 * Waiting room details
 	 */
-	public function get(string $waitingRoomId): \FoundryCo\Cloudflare\Responses\WaitingRoomDetails
+	public function get(string $waitingRoomId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId, \FoundryCo\Cloudflare\Responses\WaitingRoomDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId, \FoundryCo\Cloudflare\Responses\WaitingRoomWaitingRoomDetails::class, []);
 	}
 
 
@@ -107,9 +100,9 @@ class WaitingRoomResource
 	public function waitingRoomUpdateWaitingRoom(
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomUpdateWaitingRoomRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRoom
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId, \FoundryCo\Cloudflare\Responses\WaitingRoomRoom::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId, \FoundryCo\Cloudflare\Responses\WaitingRoomUpdateWaitingRoom::class, $request);
 	}
 
 
@@ -119,9 +112,9 @@ class WaitingRoomResource
 	public function waitingRoomPatchWaitingRoom(
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomPatchWaitingRoomRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRoom
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId, \FoundryCo\Cloudflare\Responses\WaitingRoomRoom::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId, \FoundryCo\Cloudflare\Responses\WaitingRoomPatchWaitingRoom::class, $request);
 	}
 
 
@@ -137,13 +130,9 @@ class WaitingRoomResource
 	/**
 	 * List events
 	 */
-	public function events(
-		string $waitingRoomId,
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomEvents
+	public function events(string $waitingRoomId, ?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events', \FoundryCo\Cloudflare\Responses\WaitingRoomEvents::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events', \FoundryCo\Cloudflare\Responses\WaitingRoomListEvents::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -153,21 +142,18 @@ class WaitingRoomResource
 	public function waitingRoomCreateEvent(
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomCreateEventRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomEvent
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events', \FoundryCo\Cloudflare\Responses\WaitingRoomEvent::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events', \FoundryCo\Cloudflare\Responses\WaitingRoomCreateEvent::class, $request);
 	}
 
 
 	/**
 	 * Event details
 	 */
-	public function waitingRoomEventDetails(
-		string $eventId,
-		string $waitingRoomId,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomDetails
+	public function waitingRoomEventDetails(string $eventId, string $waitingRoomId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId, \FoundryCo\Cloudflare\Responses\WaitingRoomDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId, \FoundryCo\Cloudflare\Responses\WaitingRoomEventDetails::class, []);
 	}
 
 
@@ -178,9 +164,9 @@ class WaitingRoomResource
 		string $eventId,
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomUpdateEventRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomEvent
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId, \FoundryCo\Cloudflare\Responses\WaitingRoomEvent::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId, \FoundryCo\Cloudflare\Responses\WaitingRoomUpdateEvent::class, $request);
 	}
 
 
@@ -191,9 +177,9 @@ class WaitingRoomResource
 		string $eventId,
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomPatchEventRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomEvent
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId, \FoundryCo\Cloudflare\Responses\WaitingRoomEvent::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId, \FoundryCo\Cloudflare\Responses\WaitingRoomPatchEvent::class, $request);
 	}
 
 
@@ -209,18 +195,18 @@ class WaitingRoomResource
 	/**
 	 * Preview active event details
 	 */
-	public function details(string $eventId, string $waitingRoomId): \FoundryCo\Cloudflare\Responses\WaitingRoomDetails
+	public function details(string $eventId, string $waitingRoomId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId . '/details', \FoundryCo\Cloudflare\Responses\WaitingRoomDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/events/' . $eventId . '/details', \FoundryCo\Cloudflare\Responses\WaitingRoomPreviewActiveEventDetails::class, []);
 	}
 
 
 	/**
 	 * List Waiting Room Rules
 	 */
-	public function rules(string $waitingRoomId): \FoundryCo\Cloudflare\Responses\WaitingRoomRules
+	public function rules(string $waitingRoomId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules', \FoundryCo\Cloudflare\Responses\WaitingRoomRules::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules', \FoundryCo\Cloudflare\Responses\WaitingRoomListWaitingRoomRules::class, []);
 	}
 
 
@@ -230,20 +216,18 @@ class WaitingRoomResource
 	public function waitingRoomCreateWaitingRoomRule(
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomCreateWaitingRoomRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRule
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules', \FoundryCo\Cloudflare\Responses\WaitingRoomRule::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules', \FoundryCo\Cloudflare\Responses\WaitingRoomCreateWaitingRoomRule::class, $request);
 	}
 
 
 	/**
 	 * Replace Waiting Room Rules
 	 */
-	public function waitingRoomReplaceWaitingRoomRules(
-		string $waitingRoomId,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRules
+	public function waitingRoomReplaceWaitingRoomRules(string $waitingRoomId): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules', \FoundryCo\Cloudflare\Responses\WaitingRoomRules::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules', \FoundryCo\Cloudflare\Responses\WaitingRoomReplaceWaitingRoomRules::class, null);
 	}
 
 
@@ -254,9 +238,9 @@ class WaitingRoomResource
 		string $ruleId,
 		string $waitingRoomId,
 		\FoundryCo\Cloudflare\Requests\WaitingRoomPatchWaitingRoomRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WaitingRoomRule
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\WaitingRoomRule::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\WaitingRoomPatchWaitingRoomRule::class, $request);
 	}
 
 
@@ -272,8 +256,8 @@ class WaitingRoomResource
 	/**
 	 * Get waiting room status
 	 */
-	public function status(string $waitingRoomId): \FoundryCo\Cloudflare\Responses\WaitingRoomStatus
+	public function status(string $waitingRoomId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/status', \FoundryCo\Cloudflare\Responses\WaitingRoomStatus::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/waiting_rooms/' . $waitingRoomId . '/status', \FoundryCo\Cloudflare\Responses\WaitingRoomGetWaitingRoomStatus::class, []);
 	}
 }

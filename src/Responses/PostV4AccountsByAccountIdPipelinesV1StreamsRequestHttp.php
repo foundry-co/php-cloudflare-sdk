@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,9 +14,9 @@ readonly class PostV4AccountsByAccountIdPipelinesV1StreamsRequestHttp
 {
 	public function __construct(
 		/** Indicates that authentication is required for the HTTP endpoint. */
-		public bool $authentication,
+		public ?bool $authentication = null,
 		/** Indicates that the HTTP endpoint is enabled. */
-		public bool $enabled,
+		public ?bool $enabled = null,
 		/** Specifies the CORS options for the HTTP endpoint. */
 		public ?PostV4AccountsByAccountIdPipelinesV1StreamsRequestHttpCors $cors = null,
 	) {

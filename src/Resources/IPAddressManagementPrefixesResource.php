@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class IPAddressManagementPrefixesResource
 	/**
 	 * Upload LOA Document
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesDocument
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/addressing/loa_documents', \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesDocument::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/addressing/loa_documents', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesUploadLoaDocument::class, null);
 	}
 
 
@@ -40,31 +40,27 @@ class IPAddressManagementPrefixesResource
 	/**
 	 * List Prefixes
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesPrefixes
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes', \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesPrefixes::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesListPrefixes::class, []);
 	}
 
 
 	/**
 	 * Add Prefix
 	 */
-	public function prefixes(
-		\FoundryCo\Cloudflare\Requests\IpAddressManagementPrefixesAddPrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesPrefix
+	public function prefixes(\FoundryCo\Cloudflare\Requests\IpAddressManagementPrefixesAddPrefixRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes', \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesPrefix::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesAddPrefix::class, $request);
 	}
 
 
 	/**
 	 * Prefix Details
 	 */
-	public function ipAddressManagementPrefixesPrefixDetails(
-		string $prefixId,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesDetails
+	public function ipAddressManagementPrefixesPrefixDetails(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesPrefixDetails::class, []);
 	}
 
 
@@ -74,9 +70,9 @@ class IPAddressManagementPrefixesResource
 	public function update(
 		string $prefixId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementPrefixesUpdatePrefixDescriptionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesDescription
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixesDescription::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesUpdatePrefixDescription::class, $request);
 	}
 
 

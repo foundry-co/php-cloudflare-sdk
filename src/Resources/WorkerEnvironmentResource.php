@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -36,21 +36,18 @@ class WorkerEnvironmentResource
 		string $environmentName,
 		?string $cFWORKERBODYPART = null,
 		?string $cFWORKERMAINMODULEPART = null,
-	): \FoundryCo\Cloudflare\Responses\WorkerEnvironmentContent
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/services/' . $serviceName . '/environments/' . $environmentName . '/content', \FoundryCo\Cloudflare\Responses\WorkerEnvironmentContent::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/services/' . $serviceName . '/environments/' . $environmentName . '/content', \FoundryCo\Cloudflare\Responses\WorkerEnvironmentPutScriptContent::class, null);
 	}
 
 
 	/**
 	 * Get Script Settings
 	 */
-	public function settings(
-		string $serviceName,
-		string $environmentName,
-	): \FoundryCo\Cloudflare\Responses\WorkerEnvironmentSettings
+	public function settings(string $serviceName, string $environmentName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/services/' . $serviceName . '/environments/' . $environmentName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerEnvironmentSettings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/services/' . $serviceName . '/environments/' . $environmentName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerScriptEnvironmentGetSettings::class, []);
 	}
 
 
@@ -61,8 +58,8 @@ class WorkerEnvironmentResource
 		string $serviceName,
 		string $environmentName,
 		\FoundryCo\Cloudflare\Requests\WorkerScriptEnvironmentPatchSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerEnvironmentSettings
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/services/' . $serviceName . '/environments/' . $environmentName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerEnvironmentSettings::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/services/' . $serviceName . '/environments/' . $environmentName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerScriptEnvironmentPatchSettings::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,9 @@ class DLPIntegrationEntriesResource
 	/**
 	 * Create integration entry
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpEntriesCreateIntegrationEntryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPIntegrationEntriesEntry
+	public function create(\FoundryCo\Cloudflare\Requests\DlpEntriesCreateIntegrationEntryRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/entries/integration', \FoundryCo\Cloudflare\Responses\DLPIntegrationEntriesEntry::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/entries/integration', \FoundryCo\Cloudflare\Responses\DlpEntriesCreateIntegrationEntry::class, $request);
 	}
 
 
@@ -36,9 +34,9 @@ class DLPIntegrationEntriesResource
 	public function update(
 		string $entryId,
 		\FoundryCo\Cloudflare\Requests\DlpEntriesUpdateIntegrationEntryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPIntegrationEntriesEntry
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/entries/integration/' . $entryId, \FoundryCo\Cloudflare\Responses\DLPIntegrationEntriesEntry::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/entries/integration/' . $entryId, \FoundryCo\Cloudflare\Responses\DlpEntriesUpdateIntegrationEntry::class, $request);
 	}
 
 

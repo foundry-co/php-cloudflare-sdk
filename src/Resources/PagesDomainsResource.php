@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class PagesDomainsResource
 	/**
 	 * Get domains
 	 */
-	public function get(string $projectName): \FoundryCo\Cloudflare\Responses\PagesDomainsDomains
+	public function get(string $projectName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains', \FoundryCo\Cloudflare\Responses\PagesDomainsDomains::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains', \FoundryCo\Cloudflare\Responses\PagesDomainsGetDomains::class, []);
 	}
 
 
@@ -34,27 +34,27 @@ class PagesDomainsResource
 	public function create(
 		string $projectName,
 		\FoundryCo\Cloudflare\Requests\PagesDomainsAddDomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PagesDomainsDomain
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains', \FoundryCo\Cloudflare\Responses\PagesDomainsDomain::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains', \FoundryCo\Cloudflare\Responses\PagesDomainsAddDomain::class, $request);
 	}
 
 
 	/**
 	 * Get domain
 	 */
-	public function domains(string $domainName, string $projectName): \FoundryCo\Cloudflare\Responses\PagesDomainsDomain
+	public function domains(string $domainName, string $projectName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains/' . $domainName, \FoundryCo\Cloudflare\Responses\PagesDomainsDomain::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains/' . $domainName, \FoundryCo\Cloudflare\Responses\PagesDomainsGetDomain::class, []);
 	}
 
 
 	/**
 	 * Patch domain
 	 */
-	public function update(string $domainName, string $projectName): \FoundryCo\Cloudflare\Responses\PagesDomainsDomain
+	public function update(string $domainName, string $projectName): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains/' . $domainName, \FoundryCo\Cloudflare\Responses\PagesDomainsDomain::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/domains/' . $domainName, \FoundryCo\Cloudflare\Responses\PagesDomainsPatchDomain::class, null);
 	}
 
 

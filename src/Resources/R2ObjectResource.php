@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,9 +30,9 @@ class R2ObjectResource
 		?string $delimiter = null,
 		?string $cursor = null,
 		?string $startAfter = null,
-	): \FoundryCo\Cloudflare\Responses\R2ObjectObjects
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2/buckets/' . $bucketName . '/objects', \FoundryCo\Cloudflare\Responses\R2ObjectObjects::class, ['cfR2Jurisdiction' => $cfR2Jurisdiction ?? null, 'perPage' => $perPage ?? null, 'prefix' => $prefix ?? null, 'delimiter' => $delimiter ?? null, 'cursor' => $cursor ?? null, 'startAfter' => $startAfter ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2/buckets/' . $bucketName . '/objects', \FoundryCo\Cloudflare\Responses\R2ListObjects::class, ['cfR2Jurisdiction' => $cfR2Jurisdiction ?? null, 'perPage' => $perPage ?? null, 'prefix' => $prefix ?? null, 'delimiter' => $delimiter ?? null, 'cursor' => $cursor ?? null, 'startAfter' => $startAfter ?? null]);
 	}
 
 

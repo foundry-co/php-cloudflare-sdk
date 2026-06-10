@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,9 +28,9 @@ class RadarAIInferenceResource
 		?array $dateEnd = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIInferenceModel
+	): mixed
 	{
-		return $this->client->get('/radar/ai/inference/summary/model', \FoundryCo\Cloudflare\Responses\RadarAIInferenceModel::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/inference/summary/model', \FoundryCo\Cloudflare\Responses\RadarGetAiInferenceSummaryByModel::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -44,9 +44,9 @@ class RadarAIInferenceResource
 		?array $dateEnd = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIInferenceTask
+	): mixed
 	{
-		return $this->client->get('/radar/ai/inference/summary/task', \FoundryCo\Cloudflare\Responses\RadarAIInferenceTask::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/inference/summary/task', \FoundryCo\Cloudflare\Responses\RadarGetAiInferenceSummaryByTask::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -64,9 +64,9 @@ class RadarAIInferenceResource
 		?array $continent = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIInferenceSummary
+	): mixed
 	{
-		return $this->client->get('/radar/ai/inference/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAIInferenceSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/inference/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAiInferenceSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -81,9 +81,9 @@ class RadarAIInferenceResource
 		?array $dateEnd = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIInferenceModel
+	): mixed
 	{
-		return $this->client->get('/radar/ai/inference/timeseries_groups/model', \FoundryCo\Cloudflare\Responses\RadarAIInferenceModel::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/inference/timeseries_groups/model', \FoundryCo\Cloudflare\Responses\RadarGetAiInferenceTimeseriesGroupByModel::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -98,9 +98,9 @@ class RadarAIInferenceResource
 		?array $dateEnd = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIInferenceTask
+	): mixed
 	{
-		return $this->client->get('/radar/ai/inference/timeseries_groups/task', \FoundryCo\Cloudflare\Responses\RadarAIInferenceTask::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/inference/timeseries_groups/task', \FoundryCo\Cloudflare\Responses\RadarGetAiInferenceTimeseriesGroupByTask::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -120,8 +120,8 @@ class RadarAIInferenceResource
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIInferenceFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIInferenceGroup
+	): mixed
 	{
-		return $this->client->get('/radar/ai/inference/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAIInferenceGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/inference/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAiInferenceTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 }

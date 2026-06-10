@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class PutZonesZoneIdentifierZarazConfigRequestConsentButtonTextTranslat
 {
 	public function __construct(
 		/** Object where keys are language codes. */
-		public array $acceptAll,
+		public ?array $acceptAll = null,
 		/** Object where keys are language codes. */
-		public array $confirmMyChoices,
+		public ?array $confirmMyChoices = null,
 		/** Object where keys are language codes. */
-		public array $rejectAll,
+		public ?array $rejectAll = null,
 	) {
 	}
 }

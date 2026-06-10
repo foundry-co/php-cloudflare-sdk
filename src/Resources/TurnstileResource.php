@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,40 +22,36 @@ class TurnstileResource
 	/**
 	 * List Turnstile Widgets
 	 */
-	public function list(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/challenges/widgets', \FoundryCo\Cloudflare\Responses\TurnstileList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/challenges/widgets', \FoundryCo\Cloudflare\Responses\AccountsTurnstileWidgetsList::class, []);
 	}
 
 
 	/**
 	 * Create a Turnstile Widget
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccountsTurnstileWidgetCreateRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function create(\FoundryCo\Cloudflare\Requests\AccountsTurnstileWidgetCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/challenges/widgets', \FoundryCo\Cloudflare\Responses\TurnstileCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/challenges/widgets', \FoundryCo\Cloudflare\Responses\AccountsTurnstileWidgetCreate::class, $request);
 	}
 
 
 	/**
 	 * Turnstile Widget Details
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\TurnstileGet
+	public function get(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/challenges/widgets/' . $sitekey, \FoundryCo\Cloudflare\Responses\TurnstileGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/challenges/widgets/' . $sitekey, \FoundryCo\Cloudflare\Responses\AccountsTurnstileWidgetGet::class, []);
 	}
 
 
 	/**
 	 * Update a Turnstile Widget
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\AccountsTurnstileWidgetUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TurnstileUpdate
+	public function update(\FoundryCo\Cloudflare\Requests\AccountsTurnstileWidgetUpdateRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/challenges/widgets/' . $sitekey, \FoundryCo\Cloudflare\Responses\TurnstileUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/challenges/widgets/' . $sitekey, \FoundryCo\Cloudflare\Responses\AccountsTurnstileWidgetUpdate::class, $request);
 	}
 
 
@@ -73,8 +69,8 @@ class TurnstileResource
 	 */
 	public function rotateSecret(
 		\FoundryCo\Cloudflare\Requests\AccountsTurnstileWidgetRotateSecretRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TurnstileSecret
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/challenges/widgets/' . $sitekey . '/rotate_secret', \FoundryCo\Cloudflare\Responses\TurnstileSecret::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/challenges/widgets/' . $sitekey . '/rotate_secret', \FoundryCo\Cloudflare\Responses\AccountsTurnstileWidgetRotateSecret::class, $request);
 	}
 }

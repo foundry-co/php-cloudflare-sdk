@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,9 +34,9 @@ class DNSInternalViewsResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\DNSInternalViewsForAnAccountOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\DNSInternalViewsForAnAccountDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountViews
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_settings/views', \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountViews::class, ['name' => $name ?? null, 'nameexact' => $nameexact ?? null, 'namecontains' => $namecontains ?? null, 'namestartswith' => $namestartswith ?? null, 'nameendswith' => $nameendswith ?? null, 'zoneName' => $zoneName ?? null, 'match' => $match ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_settings/views', \FoundryCo\Cloudflare\Responses\DnsViewsForAnAccountListInternalDnsViews::class, ['name' => $name ?? null, 'nameexact' => $nameexact ?? null, 'namecontains' => $namecontains ?? null, 'namestartswith' => $namestartswith ?? null, 'nameendswith' => $nameendswith ?? null, 'zoneName' => $zoneName ?? null, 'match' => $match ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -45,18 +45,18 @@ class DNSInternalViewsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\DnsViewsForAnAccountCreateInternalDnsViewsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountViews
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dns_settings/views', \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountViews::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dns_settings/views', \FoundryCo\Cloudflare\Responses\DnsViewsForAnAccountCreateInternalDnsViews::class, $request);
 	}
 
 
 	/**
 	 * DNS Internal View Details
 	 */
-	public function get(string $viewId): \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountView
+	public function get(string $viewId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_settings/views/' . $viewId, \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountView::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_settings/views/' . $viewId, \FoundryCo\Cloudflare\Responses\DnsViewsForAnAccountGetInternalDnsView::class, []);
 	}
 
 
@@ -66,9 +66,9 @@ class DNSInternalViewsResource
 	public function update(
 		string $viewId,
 		\FoundryCo\Cloudflare\Requests\DnsViewsForAnAccountUpdateInternalDnsViewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountView
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/dns_settings/views/' . $viewId, \FoundryCo\Cloudflare\Responses\DNSInternalViewsForAnAccountView::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/dns_settings/views/' . $viewId, \FoundryCo\Cloudflare\Responses\DnsViewsForAnAccountUpdateInternalDnsView::class, $request);
 	}
 
 

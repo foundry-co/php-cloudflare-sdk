@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class DeploymentsResource
 	/**
 	 * Get credentials to SSH into a Container
 	 */
-	public function get(string $instanceId): \FoundryCo\Cloudflare\Responses\DeploymentsContainerWranglerSsh
+	public function get(string $instanceId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/containers/instances/' . $instanceId . '/ssh', \FoundryCo\Cloudflare\Responses\DeploymentsContainerWranglerSsh::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/containers/instances/' . $instanceId . '/ssh', \FoundryCo\Cloudflare\Responses\ContainerWranglerSsh::class, []);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class DLPDocumentFingerprintsResource
 	/**
 	 * Retrieve data about all document fingerprints.
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsAll
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/document_fingerprints', \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsAll::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/document_fingerprints', \FoundryCo\Cloudflare\Responses\DlpDocumentFingerprintsReadAll::class, []);
 	}
 
 
 	/**
 	 * Creates a new document fingerprint.
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpDocumentFingerprintsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\DlpDocumentFingerprintsCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/document_fingerprints', \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/document_fingerprints', \FoundryCo\Cloudflare\Responses\DlpDocumentFingerprintsCreate::class, $request);
 	}
 
 
 	/**
 	 * Retrieve data about a specific document fingerprint.
 	 */
-	public function get(string $documentFingerprintId): \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsRead
+	public function get(string $documentFingerprintId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/document_fingerprints/' . $documentFingerprintId, \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/document_fingerprints/' . $documentFingerprintId, \FoundryCo\Cloudflare\Responses\DlpDocumentFingerprintsRead::class, []);
 	}
 
 
@@ -54,18 +52,18 @@ class DLPDocumentFingerprintsResource
 	public function documentFingerprints(
 		string $documentFingerprintId,
 		\FoundryCo\Cloudflare\Requests\DlpDocumentFingerprintsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsUpdate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/document_fingerprints/' . $documentFingerprintId, \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsUpdate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/document_fingerprints/' . $documentFingerprintId, \FoundryCo\Cloudflare\Responses\DlpDocumentFingerprintsUpdate::class, $request);
 	}
 
 
 	/**
 	 * Uploads a new version for a document fingerprint.
 	 */
-	public function update(string $documentFingerprintId): \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsUpload
+	public function update(string $documentFingerprintId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/document_fingerprints/' . $documentFingerprintId, \FoundryCo\Cloudflare\Responses\DLPDocumentFingerprintsUpload::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/document_fingerprints/' . $documentFingerprintId, \FoundryCo\Cloudflare\Responses\DlpDocumentFingerprintsUpload::class, null);
 	}
 
 

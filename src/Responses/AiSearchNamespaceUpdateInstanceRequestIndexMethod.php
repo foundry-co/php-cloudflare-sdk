@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class AiSearchNamespaceUpdateInstanceRequestIndexMethod
 {
 	public function __construct(
 		/** Enable keyword (BM25) storage backend. */
-		public bool $keyword,
+		public ?bool $keyword = null,
 		/** Enable vector (embedding) storage backend. */
-		public bool $vector,
+		public ?bool $vector = null,
 	) {
 	}
 }

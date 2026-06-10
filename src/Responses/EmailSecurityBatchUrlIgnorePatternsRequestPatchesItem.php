@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,7 +13,7 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class EmailSecurityBatchUrlIgnorePatternsRequestPatchesItem
 {
 	public function __construct(
-		public mixed $id,
+		public mixed $id = null,
 		/** Optional note describing the reason for the ignore pattern. */
 		public ?string $comments = null,
 		/** Regular expression matching URLs that should not be rewritten. */

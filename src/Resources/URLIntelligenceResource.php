@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class URLIntelligenceResource
 	/**
 	 * Get URL Intelligence
 	 */
-	public function list(?string $url = null): \FoundryCo\Cloudflare\Responses\URLIntelligenceIntelligence
+	public function list(?string $url = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/url', \FoundryCo\Cloudflare\Responses\URLIntelligenceIntelligence::class, ['url' => $url ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/url', \FoundryCo\Cloudflare\Responses\UrlIntelligenceGetUrlIntelligence::class, ['url' => $url ?? null]);
 	}
 }

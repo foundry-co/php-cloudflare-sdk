@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -44,7 +44,7 @@ class AIGatewayLogsResource
 		?float $maxTotalTokens = null,
 		?float $minDuration = null,
 		?float $maxDuration = null,
-		mixed $feedback = null,
+		?\FoundryCo\Cloudflare\Enums\AIGatewayLogsFeedback $feedback = null,
 		?bool $success = null,
 		?bool $cached = null,
 		?string $model = null,
@@ -52,9 +52,9 @@ class AIGatewayLogsResource
 		?string $provider = null,
 		?string $requestContentType = null,
 		?string $responseContentType = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayLogsLogs
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/logs', \FoundryCo\Cloudflare\Responses\AIGatewayLogsLogs::class, ['search' => $search ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null, 'filters' => $filters ?? null, 'metaInfo' => $metaInfo ?? null, 'direction' => $direction ?? null, 'startDate' => $startDate ?? null, 'endDate' => $endDate ?? null, 'minCost' => $minCost ?? null, 'maxCost' => $maxCost ?? null, 'minTokensIn' => $minTokensIn ?? null, 'maxTokensIn' => $maxTokensIn ?? null, 'minTokensOut' => $minTokensOut ?? null, 'maxTokensOut' => $maxTokensOut ?? null, 'minTotalTokens' => $minTotalTokens ?? null, 'maxTotalTokens' => $maxTotalTokens ?? null, 'minDuration' => $minDuration ?? null, 'maxDuration' => $maxDuration ?? null, 'feedback' => $feedback ?? null, 'success' => $success ?? null, 'cached' => $cached ?? null, 'model' => $model ?? null, 'modelType' => $modelType ?? null, 'provider' => $provider ?? null, 'requestContentType' => $requestContentType ?? null, 'responseContentType' => $responseContentType ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/logs', \FoundryCo\Cloudflare\Responses\AigConfigListGatewayLogs::class, ['search' => $search ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null, 'filters' => $filters ?? null, 'metaInfo' => $metaInfo ?? null, 'direction' => $direction ?? null, 'startDate' => $startDate ?? null, 'endDate' => $endDate ?? null, 'minCost' => $minCost ?? null, 'maxCost' => $maxCost ?? null, 'minTokensIn' => $minTokensIn ?? null, 'maxTokensIn' => $maxTokensIn ?? null, 'minTokensOut' => $minTokensOut ?? null, 'maxTokensOut' => $maxTokensOut ?? null, 'minTotalTokens' => $minTotalTokens ?? null, 'maxTotalTokens' => $maxTotalTokens ?? null, 'minDuration' => $minDuration ?? null, 'maxDuration' => $maxDuration ?? null, 'feedback' => $feedback ?? null, 'success' => $success ?? null, 'cached' => $cached ?? null, 'model' => $model ?? null, 'modelType' => $modelType ?? null, 'provider' => $provider ?? null, 'requestContentType' => $requestContentType ?? null, 'responseContentType' => $responseContentType ?? null]);
 	}
 
 
@@ -76,9 +76,9 @@ class AIGatewayLogsResource
 	/**
 	 * Get Gateway Log Detail
 	 */
-	public function logs(string $id, string $gatewayId): \FoundryCo\Cloudflare\Responses\AIGatewayLogsDetail
+	public function logs(string $id, string $gatewayId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/logs/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayLogsDetail::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/logs/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigGetGatewayLogDetail::class, []);
 	}
 
 

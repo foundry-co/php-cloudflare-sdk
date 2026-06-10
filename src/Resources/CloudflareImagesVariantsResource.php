@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,20 +31,18 @@ class CloudflareImagesVariantsResource
 	/**
 	 * Create a variant
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CloudflareImagesVariantsCreateAVariantRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsVariant
+	public function create(\FoundryCo\Cloudflare\Requests\CloudflareImagesVariantsCreateAVariantRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/images/v1/variants', \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsVariant::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/images/v1/variants', \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsCreateAVariant::class, $request);
 	}
 
 
 	/**
 	 * Variant details
 	 */
-	public function get(string $variantId): \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsDetails
+	public function get(string $variantId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/variants/' . $variantId, \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/variants/' . $variantId, \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsVariantDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class CloudflareImagesVariantsResource
 	public function update(
 		string $variantId,
 		\FoundryCo\Cloudflare\Requests\CloudflareImagesVariantsUpdateAVariantRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsVariant
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/images/v1/variants/' . $variantId, \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsVariant::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/images/v1/variants/' . $variantId, \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsUpdateAVariant::class, $request);
 	}
 
 
@@ -72,8 +70,8 @@ class CloudflareImagesVariantsResource
 	/**
 	 * Variant details (flat)
 	 */
-	public function flat(string $variantId): \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsFlat
+	public function flat(string $variantId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/variants/' . $variantId . '/flat', \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsFlat::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/images/v1/variants/' . $variantId . '/flat', \FoundryCo\Cloudflare\Responses\CloudflareImagesVariantsVariantDetailsFlat::class, []);
 	}
 }

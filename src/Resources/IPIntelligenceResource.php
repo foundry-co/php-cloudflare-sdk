@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,8 @@ class IPIntelligenceResource
 	/**
 	 * Get IP Overview
 	 */
-	public function list(
-		?string $ipv4 = null,
-		?string $ipv6 = null,
-	): \FoundryCo\Cloudflare\Responses\IPIntelligenceOverview
+	public function list(?string $ipv4 = null, ?string $ipv6 = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/ip', \FoundryCo\Cloudflare\Responses\IPIntelligenceOverview::class, ['ipv4' => $ipv4 ?? null, 'ipv6' => $ipv6 ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/ip', \FoundryCo\Cloudflare\Responses\IpIntelligenceGetIpOverview::class, ['ipv4' => $ipv4 ?? null, 'ipv6' => $ipv6 ?? null]);
 	}
 }

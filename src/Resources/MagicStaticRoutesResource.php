@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,31 +22,27 @@ class MagicStaticRoutesResource
 	/**
 	 * List Routes
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoutes
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/routes', \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoutes::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/routes', \FoundryCo\Cloudflare\Responses\MagicStaticRoutesListRoutes::class, []);
 	}
 
 
 	/**
 	 * Create a Route
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\MagicStaticRoutesCreateRoutesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoutes
+	public function create(\FoundryCo\Cloudflare\Requests\MagicStaticRoutesCreateRoutesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/routes', \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoutes::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/routes', \FoundryCo\Cloudflare\Responses\MagicStaticRoutesCreateRoutes::class, $request);
 	}
 
 
 	/**
 	 * Update Many Routes
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\MagicStaticRoutesUpdateManyRoutesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoutes
+	public function update(\FoundryCo\Cloudflare\Requests\MagicStaticRoutesUpdateManyRoutesRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/routes', \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoutes::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/routes', \FoundryCo\Cloudflare\Responses\MagicStaticRoutesUpdateManyRoutes::class, $request);
 	}
 
 
@@ -62,9 +58,9 @@ class MagicStaticRoutesResource
 	/**
 	 * Route Details
 	 */
-	public function get(string $routeId): \FoundryCo\Cloudflare\Responses\MagicStaticRoutesDetails
+	public function get(string $routeId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\MagicStaticRoutesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRouteDetails::class, []);
 	}
 
 
@@ -74,9 +70,9 @@ class MagicStaticRoutesResource
 	public function routes(
 		string $routeId,
 		\FoundryCo\Cloudflare\Requests\MagicStaticRoutesUpdateRouteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoute
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\MagicStaticRoutesRoute::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\MagicStaticRoutesUpdateRoute::class, $request);
 	}
 
 

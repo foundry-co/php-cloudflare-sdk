@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class CloudflareTunnelConfigurationResource
 	/**
 	 * Get configuration
 	 */
-	public function get(string $tunnelId): \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration
+	public function get(string $tunnelId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cfd_tunnel/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cfd_tunnel/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationGetConfiguration::class, []);
 	}
 
 
@@ -34,20 +34,18 @@ class CloudflareTunnelConfigurationResource
 	public function update(
 		string $tunnelId,
 		\FoundryCo\Cloudflare\Requests\CloudflareTunnelConfigurationPutConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/cfd_tunnel/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/cfd_tunnel/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationPutConfiguration::class, $request);
 	}
 
 
 	/**
 	 * Get WARP Connector HA configuration
 	 */
-	public function configurations(
-		string $tunnelId,
-	): \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration
+	public function configurations(string $tunnelId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/warp_connector/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/warp_connector/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationGetWarpConnectorConfiguration::class, []);
 	}
 
 
@@ -57,8 +55,8 @@ class CloudflareTunnelConfigurationResource
 	public function cloudflareTunnelConfigurationUpdateWarpConnectorConfiguration(
 		string $tunnelId,
 		\FoundryCo\Cloudflare\Requests\CloudflareTunnelConfigurationUpdateWarpConnectorConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/warp_connector/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationConfiguration::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/warp_connector/' . $tunnelId . '/configurations', \FoundryCo\Cloudflare\Responses\CloudflareTunnelConfigurationUpdateWarpConnectorConfiguration::class, $request);
 	}
 }

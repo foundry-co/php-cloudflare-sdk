@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class TelemetryvalueslistRequestNeedle
 {
 	public function __construct(
 		/** The text or pattern to search for. */
-		public mixed $value,
+		public mixed $value = null,
 		/** When true, treats the value as a regular expression (RE2 syntax). */
 		public ?bool $isRegex = null,
 		/** When true, performs a case-sensitive search. Defaults to case-insensitive. */

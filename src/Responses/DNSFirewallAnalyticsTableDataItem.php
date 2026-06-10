@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -10,11 +10,11 @@ declare(strict_types=1);
 
 namespace FoundryCo\Cloudflare\Responses;
 
-readonly class DNSFirewallAnalyticsTableDataItem
+readonly class DnsFirewallAnalyticsTableDataItem
 {
 	public function __construct(
-		/** Array with one item per requested metric. Each item is a single value. */
-		public array $metrics,
+		/** Array of dimension values, representing the combination of dimension values corresponding to this row. */
+		public ?array $dimensions = null,
 	) {
 	}
 }

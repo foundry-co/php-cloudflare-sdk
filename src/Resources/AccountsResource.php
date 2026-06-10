@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,29 +26,25 @@ class AccountsResource
 		?float $page = null,
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\AccountsDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\AccountsAccounts
+	): mixed
 	{
-		return $this->client->get('/accounts', \FoundryCo\Cloudflare\Responses\AccountsAccounts::class, ['name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts', \FoundryCo\Cloudflare\Responses\AccountsListAccounts::class, ['name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create an account
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccountCreationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountsCreation
+	public function create(\FoundryCo\Cloudflare\Requests\AccountCreationRequest $request): mixed
 	{
-		return $this->client->post('/accounts', \FoundryCo\Cloudflare\Responses\AccountsCreation::class, $request);
+		return $this->client->post('/accounts', \FoundryCo\Cloudflare\Responses\AccountCreation::class, $request);
 	}
 
 
 	/**
 	 * Batch move accounts
 	 */
-	public function move(
-		\FoundryCo\Cloudflare\Requests\AccountsBatchMoveAccountsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountsBatchMoveAccounts
+	public function move(\FoundryCo\Cloudflare\Requests\AccountsBatchMoveAccountsRequest $request): mixed
 	{
 		return $this->client->post('/accounts/move', \FoundryCo\Cloudflare\Responses\AccountsBatchMoveAccounts::class, $request);
 	}
@@ -57,20 +53,18 @@ class AccountsResource
 	/**
 	 * Account Details
 	 */
-	public function listGet(): \FoundryCo\Cloudflare\Responses\AccountsDetails
+	public function listGet(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId, \FoundryCo\Cloudflare\Responses\AccountsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId, \FoundryCo\Cloudflare\Responses\AccountsAccountDetails::class, []);
 	}
 
 
 	/**
 	 * Update Account
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\AccountsUpdateAccountRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountsAccount
+	public function update(\FoundryCo\Cloudflare\Requests\AccountsUpdateAccountRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId, \FoundryCo\Cloudflare\Responses\AccountsAccount::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId, \FoundryCo\Cloudflare\Responses\AccountsUpdateAccount::class, $request);
 	}
 
 
@@ -86,9 +80,7 @@ class AccountsResource
 	/**
 	 * Move account
 	 */
-	public function accountsMoveAccounts(
-		\FoundryCo\Cloudflare\Requests\AccountsMoveAccountsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountsMoveAccounts
+	public function accountsMoveAccounts(\FoundryCo\Cloudflare\Requests\AccountsMoveAccountsRequest $request): mixed
 	{
 		return $this->client->post('/accounts/' . $this->accountId . '/move', \FoundryCo\Cloudflare\Responses\AccountsMoveAccounts::class, $request);
 	}
@@ -97,7 +89,7 @@ class AccountsResource
 	/**
 	 * List account organizations
 	 */
-	public function organizations(): \FoundryCo\Cloudflare\Responses\AccountsListAccountOrganizations
+	public function organizations(): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/organizations', \FoundryCo\Cloudflare\Responses\AccountsListAccountOrganizations::class, []);
 	}
@@ -106,7 +98,7 @@ class AccountsResource
 	/**
 	 * Get account profile
 	 */
-	public function profile(): \FoundryCo\Cloudflare\Responses\AccountsGetAccountProfile
+	public function profile(): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/profile', \FoundryCo\Cloudflare\Responses\AccountsGetAccountProfile::class, []);
 	}

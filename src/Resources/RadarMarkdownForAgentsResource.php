@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class RadarMarkdownForAgentsResource
 		?array $dateStart = null,
 		?array $dateEnd = null,
 		?\FoundryCo\Cloudflare\Enums\RadarMarkdownForAgentsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarMarkdownForAgentsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/ai/markdown_for_agents/summary', \FoundryCo\Cloudflare\Responses\RadarMarkdownForAgentsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/markdown_for_agents/summary', \FoundryCo\Cloudflare\Responses\RadarGetAiMarkdownForAgentsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -43,8 +43,8 @@ class RadarMarkdownForAgentsResource
 		?array $dateStart = null,
 		?array $dateEnd = null,
 		?\FoundryCo\Cloudflare\Enums\RadarMarkdownForAgentsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarMarkdownForAgentsTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/ai/markdown_for_agents/timeseries', \FoundryCo\Cloudflare\Responses\RadarMarkdownForAgentsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/markdown_for_agents/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetAiMarkdownForAgentsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
 	}
 }

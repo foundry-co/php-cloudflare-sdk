@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class PostPresetsRequestPermissionsChatPublic
 {
 	public function __construct(
 		/** Can send messages in general */
-		public bool $canSend,
+		public ?bool $canSend = null,
 		/** Can send file messages */
-		public bool $files,
+		public ?bool $files = null,
 		/** Can send text messages */
-		public bool $text,
+		public ?bool $text = null,
 	) {
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,30 +22,27 @@ class MagicSiteLansResource
 	/**
 	 * List Site LANs
 	 */
-	public function get(string $siteId): \FoundryCo\Cloudflare\Responses\MagicSiteLANsLans
+	public function get(string $siteId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans', \FoundryCo\Cloudflare\Responses\MagicSiteLANsLans::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans', \FoundryCo\Cloudflare\Responses\MagicSiteLansListLans::class, []);
 	}
 
 
 	/**
 	 * Create a new Site LAN
 	 */
-	public function create(
-		string $siteId,
-		\FoundryCo\Cloudflare\Requests\MagicSiteLansCreateLanRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteLANsLan
+	public function create(string $siteId, \FoundryCo\Cloudflare\Requests\MagicSiteLansCreateLanRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans', \FoundryCo\Cloudflare\Responses\MagicSiteLANsLan::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans', \FoundryCo\Cloudflare\Responses\MagicSiteLansCreateLan::class, $request);
 	}
 
 
 	/**
 	 * Site LAN Details
 	 */
-	public function lans(string $siteId, string $lanId): \FoundryCo\Cloudflare\Responses\MagicSiteLANsDetails
+	public function lans(string $siteId, string $lanId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans/' . $lanId, \FoundryCo\Cloudflare\Responses\MagicSiteLANsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans/' . $lanId, \FoundryCo\Cloudflare\Responses\MagicSiteLansLanDetails::class, []);
 	}
 
 
@@ -56,9 +53,9 @@ class MagicSiteLansResource
 		string $siteId,
 		string $lanId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteLansUpdateLanRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteLANsLan
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans/' . $lanId, \FoundryCo\Cloudflare\Responses\MagicSiteLANsLan::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans/' . $lanId, \FoundryCo\Cloudflare\Responses\MagicSiteLansUpdateLan::class, $request);
 	}
 
 
@@ -69,9 +66,9 @@ class MagicSiteLansResource
 		string $siteId,
 		string $lanId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteLansPatchLanRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteLANsLan
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans/' . $lanId, \FoundryCo\Cloudflare\Responses\MagicSiteLANsLan::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/lans/' . $lanId, \FoundryCo\Cloudflare\Responses\MagicSiteLansPatchLan::class, $request);
 	}
 
 

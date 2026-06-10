@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -32,22 +32,18 @@ class TsengAbuseComplaintProcessorOtherResource
 		?\FoundryCo\Cloudflare\Enums\TsengAbuseComplaintProcessorOtherStatus $status = null,
 		?\FoundryCo\Cloudflare\Enums\TsengAbuseComplaintProcessorOtherType $type = null,
 		?\FoundryCo\Cloudflare\Enums\TsengAbuseComplaintProcessorOtherMitigationStatus $mitigationStatus = null,
-	): \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherListAbuseReports
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports', \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherListAbuseReports::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'sort' => $sort ?? null, 'domain' => $domain ?? null, 'createdBefore' => $createdBefore ?? null, 'createdAfter' => $createdAfter ?? null, 'status' => $status ?? null, 'type' => $type ?? null, 'mitigationStatus' => $mitigationStatus ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports', \FoundryCo\Cloudflare\Responses\ListAbuseReports::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'sort' => $sort ?? null, 'domain' => $domain ?? null, 'createdBefore' => $createdBefore ?? null, 'createdAfter' => $createdAfter ?? null, 'status' => $status ?? null, 'type' => $type ?? null, 'mitigationStatus' => $mitigationStatus ?? null]);
 	}
 
 
 	/**
 	 * List abuse report emails
 	 */
-	public function get(
-		string $reportId,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherListEmails
+	public function get(string $reportId, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports/' . $reportId . '/emails', \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherListEmails::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports/' . $reportId . '/emails', \FoundryCo\Cloudflare\Responses\ListEmails::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -64,32 +60,27 @@ class TsengAbuseComplaintProcessorOtherResource
 		?string $effectiveAfter = null,
 		?\FoundryCo\Cloudflare\Enums\TsengAbuseComplaintProcessorOtherStatus $status = null,
 		?\FoundryCo\Cloudflare\Enums\TsengAbuseComplaintProcessorOtherEntityType $entityType = null,
-	): \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherListMitigations
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports/' . $reportId . '/mitigations', \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherListMitigations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'sort' => $sort ?? null, 'type' => $type ?? null, 'effectiveBefore' => $effectiveBefore ?? null, 'effectiveAfter' => $effectiveAfter ?? null, 'status' => $status ?? null, 'entityType' => $entityType ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports/' . $reportId . '/mitigations', \FoundryCo\Cloudflare\Responses\ListMitigations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'sort' => $sort ?? null, 'type' => $type ?? null, 'effectiveBefore' => $effectiveBefore ?? null, 'effectiveAfter' => $effectiveAfter ?? null, 'status' => $status ?? null, 'entityType' => $entityType ?? null]);
 	}
 
 
 	/**
 	 * Request review on mitigations
 	 */
-	public function create(
-		string $reportId,
-		\FoundryCo\Cloudflare\Requests\RequestReviewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherRequestReview
+	public function create(string $reportId, \FoundryCo\Cloudflare\Requests\RequestReviewRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/abuse-reports/' . $reportId . '/mitigations/appeal', \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherRequestReview::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/abuse-reports/' . $reportId . '/mitigations/appeal', \FoundryCo\Cloudflare\Responses\RequestReview::class, $request);
 	}
 
 
 	/**
 	 * Abuse Report Details
 	 */
-	public function abuseReports(
-		string $reportParam,
-	): \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherGetAbuseReport
+	public function abuseReports(string $reportParam): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports/' . $reportParam, \FoundryCo\Cloudflare\Responses\TsengAbuseComplaintProcessorOtherGetAbuseReport::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/abuse-reports/' . $reportParam, \FoundryCo\Cloudflare\Responses\GetAbuseReport::class, []);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,29 +28,27 @@ class AIGatewayAccountProvidersResource
 		?bool $beta = null,
 		?bool $enable = null,
 		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers', \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'beta' => $beta ?? null, 'enable' => $enable ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers', \FoundryCo\Cloudflare\Responses\AigConfigListAccountProvider::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'beta' => $beta ?? null, 'enable' => $enable ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Create a new Account Provider
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AigConfigCreateAccountProviderRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider
+	public function create(\FoundryCo\Cloudflare\Requests\AigConfigCreateAccountProviderRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/custom-providers', \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/custom-providers', \FoundryCo\Cloudflare\Responses\AigConfigCreateAccountProvider::class, $request);
 	}
 
 
 	/**
 	 * Fetch a Account Provider
 	 */
-	public function get(string $id): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider
+	public function get(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigFetchAccountProvider::class, []);
 	}
 
 
@@ -60,9 +58,9 @@ class AIGatewayAccountProvidersResource
 	public function update(
 		string $id,
 		\FoundryCo\Cloudflare\Requests\AigConfigUpdateAccountProviderRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayAccountProvidersProvider::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/ai-gateway/custom-providers/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigUpdateAccountProvider::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,19 +22,17 @@ class TieredCachingResource
 	/**
 	 * Get Tiered Caching setting
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\TieredCachingSetting
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/argo/tiered_caching', \FoundryCo\Cloudflare\Responses\TieredCachingSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/argo/tiered_caching', \FoundryCo\Cloudflare\Responses\TieredCachingGetTieredCachingSetting::class, []);
 	}
 
 
 	/**
 	 * Patch Tiered Caching setting
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\TieredCachingPatchTieredCachingSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TieredCachingSetting
+	public function update(\FoundryCo\Cloudflare\Requests\TieredCachingPatchTieredCachingSettingRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/argo/tiered_caching', \FoundryCo\Cloudflare\Responses\TieredCachingSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/argo/tiered_caching', \FoundryCo\Cloudflare\Responses\TieredCachingPatchTieredCachingSetting::class, $request);
 	}
 }

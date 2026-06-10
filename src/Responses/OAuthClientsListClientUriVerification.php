@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,11 +13,11 @@ namespace FoundryCo\Cloudflare\Responses;
 /**
  * Client URI domain control verification state.
  */
-readonly class OAuthClientsListClientUriVerification
+readonly class OauthClientsListClientUriVerification
 {
 	public function __construct(
 		/** Current verification status for the client URI host. */
-		public ?\FoundryCo\Cloudflare\Enums\OAuthClientsListClientUriVerificationStatus $status = null,
+		public ?\FoundryCo\Cloudflare\Enums\OauthClientsListClientUriVerificationStatus $status = null,
 		/** Exact TXT record value that must be added to DNS to prove ownership of the client URI host. */
 		public ?string $text = null,
 	) {

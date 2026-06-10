@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class R2CatalogManagementResource
 	/**
 	 * List R2 catalogs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\R2CatalogManagementCatalogs
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog', \FoundryCo\Cloudflare\Responses\R2CatalogManagementCatalogs::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog', \FoundryCo\Cloudflare\Responses\ListCatalogs::class, []);
 	}
 
 
 	/**
 	 * Get R2 catalog details
 	 */
-	public function get(string $bucketName): \FoundryCo\Cloudflare\Responses\R2CatalogManagementDetails
+	public function get(string $bucketName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName, \FoundryCo\Cloudflare\Responses\R2CatalogManagementDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName, \FoundryCo\Cloudflare\Responses\GetCatalogDetails::class, []);
 	}
 
 
@@ -49,8 +49,8 @@ class R2CatalogManagementResource
 	/**
 	 * Enable R2 bucket as a catalog
 	 */
-	public function enable(string $bucketName): \FoundryCo\Cloudflare\Responses\R2CatalogManagementCatalog
+	public function enable(string $bucketName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/enable', \FoundryCo\Cloudflare\Responses\R2CatalogManagementCatalog::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/enable', \FoundryCo\Cloudflare\Responses\EnableCatalog::class, null);
 	}
 }

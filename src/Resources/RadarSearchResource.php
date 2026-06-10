@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,8 +28,8 @@ class RadarSearchResource
 		?array $include = null,
 		?array $exclude = null,
 		?\FoundryCo\Cloudflare\Enums\RadarSearchFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarSearchGlobal
+	): mixed
 	{
-		return $this->client->get('/radar/search/global', \FoundryCo\Cloudflare\Responses\RadarSearchGlobal::class, ['limit' => $limit ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'query' => $query ?? null, 'include' => $include ?? null, 'exclude' => $exclude ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/search/global', \FoundryCo\Cloudflare\Responses\RadarGetSearchGlobal::class, ['limit' => $limit ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'query' => $query ?? null, 'include' => $include ?? null, 'exclude' => $exclude ?? null, 'format' => $format ?? null]);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class R2PutBucketCorsPolicyRequestRulesItem
 {
 	public function __construct(
 		/** Object specifying allowed origins, methods and headers for this CORS rule. */
-		public R2PutBucketCorsPolicyRequestRulesItemAllowed $allowed,
+		public ?R2PutBucketCorsPolicyRequestRulesItemAllowed $allowed = null,
 		/** Specifies the headers that can be exposed back, and accessed by, the JavaScript making the cross-origin request. If you need to access headers beyond the safelisted response headers, such as Content-Encoding or cf-cache-status, you must specify it here. */
 		public ?array $exposeHeaders = null,
 		/** Identifier for this rule. */

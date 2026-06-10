@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class UpdateWorkerRequestReferencesQueuesItem
 {
 	public function __construct(
 		/** ID of the queue consumer configuration. */
-		public string $queueConsumerId,
+		public ?string $queueConsumerId = null,
 		/** ID of the queue. */
-		public string $queueId,
+		public ?string $queueId = null,
 		/** Name of the queue. */
-		public string $queueName,
+		public ?string $queueName = null,
 	) {
 	}
 }

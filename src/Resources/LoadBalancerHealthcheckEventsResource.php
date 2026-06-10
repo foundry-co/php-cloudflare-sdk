@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,8 +29,8 @@ class LoadBalancerHealthcheckEventsResource
 		?\DateTimeImmutable $since = null,
 		?string $originName = null,
 		?bool $poolHealthy = null,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancerHealthcheckEventsEvents
+	): mixed
 	{
-		return $this->client->get('/user/load_balancing_analytics/events', \FoundryCo\Cloudflare\Responses\LoadBalancerHealthcheckEventsEvents::class, ['until' => $until ?? null, 'poolName' => $poolName ?? null, 'originHealthy' => $originHealthy ?? null, 'poolId' => $poolId ?? null, 'since' => $since ?? null, 'originName' => $originName ?? null, 'poolHealthy' => $poolHealthy ?? null]);
+		return $this->client->get('/user/load_balancing_analytics/events', \FoundryCo\Cloudflare\Responses\LoadBalancerHealthcheckEventsListHealthcheckEvents::class, ['until' => $until ?? null, 'poolName' => $poolName ?? null, 'originHealthy' => $originHealthy ?? null, 'poolId' => $poolId ?? null, 'since' => $since ?? null, 'originName' => $originName ?? null, 'poolHealthy' => $poolHealthy ?? null]);
 	}
 }

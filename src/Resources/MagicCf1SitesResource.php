@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,27 +22,27 @@ class MagicCf1SitesResource
 	/**
 	 * List CF1 Sites
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\MagicCF1SitesSites
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf1_sites', \FoundryCo\Cloudflare\Responses\MagicCF1SitesSites::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf1_sites', \FoundryCo\Cloudflare\Responses\MagicCf1SitesListCf1Sites::class, []);
 	}
 
 
 	/**
 	 * Create CF1 Sites
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\MagicCF1SitesSites
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/cf1_sites', \FoundryCo\Cloudflare\Responses\MagicCF1SitesSites::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/cf1_sites', \FoundryCo\Cloudflare\Responses\MagicCf1SitesCreateCf1Sites::class, null);
 	}
 
 
 	/**
 	 * Get CF1 Site
 	 */
-	public function get(string $cf1SiteId): \FoundryCo\Cloudflare\Responses\MagicCF1SitesSite
+	public function get(string $cf1SiteId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf1_sites/' . $cf1SiteId, \FoundryCo\Cloudflare\Responses\MagicCF1SitesSite::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf1_sites/' . $cf1SiteId, \FoundryCo\Cloudflare\Responses\MagicCf1SitesGetCf1Site::class, []);
 	}
 
 
@@ -52,9 +52,9 @@ class MagicCf1SitesResource
 	public function update(
 		string $cf1SiteId,
 		\FoundryCo\Cloudflare\Requests\MagicCf1SitesUpdateCf1SiteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicCF1SitesSite
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/cf1_sites/' . $cf1SiteId, \FoundryCo\Cloudflare\Responses\MagicCF1SitesSite::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/cf1_sites/' . $cf1SiteId, \FoundryCo\Cloudflare\Responses\MagicCf1SitesUpdateCf1Site::class, $request);
 	}
 
 

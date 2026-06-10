@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -16,10 +16,10 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpoints
 {
 	public function __construct(
-		public ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsDoh $doh,
-		public ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsDot $dot,
-		public ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsIpv4 $ipv4,
-		public ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsIpv6 $ipv6,
+		public ?ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsDoh $doh = null,
+		public ?ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsDot $dot = null,
+		public ?ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsIpv4 $ipv4 = null,
+		public ?ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestEndpointsIpv6 $ipv6 = null,
 	) {
 	}
 }

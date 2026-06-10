@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,27 +21,25 @@ class UserResource
 	/**
 	 * User Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\UserDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/user', \FoundryCo\Cloudflare\Responses\UserDetails::class, []);
+		return $this->client->get('/user', \FoundryCo\Cloudflare\Responses\UserUserDetails::class, []);
 	}
 
 
 	/**
 	 * Edit User
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\UserEditUserRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UserUser
+	public function update(\FoundryCo\Cloudflare\Requests\UserEditUserRequest $request): mixed
 	{
-		return $this->client->patch('/user', \FoundryCo\Cloudflare\Responses\UserUser::class, $request);
+		return $this->client->patch('/user', \FoundryCo\Cloudflare\Responses\UserEditUser::class, $request);
 	}
 
 
 	/**
 	 * List user tenants
 	 */
-	public function tenants(): \FoundryCo\Cloudflare\Responses\UserListUserTenants
+	public function tenants(): mixed
 	{
 		return $this->client->get('/user/tenants', \FoundryCo\Cloudflare\Responses\UserListUserTenants::class, []);
 	}

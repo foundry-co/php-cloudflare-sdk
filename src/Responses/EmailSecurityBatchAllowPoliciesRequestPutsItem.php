@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,10 +13,10 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class EmailSecurityBatchAllowPoliciesRequestPutsItem
 {
 	public function __construct(
-		public mixed $createdAt,
-		public mixed $id,
+		public mixed $createdAt = null,
+		public mixed $id = null,
 		/** Deprecated, use `modified_at` instead. End of life: November 1, 2026. */
-		public mixed $lastModified,
+		public mixed $lastModified = null,
 		public ?string $comments = null,
 		/** Messages from this sender will be exempted from Spam, Spoof and Bulk dispositions. Note - This will not exempt messages with Malicious or Suspicious dispositions. */
 		public ?bool $isAcceptableSender = null,

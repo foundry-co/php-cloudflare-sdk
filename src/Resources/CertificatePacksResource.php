@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class CertificatePacksResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\CertificatePacksStatus $status = null,
 		?\FoundryCo\Cloudflare\Enums\CertificatePacksDeploy $deploy = null,
-	): \FoundryCo\Cloudflare\Responses\CertificatePacksPacks
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/ssl/certificate_packs', \FoundryCo\Cloudflare\Responses\CertificatePacksPacks::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'status' => $status ?? null, 'deploy' => $deploy ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/ssl/certificate_packs', \FoundryCo\Cloudflare\Responses\CertificatePacksListCertificatePacks::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'status' => $status ?? null, 'deploy' => $deploy ?? null]);
 	}
 
 
@@ -38,27 +38,27 @@ class CertificatePacksResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\CertificatePacksOrderAdvancedCertificateManagerCertificatePackRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CertificatePacksPack
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/ssl/certificate_packs/order', \FoundryCo\Cloudflare\Responses\CertificatePacksPack::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/ssl/certificate_packs/order', \FoundryCo\Cloudflare\Responses\CertificatePacksOrderAdvancedCertificateManagerCertificatePack::class, $request);
 	}
 
 
 	/**
 	 * Get Certificate Pack Quotas
 	 */
-	public function quota(): \FoundryCo\Cloudflare\Responses\CertificatePacksQuotas
+	public function quota(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/ssl/certificate_packs/quota', \FoundryCo\Cloudflare\Responses\CertificatePacksQuotas::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/ssl/certificate_packs/quota', \FoundryCo\Cloudflare\Responses\CertificatePacksGetCertificatePackQuotas::class, []);
 	}
 
 
 	/**
 	 * Get Certificate Pack
 	 */
-	public function get(string $certificatePackId): \FoundryCo\Cloudflare\Responses\CertificatePacksPack
+	public function get(string $certificatePackId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/ssl/certificate_packs/' . $certificatePackId, \FoundryCo\Cloudflare\Responses\CertificatePacksPack::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/ssl/certificate_packs/' . $certificatePackId, \FoundryCo\Cloudflare\Responses\CertificatePacksGetCertificatePack::class, []);
 	}
 
 
@@ -68,9 +68,9 @@ class CertificatePacksResource
 	public function update(
 		string $certificatePackId,
 		\FoundryCo\Cloudflare\Requests\CertificatePacksRestartValidationForAdvancedCertificateManagerCertificatePackRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CertificatePacksPack
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/ssl/certificate_packs/' . $certificatePackId, \FoundryCo\Cloudflare\Responses\CertificatePacksPack::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/ssl/certificate_packs/' . $certificatePackId, \FoundryCo\Cloudflare\Responses\CertificatePacksRestartValidationForAdvancedCertificateManagerCertificatePack::class, $request);
 	}
 
 

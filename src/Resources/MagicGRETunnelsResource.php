@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MagicGRETunnelsResource
 	/**
 	 * List GRE tunnels
 	 */
-	public function list(?bool $xMagicNewHcTarget = null): \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnels
+	public function list(?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/gre_tunnels', \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnels::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/gre_tunnels', \FoundryCo\Cloudflare\Responses\MagicGreTunnelsListGreTunnels::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
@@ -34,30 +34,27 @@ class MagicGRETunnelsResource
 	public function create(
 		\FoundryCo\Cloudflare\Requests\MagicGreTunnelsCreateGreTunnelsRequest $request,
 		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnels
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/gre_tunnels', \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnels::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/gre_tunnels', \FoundryCo\Cloudflare\Responses\MagicGreTunnelsCreateGreTunnels::class, $request);
 	}
 
 
 	/**
 	 * Update multiple GRE tunnels
 	 */
-	public function update(?bool $xMagicNewHcTarget = null): \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnels
+	public function update(?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/gre_tunnels', \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnels::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/gre_tunnels', \FoundryCo\Cloudflare\Responses\MagicGreTunnelsUpdateMultipleGreTunnels::class, null);
 	}
 
 
 	/**
 	 * List GRE Tunnel Details
 	 */
-	public function get(
-		string $greTunnelId,
-		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicGRETunnelsDetails
+	public function get(string $greTunnelId, ?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/gre_tunnels/' . $greTunnelId, \FoundryCo\Cloudflare\Responses\MagicGRETunnelsDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/gre_tunnels/' . $greTunnelId, \FoundryCo\Cloudflare\Responses\MagicGreTunnelsListGreTunnelDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
@@ -68,9 +65,9 @@ class MagicGRETunnelsResource
 		string $greTunnelId,
 		\FoundryCo\Cloudflare\Requests\MagicGreTunnelsUpdateGreTunnelRequest $request,
 		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnel
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/gre_tunnels/' . $greTunnelId, \FoundryCo\Cloudflare\Responses\MagicGRETunnelsTunnel::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/gre_tunnels/' . $greTunnelId, \FoundryCo\Cloudflare\Responses\MagicGreTunnelsUpdateGreTunnel::class, $request);
 	}
 
 

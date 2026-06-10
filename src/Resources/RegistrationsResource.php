@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -35,9 +35,9 @@ class RegistrationsResource
 		?array $id = null,
 		?string $deviceid = null,
 		?string $include = null,
-	): \FoundryCo\Cloudflare\Responses\RegistrationsRegistrations
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/registrations', \FoundryCo\Cloudflare\Responses\RegistrationsRegistrations::class, ['userid' => $userid ?? null, 'seenAfter' => $seenAfter ?? null, 'seenBefore' => $seenBefore ?? null, 'status' => $status ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'cursor' => $cursor ?? null, 'id' => $id ?? null, 'deviceid' => $deviceid ?? null, 'include' => $include ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/registrations', \FoundryCo\Cloudflare\Responses\ListRegistrations::class, ['userid' => $userid ?? null, 'seenAfter' => $seenAfter ?? null, 'seenBefore' => $seenBefore ?? null, 'status' => $status ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'cursor' => $cursor ?? null, 'id' => $id ?? null, 'deviceid' => $deviceid ?? null, 'include' => $include ?? null]);
 	}
 
 
@@ -62,12 +62,9 @@ class RegistrationsResource
 	/**
 	 * Get registration
 	 */
-	public function get(
-		string $registrationId,
-		?string $include = null,
-	): \FoundryCo\Cloudflare\Responses\RegistrationsRegistration
+	public function get(string $registrationId, ?string $include = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/registrations/' . $registrationId, \FoundryCo\Cloudflare\Responses\RegistrationsRegistration::class, ['include' => $include ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/registrations/' . $registrationId, \FoundryCo\Cloudflare\Responses\GetRegistration::class, ['include' => $include ?? null]);
 	}
 
 

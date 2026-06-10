@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class EndpointHealthChecksResource
 	/**
 	 * List Endpoint Health Checks
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\EndpointHealthChecksList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks', \FoundryCo\Cloudflare\Responses\EndpointHealthChecksList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks', \FoundryCo\Cloudflare\Responses\DiagnosticsEndpointHealthcheckList::class, []);
 	}
 
 
 	/**
 	 * Endpoint Health Check
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DiagnosticsEndpointHealthcheckCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EndpointHealthChecksCreate
+	public function create(\FoundryCo\Cloudflare\Requests\DiagnosticsEndpointHealthcheckCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks', \FoundryCo\Cloudflare\Responses\EndpointHealthChecksCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks', \FoundryCo\Cloudflare\Responses\DiagnosticsEndpointHealthcheckCreate::class, $request);
 	}
 
 
 	/**
 	 * Get Endpoint Health Check
 	 */
-	public function get(string $id): \FoundryCo\Cloudflare\Responses\EndpointHealthChecksGet
+	public function get(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks/' . $id, \FoundryCo\Cloudflare\Responses\EndpointHealthChecksGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks/' . $id, \FoundryCo\Cloudflare\Responses\DiagnosticsEndpointHealthcheckGet::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class EndpointHealthChecksResource
 	public function update(
 		string $id,
 		\FoundryCo\Cloudflare\Requests\DiagnosticsEndpointHealthcheckUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EndpointHealthChecksUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks/' . $id, \FoundryCo\Cloudflare\Responses\EndpointHealthChecksUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/diagnostics/endpoint-healthchecks/' . $id, \FoundryCo\Cloudflare\Responses\DiagnosticsEndpointHealthcheckUpdate::class, $request);
 	}
 
 

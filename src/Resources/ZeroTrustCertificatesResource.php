@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class ZeroTrustCertificatesResource
 	/**
 	 * List Zero Trust certificates
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCertificates
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/certificates', \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCertificates::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/certificates', \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesListZeroTrustCertificates::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class ZeroTrustCertificatesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZeroTrustCertificatesCreateZeroTrustCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCertificate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/certificates', \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCertificate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/certificates', \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCreateZeroTrustCertificate::class, $request);
 	}
 
 
 	/**
 	 * Get Zero Trust certificate details
 	 */
-	public function get(string $certificateId): \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesDetails
+	public function get(string $certificateId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesZeroTrustCertificateDetails::class, []);
 	}
 
 
@@ -69,8 +69,8 @@ class ZeroTrustCertificatesResource
 	/**
 	 * Deactivate a Zero Trust certificate
 	 */
-	public function deactivate(string $certificateId): \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCertificate
+	public function deactivate(string $certificateId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/certificates/' . $certificateId . '/deactivate', \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesCertificate::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/certificates/' . $certificateId . '/deactivate', \FoundryCo\Cloudflare\Responses\ZeroTrustCertificatesDeactivateZeroTrustCertificate::class, null);
 	}
 }

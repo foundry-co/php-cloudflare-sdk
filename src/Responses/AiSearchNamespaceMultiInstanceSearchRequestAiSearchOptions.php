@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,7 +13,7 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class AiSearchNamespaceMultiInstanceSearchRequestAiSearchOptions
 {
 	public function __construct(
-		public array $instanceIds,
+		public ?array $instanceIds = null,
 		public ?AiSearchNamespaceMultiInstanceSearchRequestAiSearchOptionsCache $cache = null,
 		public ?AiSearchNamespaceMultiInstanceSearchRequestAiSearchOptionsQueryRewrite $queryRewrite = null,
 		public ?AiSearchNamespaceMultiInstanceSearchRequestAiSearchOptionsReranking $reranking = null,

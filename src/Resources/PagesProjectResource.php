@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class PagesProjectResource
 	/**
 	 * Get projects
 	 */
-	public function list(?int $page = null, ?int $perPage = null): \FoundryCo\Cloudflare\Responses\PagesProjectProjects
+	public function list(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects', \FoundryCo\Cloudflare\Responses\PagesProjectProjects::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects', \FoundryCo\Cloudflare\Responses\PagesProjectGetProjects::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create project
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PagesProjectCreateProjectRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PagesProjectProject
+	public function create(\FoundryCo\Cloudflare\Requests\PagesProjectCreateProjectRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects', \FoundryCo\Cloudflare\Responses\PagesProjectProject::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects', \FoundryCo\Cloudflare\Responses\PagesProjectCreateProject::class, $request);
 	}
 
 
 	/**
 	 * Get project
 	 */
-	public function get(string $projectName): \FoundryCo\Cloudflare\Responses\PagesProjectProject
+	public function get(string $projectName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName, \FoundryCo\Cloudflare\Responses\PagesProjectProject::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName, \FoundryCo\Cloudflare\Responses\PagesProjectGetProject::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class PagesProjectResource
 	public function update(
 		string $projectName,
 		\FoundryCo\Cloudflare\Requests\PagesProjectUpdateProjectRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PagesProjectProject
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/pages/projects/' . $projectName, \FoundryCo\Cloudflare\Responses\PagesProjectProject::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/pages/projects/' . $projectName, \FoundryCo\Cloudflare\Responses\PagesProjectUpdateProject::class, $request);
 	}
 
 
@@ -75,9 +73,9 @@ class PagesProjectResource
 	public function source(
 		string $projectName,
 		\FoundryCo\Cloudflare\Requests\PagesProjectConnectProjectSourceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PagesProjectSource
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/source', \FoundryCo\Cloudflare\Responses\PagesProjectSource::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/source', \FoundryCo\Cloudflare\Responses\PagesProjectConnectProjectSource::class, $request);
 	}
 
 

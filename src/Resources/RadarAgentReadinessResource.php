@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,8 +27,8 @@ class RadarAgentReadinessResource
 		?array $domainCategory = null,
 		?array $name = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAgentReadinessFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAgentReadinessSummary
+	): mixed
 	{
-		return $this->client->get('/radar/agent_readiness/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAgentReadinessSummary::class, ['date' => $date ?? null, 'domainCategory' => $domainCategory ?? null, 'name' => $name ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/agent_readiness/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAgentReadinessSummary::class, ['date' => $date ?? null, 'domainCategory' => $domainCategory ?? null, 'name' => $name ?? null, 'format' => $format ?? null]);
 	}
 }

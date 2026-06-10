@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MagicIpsecTunnelsResource
 	/**
 	 * List IPsec tunnels
 	 */
-	public function list(?bool $xMagicNewHcTarget = null): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels
+	public function list(?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/ipsec_tunnels', \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/ipsec_tunnels', \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsListIpsecTunnels::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
@@ -34,18 +34,18 @@ class MagicIpsecTunnelsResource
 	public function create(
 		\FoundryCo\Cloudflare\Requests\MagicIpsecTunnelsCreateIpsecTunnelsRequest $request,
 		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/ipsec_tunnels', \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/ipsec_tunnels', \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsCreateIpsecTunnels::class, $request);
 	}
 
 
 	/**
 	 * Update multiple IPsec tunnels
 	 */
-	public function update(?bool $xMagicNewHcTarget = null): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels
+	public function update(?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/ipsec_tunnels', \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/ipsec_tunnels', \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsUpdateMultipleIpsecTunnels::class, null);
 	}
 
 
@@ -55,21 +55,18 @@ class MagicIpsecTunnelsResource
 	public function psk(
 		\FoundryCo\Cloudflare\Requests\MagicIpsecTunnelsSetPreSharedKeysForIpsecTunnelsRequest $request,
 		?bool $validateOnly = null,
-	): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/psk', \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/psk', \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsSetPreSharedKeysForIpsecTunnels::class, $request);
 	}
 
 
 	/**
 	 * List IPsec tunnel details
 	 */
-	public function get(
-		string $ipsecTunnelId,
-		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsDetails
+	public function get(string $ipsecTunnelId, ?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/' . $ipsecTunnelId, \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/' . $ipsecTunnelId, \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsListIpsecTunnelDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
@@ -80,9 +77,9 @@ class MagicIpsecTunnelsResource
 		string $ipsecTunnelId,
 		\FoundryCo\Cloudflare\Requests\MagicIpsecTunnelsUpdateIpsecTunnelRequest $request,
 		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnel
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/' . $ipsecTunnelId, \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnel::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/' . $ipsecTunnelId, \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsUpdateIpsecTunnel::class, $request);
 	}
 
 
@@ -98,8 +95,8 @@ class MagicIpsecTunnelsResource
 	/**
 	 * Generate Pre-Shared Key (PSK) for IPsec tunnels
 	 */
-	public function pskGenerate(string $ipsecTunnelId): \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels
+	public function pskGenerate(string $ipsecTunnelId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/' . $ipsecTunnelId . '/psk_generate', \FoundryCo\Cloudflare\Responses\MagicIPsecTunnelsTunnels::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/ipsec_tunnels/' . $ipsecTunnelId . '/psk_generate', \FoundryCo\Cloudflare\Responses\MagicIpsecTunnelsGeneratePreSharedKeyPskForIpsecTunnels::class, null);
 	}
 }

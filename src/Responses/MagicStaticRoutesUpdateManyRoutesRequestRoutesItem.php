@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,13 +14,13 @@ readonly class MagicStaticRoutesUpdateManyRoutesRequestRoutesItem
 {
 	public function __construct(
 		/** Identifier */
-		public string $id,
+		public ?string $id = null,
 		/** The next-hop IP Address for the static route. */
-		public string $nexthop,
+		public ?string $nexthop = null,
 		/** IP Prefix in Classless Inter-Domain Routing format. */
-		public string $prefix,
+		public ?string $prefix = null,
 		/** Priority of the static route. */
-		public int $priority,
+		public ?int $priority = null,
 		/** An optional human provided description of the static route. */
 		public ?string $description = null,
 		/** Used only for ECMP routes. */

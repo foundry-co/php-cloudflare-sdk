@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class R2PutBucketLifecycleConfigurationRequestRulesItem
 {
 	public function __construct(
 		/** Conditions that apply to all transitions of this rule. */
-		public R2PutBucketLifecycleConfigurationRequestRulesItemConditions $conditions,
+		public ?R2PutBucketLifecycleConfigurationRequestRulesItemConditions $conditions = null,
 		/** Whether or not this rule is in effect. */
-		public bool $enabled,
+		public ?bool $enabled = null,
 		/** Unique identifier for this rule. */
-		public string $id,
+		public ?string $id = null,
 		/** Transition to abort ongoing multipart uploads. */
 		public ?R2PutBucketLifecycleConfigurationRequestRulesItemAbortMultipartUploadsTransition $abortMultipartUploadsTransition = null,
 		/** Transition to delete objects. */

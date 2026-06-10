@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,9 @@ class APIShieldClientCertificatesResource
 	/**
 	 * List Hostname Associations
 	 */
-	public function list(
-		?string $mtlsCertificateId = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneAssociations
+	public function list(?string $mtlsCertificateId = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/certificate_authorities/hostname_associations', \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneAssociations::class, ['mtlsCertificateId' => $mtlsCertificateId ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/certificate_authorities/hostname_associations', \FoundryCo\Cloudflare\Responses\ClientCertificateForAZoneListHostnameAssociations::class, ['mtlsCertificateId' => $mtlsCertificateId ?? null]);
 	}
 
 
@@ -35,9 +33,9 @@ class APIShieldClientCertificatesResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ClientCertificateForAZonePutHostnameAssociationsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneAssociations
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/certificate_authorities/hostname_associations', \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneAssociations::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/certificate_authorities/hostname_associations', \FoundryCo\Cloudflare\Responses\ClientCertificateForAZonePutHostnameAssociations::class, $request);
 	}
 
 
@@ -50,9 +48,9 @@ class APIShieldClientCertificatesResource
 		?float $perPage = null,
 		?int $limit = null,
 		?int $offset = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneCertificates
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/client_certificates', \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneCertificates::class, ['status' => $status ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/client_certificates', \FoundryCo\Cloudflare\Responses\ClientCertificateForAZoneListClientCertificates::class, ['status' => $status ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null]);
 	}
 
 
@@ -61,20 +59,18 @@ class APIShieldClientCertificatesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ClientCertificateForAZoneCreateClientCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneCertificate
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/client_certificates', \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneCertificate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/client_certificates', \FoundryCo\Cloudflare\Responses\ClientCertificateForAZoneCreateClientCertificate::class, $request);
 	}
 
 
 	/**
 	 * Client Certificate Details
 	 */
-	public function get(
-		string $clientCertificateId,
-	): \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneDetails
+	public function get(string $clientCertificateId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/client_certificates/' . $clientCertificateId, \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/client_certificates/' . $clientCertificateId, \FoundryCo\Cloudflare\Responses\ClientCertificateForAZoneClientCertificateDetails::class, []);
 	}
 
 
@@ -84,9 +80,9 @@ class APIShieldClientCertificatesResource
 	public function clientCertificateForAZoneEditClientCertificate(
 		string $clientCertificateId,
 		\FoundryCo\Cloudflare\Requests\ClientCertificateForAZoneEditClientCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneCertificate
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/client_certificates/' . $clientCertificateId, \FoundryCo\Cloudflare\Responses\APIShieldClientCertificatesForAZoneCertificate::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/client_certificates/' . $clientCertificateId, \FoundryCo\Cloudflare\Responses\ClientCertificateForAZoneEditClientCertificate::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class RateLimitsResource
 	/**
 	 * List rate limits
 	 */
-	public function list(
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimits
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/rate_limits', \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimits::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/rate_limits', \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneListRateLimits::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create a rate limit
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\RateLimitsForAZoneCreateARateLimitRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimit
+	public function create(\FoundryCo\Cloudflare\Requests\RateLimitsForAZoneCreateARateLimitRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/rate_limits', \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimit::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/rate_limits', \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneCreateARateLimit::class, $request);
 	}
 
 
 	/**
 	 * Get a rate limit
 	 */
-	public function get(string $rateLimitId): \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimit
+	public function get(string $rateLimitId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/rate_limits/' . $rateLimitId, \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimit::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/rate_limits/' . $rateLimitId, \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneGetARateLimit::class, []);
 	}
 
 
@@ -57,9 +52,9 @@ class RateLimitsResource
 	public function update(
 		string $rateLimitId,
 		\FoundryCo\Cloudflare\Requests\RateLimitsForAZoneUpdateARateLimitRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimit
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/rate_limits/' . $rateLimitId, \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneLimit::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/rate_limits/' . $rateLimitId, \FoundryCo\Cloudflare\Responses\RateLimitsForAZoneUpdateARateLimit::class, $request);
 	}
 
 

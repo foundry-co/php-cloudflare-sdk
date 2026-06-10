@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -37,8 +37,8 @@ class AISearchAccountSearchResource
 	public function search(
 		string $name,
 		\FoundryCo\Cloudflare\Requests\AiSearchNamespaceMultiInstanceSearchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchAccountSearchSearch
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/search', \FoundryCo\Cloudflare\Responses\AISearchAccountSearchSearch::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/search', \FoundryCo\Cloudflare\Responses\AiSearchNamespaceMultiInstanceSearch::class, $request);
 	}
 }

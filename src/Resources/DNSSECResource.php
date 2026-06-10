@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class DNSSECResource
 	/**
 	 * DNSSEC Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DNSSECDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dnssec', \FoundryCo\Cloudflare\Responses\DNSSECDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/dnssec', \FoundryCo\Cloudflare\Responses\DnssecDnssecDetails::class, []);
 	}
 
 
 	/**
 	 * Edit DNSSEC Status
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\DnssecEditDnssecStatusRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSSECStatus
+	public function update(\FoundryCo\Cloudflare\Requests\DnssecEditDnssecStatusRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/dnssec', \FoundryCo\Cloudflare\Responses\DNSSECStatus::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/dnssec', \FoundryCo\Cloudflare\Responses\DnssecEditDnssecStatus::class, $request);
 	}
 
 
@@ -51,8 +49,8 @@ class DNSSECResource
 	/**
 	 * List DNSSEC ZSKs
 	 */
-	public function zsk(): \FoundryCo\Cloudflare\Responses\DNSSECZsks
+	public function zsk(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dnssec/zsk', \FoundryCo\Cloudflare\Responses\DNSSECZsks::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/dnssec/zsk', \FoundryCo\Cloudflare\Responses\DnssecListDnssecZsks::class, []);
 	}
 }

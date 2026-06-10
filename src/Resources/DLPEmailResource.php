@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class DLPEmailResource
 	/**
 	 * Get mapping
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLPEmailMapping
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/email/account_mapping', \FoundryCo\Cloudflare\Responses\DLPEmailMapping::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/email/account_mapping', \FoundryCo\Cloudflare\Responses\DlpEmailScannerGetAccountMapping::class, []);
 	}
 
 
 	/**
 	 * Create mapping
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpEmailScannerCreateAccountMappingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPEmailMapping
+	public function create(\FoundryCo\Cloudflare\Requests\DlpEmailScannerCreateAccountMappingRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/email/account_mapping', \FoundryCo\Cloudflare\Responses\DLPEmailMapping::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/email/account_mapping', \FoundryCo\Cloudflare\Responses\DlpEmailScannerCreateAccountMapping::class, $request);
 	}
 
 
 	/**
 	 * List all email scanner rules
 	 */
-	public function rules(): \FoundryCo\Cloudflare\Responses\DLPEmailRules
+	public function rules(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/email/rules', \FoundryCo\Cloudflare\Responses\DLPEmailRules::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/email/rules', \FoundryCo\Cloudflare\Responses\DlpEmailScannerListAllRules::class, []);
 	}
 
 
@@ -53,29 +51,27 @@ class DLPEmailResource
 	 */
 	public function dlpEmailScannerCreateRule(
 		\FoundryCo\Cloudflare\Requests\DlpEmailScannerCreateRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPEmailRule
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/email/rules', \FoundryCo\Cloudflare\Responses\DLPEmailRule::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/email/rules', \FoundryCo\Cloudflare\Responses\DlpEmailScannerCreateRule::class, $request);
 	}
 
 
 	/**
 	 * Update email scanner rule priorities
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\DlpEmailScannerUpdateRulePrioritiesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPEmailPriorities
+	public function update(\FoundryCo\Cloudflare\Requests\DlpEmailScannerUpdateRulePrioritiesRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/dlp/email/rules', \FoundryCo\Cloudflare\Responses\DLPEmailPriorities::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/dlp/email/rules', \FoundryCo\Cloudflare\Responses\DlpEmailScannerUpdateRulePriorities::class, $request);
 	}
 
 
 	/**
 	 * Get an email scanner rule
 	 */
-	public function get(string $ruleId): \FoundryCo\Cloudflare\Responses\DLPEmailRule
+	public function get(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/email/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DLPEmailRule::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/email/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DlpEmailScannerGetRule::class, []);
 	}
 
 
@@ -85,9 +81,9 @@ class DLPEmailResource
 	public function dlpEmailScannerUpdateRule(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\DlpEmailScannerUpdateRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPEmailRule
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/email/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DLPEmailRule::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/email/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DlpEmailScannerUpdateRule::class, $request);
 	}
 
 

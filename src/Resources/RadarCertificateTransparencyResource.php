@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -25,9 +25,9 @@ class RadarCertificateTransparencyResource
 		?int $limit = null,
 		?int $offset = null,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyAuthorities
+	): mixed
 	{
-		return $this->client->get('/radar/ct/authorities', \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyAuthorities::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ct/authorities', \FoundryCo\Cloudflare\Responses\RadarGetCertificateAuthorities::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -37,9 +37,9 @@ class RadarCertificateTransparencyResource
 	public function get(
 		string $caSlug,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyDetails
+	): mixed
 	{
-		return $this->client->get('/radar/ct/authorities/' . $caSlug, \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyDetails::class, ['format' => $format ?? null]);
+		return $this->client->get('/radar/ct/authorities/' . $caSlug, \FoundryCo\Cloudflare\Responses\RadarGetCertificateAuthorityDetails::class, ['format' => $format ?? null]);
 	}
 
 
@@ -50,9 +50,9 @@ class RadarCertificateTransparencyResource
 		?int $limit = null,
 		?int $offset = null,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyLogs
+	): mixed
 	{
-		return $this->client->get('/radar/ct/logs', \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyLogs::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ct/logs', \FoundryCo\Cloudflare\Responses\RadarGetCertificateLogs::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -62,9 +62,9 @@ class RadarCertificateTransparencyResource
 	public function radarGetCertificateLogDetails(
 		string $logSlug,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyDetails
+	): mixed
 	{
-		return $this->client->get('/radar/ct/logs/' . $logSlug, \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyDetails::class, ['format' => $format ?? null]);
+		return $this->client->get('/radar/ct/logs/' . $logSlug, \FoundryCo\Cloudflare\Responses\RadarGetCertificateLogDetails::class, ['format' => $format ?? null]);
 	}
 
 
@@ -95,9 +95,9 @@ class RadarCertificateTransparencyResource
 		?array $uniqueEntries = null,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencySummary
+	): mixed
 	{
-		return $this->client->get('/radar/ct/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencySummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'ca' => $ca ?? null, 'caOwner' => $caOwner ?? null, 'duration' => $duration ?? null, 'entryType' => $entryType ?? null, 'expirationStatus' => $expirationStatus ?? null, 'hasIps' => $hasIps ?? null, 'hasWildcards' => $hasWildcards ?? null, 'log' => $log ?? null, 'logApi' => $logApi ?? null, 'logOperator' => $logOperator ?? null, 'publicKeyAlgorithm' => $publicKeyAlgorithm ?? null, 'signatureAlgorithm' => $signatureAlgorithm ?? null, 'tld' => $tld ?? null, 'validationLevel' => $validationLevel ?? null, 'uniqueEntries' => $uniqueEntries ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ct/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetCtSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'ca' => $ca ?? null, 'caOwner' => $caOwner ?? null, 'duration' => $duration ?? null, 'entryType' => $entryType ?? null, 'expirationStatus' => $expirationStatus ?? null, 'hasIps' => $hasIps ?? null, 'hasWildcards' => $hasWildcards ?? null, 'log' => $log ?? null, 'logApi' => $logApi ?? null, 'logOperator' => $logOperator ?? null, 'publicKeyAlgorithm' => $publicKeyAlgorithm ?? null, 'signatureAlgorithm' => $signatureAlgorithm ?? null, 'tld' => $tld ?? null, 'validationLevel' => $validationLevel ?? null, 'uniqueEntries' => $uniqueEntries ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -126,9 +126,9 @@ class RadarCertificateTransparencyResource
 		?array $validationLevel = null,
 		?array $uniqueEntries = null,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/ct/timeseries', \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'ca' => $ca ?? null, 'caOwner' => $caOwner ?? null, 'duration' => $duration ?? null, 'entryType' => $entryType ?? null, 'expirationStatus' => $expirationStatus ?? null, 'hasIps' => $hasIps ?? null, 'hasWildcards' => $hasWildcards ?? null, 'log' => $log ?? null, 'logApi' => $logApi ?? null, 'logOperator' => $logOperator ?? null, 'publicKeyAlgorithm' => $publicKeyAlgorithm ?? null, 'signatureAlgorithm' => $signatureAlgorithm ?? null, 'tld' => $tld ?? null, 'validationLevel' => $validationLevel ?? null, 'uniqueEntries' => $uniqueEntries ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ct/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetCtTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'ca' => $ca ?? null, 'caOwner' => $caOwner ?? null, 'duration' => $duration ?? null, 'entryType' => $entryType ?? null, 'expirationStatus' => $expirationStatus ?? null, 'hasIps' => $hasIps ?? null, 'hasWildcards' => $hasWildcards ?? null, 'log' => $log ?? null, 'logApi' => $logApi ?? null, 'logOperator' => $logOperator ?? null, 'publicKeyAlgorithm' => $publicKeyAlgorithm ?? null, 'signatureAlgorithm' => $signatureAlgorithm ?? null, 'tld' => $tld ?? null, 'validationLevel' => $validationLevel ?? null, 'uniqueEntries' => $uniqueEntries ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -160,8 +160,8 @@ class RadarCertificateTransparencyResource
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyNormalization $normalization = null,
 		?array $uniqueEntries = null,
 		?\FoundryCo\Cloudflare\Enums\RadarCertificateTransparencyFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyGroup
+	): mixed
 	{
-		return $this->client->get('/radar/ct/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarCertificateTransparencyGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'ca' => $ca ?? null, 'caOwner' => $caOwner ?? null, 'duration' => $duration ?? null, 'entryType' => $entryType ?? null, 'expirationStatus' => $expirationStatus ?? null, 'hasIps' => $hasIps ?? null, 'hasWildcards' => $hasWildcards ?? null, 'log' => $log ?? null, 'logApi' => $logApi ?? null, 'logOperator' => $logOperator ?? null, 'publicKeyAlgorithm' => $publicKeyAlgorithm ?? null, 'signatureAlgorithm' => $signatureAlgorithm ?? null, 'validationLevel' => $validationLevel ?? null, 'tld' => $tld ?? null, 'normalization' => $normalization ?? null, 'uniqueEntries' => $uniqueEntries ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ct/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetCtTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'ca' => $ca ?? null, 'caOwner' => $caOwner ?? null, 'duration' => $duration ?? null, 'entryType' => $entryType ?? null, 'expirationStatus' => $expirationStatus ?? null, 'hasIps' => $hasIps ?? null, 'hasWildcards' => $hasWildcards ?? null, 'log' => $log ?? null, 'logApi' => $logApi ?? null, 'logOperator' => $logOperator ?? null, 'publicKeyAlgorithm' => $publicKeyAlgorithm ?? null, 'signatureAlgorithm' => $signatureAlgorithm ?? null, 'validationLevel' => $validationLevel ?? null, 'tld' => $tld ?? null, 'normalization' => $normalization ?? null, 'uniqueEntries' => $uniqueEntries ?? null, 'format' => $format ?? null]);
 	}
 }

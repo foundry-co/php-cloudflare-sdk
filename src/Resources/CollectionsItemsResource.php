@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,11 +31,8 @@ class CollectionsItemsResource
 	/**
 	 * Search items (advanced filtering)
 	 */
-	public function search(
-		string $collectionId,
-		\FoundryCo\Cloudflare\Requests\PostItemSearchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CollectionsItemsItemSearch
+	public function search(string $collectionId, \FoundryCo\Cloudflare\Requests\PostItemSearchRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/search', \FoundryCo\Cloudflare\Responses\CollectionsItemsItemSearch::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/search', \FoundryCo\Cloudflare\Responses\PostItemSearch::class, $request);
 	}
 }

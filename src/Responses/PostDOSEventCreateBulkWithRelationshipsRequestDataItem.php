@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,11 +13,11 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class PostDOSEventCreateBulkWithRelationshipsRequestDataItem
 {
 	public function __construct(
-		public string $category,
-		public \DateTimeImmutable $date,
-		public string $event,
-		public PostDOSEventCreateBulkWithRelationshipsRequestDataItemRaw $raw,
-		public string $tlp,
+		public ?string $category = null,
+		public ?\DateTimeImmutable $date = null,
+		public ?string $event = null,
+		public ?PostDOSEventCreateBulkWithRelationshipsRequestDataItemRaw $raw = null,
+		public ?string $tlp = null,
 		public ?float $accountId = null,
 		public ?string $attacker = null,
 		public ?string $attackerCountry = null,

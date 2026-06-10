@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class PutV4AccountsByAccountIdPipelinesByPipelineNameDeprecatedRequestD
 {
 	public function __construct(
 		/** Specifies the R2 Bucket to store files. */
-		public string $bucket,
+		public ?string $bucket = null,
 		/** Specifies the name pattern to for individual data files. */
 		public mixed $filename = null,
 		/** Specifies the name pattern for directory. */

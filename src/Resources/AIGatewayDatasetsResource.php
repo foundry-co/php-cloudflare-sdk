@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,9 +29,9 @@ class AIGatewayDatasetsResource
 		?string $name = null,
 		?bool $enable = null,
 		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets', \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'name' => $name ?? null, 'enable' => $enable ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets', \FoundryCo\Cloudflare\Responses\AigConfigListDataset::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'name' => $name ?? null, 'enable' => $enable ?? null, 'search' => $search ?? null]);
 	}
 
 
@@ -41,18 +41,18 @@ class AIGatewayDatasetsResource
 	public function create(
 		string $gatewayId,
 		\FoundryCo\Cloudflare\Requests\AigConfigCreateDatasetRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets', \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets', \FoundryCo\Cloudflare\Responses\AigConfigCreateDataset::class, $request);
 	}
 
 
 	/**
 	 * Fetch a Dataset
 	 */
-	public function datasets(string $gatewayId, string $id): \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset
+	public function datasets(string $gatewayId, string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigFetchDataset::class, []);
 	}
 
 
@@ -63,9 +63,9 @@ class AIGatewayDatasetsResource
 		string $gatewayId,
 		string $id,
 		\FoundryCo\Cloudflare\Requests\AigConfigUpdateDatasetRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayDatasetsDataset::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/datasets/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigUpdateDataset::class, $request);
 	}
 
 

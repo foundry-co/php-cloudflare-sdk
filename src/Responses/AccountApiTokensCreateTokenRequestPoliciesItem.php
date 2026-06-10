@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,13 +14,13 @@ readonly class AccountApiTokensCreateTokenRequestPoliciesItem
 {
 	public function __construct(
 		/** Allow or deny operations against the resources. */
-		public \FoundryCo\Cloudflare\Enums\AccountApiTokensCreateTokenRequestPoliciesItemEffect $effect,
+		public ?\FoundryCo\Cloudflare\Enums\AccountApiTokensCreateTokenRequestPoliciesItemEffect $effect = null,
 		/** Policy identifier. */
-		public string $id,
+		public ?string $id = null,
 		/** A set of permission groups that are specified to the policy. */
-		public array $permissionGroups,
+		public ?array $permissionGroups = null,
 		/** A list of resource names that the policy applies to. */
-		public mixed $resources,
+		public mixed $resources = null,
 	) {
 	}
 }

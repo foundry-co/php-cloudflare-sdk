@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -11,16 +11,17 @@ declare(strict_types=1);
 namespace FoundryCo\Cloudflare\Responses;
 
 /**
- * Response result for a batch origin cloud region operation.
+ * Response result for a single origin cloud region mapping.
  */
 readonly class OriginCloudRegionsDelete
 {
 	public function __construct(
 		/** Whether the setting can be modified by the current user. */
-		public bool $editable,
-		public \FoundryCo\Cloudflare\Enums\OriginCloudRegionsDeleteId $id,
-		public OriginCloudRegionsDeleteValue $value,
-		/** Time the mapping set was last modified. Null when no items were successfully applied. */
+		public ?bool $editable = null,
+		public ?\FoundryCo\Cloudflare\Enums\OriginCloudRegionsDeleteId $id = null,
+		/** A single origin IP-to-cloud-region mapping. */
+		public ?OriginCloudRegionsDeleteValue $value = null,
+		/** Time the mapping was last modified. */
 		public ?\DateTimeImmutable $modifiedOn = null,
 	) {
 	}

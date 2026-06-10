@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -23,15 +23,15 @@ readonly class RegistrarDomainRegistrationCreateRequestContactsRegistrant
 		 * communications from the registry, including ownership verification
 		 * and renewal notices.
 		 */
-		public string $email,
+		public ?string $email = null,
 		/**
 		 * Phone number in E.164 format: `+{country_code}.{number}` with no
 		 * spaces or dashes. Examples: `+1.5555555555` (US), `+44.2071234567`
 		 * (UK), `+81.312345678` (Japan).
 		 */
-		public string $phone,
+		public ?string $phone = null,
 		/** Postal/mailing information for the registrant contact. */
-		public RegistrarDomainRegistrationCreateRequestContactsRegistrantPostalInfo $postalInfo,
+		public ?RegistrarDomainRegistrationCreateRequestContactsRegistrantPostalInfo $postalInfo = null,
 		/**
 		 * Fax number in E.164 format (e.g., `+1.5555555555`). Optional.
 		 * Most registrations do not require a fax number.

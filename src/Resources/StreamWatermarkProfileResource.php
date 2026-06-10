@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class StreamWatermarkProfileResource
 	/**
 	 * List watermark profiles
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileProfiles
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/watermarks', \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileProfiles::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/watermarks', \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileListWatermarkProfiles::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class StreamWatermarkProfileResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\StreamWatermarkProfileCreateWatermarkProfilesViaBasicUploadRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileUpload
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/watermarks', \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileUpload::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/watermarks', \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileCreateWatermarkProfilesViaBasicUpload::class, $request);
 	}
 
 
 	/**
 	 * Watermark profile details
 	 */
-	public function get(string $identifier): \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileDetails
+	public function get(string $identifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/watermarks/' . $identifier, \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/watermarks/' . $identifier, \FoundryCo\Cloudflare\Responses\StreamWatermarkProfileWatermarkProfileDetails::class, []);
 	}
 
 

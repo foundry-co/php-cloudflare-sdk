@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,42 +31,36 @@ class DEXRemoteCommandsResource
 		?string $userEmail = null,
 		?\FoundryCo\Cloudflare\Enums\DEXRemoteCommandsCommandType $commandType = null,
 		?\FoundryCo\Cloudflare\Enums\DEXRemoteCommandsStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsCommands
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/commands', \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsCommands::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'deviceId' => $deviceId ?? null, 'userEmail' => $userEmail ?? null, 'commandType' => $commandType ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/commands', \FoundryCo\Cloudflare\Responses\GetCommands::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'deviceId' => $deviceId ?? null, 'userEmail' => $userEmail ?? null, 'commandType' => $commandType ?? null, 'status' => $status ?? null]);
 	}
 
 
 	/**
 	 * Create account commands
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostCommandsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsCommands
+	public function create(\FoundryCo\Cloudflare\Requests\PostCommandsRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dex/commands', \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsCommands::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dex/commands', \FoundryCo\Cloudflare\Responses\PostCommands::class, $request);
 	}
 
 
 	/**
 	 * List devices eligible for remote captures
 	 */
-	public function devices(
-		?float $page = null,
-		?float $perPage = null,
-		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsDevices
+	public function devices(?float $page = null, ?float $perPage = null, ?string $search = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/commands/devices', \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsDevices::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/commands/devices', \FoundryCo\Cloudflare\Responses\GetCommandsEligibleDevices::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Returns account commands usage, quota, and reset time
 	 */
-	public function quota(): \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsQuota
+	public function quota(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/commands/quota', \FoundryCo\Cloudflare\Responses\DEXRemoteCommandsQuota::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/commands/quota', \FoundryCo\Cloudflare\Responses\GetCommandsQuota::class, []);
 	}
 
 

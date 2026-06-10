@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,43 +22,36 @@ class SchemaValidationSettingsResource
 	/**
 	 * Get global schema validation settings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/settings', \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/settings', \FoundryCo\Cloudflare\Responses\SchemaValidationGetSettings::class, []);
 	}
 
 
 	/**
 	 * Update global schema validation settings
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\SchemaValidationUpdateSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings
+	public function update(\FoundryCo\Cloudflare\Requests\SchemaValidationUpdateSettingsRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/schema_validation/settings', \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/schema_validation/settings', \FoundryCo\Cloudflare\Responses\SchemaValidationUpdateSettings::class, $request);
 	}
 
 
 	/**
 	 * Edit global schema validation settings
 	 */
-	public function settings(
-		\FoundryCo\Cloudflare\Requests\SchemaValidationEditSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings
+	public function settings(\FoundryCo\Cloudflare\Requests\SchemaValidationEditSettingsRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/schema_validation/settings', \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/schema_validation/settings', \FoundryCo\Cloudflare\Responses\SchemaValidationEditSettings::class, $request);
 	}
 
 
 	/**
 	 * List per-operation schema validation settings
 	 */
-	public function operations(
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings
+	public function operations(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/settings/operations', \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSettings::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/settings/operations', \FoundryCo\Cloudflare\Responses\SchemaValidationListPerOperationSettings::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -74,9 +67,9 @@ class SchemaValidationSettingsResource
 	/**
 	 * Get per-operation schema validation setting
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSetting
+	public function get(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/settings/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/settings/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\SchemaValidationGetPerOperationSetting::class, []);
 	}
 
 
@@ -85,9 +78,9 @@ class SchemaValidationSettingsResource
 	 */
 	public function schemaValidationUpdatePerOperationSetting(
 		\FoundryCo\Cloudflare\Requests\SchemaValidationUpdatePerOperationSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSetting
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/schema_validation/settings/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\SchemaValidationSettingsSetting::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/schema_validation/settings/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\SchemaValidationUpdatePerOperationSetting::class, $request);
 	}
 
 

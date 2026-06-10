@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class NotificationDestinationsWithPagerdutyResource
 	/**
 	 * List PagerDuty services
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyServices
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/pagerduty', \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyServices::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/pagerduty', \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyListPagerDutyServices::class, []);
 	}
 
 
@@ -40,17 +40,17 @@ class NotificationDestinationsWithPagerdutyResource
 	/**
 	 * Create PagerDuty integration token
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyDuty
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/destinations/pagerduty/connect', \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyDuty::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/destinations/pagerduty/connect', \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyConnectPagerDuty::class, null);
 	}
 
 
 	/**
 	 * Connect PagerDuty
 	 */
-	public function get(string $tokenId): \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyToken
+	public function get(string $tokenId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/pagerduty/connect/' . $tokenId, \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyToken::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/pagerduty/connect/' . $tokenId, \FoundryCo\Cloudflare\Responses\NotificationDestinationsWithPagerDutyConnectPagerDutyToken::class, []);
 	}
 }

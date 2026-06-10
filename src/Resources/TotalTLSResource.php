@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,19 +22,17 @@ class TotalTLSResource
 	/**
 	 * Total TLS Settings Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\TotalTLSDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/acm/total_tls', \FoundryCo\Cloudflare\Responses\TotalTLSDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/acm/total_tls', \FoundryCo\Cloudflare\Responses\TotalTlsTotalTlsSettingsDetails::class, []);
 	}
 
 
 	/**
 	 * Enable or Disable Total TLS
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\TotalTlsEnableOrDisableTotalTlsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TotalTLSTls
+	public function create(\FoundryCo\Cloudflare\Requests\TotalTlsEnableOrDisableTotalTlsRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/acm/total_tls', \FoundryCo\Cloudflare\Responses\TotalTLSTls::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/acm/total_tls', \FoundryCo\Cloudflare\Responses\TotalTlsEnableOrDisableTotalTls::class, $request);
 	}
 }

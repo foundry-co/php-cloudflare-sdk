@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityArc
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/arc', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityArc::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/arc', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryByArc::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -50,9 +50,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDkim
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/dkim', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDkim::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/dkim', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryByDkim::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -69,9 +69,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDmarc
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/dmarc', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDmarc::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/dmarc', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryByDmarc::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -89,9 +89,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMalicious
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/malicious', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMalicious::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/malicious', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryByMalicious::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -109,9 +109,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpam
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/spam', \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpam::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/spam', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryBySpam::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -128,9 +128,9 @@ class RadarEmailSecurityResource
 		?array $dmarc = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpf
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/spf', \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpf::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/spf', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryBySpf::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -148,9 +148,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpoof
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/spoof', \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpoof::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/spoof', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryBySpoof::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -168,9 +168,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityCategory
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/threat_category', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityCategory::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/threat_category', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryByThreatCategory::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -187,9 +187,9 @@ class RadarEmailSecurityResource
 		?array $dmarc = null,
 		?array $spf = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityVersion
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/tls_version', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/tls_version', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummaryByTlsVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -209,9 +209,9 @@ class RadarEmailSecurityResource
 		?array $tlsVersion = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySummary
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetEmailSecuritySummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -229,9 +229,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityArc
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/arc', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityArc::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/arc', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupByArc::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -249,9 +249,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDkim
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/dkim', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDkim::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/dkim', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupByDkim::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -269,9 +269,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDmarc
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/dmarc', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityDmarc::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/dmarc', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupByDmarc::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -290,9 +290,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMalicious
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/malicious', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMalicious::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/malicious', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupByMalicious::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -311,9 +311,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpam
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/spam', \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpam::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/spam', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupBySpam::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -331,9 +331,9 @@ class RadarEmailSecurityResource
 		?array $dmarc = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpf
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/spf', \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpf::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/spf', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupBySpf::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -352,9 +352,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpoof
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/spoof', \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpoof::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/spoof', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupBySpoof::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -373,9 +373,9 @@ class RadarEmailSecurityResource
 		?array $spf = null,
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityCategory
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/threat_category', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityCategory::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/threat_category', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupByThreatCategory::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -393,9 +393,9 @@ class RadarEmailSecurityResource
 		?array $dmarc = null,
 		?array $spf = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityVersion
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/tls_version', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/tls_version', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroupByTlsVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -416,9 +416,9 @@ class RadarEmailSecurityResource
 		?array $tlsVersion = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityGroup
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarEmailSecurityGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -438,9 +438,9 @@ class RadarEmailSecurityResource
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityTldCategory $tldCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMessages
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/top/tlds', \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMessages::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/top/tlds', \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTopTldsByMessages::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -461,9 +461,9 @@ class RadarEmailSecurityResource
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityTldCategory $tldCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMalicious
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/top/tlds/malicious/' . $malicious, \FoundryCo\Cloudflare\Responses\RadarEmailSecurityMalicious::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/top/tlds/malicious/' . $malicious, \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTopTldsByMalicious::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -484,9 +484,9 @@ class RadarEmailSecurityResource
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityTldCategory $tldCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpam
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/top/tlds/spam/' . $spam, \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpam::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/top/tlds/spam/' . $spam, \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTopTldsBySpam::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -507,8 +507,8 @@ class RadarEmailSecurityResource
 		?array $tlsVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityTldCategory $tldCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarEmailSecurityFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpoof
+	): mixed
 	{
-		return $this->client->get('/radar/email/security/top/tlds/spoof/' . $spoof, \FoundryCo\Cloudflare\Responses\RadarEmailSecuritySpoof::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/email/security/top/tlds/spoof/' . $spoof, \FoundryCo\Cloudflare\Responses\RadarGetEmailSecurityTopTldsBySpoof::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'arc' => $arc ?? null, 'dkim' => $dkim ?? null, 'dmarc' => $dmarc ?? null, 'spf' => $spf ?? null, 'tlsVersion' => $tlsVersion ?? null, 'tldCategory' => $tldCategory ?? null, 'format' => $format ?? null]);
 	}
 }

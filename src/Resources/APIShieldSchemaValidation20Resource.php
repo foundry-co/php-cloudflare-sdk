@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -87,38 +87,36 @@ class APIShieldSchemaValidation20Resource
 		?int $perPage = null,
 		?bool $omitSource = null,
 		?bool $validationEnabled = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schemas
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/user_schemas', \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schemas::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'omitSource' => $omitSource ?? null, 'validationEnabled' => $validationEnabled ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/user_schemas', \FoundryCo\Cloudflare\Responses\ApiShieldSchemaValidationRetrieveInformationAboutAllSchemas::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'omitSource' => $omitSource ?? null, 'validationEnabled' => $validationEnabled ?? null]);
 	}
 
 
 	/**
 	 * Upload a schema to a zone
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schema
+	public function create(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/user_schemas', \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schema::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/user_schemas', \FoundryCo\Cloudflare\Responses\ApiShieldSchemaValidationPostSchema::class, null);
 	}
 
 
 	/**
 	 * Retrieve schema hosts in a zone
 	 */
-	public function hosts(): \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Hosts
+	public function hosts(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/user_schemas/hosts', \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Hosts::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/user_schemas/hosts', \FoundryCo\Cloudflare\Responses\ApiShieldSchemaValidationRetrieveUserSchemaHosts::class, []);
 	}
 
 
 	/**
 	 * Retrieve information about a specific schema on a zone
 	 */
-	public function apiShieldSchemaValidationRetrieveInformationAboutSpecificSchema(
-		?bool $omitSource = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schema
+	public function apiShieldSchemaValidationRetrieveInformationAboutSpecificSchema(?bool $omitSource = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/user_schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schema::class, ['omitSource' => $omitSource ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/user_schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\ApiShieldSchemaValidationRetrieveInformationAboutSpecificSchema::class, ['omitSource' => $omitSource ?? null]);
 	}
 
 
@@ -127,9 +125,9 @@ class APIShieldSchemaValidation20Resource
 	 */
 	public function apiShieldSchemaValidationEnableValidationForASchema(
 		\FoundryCo\Cloudflare\Requests\ApiShieldSchemaValidationEnableValidationForASchemaRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schema
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/api_gateway/user_schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\APIShieldSchemaValidation20Schema::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/api_gateway/user_schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\ApiShieldSchemaValidationEnableValidationForASchema::class, $request);
 	}
 
 

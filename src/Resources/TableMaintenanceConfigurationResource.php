@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,13 +22,9 @@ class TableMaintenanceConfigurationResource
 	/**
 	 * Get table maintenance configuration
 	 */
-	public function get(
-		string $bucketName,
-		string $namespace,
-		string $tableName,
-	): \FoundryCo\Cloudflare\Responses\TableMaintenanceConfigurationConfig
+	public function get(string $bucketName, string $namespace, string $tableName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/namespaces/' . $namespace . '/tables/' . $tableName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\TableMaintenanceConfigurationConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/namespaces/' . $namespace . '/tables/' . $tableName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\GetTableMaintenanceConfig::class, []);
 	}
 
 
@@ -40,8 +36,8 @@ class TableMaintenanceConfigurationResource
 		string $namespace,
 		string $tableName,
 		\FoundryCo\Cloudflare\Requests\UpdateTableMaintenanceConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TableMaintenanceConfigurationConfig
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/namespaces/' . $namespace . '/tables/' . $tableName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\TableMaintenanceConfigurationConfig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/r2-catalog/' . $bucketName . '/namespaces/' . $namespace . '/tables/' . $tableName . '/maintenance-configs', \FoundryCo\Cloudflare\Responses\UpdateTableMaintenanceConfig::class, $request);
 	}
 }

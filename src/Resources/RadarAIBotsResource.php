@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class RadarAIBotsResource
 		?array $continent = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIBotsAgent
+	): mixed
 	{
-		return $this->client->get('/radar/ai/bots/summary/user_agent', \FoundryCo\Cloudflare\Responses\RadarAIBotsAgent::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/bots/summary/user_agent', \FoundryCo\Cloudflare\Responses\RadarGetAiBotsSummaryByUserAgent::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -58,9 +58,9 @@ class RadarAIBotsResource
 		?array $responseStatusCategory = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIBotsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/ai/bots/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAIBotsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'crawlPurpose' => $crawlPurpose ?? null, 'userAgent' => $userAgent ?? null, 'vertical' => $vertical ?? null, 'industry' => $industry ?? null, 'contentType' => $contentType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/bots/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAiBotsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'crawlPurpose' => $crawlPurpose ?? null, 'userAgent' => $userAgent ?? null, 'vertical' => $vertical ?? null, 'industry' => $industry ?? null, 'contentType' => $contentType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -85,9 +85,9 @@ class RadarAIBotsResource
 		?array $responseStatusCategory = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIBotsTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/ai/bots/timeseries', \FoundryCo\Cloudflare\Responses\RadarAIBotsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'crawlPurpose' => $crawlPurpose ?? null, 'userAgent' => $userAgent ?? null, 'industry' => $industry ?? null, 'vertical' => $vertical ?? null, 'contentType' => $contentType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/bots/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetAiBotsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'crawlPurpose' => $crawlPurpose ?? null, 'userAgent' => $userAgent ?? null, 'industry' => $industry ?? null, 'vertical' => $vertical ?? null, 'contentType' => $contentType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -105,9 +105,9 @@ class RadarAIBotsResource
 		?array $continent = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIBotsAgent
+	): mixed
 	{
-		return $this->client->get('/radar/ai/bots/timeseries_groups/user_agent', \FoundryCo\Cloudflare\Responses\RadarAIBotsAgent::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/bots/timeseries_groups/user_agent', \FoundryCo\Cloudflare\Responses\RadarGetAiBotsTimeseriesGroupByUserAgent::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -134,8 +134,8 @@ class RadarAIBotsResource
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIBotsNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarAIBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarAIBotsGroup
+	): mixed
 	{
-		return $this->client->get('/radar/ai/bots/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarAIBotsGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'crawlPurpose' => $crawlPurpose ?? null, 'userAgent' => $userAgent ?? null, 'industry' => $industry ?? null, 'vertical' => $vertical ?? null, 'contentType' => $contentType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/ai/bots/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAiBotsTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'crawlPurpose' => $crawlPurpose ?? null, 'userAgent' => $userAgent ?? null, 'industry' => $industry ?? null, 'vertical' => $vertical ?? null, 'contentType' => $contentType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 }

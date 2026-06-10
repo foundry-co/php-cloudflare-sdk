@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class NotificationWebhooksResource
 	/**
 	 * List webhooks
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhooks
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks', \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhooks::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks', \FoundryCo\Cloudflare\Responses\NotificationWebhooksListWebhooks::class, []);
 	}
 
 
 	/**
 	 * Create a webhook
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\NotificationWebhooksCreateAWebhookRequest $request,
-	): \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhook
+	public function create(\FoundryCo\Cloudflare\Requests\NotificationWebhooksCreateAWebhookRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks', \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhook::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks', \FoundryCo\Cloudflare\Responses\NotificationWebhooksCreateAWebhook::class, $request);
 	}
 
 
 	/**
 	 * Get a webhook
 	 */
-	public function get(string $webhookId): \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhook
+	public function get(string $webhookId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks/' . $webhookId, \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhook::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks/' . $webhookId, \FoundryCo\Cloudflare\Responses\NotificationWebhooksGetAWebhook::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class NotificationWebhooksResource
 	public function update(
 		string $webhookId,
 		\FoundryCo\Cloudflare\Requests\NotificationWebhooksUpdateAWebhookRequest $request,
-	): \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhook
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks/' . $webhookId, \FoundryCo\Cloudflare\Responses\NotificationWebhooksWebhook::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/alerting/v3/destinations/webhooks/' . $webhookId, \FoundryCo\Cloudflare\Responses\NotificationWebhooksUpdateAWebhook::class, $request);
 	}
 
 

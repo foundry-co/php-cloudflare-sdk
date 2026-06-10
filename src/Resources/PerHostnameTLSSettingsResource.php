@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,9 @@ class PerHostnameTLSSettingsResource
 	/**
 	 * List TLS setting for hostnames
 	 */
-	public function get(
-		\FoundryCo\Cloudflare\Enums\PerHostnameTLSSettingsSettingId $settingId,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function get(\FoundryCo\Cloudflare\Enums\PerHostnameTLSSettingsSettingId $settingId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/hostnames/settings/' . $settingId, \FoundryCo\Cloudflare\Responses\PerHostnameTLSSettingsList::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/hostnames/settings/' . $settingId, \FoundryCo\Cloudflare\Responses\PerHostnameTlsSettingsList::class, []);
 	}
 
 
@@ -36,9 +34,9 @@ class PerHostnameTLSSettingsResource
 	public function settings(
 		\FoundryCo\Cloudflare\Enums\PerHostnameTLSSettingsSettingId $settingId,
 		string $hostname,
-	): \FoundryCo\Cloudflare\Responses\PerHostnameTLSSettingsGet
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/hostnames/settings/' . $settingId . '/' . $hostname, \FoundryCo\Cloudflare\Responses\PerHostnameTLSSettingsGet::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/hostnames/settings/' . $settingId . '/' . $hostname, \FoundryCo\Cloudflare\Responses\PerHostnameTlsSettingsGet::class, []);
 	}
 
 
@@ -49,9 +47,9 @@ class PerHostnameTLSSettingsResource
 		\FoundryCo\Cloudflare\Enums\PerHostnameTLSSettingsSettingId $settingId,
 		string $hostname,
 		\FoundryCo\Cloudflare\Requests\PerHostnameTlsSettingsPutRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PerHostnameTLSSettingsPut
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/hostnames/settings/' . $settingId . '/' . $hostname, \FoundryCo\Cloudflare\Responses\PerHostnameTLSSettingsPut::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/hostnames/settings/' . $settingId . '/' . $hostname, \FoundryCo\Cloudflare\Responses\PerHostnameTlsSettingsPut::class, $request);
 	}
 
 

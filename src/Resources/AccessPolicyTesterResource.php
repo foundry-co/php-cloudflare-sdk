@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class AccessPolicyTesterResource
 	/**
 	 * Start Access policy test
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccessPolicyTestsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessPolicyTesterTests
+	public function create(\FoundryCo\Cloudflare\Requests\AccessPolicyTestsRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/policy-tests', \FoundryCo\Cloudflare\Responses\AccessPolicyTesterTests::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/policy-tests', \FoundryCo\Cloudflare\Responses\AccessPolicyTests::class, $request);
 	}
 
 
 	/**
 	 * Get the current status of a given Access policy test
 	 */
-	public function get(string $policyTestId): \FoundryCo\Cloudflare\Responses\AccessPolicyTesterUpdate
+	public function get(string $policyTestId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/policy-tests/' . $policyTestId, \FoundryCo\Cloudflare\Responses\AccessPolicyTesterUpdate::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/policy-tests/' . $policyTestId, \FoundryCo\Cloudflare\Responses\AccessPolicyTestsGetAnUpdate::class, []);
 	}
 
 
@@ -47,8 +45,8 @@ class AccessPolicyTesterResource
 		?int $page = null,
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\AccessPolicyTesterStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\AccessPolicyTesterPage
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/policy-tests/' . $policyTestId . '/users', \FoundryCo\Cloudflare\Responses\AccessPolicyTesterPage::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/policy-tests/' . $policyTestId . '/users', \FoundryCo\Cloudflare\Responses\AccessPolicyTestsGetAUserPage::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'status' => $status ?? null]);
 	}
 }

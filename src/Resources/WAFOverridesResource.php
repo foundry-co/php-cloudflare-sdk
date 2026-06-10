@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class WAFOverridesResource
 	/**
 	 * List WAF overrides
 	 */
-	public function list(
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\WAFOverridesOverrides
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/waf/overrides', \FoundryCo\Cloudflare\Responses\WAFOverridesOverrides::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/waf/overrides', \FoundryCo\Cloudflare\Responses\WafOverridesListWafOverrides::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create a WAF override
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\WafOverridesCreateAWafOverrideRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WAFOverridesOverride
+	public function create(\FoundryCo\Cloudflare\Requests\WafOverridesCreateAWafOverrideRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/firewall/waf/overrides', \FoundryCo\Cloudflare\Responses\WAFOverridesOverride::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/firewall/waf/overrides', \FoundryCo\Cloudflare\Responses\WafOverridesCreateAWafOverride::class, $request);
 	}
 
 
 	/**
 	 * Get a WAF override
 	 */
-	public function get(string $overridesId): \FoundryCo\Cloudflare\Responses\WAFOverridesOverride
+	public function get(string $overridesId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/waf/overrides/' . $overridesId, \FoundryCo\Cloudflare\Responses\WAFOverridesOverride::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/waf/overrides/' . $overridesId, \FoundryCo\Cloudflare\Responses\WafOverridesGetAWafOverride::class, []);
 	}
 
 
@@ -57,9 +52,9 @@ class WAFOverridesResource
 	public function update(
 		string $overridesId,
 		\FoundryCo\Cloudflare\Requests\WafOverridesUpdateWafOverrideRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WAFOverridesOverride
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/firewall/waf/overrides/' . $overridesId, \FoundryCo\Cloudflare\Responses\WAFOverridesOverride::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/firewall/waf/overrides/' . $overridesId, \FoundryCo\Cloudflare\Responses\WafOverridesUpdateWafOverride::class, $request);
 	}
 
 

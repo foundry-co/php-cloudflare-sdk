@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,43 +22,36 @@ class TokenValidationTokenConfigurationResource
 	/**
 	 * List token validation configurations
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationList
+	public function list(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/config', \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/config', \FoundryCo\Cloudflare\Responses\TokenValidationConfigList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create a new Token Validation configuration
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\TokenValidationConfigCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationCreate
+	public function create(\FoundryCo\Cloudflare\Requests\TokenValidationConfigCreateRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/config', \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationCreate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/token_validation/config', \FoundryCo\Cloudflare\Responses\TokenValidationConfigCreate::class, $request);
 	}
 
 
 	/**
 	 * Get a single Token Configuration
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationGet
+	public function get(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/config/' . $configId, \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationGet::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/token_validation/config/' . $configId, \FoundryCo\Cloudflare\Responses\TokenValidationConfigGet::class, []);
 	}
 
 
 	/**
 	 * Edit an existing Token Configuration
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\TokenValidationConfigEditRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationEdit
+	public function update(\FoundryCo\Cloudflare\Requests\TokenValidationConfigEditRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/token_validation/config/' . $configId, \FoundryCo\Cloudflare\Responses\TokenValidationTokenConfigurationEdit::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/token_validation/config/' . $configId, \FoundryCo\Cloudflare\Responses\TokenValidationConfigEdit::class, $request);
 	}
 
 

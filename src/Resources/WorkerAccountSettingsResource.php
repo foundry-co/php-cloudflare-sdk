@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class WorkerAccountSettingsResource
 	/**
 	 * Fetch Worker Account Settings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\WorkerAccountSettingsSettings
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/account-settings', \FoundryCo\Cloudflare\Responses\WorkerAccountSettingsSettings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/account-settings', \FoundryCo\Cloudflare\Responses\WorkerAccountSettingsFetchWorkerAccountSettings::class, []);
 	}
 
 
@@ -33,8 +33,8 @@ class WorkerAccountSettingsResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\WorkerAccountSettingsCreateWorkerAccountSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerAccountSettingsSettings
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/account-settings', \FoundryCo\Cloudflare\Responses\WorkerAccountSettingsSettings::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/account-settings', \FoundryCo\Cloudflare\Responses\WorkerAccountSettingsCreateWorkerAccountSettings::class, $request);
 	}
 }

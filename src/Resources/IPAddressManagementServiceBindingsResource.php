@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class IPAddressManagementServiceBindingsResource
 	/**
 	 * List Service Bindings
 	 */
-	public function get(string $prefixId): \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsBindings
+	public function get(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bindings', \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsBindings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bindings', \FoundryCo\Cloudflare\Responses\IpAddressManagementServiceBindingsListServiceBindings::class, []);
 	}
 
 
@@ -34,21 +34,18 @@ class IPAddressManagementServiceBindingsResource
 	public function create(
 		string $prefixId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementServiceBindingsCreateServiceBindingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsBinding
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bindings', \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsBinding::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bindings', \FoundryCo\Cloudflare\Responses\IpAddressManagementServiceBindingsCreateServiceBinding::class, $request);
 	}
 
 
 	/**
 	 * Get Service Binding
 	 */
-	public function bindings(
-		string $prefixId,
-		string $bindingId,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsBinding
+	public function bindings(string $prefixId, string $bindingId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bindings/' . $bindingId, \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsBinding::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bindings/' . $bindingId, \FoundryCo\Cloudflare\Responses\IpAddressManagementServiceBindingsGetServiceBinding::class, []);
 	}
 
 
@@ -64,8 +61,8 @@ class IPAddressManagementServiceBindingsResource
 	/**
 	 * List Services
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsServices
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/services', \FoundryCo\Cloudflare\Responses\IPAddressManagementServiceBindingsServices::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/services', \FoundryCo\Cloudflare\Responses\IpAddressManagementServiceBindingsListServices::class, []);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MagicNetworkMonitoringConfigurationResource
 	/**
 	 * List account configuration
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationListAccountConfiguration::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class MagicNetworkMonitoringConfigurationResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringConfigurationCreateAccountConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationCreateAccountConfiguration::class, $request);
 	}
 
 
@@ -44,9 +44,9 @@ class MagicNetworkMonitoringConfigurationResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringConfigurationUpdateAnEntireAccountConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationUpdateAnEntireAccountConfiguration::class, $request);
 	}
 
 
@@ -55,9 +55,9 @@ class MagicNetworkMonitoringConfigurationResource
 	 */
 	public function config(
 		\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringConfigurationUpdateAccountConfigurationFieldsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationFields
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationFields::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/mnm/config', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationUpdateAccountConfigurationFields::class, $request);
 	}
 
 
@@ -73,8 +73,8 @@ class MagicNetworkMonitoringConfigurationResource
 	/**
 	 * List rules and account configuration
 	 */
-	public function full(): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration
+	public function full(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mnm/config/full', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationConfiguration::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/mnm/config/full', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringConfigurationListRulesAndAccountConfiguration::class, []);
 	}
 }

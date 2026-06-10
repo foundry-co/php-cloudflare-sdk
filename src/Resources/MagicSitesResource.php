@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,56 +22,45 @@ class MagicSitesResource
 	/**
 	 * List Sites
 	 */
-	public function list(?string $connectorid = null): \FoundryCo\Cloudflare\Responses\MagicSitesSites
+	public function list(?string $connectorid = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites', \FoundryCo\Cloudflare\Responses\MagicSitesSites::class, ['connectorid' => $connectorid ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites', \FoundryCo\Cloudflare\Responses\MagicSitesListSites::class, ['connectorid' => $connectorid ?? null]);
 	}
 
 
 	/**
 	 * Create a new Site
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\MagicSitesCreateSiteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSitesSite
+	public function create(\FoundryCo\Cloudflare\Requests\MagicSitesCreateSiteRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites', \FoundryCo\Cloudflare\Responses\MagicSitesSite::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites', \FoundryCo\Cloudflare\Responses\MagicSitesCreateSite::class, $request);
 	}
 
 
 	/**
 	 * Site Details
 	 */
-	public function get(
-		string $siteId,
-		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicSitesDetails
+	public function get(string $siteId, ?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId, \FoundryCo\Cloudflare\Responses\MagicSitesDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId, \FoundryCo\Cloudflare\Responses\MagicSitesSiteDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
 	/**
 	 * Update Site
 	 */
-	public function update(
-		string $siteId,
-		\FoundryCo\Cloudflare\Requests\MagicSitesUpdateSiteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSitesSite
+	public function update(string $siteId, \FoundryCo\Cloudflare\Requests\MagicSitesUpdateSiteRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId, \FoundryCo\Cloudflare\Responses\MagicSitesSite::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId, \FoundryCo\Cloudflare\Responses\MagicSitesUpdateSite::class, $request);
 	}
 
 
 	/**
 	 * Patch Site
 	 */
-	public function sites(
-		string $siteId,
-		\FoundryCo\Cloudflare\Requests\MagicSitesPatchSiteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSitesSite
+	public function sites(string $siteId, \FoundryCo\Cloudflare\Requests\MagicSitesPatchSiteRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId, \FoundryCo\Cloudflare\Responses\MagicSitesSite::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId, \FoundryCo\Cloudflare\Responses\MagicSitesPatchSite::class, $request);
 	}
 
 

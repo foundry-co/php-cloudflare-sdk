@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,8 +13,8 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class PostIndicatorCreateBulkRequestIndicatorsItem
 {
 	public function __construct(
-		public string $indicatorType,
-		public string $value,
+		public ?string $indicatorType = null,
+		public ?string $value = null,
 		/** If true, automatically create the indicator type if it doesn't exist. If false (default), throw an error when the indicator type doesn't exist. */
 		public ?bool $autoCreateType = null,
 		public ?array $relatedEvents = null,

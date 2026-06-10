@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,9 +14,9 @@ readonly class PostEventCreateBulkRequestDataItemIndicatorsItem
 {
 	public function __construct(
 		/** The type of indicator (e.g., DOMAIN, IP, JA3, HASH) */
-		public string $indicatorType,
+		public ?string $indicatorType = null,
 		/** The indicator value (e.g., domain name, IP address, hash) */
-		public string $value,
+		public ?string $value = null,
 	) {
 	}
 }

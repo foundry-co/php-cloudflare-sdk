@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class DNSFirewallAnalyticsResource
 		?int $limit = null,
 		?string $sort = null,
 		?string $filters = null,
-	): \FoundryCo\Cloudflare\Responses\DNSFirewallAnalyticsTable
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/dns_analytics/report', \FoundryCo\Cloudflare\Responses\DNSFirewallAnalyticsTable::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/dns_analytics/report', \FoundryCo\Cloudflare\Responses\DnsFirewallAnalyticsTable::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null]);
 	}
 
 
@@ -50,8 +50,8 @@ class DNSFirewallAnalyticsResource
 		?string $sort = null,
 		?string $filters = null,
 		?\FoundryCo\Cloudflare\Enums\DNSFirewallAnalyticsTimeDelta $timeDelta = null,
-	): \FoundryCo\Cloudflare\Responses\DNSFirewallAnalyticsTime
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/dns_analytics/report/bytime', \FoundryCo\Cloudflare\Responses\DNSFirewallAnalyticsTime::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null, 'timeDelta' => $timeDelta ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/dns_analytics/report/bytime', \FoundryCo\Cloudflare\Responses\DnsFirewallAnalyticsByTime::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null, 'timeDelta' => $timeDelta ?? null]);
 	}
 }

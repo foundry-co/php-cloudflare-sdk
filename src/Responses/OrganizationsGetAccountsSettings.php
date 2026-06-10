@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,14 +13,14 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class OrganizationsGetAccountsSettings
 {
 	public function __construct(
-		public string $abuseContactEmail,
-		public \DateTimeImmutable $accessApprovalExpiry,
-		public bool $apiAccessEnabled,
+		public ?string $abuseContactEmail = null,
+		public ?\DateTimeImmutable $accessApprovalExpiry = null,
+		public ?bool $apiAccessEnabled = null,
 		/** Use [DNS Settings](https://developers.cloudflare.com/api/operations/dns-settings-for-an-account-list-dns-settings) instead. Deprecated. */
-		public string $defaultNameservers,
-		public bool $enforceTwofactor,
+		public ?string $defaultNameservers = null,
+		public ?bool $enforceTwofactor = null,
 		/** Use [DNS Settings](https://developers.cloudflare.com/api/operations/dns-settings-for-an-account-list-dns-settings) instead. Deprecated. */
-		public bool $useAccountCustomNsByDefault,
+		public ?bool $useAccountCustomNsByDefault = null,
 	) {
 	}
 }

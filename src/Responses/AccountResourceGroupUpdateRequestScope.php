@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class AccountResourceGroupUpdateRequestScope
 {
 	public function __construct(
 		/** This is a combination of pre-defined resource name and identifier (like Account ID etc.) */
-		public array $key,
+		public ?array $key = null,
 		/** A list of scope objects for additional context. The number of Scope objects should not be zero. */
-		public array $objects,
+		public ?array $objects = null,
 	) {
 	}
 }

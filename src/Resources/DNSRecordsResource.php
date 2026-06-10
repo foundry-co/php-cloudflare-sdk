@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -56,29 +56,27 @@ class DNSRecordsResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\DNSRecordsForAZoneOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\DNSRecordsForAZoneDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_records', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords::class, ['name' => $name ?? null, 'nameexact' => $nameexact ?? null, 'namecontains' => $namecontains ?? null, 'namestartswith' => $namestartswith ?? null, 'nameendswith' => $nameendswith ?? null, 'type' => $type ?? null, 'content' => $content ?? null, 'contentexact' => $contentexact ?? null, 'contentcontains' => $contentcontains ?? null, 'contentstartswith' => $contentstartswith ?? null, 'contentendswith' => $contentendswith ?? null, 'proxied' => $proxied ?? null, 'match' => $match ?? null, 'comment' => $comment ?? null, 'commentpresent' => $commentpresent ?? null, 'commentabsent' => $commentabsent ?? null, 'commentexact' => $commentexact ?? null, 'commentcontains' => $commentcontains ?? null, 'commentstartswith' => $commentstartswith ?? null, 'commentendswith' => $commentendswith ?? null, 'tag' => $tag ?? null, 'tagpresent' => $tagpresent ?? null, 'tagabsent' => $tagabsent ?? null, 'tagexact' => $tagexact ?? null, 'tagcontains' => $tagcontains ?? null, 'tagstartswith' => $tagstartswith ?? null, 'tagendswith' => $tagendswith ?? null, 'search' => $search ?? null, 'tagMatch' => $tagMatch ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_records', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneListDnsRecords::class, ['name' => $name ?? null, 'nameexact' => $nameexact ?? null, 'namecontains' => $namecontains ?? null, 'namestartswith' => $namestartswith ?? null, 'nameendswith' => $nameendswith ?? null, 'type' => $type ?? null, 'content' => $content ?? null, 'contentexact' => $contentexact ?? null, 'contentcontains' => $contentcontains ?? null, 'contentstartswith' => $contentstartswith ?? null, 'contentendswith' => $contentendswith ?? null, 'proxied' => $proxied ?? null, 'match' => $match ?? null, 'comment' => $comment ?? null, 'commentpresent' => $commentpresent ?? null, 'commentabsent' => $commentabsent ?? null, 'commentexact' => $commentexact ?? null, 'commentcontains' => $commentcontains ?? null, 'commentstartswith' => $commentstartswith ?? null, 'commentendswith' => $commentendswith ?? null, 'tag' => $tag ?? null, 'tagpresent' => $tagpresent ?? null, 'tagabsent' => $tagabsent ?? null, 'tagexact' => $tagexact ?? null, 'tagcontains' => $tagcontains ?? null, 'tagstartswith' => $tagstartswith ?? null, 'tagendswith' => $tagendswith ?? null, 'search' => $search ?? null, 'tagMatch' => $tagMatch ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create DNS Record
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecord
+	public function create(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/dns_records', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecord::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/dns_records', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneCreateDnsRecord::class, null);
 	}
 
 
 	/**
 	 * Batch DNS Records
 	 */
-	public function batch(
-		\FoundryCo\Cloudflare\Requests\DnsRecordsForAZoneBatchDnsRecordsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords
+	public function batch(\FoundryCo\Cloudflare\Requests\DnsRecordsForAZoneBatchDnsRecordsRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/batch', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/batch', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneBatchDnsRecords::class, $request);
 	}
 
 
@@ -94,27 +92,27 @@ class DNSRecordsResource
 	/**
 	 * Import DNS Records
 	 */
-	public function import(): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords
+	public function import(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/import', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/import', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneImportDnsRecords::class, null);
 	}
 
 
 	/**
 	 * Scan DNS Records
 	 */
-	public function scan(): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords
+	public function scan(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/scan', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecords::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/scan', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneScanDnsRecords::class, null);
 	}
 
 
 	/**
 	 * List Scanned DNS Records
 	 */
-	public function review(): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneScan
+	public function review(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_records/scan/review', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneScan::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_records/scan/review', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneReviewDnsScan::class, []);
 	}
 
 
@@ -123,9 +121,9 @@ class DNSRecordsResource
 	 */
 	public function dnsRecordsForAZoneApplyDnsScanResults(
 		\FoundryCo\Cloudflare\Requests\DnsRecordsForAZoneApplyDnsScanResultsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneResults
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/scan/review', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneResults::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/dns_records/scan/review', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneApplyDnsScanResults::class, $request);
 	}
 
 
@@ -141,36 +139,36 @@ class DNSRecordsResource
 	/**
 	 * Get DNS Record Usage
 	 */
-	public function usage(): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneUsage
+	public function usage(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_records/usage', \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneUsage::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_records/usage', \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneGetUsage::class, []);
 	}
 
 
 	/**
 	 * DNS Record Details
 	 */
-	public function get(string $dnsRecordId): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneDetails
+	public function get(string $dnsRecordId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_records/' . $dnsRecordId, \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_records/' . $dnsRecordId, \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneDnsRecordDetails::class, []);
 	}
 
 
 	/**
 	 * Overwrite DNS Record
 	 */
-	public function update(string $dnsRecordId): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecord
+	public function update(string $dnsRecordId): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/dns_records/' . $dnsRecordId, \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecord::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/dns_records/' . $dnsRecordId, \FoundryCo\Cloudflare\Responses\DnsRecordsForAZoneUpdateDnsRecord::class, null);
 	}
 
 
 	/**
 	 * Update DNS Record
 	 */
-	public function dnsRecords(string $dnsRecordId): \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecord
+	public function dnsRecords(string $dnsRecordId): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/dns_records/' . $dnsRecordId, \FoundryCo\Cloudflare\Responses\DNSRecordsForAZoneRecord::class, null);
+		return $this->client->patch('/zones/' . $this->zoneId . '/dns_records/' . $dnsRecordId, \FoundryCo\Cloudflare\Responses\DnsRecordsForAZonePatchDnsRecord::class, null);
 	}
 
 

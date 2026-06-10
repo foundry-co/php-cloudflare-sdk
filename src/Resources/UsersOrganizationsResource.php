@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,9 +29,9 @@ class UsersOrganizationsResource
 		?\FoundryCo\Cloudflare\Enums\UsersOrganizationsDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\UsersOrganizationsMatch $match = null,
 		?\FoundryCo\Cloudflare\Enums\UsersOrganizationsStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\UsersOrganizationsOrganizations
+	): mixed
 	{
-		return $this->client->get('/user/organizations', \FoundryCo\Cloudflare\Responses\UsersOrganizationsOrganizations::class, ['name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/user/organizations', \FoundryCo\Cloudflare\Responses\UserSOrganizationsListOrganizations::class, ['name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null, 'status' => $status ?? null]);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,9 +13,9 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class QueriespatchRequestParametersHavingsItem
 {
 	public function __construct(
-		public string $key,
-		public \FoundryCo\Cloudflare\Enums\QueriespatchRequestParametersHavingsItemOperation $operation,
-		public float $value,
+		public ?string $key = null,
+		public ?\FoundryCo\Cloudflare\Enums\QueriespatchRequestParametersHavingsItemOperation $operation = null,
+		public ?float $value = null,
 	) {
 	}
 }

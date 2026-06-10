@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,13 +21,9 @@ class BillableUsageV2Resource
 	/**
 	 * Get Account Usage (Version 2, Alpha, Restricted)
 	 */
-	public function list(
-		?\DateTimeImmutable $from = null,
-		?\DateTimeImmutable $to = null,
-		?string $metric = null,
-	): \FoundryCo\Cloudflare\Responses\BillableUsageV2Usage
+	public function list(?\DateTimeImmutable $from = null, ?\DateTimeImmutable $to = null, ?string $metric = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/billable/usage', \FoundryCo\Cloudflare\Responses\BillableUsageV2Usage::class, ['from' => $from ?? null, 'to' => $to ?? null, 'metric' => $metric ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/billable/usage', \FoundryCo\Cloudflare\Responses\BillableUsageV2GetAccountUsage::class, ['from' => $from ?? null, 'to' => $to ?? null, 'metric' => $metric ?? null]);
 	}
 
 
@@ -39,8 +35,8 @@ class BillableUsageV2Resource
 		?\DateTimeImmutable $from = null,
 		?\DateTimeImmutable $to = null,
 		?string $metric = null,
-	): \FoundryCo\Cloudflare\Responses\BillableUsageV2Usage
+	): mixed
 	{
-		return $this->client->get('/organizations/' . $organizationId . '/billable/usage', \FoundryCo\Cloudflare\Responses\BillableUsageV2Usage::class, ['from' => $from ?? null, 'to' => $to ?? null, 'metric' => $metric ?? null]);
+		return $this->client->get('/organizations/' . $organizationId . '/billable/usage', \FoundryCo\Cloudflare\Responses\BillableUsageV2GetOrganizationUsage::class, ['from' => $from ?? null, 'to' => $to ?? null, 'metric' => $metric ?? null]);
 	}
 }

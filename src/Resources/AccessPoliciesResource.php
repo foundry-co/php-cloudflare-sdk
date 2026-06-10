@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class AccessPoliciesResource
 	/**
 	 * List Access policies
 	 */
-	public function get(string $appId): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicies
+	public function get(string $appId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicies::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesListAccessPolicies::class, []);
 	}
 
 
@@ -34,21 +34,18 @@ class AccessPoliciesResource
 	public function create(
 		string $appId,
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessPoliciesCreateAnAccessPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicy
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicy::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesCreateAnAccessPolicy::class, $request);
 	}
 
 
 	/**
 	 * Get an Access policy
 	 */
-	public function policies(
-		string $policyId,
-		string $appId,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicy
+	public function policies(string $policyId, string $appId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicy::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesGetAnAccessPolicy::class, []);
 	}
 
 
@@ -59,9 +56,9 @@ class AccessPoliciesResource
 		string $policyId,
 		string $appId,
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessPoliciesUpdateAnAccessPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicy
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesPolicy::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessPoliciesUpdateAnAccessPolicy::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,34 +22,27 @@ class MagicInterconnectsResource
 	/**
 	 * List interconnects
 	 */
-	public function list(
-		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicInterconnectsInterconnects
+	public function list(?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf_interconnects', \FoundryCo\Cloudflare\Responses\MagicInterconnectsInterconnects::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf_interconnects', \FoundryCo\Cloudflare\Responses\MagicInterconnectsListInterconnects::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
 	/**
 	 * Update multiple interconnects
 	 */
-	public function update(
-		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicInterconnectsInterconnects
+	public function update(?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/cf_interconnects', \FoundryCo\Cloudflare\Responses\MagicInterconnectsInterconnects::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/cf_interconnects', \FoundryCo\Cloudflare\Responses\MagicInterconnectsUpdateMultipleInterconnects::class, null);
 	}
 
 
 	/**
 	 * List interconnect Details
 	 */
-	public function get(
-		string $cfInterconnectId,
-		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicInterconnectsDetails
+	public function get(string $cfInterconnectId, ?bool $xMagicNewHcTarget = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf_interconnects/' . $cfInterconnectId, \FoundryCo\Cloudflare\Responses\MagicInterconnectsDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cf_interconnects/' . $cfInterconnectId, \FoundryCo\Cloudflare\Responses\MagicInterconnectsListInterconnectDetails::class, ['xMagicNewHcTarget' => $xMagicNewHcTarget ?? null]);
 	}
 
 
@@ -60,8 +53,8 @@ class MagicInterconnectsResource
 		string $cfInterconnectId,
 		\FoundryCo\Cloudflare\Requests\MagicInterconnectsUpdateInterconnectRequest $request,
 		?bool $xMagicNewHcTarget = null,
-	): \FoundryCo\Cloudflare\Responses\MagicInterconnectsInterconnect
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/cf_interconnects/' . $cfInterconnectId, \FoundryCo\Cloudflare\Responses\MagicInterconnectsInterconnect::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/cf_interconnects/' . $cfInterconnectId, \FoundryCo\Cloudflare\Responses\MagicInterconnectsUpdateInterconnect::class, $request);
 	}
 }

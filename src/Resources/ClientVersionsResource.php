@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,17 +27,17 @@ class ClientVersionsResource
 		?\FoundryCo\Cloudflare\Enums\ClientVersionsReleaseTrack $releaseTrack = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\ClientVersionsVersions
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/client-versions', \FoundryCo\Cloudflare\Responses\ClientVersionsVersions::class, ['targetEnvironment' => $targetEnvironment ?? null, 'releaseTrack' => $releaseTrack ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/client-versions', \FoundryCo\Cloudflare\Responses\ListClientVersions::class, ['targetEnvironment' => $targetEnvironment ?? null, 'releaseTrack' => $releaseTrack ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * List available target environments
 	 */
-	public function targetEnvironments(): \FoundryCo\Cloudflare\Responses\ClientVersionsEnvironments
+	public function targetEnvironments(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/client-versions/target-environments', \FoundryCo\Cloudflare\Responses\ClientVersionsEnvironments::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/client-versions/target-environments', \FoundryCo\Cloudflare\Responses\ListClientTargetEnvironments::class, []);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -57,7 +57,7 @@ readonly class ModifyApplicationRequestConfiguration
 		 * - "standard-3": 2 vCPU, 8 GiB memory, 16 GB disk
 		 * - "standard-4": 4 vCPU, 12 GiB memory, 20 GB disk
 		 */
-		public mixed $instanceType = null,
+		public ?\FoundryCo\Cloudflare\Enums\ModifyApplicationRequestConfigurationInstanceType $instanceType = null,
 		/** Deployment labels */
 		public ?array $labels = null,
 		/** Lifecycle configuration for a deployment. */

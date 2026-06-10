@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,9 @@ class SSLVerificationResource
 	/**
 	 * SSL Verification Details
 	 */
-	public function list(
-		?\FoundryCo\Cloudflare\Enums\SSLVerificationRetry $retry = null,
-	): \FoundryCo\Cloudflare\Responses\SSLVerificationDetails
+	public function list(?\FoundryCo\Cloudflare\Enums\SSLVerificationRetry $retry = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/ssl/verification', \FoundryCo\Cloudflare\Responses\SSLVerificationDetails::class, ['retry' => $retry ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/ssl/verification', \FoundryCo\Cloudflare\Responses\SslVerificationSslVerificationDetails::class, ['retry' => $retry ?? null]);
 	}
 
 
@@ -36,8 +34,8 @@ class SSLVerificationResource
 	public function update(
 		string $certificatePackId,
 		\FoundryCo\Cloudflare\Requests\SslVerificationEditSslCertificatePackValidationMethodRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SSLVerificationMethod
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/ssl/verification/' . $certificatePackId, \FoundryCo\Cloudflare\Responses\SSLVerificationMethod::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/ssl/verification/' . $certificatePackId, \FoundryCo\Cloudflare\Responses\SslVerificationEditSslCertificatePackValidationMethod::class, $request);
 	}
 }

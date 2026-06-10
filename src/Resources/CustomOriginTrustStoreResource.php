@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,23 +22,16 @@ class CustomOriginTrustStoreResource
 	/**
 	 * List Custom Origin Trust Store Details
 	 */
-	public function list(
-		?float $page = null,
-		?float $perPage = null,
-		?int $limit = null,
-		?int $offset = null,
-	): \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreDetails
+	public function list(?float $page = null, ?float $perPage = null, ?int $limit = null, ?int $offset = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/acm/custom_trust_store', \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreDetails::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/acm/custom_trust_store', \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreListDetails::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null]);
 	}
 
 
 	/**
 	 * Upload Custom Origin Trust Store
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CustomOriginTrustStoreCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreCreate
+	public function create(\FoundryCo\Cloudflare\Requests\CustomOriginTrustStoreCreateRequest $request): mixed
 	{
 		return $this->client->post('/zones/' . $this->zoneId . '/acm/custom_trust_store', \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreCreate::class, $request);
 	}
@@ -47,7 +40,7 @@ class CustomOriginTrustStoreResource
 	/**
 	 * Custom Origin Trust Store Details
 	 */
-	public function get(string $customOriginTrustStoreId): \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreDetails
+	public function get(string $customOriginTrustStoreId): mixed
 	{
 		return $this->client->get('/zones/' . $this->zoneId . '/acm/custom_trust_store/' . $customOriginTrustStoreId, \FoundryCo\Cloudflare\Responses\CustomOriginTrustStoreDetails::class, []);
 	}

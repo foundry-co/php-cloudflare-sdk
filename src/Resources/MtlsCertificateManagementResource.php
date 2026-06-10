@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MtlsCertificateManagementResource
 	/**
 	 * List mTLS certificates
 	 */
-	public function list(?array $type = null): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function list(?array $type = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mtls_certificates', \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementCertificates::class, ['type' => $type ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/mtls_certificates', \FoundryCo\Cloudflare\Responses\MTlsCertificateManagementListMTlsCertificates::class, ['type' => $type ?? null]);
 	}
 
 
@@ -33,18 +33,18 @@ class MtlsCertificateManagementResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\MTlsCertificateManagementUploadMTlsCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementCertificate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/mtls_certificates', \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementCertificate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/mtls_certificates', \FoundryCo\Cloudflare\Responses\MTlsCertificateManagementUploadMTlsCertificate::class, $request);
 	}
 
 
 	/**
 	 * Get mTLS certificate
 	 */
-	public function get(string $mtlsCertificateId): \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementCertificate
+	public function get(string $mtlsCertificateId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mtls_certificates/' . $mtlsCertificateId, \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementCertificate::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/mtls_certificates/' . $mtlsCertificateId, \FoundryCo\Cloudflare\Responses\MTlsCertificateManagementGetMTlsCertificate::class, []);
 	}
 
 
@@ -60,10 +60,8 @@ class MtlsCertificateManagementResource
 	/**
 	 * List mTLS certificate associations
 	 */
-	public function associations(
-		string $mtlsCertificateId,
-	): \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementAssociations
+	public function associations(string $mtlsCertificateId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mtls_certificates/' . $mtlsCertificateId . '/associations', \FoundryCo\Cloudflare\Responses\MTLSCertificateManagementAssociations::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/mtls_certificates/' . $mtlsCertificateId . '/associations', \FoundryCo\Cloudflare\Responses\MTlsCertificateManagementListMTlsCertificateAssociations::class, []);
 	}
 }

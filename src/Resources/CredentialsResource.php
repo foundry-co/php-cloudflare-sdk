@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,51 +22,45 @@ class CredentialsResource
 	/**
 	 * List Credentials
 	 */
-	public function get(?int $page = null, ?int $perPage = null): \FoundryCo\Cloudflare\Responses\CredentialsCredentials
+	public function get(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials', \FoundryCo\Cloudflare\Responses\CredentialsCredentials::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials', \FoundryCo\Cloudflare\Responses\ListCredentials::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create Credential
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateCredentialRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function create(\FoundryCo\Cloudflare\Requests\CreateCredentialRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials', \FoundryCo\Cloudflare\Responses\CredentialsCredential::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials', \FoundryCo\Cloudflare\Responses\CreateCredential::class, $request);
 	}
 
 
 	/**
 	 * Get Credential
 	 */
-	public function credentials(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function credentials(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials/' . $credentialId, \FoundryCo\Cloudflare\Responses\CredentialsCredential::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials/' . $credentialId, \FoundryCo\Cloudflare\Responses\GetCredential::class, []);
 	}
 
 
 	/**
 	 * Update Credential
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\UpdateCredentialRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function update(\FoundryCo\Cloudflare\Requests\UpdateCredentialRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials/' . $credentialId, \FoundryCo\Cloudflare\Responses\CredentialsCredential::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials/' . $credentialId, \FoundryCo\Cloudflare\Responses\UpdateCredential::class, $request);
 	}
 
 
 	/**
 	 * Edit Credential
 	 */
-	public function editCredential(
-		\FoundryCo\Cloudflare\Requests\EditCredentialRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function editCredential(\FoundryCo\Cloudflare\Requests\EditCredentialRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials/' . $credentialId, \FoundryCo\Cloudflare\Responses\CredentialsCredential::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/vuln_scanner/credential_sets/' . $credentialSetId . '/credentials/' . $credentialId, \FoundryCo\Cloudflare\Responses\EditCredential::class, $request);
 	}
 
 

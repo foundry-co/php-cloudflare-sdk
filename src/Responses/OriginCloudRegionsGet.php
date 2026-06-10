@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,10 +17,10 @@ readonly class OriginCloudRegionsGet
 {
 	public function __construct(
 		/** Whether the setting can be modified by the current user. */
-		public bool $editable,
-		public \FoundryCo\Cloudflare\Enums\OriginCloudRegionsGetId $id,
+		public ?bool $editable = null,
+		public ?\FoundryCo\Cloudflare\Enums\OriginCloudRegionsGetId $id = null,
 		/** A single origin IP-to-cloud-region mapping. */
-		public OriginCloudRegionsGetValue $value,
+		public ?OriginCloudRegionsGetValue $value = null,
 		/** Time the mapping was last modified. */
 		public ?\DateTimeImmutable $modifiedOn = null,
 	) {

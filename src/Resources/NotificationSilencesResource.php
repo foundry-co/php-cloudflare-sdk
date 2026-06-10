@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class NotificationSilencesResource
 	/**
 	 * List Silences
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\NotificationSilencesSilences
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/silences', \FoundryCo\Cloudflare\Responses\NotificationSilencesSilences::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/silences', \FoundryCo\Cloudflare\Responses\NotificationSilencesListSilences::class, []);
 	}
 
 
@@ -40,18 +40,18 @@ class NotificationSilencesResource
 	/**
 	 * Update Silences
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\NotificationSilencesSilences
+	public function update(): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/alerting/v3/silences', \FoundryCo\Cloudflare\Responses\NotificationSilencesSilences::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/alerting/v3/silences', \FoundryCo\Cloudflare\Responses\NotificationSilencesUpdateSilences::class, null);
 	}
 
 
 	/**
 	 * Get Silence
 	 */
-	public function get(string $silenceId): \FoundryCo\Cloudflare\Responses\NotificationSilencesSilence
+	public function get(string $silenceId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/silences/' . $silenceId, \FoundryCo\Cloudflare\Responses\NotificationSilencesSilence::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/silences/' . $silenceId, \FoundryCo\Cloudflare\Responses\NotificationSilencesGetSilence::class, []);
 	}
 
 

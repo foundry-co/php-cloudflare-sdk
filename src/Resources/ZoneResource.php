@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -639,40 +639,36 @@ class ZoneResource
 		?\FoundryCo\Cloudflare\Enums\ZoneOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\ZoneDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\ZoneMatch $match = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/zones', \FoundryCo\Cloudflare\Responses\ZoneGet::class, ['name' => $name ?? null, 'status' => $status ?? null, 'type' => $type ?? null, 'accountid' => $accountid ?? null, 'accountname' => $accountname ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null]);
+		return $this->client->get('/zones', \FoundryCo\Cloudflare\Responses\ZonesGet::class, ['name' => $name ?? null, 'status' => $status ?? null, 'type' => $type ?? null, 'accountid' => $accountid ?? null, 'accountname' => $accountname ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null]);
 	}
 
 
 	/**
 	 * Create Zone
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZonesPostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZonePost
+	public function create(\FoundryCo\Cloudflare\Requests\ZonesPostRequest $request): mixed
 	{
-		return $this->client->post('/zones', \FoundryCo\Cloudflare\Responses\ZonePost::class, $request);
+		return $this->client->post('/zones', \FoundryCo\Cloudflare\Responses\ZonesPost::class, $request);
 	}
 
 
 	/**
 	 * Zone Details
 	 */
-	public function listGet(): \FoundryCo\Cloudflare\Responses\ZoneGet
+	public function listGet(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId, \FoundryCo\Cloudflare\Responses\ZoneGet::class, []);
+		return $this->client->get('/zones/' . $this->zoneId, \FoundryCo\Cloudflare\Responses\Zones0Get::class, []);
 	}
 
 
 	/**
 	 * Edit Zone
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\Zones0PatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZonePatch
+	public function update(\FoundryCo\Cloudflare\Requests\Zones0PatchRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId, \FoundryCo\Cloudflare\Responses\ZonePatch::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId, \FoundryCo\Cloudflare\Responses\Zones0Patch::class, $request);
 	}
 
 
@@ -688,25 +684,25 @@ class ZoneResource
 	/**
 	 * Rerun the Activation Check
 	 */
-	public function activationCheck(): \FoundryCo\Cloudflare\Responses\ZoneCheck
+	public function activationCheck(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/activation_check', \FoundryCo\Cloudflare\Responses\ZoneCheck::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/activation_check', \FoundryCo\Cloudflare\Responses\PutZonesZoneIdActivationCheck::class, null);
 	}
 
 
 	/**
 	 * Purge Cached Content by Environment
 	 */
-	public function purgeCache(string $environmentId): \FoundryCo\Cloudflare\Responses\ZonePurge
+	public function purgeCache(string $environmentId): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/environments/' . $environmentId . '/purge_cache', \FoundryCo\Cloudflare\Responses\ZonePurge::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/environments/' . $environmentId . '/purge_cache', \FoundryCo\Cloudflare\Responses\ZoneEnvironmentPurge::class, null);
 	}
 
 
 	/**
 	 * Purge Cached Content
 	 */
-	public function zonePurge(): \FoundryCo\Cloudflare\Responses\ZonePurge
+	public function zonePurge(): mixed
 	{
 		return $this->client->post('/zones/' . $this->zoneId . '/purge_cache', \FoundryCo\Cloudflare\Responses\ZonePurge::class, null);
 	}

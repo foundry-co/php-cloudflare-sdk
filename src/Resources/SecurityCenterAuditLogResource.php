@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,9 +29,9 @@ class SecurityCenterAuditLogResource
 		?\DateTimeImmutable $since = null,
 		?\DateTimeImmutable $before = null,
 		?\FoundryCo\Cloudflare\Enums\SecurityCenterAuditLogOrder $order = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/security-center/insights/audit-log', \FoundryCo\Cloudflare\Responses\SecurityCenterAuditLogLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/security-center/insights/audit-log', \FoundryCo\Cloudflare\Responses\GetSecurityCenterAccountAuditLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
 	}
 
 
@@ -47,9 +47,9 @@ class SecurityCenterAuditLogResource
 		?\DateTimeImmutable $since = null,
 		?\DateTimeImmutable $before = null,
 		?\FoundryCo\Cloudflare\Enums\SecurityCenterAuditLogOrder $order = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/security-center/insights/' . $issueId . '/audit-log', \FoundryCo\Cloudflare\Responses\SecurityCenterAuditLogLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/security-center/insights/' . $issueId . '/audit-log', \FoundryCo\Cloudflare\Responses\GetSecurityCenterIssueAuditLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
 	}
 
 
@@ -64,9 +64,9 @@ class SecurityCenterAuditLogResource
 		?\DateTimeImmutable $since = null,
 		?\DateTimeImmutable $before = null,
 		?\FoundryCo\Cloudflare\Enums\SecurityCenterAuditLogOrder $order = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/security-center/insights/audit-log', \FoundryCo\Cloudflare\Responses\SecurityCenterAuditLogLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/security-center/insights/audit-log', \FoundryCo\Cloudflare\Responses\GetZoneSecurityCenterAuditLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
 	}
 
 
@@ -82,8 +82,8 @@ class SecurityCenterAuditLogResource
 		?\DateTimeImmutable $since = null,
 		?\DateTimeImmutable $before = null,
 		?\FoundryCo\Cloudflare\Enums\SecurityCenterAuditLogOrder $order = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/security-center/insights/' . $issueId . '/audit-log', \FoundryCo\Cloudflare\Responses\SecurityCenterAuditLogLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/security-center/insights/' . $issueId . '/audit-log', \FoundryCo\Cloudflare\Responses\GetZoneSecurityCenterIssueAuditLog::class, ['perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'fieldChanged' => $fieldChanged ?? null, 'changedBy' => $changedBy ?? null, 'since' => $since ?? null, 'before' => $before ?? null, 'order' => $order ?? null]);
 	}
 }

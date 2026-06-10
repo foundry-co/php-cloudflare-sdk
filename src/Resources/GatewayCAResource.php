@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class GatewayCAResource
 	/**
 	 * List SSH Certificate Authorities (CA)
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\GatewayCACa
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/gateway_ca', \FoundryCo\Cloudflare\Responses\GatewayCACa::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/gateway_ca', \FoundryCo\Cloudflare\Responses\AccessGatewayCaListSSHCa::class, []);
 	}
 
 
 	/**
 	 * Add a new SSH Certificate Authority (CA)
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\GatewayCACa
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/gateway_ca', \FoundryCo\Cloudflare\Responses\GatewayCACa::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/gateway_ca', \FoundryCo\Cloudflare\Responses\AccessGatewayCaAddAnSSHCa::class, null);
 	}
 
 

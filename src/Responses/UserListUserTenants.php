@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -16,10 +16,10 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class UserListUserTenants
 {
 	public function __construct(
-		public \DateTimeImmutable $createTime,
-		public mixed $id,
-		public UserListUserTenantsMeta $meta,
-		public string $name,
+		public ?\DateTimeImmutable $createTime = null,
+		public mixed $id = null,
+		public ?UserListUserTenantsMeta $meta = null,
+		public ?string $name = null,
 		public ?UserListUserTenantsParent $parent = null,
 		public ?UserListUserTenantsProfile $profile = null,
 	) {

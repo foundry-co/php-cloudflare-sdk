@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class EmailRoutingSettingsResource
 	/**
 	 * Get Email Routing settings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsSettings
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/routing', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsSettings::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/routing', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsGetEmailRoutingSettings::class, []);
 	}
 
 
 	/**
 	 * Disable Email Routing
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsRouting
+	public function create(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/disable', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsRouting::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/disable', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsDisableEmailRouting::class, null);
 	}
 
 
@@ -51,9 +51,9 @@ class EmailRoutingSettingsResource
 	 */
 	public function emailRoutingSettingsEnableEmailRoutingDns(
 		\FoundryCo\Cloudflare\Requests\EmailRoutingSettingsEnableEmailRoutingDnsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsDns
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/dns', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsDns::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/dns', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsEnableEmailRoutingDns::class, $request);
 	}
 
 
@@ -62,9 +62,9 @@ class EmailRoutingSettingsResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\EmailRoutingSettingsUnlockEmailRoutingDnsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsDns
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/email/routing/dns', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsDns::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/email/routing/dns', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsUnlockEmailRoutingDns::class, $request);
 	}
 
 
@@ -82,8 +82,8 @@ class EmailRoutingSettingsResource
 	/**
 	 * Enable Email Routing
 	 */
-	public function enable(): \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsRouting
+	public function enable(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/enable', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsRouting::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/enable', \FoundryCo\Cloudflare\Responses\EmailRoutingSettingsEnableEmailRouting::class, null);
 	}
 }

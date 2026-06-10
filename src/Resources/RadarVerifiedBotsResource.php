@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class RadarVerifiedBotsResource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarVerifiedBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarVerifiedBotsRequests
+	): mixed
 	{
-		return $this->client->get('/radar/verified_bots/top/bots', \FoundryCo\Cloudflare\Responses\RadarVerifiedBotsRequests::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/verified_bots/top/bots', \FoundryCo\Cloudflare\Responses\RadarGetVerifiedBotsTopByHttpRequests::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -50,8 +50,8 @@ class RadarVerifiedBotsResource
 		?array $location = null,
 		?array $continent = null,
 		?\FoundryCo\Cloudflare\Enums\RadarVerifiedBotsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarVerifiedBotsRequests
+	): mixed
 	{
-		return $this->client->get('/radar/verified_bots/top/categories', \FoundryCo\Cloudflare\Responses\RadarVerifiedBotsRequests::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/verified_bots/top/categories', \FoundryCo\Cloudflare\Responses\RadarGetVerifiedBotsTopCategoriesByHttpRequests::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'format' => $format ?? null]);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,9 +26,9 @@ class PerHostnameAuthenticatedOriginPullResource
 		?float $page = null,
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\PerHostnameAuthenticatedOriginPullStatus $status = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullAssociations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullListHostnameAssociations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'status' => $status ?? null]);
 	}
 
 
@@ -37,18 +37,18 @@ class PerHostnameAuthenticatedOriginPullResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\PerHostnameAuthenticatedOriginPullEnableOrDisableAHostnameForClientAuthenticationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullAuthentication
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullAuthentication::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullEnableOrDisableAHostnameForClientAuthentication::class, $request);
 	}
 
 
 	/**
 	 * List Certificates
 	 */
-	public function certificates(): \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullCertificates
+	public function certificates(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/certificates', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullCertificates::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/certificates', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullListCertificates::class, []);
 	}
 
 
@@ -57,20 +57,18 @@ class PerHostnameAuthenticatedOriginPullResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\PerHostnameAuthenticatedOriginPullUploadAHostnameClientCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullCertificate
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/certificates', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullCertificate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/certificates', \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullUploadAHostnameClientCertificate::class, $request);
 	}
 
 
 	/**
 	 * Get the Hostname Client Certificate
 	 */
-	public function get(
-		string $certificateId,
-	): \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullCertificate
+	public function get(string $certificateId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullCertificate::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullGetTheHostnameClientCertificate::class, []);
 	}
 
 
@@ -86,10 +84,8 @@ class PerHostnameAuthenticatedOriginPullResource
 	/**
 	 * Get the Hostname Status for Client Authentication
 	 */
-	public function hostnames(
-		string $hostname,
-	): \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullAuthentication
+	public function hostnames(string $hostname): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/' . $hostname, \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullAuthentication::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/hostnames/' . $hostname, \FoundryCo\Cloudflare\Responses\PerHostnameAuthenticatedOriginPullGetTheHostnameStatusForClientAuthentication::class, []);
 	}
 }

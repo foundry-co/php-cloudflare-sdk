@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,17 +22,17 @@ class ZeroTrustGatewayOperationsResource
 	/**
 	 * List Zero Trust Gateway operations
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayOperationsOperations
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/operations', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayOperationsOperations::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/operations', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayOperationsListZeroTrustGatewayOperations::class, []);
 	}
 
 
 	/**
 	 * Zero Trust Gateway operation details
 	 */
-	public function get(string $operationId): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayOperationsDetails
+	public function get(string $operationId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayOperationsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayOperationsZeroTrustGatewayOperationDetails::class, []);
 	}
 }

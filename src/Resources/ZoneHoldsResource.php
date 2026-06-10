@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class ZoneHoldsResource
 	/**
 	 * Get Zone Hold
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneHoldsGet
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/hold', \FoundryCo\Cloudflare\Responses\ZoneHoldsGet::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/hold', \FoundryCo\Cloudflare\Responses\Zones0HoldGet::class, []);
 	}
 
 
 	/**
 	 * Create Zone Hold
 	 */
-	public function create(?bool $includeSubdomains = null): \FoundryCo\Cloudflare\Responses\ZoneHoldsPost
+	public function create(?bool $includeSubdomains = null): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/hold', \FoundryCo\Cloudflare\Responses\ZoneHoldsPost::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/hold', \FoundryCo\Cloudflare\Responses\Zones0HoldPost::class, null);
 	}
 
 
 	/**
 	 * Update Zone Hold
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\Zones0HoldPatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneHoldsPatch
+	public function update(\FoundryCo\Cloudflare\Requests\Zones0HoldPatchRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/hold', \FoundryCo\Cloudflare\Responses\ZoneHoldsPatch::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/hold', \FoundryCo\Cloudflare\Responses\Zones0HoldPatch::class, $request);
 	}
 
 

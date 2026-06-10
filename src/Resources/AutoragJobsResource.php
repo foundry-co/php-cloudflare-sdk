@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,35 +22,26 @@ class AutoragJobsResource
 	/**
 	 * List Jobs
 	 */
-	public function get(
-		string $id,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AutoRAGJobsJobs
+	public function get(string $id, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/jobs', \FoundryCo\Cloudflare\Responses\AutoRAGJobsJobs::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/jobs', \FoundryCo\Cloudflare\Responses\AutoragConfigListJobs::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Get a Job Details
 	 */
-	public function jobs(string $id, string $jobId): \FoundryCo\Cloudflare\Responses\AutoRAGJobsJob
+	public function jobs(string $id, string $jobId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\AutoRAGJobsJob::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\AutoragConfigGetJob::class, []);
 	}
 
 
 	/**
 	 * List Job Logs
 	 */
-	public function logs(
-		string $id,
-		string $jobId,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AutoRAGJobsLogs
+	public function logs(string $id, string $jobId, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/jobs/' . $jobId . '/logs', \FoundryCo\Cloudflare\Responses\AutoRAGJobsLogs::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/jobs/' . $jobId . '/logs', \FoundryCo\Cloudflare\Responses\AutoragConfigListJobLogs::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 }

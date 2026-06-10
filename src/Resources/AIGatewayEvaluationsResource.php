@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class AIGatewayEvaluationsResource
 		?int $perPage = null,
 		?string $orderBy = null,
 		?\FoundryCo\Cloudflare\Enums\AIGatewayEvaluationsOrderByDirection $orderByDirection = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluators
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/evaluation-types', \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluators::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/evaluation-types', \FoundryCo\Cloudflare\Responses\AigConfigListEvaluators::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null]);
 	}
 
 
@@ -43,9 +43,9 @@ class AIGatewayEvaluationsResource
 		?string $name = null,
 		?bool $processed = null,
 		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluations
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/evaluations', \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'name' => $name ?? null, 'processed' => $processed ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/evaluations', \FoundryCo\Cloudflare\Responses\AigConfigListEvaluations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'name' => $name ?? null, 'processed' => $processed ?? null, 'search' => $search ?? null]);
 	}
 
 
@@ -55,21 +55,18 @@ class AIGatewayEvaluationsResource
 	public function create(
 		string $gatewayId,
 		\FoundryCo\Cloudflare\Requests\AigConfigCreateEvaluationsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluations
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/evaluations', \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluations::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/evaluations', \FoundryCo\Cloudflare\Responses\AigConfigCreateEvaluations::class, $request);
 	}
 
 
 	/**
 	 * Fetch a Evaluation
 	 */
-	public function evaluations(
-		string $gatewayId,
-		string $id,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluations
+	public function evaluations(string $gatewayId, string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/evaluations/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayEvaluationsEvaluations::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/evaluations/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigFetchEvaluations::class, []);
 	}
 
 

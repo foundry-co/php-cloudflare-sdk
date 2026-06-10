@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-10 02:24:37 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class AccountLevelCustomNameserversListAccountCustomNameserversDnsRecordsItem
+{
+	public function __construct(
+		/** DNS record type. */
+		public ?\FoundryCo\Cloudflare\Enums\AccountLevelCustomNameserversListAccountCustomNameserversDnsRecordsItemType $type = null,
+		/** DNS record contents (an IPv4 or IPv6 address). */
+		public ?string $value = null,
+	) {
+	}
+}

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -100,8 +100,8 @@ class AccessApplicationsResource
 	/**
 	 * Test Access policies
 	 */
-	public function userPolicyChecks(mixed $appId): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessApplicationsPolicies
+	public function userPolicyChecks(mixed $appId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/user_policy_checks', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessApplicationsPolicies::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/user_policy_checks', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessApplicationsTestAccessPolicies::class, []);
 	}
 }

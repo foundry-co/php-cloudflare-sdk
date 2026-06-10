@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class AccountSubscriptionsResource
 	/**
 	 * List Subscriptions
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\AccountSubscriptionsSubscriptions
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/subscriptions', \FoundryCo\Cloudflare\Responses\AccountSubscriptionsSubscriptions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/subscriptions', \FoundryCo\Cloudflare\Responses\AccountSubscriptionsListSubscriptions::class, []);
 	}
 
 
 	/**
 	 * Create Subscription
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccountSubscriptionsCreateSubscriptionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountSubscriptionsSubscription
+	public function create(\FoundryCo\Cloudflare\Requests\AccountSubscriptionsCreateSubscriptionRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/subscriptions', \FoundryCo\Cloudflare\Responses\AccountSubscriptionsSubscription::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/subscriptions', \FoundryCo\Cloudflare\Responses\AccountSubscriptionsCreateSubscription::class, $request);
 	}
 
 
@@ -45,9 +43,9 @@ class AccountSubscriptionsResource
 	public function update(
 		string $subscriptionIdentifier,
 		\FoundryCo\Cloudflare\Requests\AccountSubscriptionsUpdateSubscriptionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountSubscriptionsSubscription
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/subscriptions/' . $subscriptionIdentifier, \FoundryCo\Cloudflare\Responses\AccountSubscriptionsSubscription::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/subscriptions/' . $subscriptionIdentifier, \FoundryCo\Cloudflare\Responses\AccountSubscriptionsUpdateSubscription::class, $request);
 	}
 
 

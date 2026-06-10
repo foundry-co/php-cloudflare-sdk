@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class WorkerDeploymentsResource
 	/**
 	 * List Deployments
 	 */
-	public function get(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerDeploymentsDeployments
+	public function get(string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/deployments', \FoundryCo\Cloudflare\Responses\WorkerDeploymentsDeployments::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/deployments', \FoundryCo\Cloudflare\Responses\WorkerDeploymentsListDeployments::class, []);
 	}
 
 
@@ -35,21 +35,18 @@ class WorkerDeploymentsResource
 		string $scriptName,
 		\FoundryCo\Cloudflare\Requests\WorkerDeploymentsCreateDeploymentRequest $request,
 		?bool $force = null,
-	): \FoundryCo\Cloudflare\Responses\WorkerDeploymentsDeployment
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/deployments', \FoundryCo\Cloudflare\Responses\WorkerDeploymentsDeployment::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/deployments', \FoundryCo\Cloudflare\Responses\WorkerDeploymentsCreateDeployment::class, $request);
 	}
 
 
 	/**
 	 * Get Deployment
 	 */
-	public function deployments(
-		string $scriptName,
-		string $deploymentId,
-	): \FoundryCo\Cloudflare\Responses\WorkerDeploymentsDeployment
+	public function deployments(string $scriptName, string $deploymentId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/deployments/' . $deploymentId, \FoundryCo\Cloudflare\Responses\WorkerDeploymentsDeployment::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/deployments/' . $deploymentId, \FoundryCo\Cloudflare\Responses\WorkerDeploymentsGetDeployment::class, []);
 	}
 
 

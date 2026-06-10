@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class WorkerTailLogsResource
 	/**
 	 * List Tails
 	 */
-	public function get(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerTailLogsTails
+	public function get(string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/tails', \FoundryCo\Cloudflare\Responses\WorkerTailLogsTails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/tails', \FoundryCo\Cloudflare\Responses\GetAccountsaccountIdWorkersScriptsscriptNameTails::class, []);
 	}
 
 
 	/**
 	 * Start Tail
 	 */
-	public function create(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerTailLogsTail
+	public function create(string $scriptName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/tails', \FoundryCo\Cloudflare\Responses\WorkerTailLogsTail::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/tails', \FoundryCo\Cloudflare\Responses\WorkerTailLogsStartTail::class, null);
 	}
 
 

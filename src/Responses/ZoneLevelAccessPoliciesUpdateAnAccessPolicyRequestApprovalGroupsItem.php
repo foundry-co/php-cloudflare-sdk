@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class ZoneLevelAccessPoliciesUpdateAnAccessPolicyRequestApprovalGroupsI
 {
 	public function __construct(
 		/** The number of approvals needed to obtain access. */
-		public float $approvalsNeeded,
+		public ?float $approvalsNeeded = null,
 		/** A list of emails that can approve the access request. */
 		public ?array $emailAddresses = null,
 		/** The UUID of an re-usable email list. */

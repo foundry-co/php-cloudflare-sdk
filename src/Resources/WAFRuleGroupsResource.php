@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -32,9 +32,9 @@ class WAFRuleGroupsResource
 		?\FoundryCo\Cloudflare\Enums\WAFRuleGroupsMatch $match = null,
 		?string $name = null,
 		?float $rulesCount = null,
-	): \FoundryCo\Cloudflare\Responses\WAFRuleGroupsGroups
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/waf/packages/' . $packageId . '/groups', \FoundryCo\Cloudflare\Responses\WAFRuleGroupsGroups::class, ['mode' => $mode ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null, 'name' => $name ?? null, 'rulesCount' => $rulesCount ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/waf/packages/' . $packageId . '/groups', \FoundryCo\Cloudflare\Responses\WafRuleGroupsListWafRuleGroups::class, ['mode' => $mode ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null, 'name' => $name ?? null, 'rulesCount' => $rulesCount ?? null]);
 	}
 
 

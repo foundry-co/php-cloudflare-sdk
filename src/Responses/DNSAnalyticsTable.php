@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -10,21 +10,22 @@ declare(strict_types=1);
 
 namespace FoundryCo\Cloudflare\Responses;
 
-readonly class DNSAnalyticsTable
+readonly class DnsAnalyticsTable
 {
 	public function __construct(
-		public array $data,
+		/** Array with one row per combination of dimension values. */
+		public ?array $data = null,
 		/** Number of seconds between current time and last processed event, in another words how many seconds of data could be missing. */
-		public float $dataLag,
+		public ?float $dataLag = null,
 		/** Maximum results for each metric (object mapping metric names to values). Currently always an empty object. */
-		public array $max,
+		public ?array $max = null,
 		/** Minimum results for each metric (object mapping metric names to values). Currently always an empty object. */
-		public array $min,
-		public DNSAnalyticsTableQuery $query,
+		public ?array $min = null,
+		public ?DnsAnalyticsTableQuery $query = null,
 		/** Total number of rows in the result. */
-		public float $rows,
+		public ?float $rows = null,
 		/** Total results for metrics across all data (object mapping metric names to values). */
-		public array $totals,
+		public ?array $totals = null,
 	) {
 	}
 }

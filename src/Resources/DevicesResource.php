@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,38 +21,36 @@ class DevicesResource
 	/**
 	 * List devices (deprecated)
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DevicesDevices
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices', \FoundryCo\Cloudflare\Responses\DevicesDevices::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices', \FoundryCo\Cloudflare\Responses\DevicesListDevices::class, []);
 	}
 
 
 	/**
 	 * List device settings profiles
 	 */
-	public function policies(): \FoundryCo\Cloudflare\Responses\DevicesPolicies
+	public function policies(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/policies', \FoundryCo\Cloudflare\Responses\DevicesPolicies::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/policies', \FoundryCo\Cloudflare\Responses\DevicesListDeviceSettingsPolicies::class, []);
 	}
 
 
 	/**
 	 * Get the default device settings profile
 	 */
-	public function policy(): \FoundryCo\Cloudflare\Responses\DevicesPolicy
+	public function policy(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy', \FoundryCo\Cloudflare\Responses\DevicesPolicy::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy', \FoundryCo\Cloudflare\Responses\DevicesGetDefaultDeviceSettingsPolicy::class, []);
 	}
 
 
 	/**
 	 * Create a device settings profile
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DevicesCreateDeviceSettingsPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicesPolicy
+	public function create(\FoundryCo\Cloudflare\Requests\DevicesCreateDeviceSettingsPolicyRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/devices/policy', \FoundryCo\Cloudflare\Responses\DevicesPolicy::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/devices/policy', \FoundryCo\Cloudflare\Responses\DevicesCreateDeviceSettingsPolicy::class, $request);
 	}
 
 
@@ -61,9 +59,9 @@ class DevicesResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\DevicesUpdateDefaultDeviceSettingsPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicesPolicy
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/devices/policy', \FoundryCo\Cloudflare\Responses\DevicesPolicy::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/devices/policy', \FoundryCo\Cloudflare\Responses\DevicesUpdateDefaultDeviceSettingsPolicy::class, $request);
 	}
 
 
@@ -88,18 +86,18 @@ class DevicesResource
 	/**
 	 * Get your Local Domain Fallback list
 	 */
-	public function fallbackDomains(): \FoundryCo\Cloudflare\Responses\DevicesList
+	public function fallbackDomains(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesGetLocalDomainFallbackList::class, []);
 	}
 
 
 	/**
 	 * Set your Local Domain Fallback list
 	 */
-	public function devicesSetLocalDomainFallbackList(): \FoundryCo\Cloudflare\Responses\DevicesList
+	public function devicesSetLocalDomainFallbackList(): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/devices/policy/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesList::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/devices/policy/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesSetLocalDomainFallbackList::class, null);
 	}
 
 
@@ -124,9 +122,9 @@ class DevicesResource
 	/**
 	 * Get device settings profile by ID
 	 */
-	public function get(string $policyId): \FoundryCo\Cloudflare\Responses\DevicesId
+	public function get(string $policyId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy/' . $policyId, \FoundryCo\Cloudflare\Responses\DevicesId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy/' . $policyId, \FoundryCo\Cloudflare\Responses\DevicesGetDeviceSettingsPolicyById::class, []);
 	}
 
 
@@ -136,9 +134,9 @@ class DevicesResource
 	public function devicesUpdateDeviceSettingsPolicy(
 		string $policyId,
 		\FoundryCo\Cloudflare\Requests\DevicesUpdateDeviceSettingsPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicesPolicy
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/devices/policy/' . $policyId, \FoundryCo\Cloudflare\Responses\DevicesPolicy::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/devices/policy/' . $policyId, \FoundryCo\Cloudflare\Responses\DevicesUpdateDeviceSettingsPolicy::class, $request);
 	}
 
 
@@ -172,22 +170,18 @@ class DevicesResource
 	/**
 	 * Get the Local Domain Fallback list for a device settings profile
 	 */
-	public function devicesGetLocalDomainFallbackListForADeviceSettingsPolicy(
-		string $policyId,
-	): \FoundryCo\Cloudflare\Responses\DevicesPolicy
+	public function devicesGetLocalDomainFallbackListForADeviceSettingsPolicy(string $policyId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy/' . $policyId . '/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesPolicy::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/policy/' . $policyId . '/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesGetLocalDomainFallbackListForADeviceSettingsPolicy::class, []);
 	}
 
 
 	/**
 	 * Set the Local Domain Fallback list for a device settings profile
 	 */
-	public function devicesSetLocalDomainFallbackListForADeviceSettingsPolicy(
-		string $policyId,
-	): \FoundryCo\Cloudflare\Responses\DevicesPolicy
+	public function devicesSetLocalDomainFallbackListForADeviceSettingsPolicy(string $policyId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/devices/policy/' . $policyId . '/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesPolicy::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/devices/policy/' . $policyId . '/fallback_domains', \FoundryCo\Cloudflare\Responses\DevicesSetLocalDomainFallbackListForADeviceSettingsPolicy::class, null);
 	}
 
 
@@ -230,27 +224,27 @@ class DevicesResource
 	/**
 	 * Get device (deprecated)
 	 */
-	public function devices(string $deviceId): \FoundryCo\Cloudflare\Responses\DevicesDetails
+	public function devices(string $deviceId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/' . $deviceId, \FoundryCo\Cloudflare\Responses\DevicesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/' . $deviceId, \FoundryCo\Cloudflare\Responses\DevicesDeviceDetails::class, []);
 	}
 
 
 	/**
 	 * Get override codes (deprecated)
 	 */
-	public function overrideCodes(string $deviceId): \FoundryCo\Cloudflare\Responses\DevicesDevice
+	public function overrideCodes(string $deviceId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/' . $deviceId . '/override_codes', \FoundryCo\Cloudflare\Responses\DevicesDevice::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/' . $deviceId . '/override_codes', \FoundryCo\Cloudflare\Responses\DevicesListAdminOverrideCodeForDevice::class, []);
 	}
 
 
 	/**
 	 * Get device certificate provisioning status
 	 */
-	public function certificates(): \FoundryCo\Cloudflare\Responses\DevicesCertificates
+	public function certificates(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/devices/policy/certificates', \FoundryCo\Cloudflare\Responses\DevicesCertificates::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/devices/policy/certificates', \FoundryCo\Cloudflare\Responses\DevicesGetPolicyCertificates::class, []);
 	}
 
 
@@ -259,8 +253,8 @@ class DevicesResource
 	 */
 	public function devicesUpdatePolicyCertificates(
 		\FoundryCo\Cloudflare\Requests\DevicesUpdatePolicyCertificatesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicesCertificates
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/devices/policy/certificates', \FoundryCo\Cloudflare\Responses\DevicesCertificates::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/devices/policy/certificates', \FoundryCo\Cloudflare\Responses\DevicesUpdatePolicyCertificates::class, $request);
 	}
 }

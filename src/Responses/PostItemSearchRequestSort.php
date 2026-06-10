@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class PostItemSearchRequestSort
 {
 	public function __construct(
 		/** Column name to sort by */
-		public string $field,
+		public ?string $field = null,
 		public ?\FoundryCo\Cloudflare\Enums\PostItemSearchRequestSortOrder $order = null,
 	) {
 	}

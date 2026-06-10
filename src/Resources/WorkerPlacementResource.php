@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class WorkerPlacementResource
 	/**
 	 * List Placement Regions
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\WorkerPlacementRegions
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/placement/regions', \FoundryCo\Cloudflare\Responses\WorkerPlacementRegions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/placement/regions', \FoundryCo\Cloudflare\Responses\WorkerPlacementListRegions::class, []);
 	}
 }

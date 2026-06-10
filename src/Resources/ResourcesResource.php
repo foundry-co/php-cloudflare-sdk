@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -36,9 +36,9 @@ class ResourcesResource
 		?int $page = null,
 		?bool $cloudflare = null,
 		?bool $v2 = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/resources', \FoundryCo\Cloudflare\Responses\ResourcesList::class, ['providerId' => $providerId ?? null, 'resourceType' => $resourceType ?? null, 'resourceId' => $resourceId ?? null, 'region' => $region ?? null, 'resourceGroup' => $resourceGroup ?? null, 'managed' => $managed ?? null, 'search' => $search ?? null, 'orderBy' => $orderBy ?? null, 'desc' => $desc ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null, 'cloudflare' => $cloudflare ?? null, 'v2' => $v2 ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/resources', \FoundryCo\Cloudflare\Responses\ResourcesCatalogList::class, ['providerId' => $providerId ?? null, 'resourceType' => $resourceType ?? null, 'resourceId' => $resourceId ?? null, 'region' => $region ?? null, 'resourceGroup' => $resourceGroup ?? null, 'managed' => $managed ?? null, 'search' => $search ?? null, 'orderBy' => $orderBy ?? null, 'desc' => $desc ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null, 'cloudflare' => $cloudflare ?? null, 'v2' => $v2 ?? null]);
 	}
 
 
@@ -73,8 +73,8 @@ class ResourcesResource
 	/**
 	 * Read Resource
 	 */
-	public function get(string $resourceId, ?bool $v2 = null): \FoundryCo\Cloudflare\Responses\ResourcesRead
+	public function get(string $resourceId, ?bool $v2 = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/resources/' . $resourceId, \FoundryCo\Cloudflare\Responses\ResourcesRead::class, ['v2' => $v2 ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/resources/' . $resourceId, \FoundryCo\Cloudflare\Responses\ResourcesCatalogRead::class, ['v2' => $v2 ?? null]);
 	}
 }

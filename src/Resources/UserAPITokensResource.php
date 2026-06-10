@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -25,50 +25,45 @@ class UserAPITokensResource
 		?float $page = null,
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\UserAPITokensDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\UserAPITokensTokens
+	): mixed
 	{
-		return $this->client->get('/user/tokens', \FoundryCo\Cloudflare\Responses\UserAPITokensTokens::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/user/tokens', \FoundryCo\Cloudflare\Responses\UserApiTokensListTokens::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create Token
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\UserApiTokensCreateTokenRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UserAPITokensToken
+	public function create(\FoundryCo\Cloudflare\Requests\UserApiTokensCreateTokenRequest $request): mixed
 	{
-		return $this->client->post('/user/tokens', \FoundryCo\Cloudflare\Responses\UserAPITokensToken::class, $request);
+		return $this->client->post('/user/tokens', \FoundryCo\Cloudflare\Responses\UserApiTokensCreateToken::class, $request);
 	}
 
 
 	/**
 	 * List Token Permission Groups
 	 */
-	public function permissionGroups(
-		?string $name = null,
-		?string $scope = null,
-	): \FoundryCo\Cloudflare\Responses\UserAPITokensGroups
+	public function permissionGroups(?string $name = null, ?string $scope = null): mixed
 	{
-		return $this->client->get('/user/tokens/permission_groups', \FoundryCo\Cloudflare\Responses\UserAPITokensGroups::class, ['name' => $name ?? null, 'scope' => $scope ?? null]);
+		return $this->client->get('/user/tokens/permission_groups', \FoundryCo\Cloudflare\Responses\PermissionGroupsListPermissionGroups::class, ['name' => $name ?? null, 'scope' => $scope ?? null]);
 	}
 
 
 	/**
 	 * Verify Token
 	 */
-	public function verify(): \FoundryCo\Cloudflare\Responses\UserAPITokensToken
+	public function verify(): mixed
 	{
-		return $this->client->get('/user/tokens/verify', \FoundryCo\Cloudflare\Responses\UserAPITokensToken::class, []);
+		return $this->client->get('/user/tokens/verify', \FoundryCo\Cloudflare\Responses\UserApiTokensVerifyToken::class, []);
 	}
 
 
 	/**
 	 * Token Details
 	 */
-	public function get(string $tokenId): \FoundryCo\Cloudflare\Responses\UserAPITokensDetails
+	public function get(string $tokenId): mixed
 	{
-		return $this->client->get('/user/tokens/' . $tokenId, \FoundryCo\Cloudflare\Responses\UserAPITokensDetails::class, []);
+		return $this->client->get('/user/tokens/' . $tokenId, \FoundryCo\Cloudflare\Responses\UserApiTokensTokenDetails::class, []);
 	}
 
 
@@ -78,9 +73,9 @@ class UserAPITokensResource
 	public function update(
 		string $tokenId,
 		\FoundryCo\Cloudflare\Requests\UserApiTokensUpdateTokenRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UserAPITokensToken
+	): mixed
 	{
-		return $this->client->put('/user/tokens/' . $tokenId, \FoundryCo\Cloudflare\Responses\UserAPITokensToken::class, $request);
+		return $this->client->put('/user/tokens/' . $tokenId, \FoundryCo\Cloudflare\Responses\UserApiTokensUpdateToken::class, $request);
 	}
 
 

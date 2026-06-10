@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class DNSFirewallResource
 	/**
 	 * List DNS Firewall Clusters
 	 */
-	public function list(
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\DNSFirewallClusters
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall', \FoundryCo\Cloudflare\Responses\DNSFirewallClusters::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall', \FoundryCo\Cloudflare\Responses\DnsFirewallListDnsFirewallClusters::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create DNS Firewall Cluster
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DnsFirewallCreateDnsFirewallClusterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSFirewallCluster
+	public function create(\FoundryCo\Cloudflare\Requests\DnsFirewallCreateDnsFirewallClusterRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dns_firewall', \FoundryCo\Cloudflare\Responses\DNSFirewallCluster::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dns_firewall', \FoundryCo\Cloudflare\Responses\DnsFirewallCreateDnsFirewallCluster::class, $request);
 	}
 
 
 	/**
 	 * DNS Firewall Cluster Details
 	 */
-	public function get(string $dnsFirewallId): \FoundryCo\Cloudflare\Responses\DNSFirewallDetails
+	public function get(string $dnsFirewallId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId, \FoundryCo\Cloudflare\Responses\DNSFirewallDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId, \FoundryCo\Cloudflare\Responses\DnsFirewallDnsFirewallClusterDetails::class, []);
 	}
 
 
@@ -57,9 +52,9 @@ class DNSFirewallResource
 	public function update(
 		string $dnsFirewallId,
 		\FoundryCo\Cloudflare\Requests\DnsFirewallUpdateDnsFirewallClusterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSFirewallCluster
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId, \FoundryCo\Cloudflare\Responses\DNSFirewallCluster::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId, \FoundryCo\Cloudflare\Responses\DnsFirewallUpdateDnsFirewallCluster::class, $request);
 	}
 
 
@@ -75,9 +70,9 @@ class DNSFirewallResource
 	/**
 	 * Show DNS Firewall Cluster Reverse DNS
 	 */
-	public function reverseDns(string $dnsFirewallId): \FoundryCo\Cloudflare\Responses\DNSFirewallDns
+	public function reverseDns(string $dnsFirewallId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/reverse_dns', \FoundryCo\Cloudflare\Responses\DNSFirewallDns::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/reverse_dns', \FoundryCo\Cloudflare\Responses\DnsFirewallShowDnsFirewallClusterReverseDns::class, []);
 	}
 
 
@@ -87,8 +82,8 @@ class DNSFirewallResource
 	public function dnsFirewallUpdateDnsFirewallClusterReverseDns(
 		string $dnsFirewallId,
 		\FoundryCo\Cloudflare\Requests\DnsFirewallUpdateDnsFirewallClusterReverseDnsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSFirewallDns
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/reverse_dns', \FoundryCo\Cloudflare\Responses\DNSFirewallDns::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/dns_firewall/' . $dnsFirewallId . '/reverse_dns', \FoundryCo\Cloudflare\Responses\DnsFirewallUpdateDnsFirewallClusterReverseDns::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class CatalogSyncResource
 	/**
 	 * List Catalog Syncs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\CatalogSyncList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs', \FoundryCo\Cloudflare\Responses\CatalogSyncList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs', \FoundryCo\Cloudflare\Responses\CatalogSyncsList::class, []);
 	}
 
 
@@ -34,9 +34,9 @@ class CatalogSyncResource
 	public function create(
 		\FoundryCo\Cloudflare\Requests\CatalogSyncsCreateRequest $request,
 		?string $forwarded = null,
-	): \FoundryCo\Cloudflare\Responses\CatalogSyncCreate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs', \FoundryCo\Cloudflare\Responses\CatalogSyncCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs', \FoundryCo\Cloudflare\Responses\CatalogSyncsCreate::class, $request);
 	}
 
 
@@ -45,42 +45,36 @@ class CatalogSyncResource
 	 */
 	public function prebuiltPolicies(
 		?\FoundryCo\Cloudflare\Enums\CatalogSyncDestinationType $destinationType = null,
-	): \FoundryCo\Cloudflare\Responses\CatalogSyncList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/prebuilt-policies', \FoundryCo\Cloudflare\Responses\CatalogSyncList::class, ['destinationType' => $destinationType ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/prebuilt-policies', \FoundryCo\Cloudflare\Responses\CatalogSyncsPrebuiltPoliciesList::class, ['destinationType' => $destinationType ?? null]);
 	}
 
 
 	/**
 	 * Read Catalog Sync
 	 */
-	public function get(string $syncId): \FoundryCo\Cloudflare\Responses\CatalogSyncRead
+	public function get(string $syncId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/' . $syncId, \FoundryCo\Cloudflare\Responses\CatalogSyncRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/' . $syncId, \FoundryCo\Cloudflare\Responses\CatalogSyncsRead::class, []);
 	}
 
 
 	/**
 	 * Update Catalog Sync
 	 */
-	public function update(
-		string $syncId,
-		\FoundryCo\Cloudflare\Requests\CatalogSyncsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CatalogSyncUpdate
+	public function update(string $syncId, \FoundryCo\Cloudflare\Requests\CatalogSyncsUpdateRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/' . $syncId, \FoundryCo\Cloudflare\Responses\CatalogSyncUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/' . $syncId, \FoundryCo\Cloudflare\Responses\CatalogSyncsUpdate::class, $request);
 	}
 
 
 	/**
 	 * Patch Catalog Sync
 	 */
-	public function catalogSyncs(
-		string $syncId,
-		\FoundryCo\Cloudflare\Requests\CatalogSyncsPatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CatalogSyncPatch
+	public function catalogSyncs(string $syncId, \FoundryCo\Cloudflare\Requests\CatalogSyncsPatchRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/' . $syncId, \FoundryCo\Cloudflare\Responses\CatalogSyncPatch::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/cloud/catalog-syncs/' . $syncId, \FoundryCo\Cloudflare\Responses\CatalogSyncsPatch::class, $request);
 	}
 
 

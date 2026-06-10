@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,13 +21,9 @@ class CustomAssetsResource
 	/**
 	 * List custom assets
 	 */
-	public function get(
-		string $zoneIdentifier,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAssets
+	public function get(string $zoneIdentifier, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $zoneIdentifier . '/custom_pages/assets', \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAssets::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $zoneIdentifier . '/custom_pages/assets', \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneListCustomAssets::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -37,21 +33,18 @@ class CustomAssetsResource
 	public function create(
 		string $zoneIdentifier,
 		\FoundryCo\Cloudflare\Requests\CustomAssetsForAZoneCreateACustomAssetRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAsset
+	): mixed
 	{
-		return $this->client->post('/zones/' . $zoneIdentifier . '/custom_pages/assets', \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAsset::class, $request);
+		return $this->client->post('/zones/' . $zoneIdentifier . '/custom_pages/assets', \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneCreateACustomAsset::class, $request);
 	}
 
 
 	/**
 	 * Get a custom asset
 	 */
-	public function assets(
-		string $assetName,
-		string $zoneIdentifier,
-	): \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAsset
+	public function assets(string $assetName, string $zoneIdentifier): mixed
 	{
-		return $this->client->get('/zones/' . $zoneIdentifier . '/custom_pages/assets/' . $assetName, \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAsset::class, []);
+		return $this->client->get('/zones/' . $zoneIdentifier . '/custom_pages/assets/' . $assetName, \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneGetACustomAsset::class, []);
 	}
 
 
@@ -62,9 +55,9 @@ class CustomAssetsResource
 		string $assetName,
 		string $zoneIdentifier,
 		\FoundryCo\Cloudflare\Requests\CustomAssetsForAZoneUpdateACustomAssetRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAsset
+	): mixed
 	{
-		return $this->client->put('/zones/' . $zoneIdentifier . '/custom_pages/assets/' . $assetName, \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneAsset::class, $request);
+		return $this->client->put('/zones/' . $zoneIdentifier . '/custom_pages/assets/' . $assetName, \FoundryCo\Cloudflare\Responses\CustomAssetsForAZoneUpdateACustomAsset::class, $request);
 	}
 
 

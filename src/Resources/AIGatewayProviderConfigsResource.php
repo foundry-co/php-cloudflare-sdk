@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,13 +22,9 @@ class AIGatewayProviderConfigsResource
 	/**
 	 * List Provider Configs
 	 */
-	public function get(
-		string $gatewayId,
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayProviderConfigsProviders
+	public function get(string $gatewayId, ?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/provider_configs', \FoundryCo\Cloudflare\Responses\AIGatewayProviderConfigsProviders::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/provider_configs', \FoundryCo\Cloudflare\Responses\AigConfigListProviders::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -38,9 +34,9 @@ class AIGatewayProviderConfigsResource
 	public function create(
 		string $gatewayId,
 		\FoundryCo\Cloudflare\Requests\AigConfigCreateProvidersRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayProviderConfigsProviders
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/provider_configs', \FoundryCo\Cloudflare\Responses\AIGatewayProviderConfigsProviders::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/provider_configs', \FoundryCo\Cloudflare\Responses\AigConfigCreateProviders::class, $request);
 	}
 
 
@@ -51,9 +47,9 @@ class AIGatewayProviderConfigsResource
 		string $gatewayId,
 		string $id,
 		\FoundryCo\Cloudflare\Requests\AigConfigUpdateProvidersRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayProviderConfigsProviders
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/provider_configs/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayProviderConfigsProviders::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/provider_configs/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigUpdateProviders::class, $request);
 	}
 
 

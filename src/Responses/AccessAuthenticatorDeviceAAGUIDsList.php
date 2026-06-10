@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,13 +13,13 @@ namespace FoundryCo\Cloudflare\Responses;
 /**
  * A FIDO2 authenticator device AAGUID entry
  */
-readonly class AccessAuthenticatorDeviceAAGUIDsList
+readonly class AccessAuthenticatorDeviceAaguidsList
 {
 	public function __construct(
 		/** The Authenticator Attestation GUID (AAGUID) uniquely identifying a FIDO2 authenticator model */
-		public string $aaguid,
+		public ?string $aaguid = null,
 		/** The human-readable name of the FIDO2 authenticator */
-		public string $name,
+		public ?string $name = null,
 	) {
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class APIShieldAPIDiscoveryResource
 	/**
 	 * Retrieve discovered operations on a zone rendered as OpenAPI schemas
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryOpenapi
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/discovery', \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryOpenapi::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/discovery', \FoundryCo\Cloudflare\Responses\ApiShieldApiDiscoveryRetrieveDiscoveredOperationsOnAZoneAsOpenapi::class, []);
 	}
 
 
@@ -42,9 +42,9 @@ class APIShieldAPIDiscoveryResource
 		?bool $diff = null,
 		?\FoundryCo\Cloudflare\Enums\APIShieldAPIDiscoveryOrigin $origin = null,
 		?\FoundryCo\Cloudflare\Enums\APIShieldAPIDiscoveryState $state = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryZone
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/discovery/operations', \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryZone::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'host' => $host ?? null, 'method' => $method ?? null, 'endpoint' => $endpoint ?? null, 'direction' => $direction ?? null, 'order' => $order ?? null, 'diff' => $diff ?? null, 'origin' => $origin ?? null, 'state' => $state ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/discovery/operations', \FoundryCo\Cloudflare\Responses\ApiShieldApiDiscoveryRetrieveDiscoveredOperationsOnAZone::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'host' => $host ?? null, 'method' => $method ?? null, 'endpoint' => $endpoint ?? null, 'direction' => $direction ?? null, 'order' => $order ?? null, 'diff' => $diff ?? null, 'origin' => $origin ?? null, 'state' => $state ?? null]);
 	}
 
 
@@ -60,9 +60,9 @@ class APIShieldAPIDiscoveryResource
 	/**
 	 * Retrieve a discovered operation
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryId
+	public function get(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/discovery/operations/' . $discoveryId, \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryId::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/discovery/operations/' . $discoveryId, \FoundryCo\Cloudflare\Responses\ApiShieldApiDiscoveryRetrieveDiscoveredOperationById::class, []);
 	}
 
 
@@ -71,8 +71,8 @@ class APIShieldAPIDiscoveryResource
 	 */
 	public function apiShieldApiPatchDiscoveredOperation(
 		\FoundryCo\Cloudflare\Requests\ApiShieldApiPatchDiscoveredOperationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryOperation
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/api_gateway/discovery/operations/' . $discoveryId, \FoundryCo\Cloudflare\Responses\APIShieldAPIDiscoveryOperation::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/api_gateway/discovery/operations/' . $discoveryId, \FoundryCo\Cloudflare\Responses\ApiShieldApiPatchDiscoveredOperation::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class SecondaryDNSSecondaryZoneResource
 	/**
 	 * Secondary Zone Configuration Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SecondaryDNSSecondaryZoneDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/secondary_dns/incoming', \FoundryCo\Cloudflare\Responses\SecondaryDNSSecondaryZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/secondary_dns/incoming', \FoundryCo\Cloudflare\Responses\SecondaryDnsSecondaryZoneSecondaryZoneConfigurationDetails::class, []);
 	}
 
 
@@ -42,9 +42,9 @@ class SecondaryDNSSecondaryZoneResource
 	 */
 	public function incoming(
 		\FoundryCo\Cloudflare\Requests\SecondaryDnsSecondaryZoneCreateSecondaryZoneConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSSecondaryZoneConfiguration
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/secondary_dns/incoming', \FoundryCo\Cloudflare\Responses\SecondaryDNSSecondaryZoneConfiguration::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/secondary_dns/incoming', \FoundryCo\Cloudflare\Responses\SecondaryDnsSecondaryZoneCreateSecondaryZoneConfiguration::class, $request);
 	}
 
 
@@ -53,9 +53,9 @@ class SecondaryDNSSecondaryZoneResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\SecondaryDnsSecondaryZoneUpdateSecondaryZoneConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSSecondaryZoneConfiguration
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/secondary_dns/incoming', \FoundryCo\Cloudflare\Responses\SecondaryDNSSecondaryZoneConfiguration::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/secondary_dns/incoming', \FoundryCo\Cloudflare\Responses\SecondaryDnsSecondaryZoneUpdateSecondaryZoneConfiguration::class, $request);
 	}
 
 

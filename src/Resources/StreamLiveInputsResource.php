@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class StreamLiveInputsResource
 	/**
 	 * List live inputs
 	 */
-	public function list(?bool $includeCounts = null): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInputs
+	public function list(?bool $includeCounts = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/live_inputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsInputs::class, ['includeCounts' => $includeCounts ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/live_inputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsListLiveInputs::class, ['includeCounts' => $includeCounts ?? null]);
 	}
 
 
 	/**
 	 * Create a live input
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\StreamLiveInputsCreateALiveInputRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	public function create(\FoundryCo\Cloudflare\Requests\StreamLiveInputsCreateALiveInputRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsCreateALiveInput::class, $request);
 	}
 
 
 	/**
 	 * Retrieve a live input
 	 */
-	public function get(string $liveInputIdentifier): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	public function get(string $liveInputIdentifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier, \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier, \FoundryCo\Cloudflare\Responses\StreamLiveInputsRetrieveALiveInput::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class StreamLiveInputsResource
 	public function update(
 		string $liveInputIdentifier,
 		\FoundryCo\Cloudflare\Requests\StreamLiveInputsUpdateALiveInputRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier, \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier, \FoundryCo\Cloudflare\Responses\StreamLiveInputsUpdateALiveInput::class, $request);
 	}
 
 
@@ -72,27 +70,27 @@ class StreamLiveInputsResource
 	/**
 	 * Disable a live input
 	 */
-	public function disable(string $liveInputIdentifier): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	public function disable(string $liveInputIdentifier): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/disable', \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/disable', \FoundryCo\Cloudflare\Responses\StreamLiveInputsDisableALiveInput::class, null);
 	}
 
 
 	/**
 	 * Enable a live input
 	 */
-	public function enable(string $liveInputIdentifier): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	public function enable(string $liveInputIdentifier): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/enable', \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/enable', \FoundryCo\Cloudflare\Responses\StreamLiveInputsEnableALiveInput::class, null);
 	}
 
 
 	/**
 	 * List all outputs associated with a specified live input
 	 */
-	public function outputs(string $liveInputIdentifier): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	public function outputs(string $liveInputIdentifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/outputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/outputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsListAllOutputsAssociatedWithASpecifiedLiveInput::class, []);
 	}
 
 
@@ -102,9 +100,9 @@ class StreamLiveInputsResource
 	public function streamLiveInputsCreateANewOutputConnectedToALiveInput(
 		string $liveInputIdentifier,
 		\FoundryCo\Cloudflare\Requests\StreamLiveInputsCreateANewOutputConnectedToALiveInputRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/outputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsInput::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/outputs', \FoundryCo\Cloudflare\Responses\StreamLiveInputsCreateANewOutputConnectedToALiveInput::class, $request);
 	}
 
 
@@ -115,9 +113,9 @@ class StreamLiveInputsResource
 		string $outputIdentifier,
 		string $liveInputIdentifier,
 		\FoundryCo\Cloudflare\Requests\StreamLiveInputsUpdateAnOutputRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamLiveInputsOutput
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/outputs/' . $outputIdentifier, \FoundryCo\Cloudflare\Responses\StreamLiveInputsOutput::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/stream/live_inputs/' . $liveInputIdentifier . '/outputs/' . $outputIdentifier, \FoundryCo\Cloudflare\Responses\StreamLiveInputsUpdateAnOutput::class, $request);
 	}
 
 

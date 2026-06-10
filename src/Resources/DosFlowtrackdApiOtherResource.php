@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,20 +27,18 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListDnsProtectionRulesForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListDnsProtectionRulesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules', \FoundryCo\Cloudflare\Responses\ListDnsProtectionRulesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create DNS Protection rule.
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateDnsProtectionRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateDnsProtectionRule
+	public function create(\FoundryCo\Cloudflare\Requests\CreateDnsProtectionRuleRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateDnsProtectionRule::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules', \FoundryCo\Cloudflare\Responses\CreateDnsProtectionRule::class, $request);
 	}
 
 
@@ -56,21 +54,18 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get DNS Protection rule.
 	 */
-	public function get(string $ruleId): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetDnsProtectionRule
+	public function get(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetDnsProtectionRule::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\GetDnsProtectionRule::class, []);
 	}
 
 
 	/**
 	 * Update DNS Protection rule.
 	 */
-	public function update(
-		string $ruleId,
-		\FoundryCo\Cloudflare\Requests\UpdateDnsProtectionRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateDnsProtectionRule
+	public function update(string $ruleId, \FoundryCo\Cloudflare\Requests\UpdateDnsProtectionRuleRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateDnsProtectionRule::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_dns_protection/configs/dns_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\UpdateDnsProtectionRule::class, $request);
 	}
 
 
@@ -91,9 +86,9 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListAllowlistPrefixesForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListAllowlistPrefixesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist', \FoundryCo\Cloudflare\Responses\ListAllowlistPrefixesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -102,9 +97,9 @@ class DosFlowtrackdApiOtherResource
 	 */
 	public function createAllowlistedPrefix(
 		\FoundryCo\Cloudflare\Requests\CreateAllowlistedPrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateAllowlistedPrefix
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateAllowlistedPrefix::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist', \FoundryCo\Cloudflare\Responses\CreateAllowlistedPrefix::class, $request);
 	}
 
 
@@ -120,11 +115,9 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get allowlist prefix.
 	 */
-	public function getAllowlistPrefix(
-		string $prefixId,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetAllowlistPrefix
+	public function getAllowlistPrefix(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist/' . $prefixId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetAllowlistPrefix::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist/' . $prefixId, \FoundryCo\Cloudflare\Responses\GetAllowlistPrefix::class, []);
 	}
 
 
@@ -134,9 +127,9 @@ class DosFlowtrackdApiOtherResource
 	public function updateAllowlistPrefix(
 		string $prefixId,
 		\FoundryCo\Cloudflare\Requests\UpdateAllowlistPrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateAllowlistPrefix
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist/' . $prefixId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateAllowlistPrefix::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/allowlist/' . $prefixId, \FoundryCo\Cloudflare\Responses\UpdateAllowlistPrefix::class, $request);
 	}
 
 
@@ -157,20 +150,18 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListPrefixesForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListPrefixesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes', \FoundryCo\Cloudflare\Responses\ListPrefixesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create prefix.
 	 */
-	public function createPrefix(
-		\FoundryCo\Cloudflare\Requests\CreatePrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreatePrefix
+	public function createPrefix(\FoundryCo\Cloudflare\Requests\CreatePrefixRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreatePrefix::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes', \FoundryCo\Cloudflare\Responses\CreatePrefix::class, $request);
 	}
 
 
@@ -186,30 +177,27 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Create multiple prefixes.
 	 */
-	public function bulk(): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherBulkCreatePrefixes
+	public function bulk(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes/bulk', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherBulkCreatePrefixes::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes/bulk', \FoundryCo\Cloudflare\Responses\BulkCreatePrefixes::class, null);
 	}
 
 
 	/**
 	 * Get prefix.
 	 */
-	public function getPrefix(string $prefixId): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetPrefix
+	public function getPrefix(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetPrefix::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\GetPrefix::class, []);
 	}
 
 
 	/**
 	 * Update prefix.
 	 */
-	public function updatePrefix(
-		string $prefixId,
-		\FoundryCo\Cloudflare\Requests\UpdatePrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdatePrefix
+	public function updatePrefix(string $prefixId, \FoundryCo\Cloudflare\Requests\UpdatePrefixRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdatePrefix::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/prefixes/' . $prefixId, \FoundryCo\Cloudflare\Responses\UpdatePrefix::class, $request);
 	}
 
 
@@ -231,9 +219,9 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListSynProtectionFiltersForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListSynProtectionFiltersForAccount::class, ['mode' => $mode ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters', \FoundryCo\Cloudflare\Responses\ListSynProtectionFiltersForAccount::class, ['mode' => $mode ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -242,9 +230,9 @@ class DosFlowtrackdApiOtherResource
 	 */
 	public function createSynProtectionFilter(
 		\FoundryCo\Cloudflare\Requests\CreateSynProtectionFilterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateSynProtectionFilter
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateSynProtectionFilter::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters', \FoundryCo\Cloudflare\Responses\CreateSynProtectionFilter::class, $request);
 	}
 
 
@@ -260,11 +248,9 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get SYN Protection filter.
 	 */
-	public function getSynProtectionFilter(
-		string $filterId,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetSynProtectionFilter
+	public function getSynProtectionFilter(string $filterId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetSynProtectionFilter::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\GetSynProtectionFilter::class, []);
 	}
 
 
@@ -274,9 +260,9 @@ class DosFlowtrackdApiOtherResource
 	public function updateSynProtectionFilter(
 		string $filterId,
 		\FoundryCo\Cloudflare\Requests\UpdateSynProtectionFilterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateSynProtectionFilter
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateSynProtectionFilter::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\UpdateSynProtectionFilter::class, $request);
 	}
 
 
@@ -297,9 +283,9 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListSynProtectionRulesForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListSynProtectionRulesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules', \FoundryCo\Cloudflare\Responses\ListSynProtectionRulesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -308,9 +294,9 @@ class DosFlowtrackdApiOtherResource
 	 */
 	public function createSynProtectionRule(
 		\FoundryCo\Cloudflare\Requests\CreateSynProtectionRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateSynProtectionRule
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateSynProtectionRule::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules', \FoundryCo\Cloudflare\Responses\CreateSynProtectionRule::class, $request);
 	}
 
 
@@ -326,11 +312,9 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get SYN Protection rule.
 	 */
-	public function getSynProtectionRule(
-		string $ruleId,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetSynProtectionRule
+	public function getSynProtectionRule(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetSynProtectionRule::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\GetSynProtectionRule::class, []);
 	}
 
 
@@ -340,9 +324,9 @@ class DosFlowtrackdApiOtherResource
 	public function updateSynProtectionRule(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\UpdateSynProtectionRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateSynProtectionRule
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateSynProtectionRule::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/syn_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\UpdateSynProtectionRule::class, $request);
 	}
 
 
@@ -364,9 +348,9 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListTcpFlowProtectionFiltersForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListTcpFlowProtectionFiltersForAccount::class, ['mode' => $mode ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters', \FoundryCo\Cloudflare\Responses\ListTcpFlowProtectionFiltersForAccount::class, ['mode' => $mode ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -375,9 +359,9 @@ class DosFlowtrackdApiOtherResource
 	 */
 	public function createTcpFlowProtectionFilter(
 		\FoundryCo\Cloudflare\Requests\CreateTcpFlowProtectionFilterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateTcpFlowProtectionFilter
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateTcpFlowProtectionFilter::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters', \FoundryCo\Cloudflare\Responses\CreateTcpFlowProtectionFilter::class, $request);
 	}
 
 
@@ -393,11 +377,9 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get TCP Flow Protection filter.
 	 */
-	public function getTcpFlowProtectionFilter(
-		string $filterId,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetTcpFlowProtectionFilter
+	public function getTcpFlowProtectionFilter(string $filterId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetTcpFlowProtectionFilter::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\GetTcpFlowProtectionFilter::class, []);
 	}
 
 
@@ -407,9 +389,9 @@ class DosFlowtrackdApiOtherResource
 	public function updateTcpFlowProtectionFilter(
 		string $filterId,
 		\FoundryCo\Cloudflare\Requests\UpdateTcpFlowProtectionFilterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateTcpFlowProtectionFilter
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateTcpFlowProtectionFilter::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\UpdateTcpFlowProtectionFilter::class, $request);
 	}
 
 
@@ -430,9 +412,9 @@ class DosFlowtrackdApiOtherResource
 		?int $perPage = null,
 		?string $order = null,
 		?string $direction = null,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListTcpFlowProtectionRulesForAccount
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherListTcpFlowProtectionRulesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules', \FoundryCo\Cloudflare\Responses\ListTcpFlowProtectionRulesForAccount::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -441,9 +423,9 @@ class DosFlowtrackdApiOtherResource
 	 */
 	public function createTcpFlowProtectionRule(
 		\FoundryCo\Cloudflare\Requests\CreateTcpFlowProtectionRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateTcpFlowProtectionRule
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherCreateTcpFlowProtectionRule::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules', \FoundryCo\Cloudflare\Responses\CreateTcpFlowProtectionRule::class, $request);
 	}
 
 
@@ -459,11 +441,9 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get TCP Flow Protection rule.
 	 */
-	public function getTcpFlowProtectionRule(
-		string $ruleId,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetTcpFlowProtectionRule
+	public function getTcpFlowProtectionRule(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetTcpFlowProtectionRule::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\GetTcpFlowProtectionRule::class, []);
 	}
 
 
@@ -473,9 +453,9 @@ class DosFlowtrackdApiOtherResource
 	public function updateTcpFlowProtectionRule(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\UpdateTcpFlowProtectionRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateTcpFlowProtectionRule
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateTcpFlowProtectionRule::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_flow_protection/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\UpdateTcpFlowProtectionRule::class, $request);
 	}
 
 
@@ -491,19 +471,17 @@ class DosFlowtrackdApiOtherResource
 	/**
 	 * Get protection status.
 	 */
-	public function tcpProtectionStatus(): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetProtectionStatus
+	public function tcpProtectionStatus(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_protection_status', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherGetProtectionStatus::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_protection_status', \FoundryCo\Cloudflare\Responses\GetProtectionStatus::class, []);
 	}
 
 
 	/**
 	 * Update protection status.
 	 */
-	public function updateProtectionStatus(
-		\FoundryCo\Cloudflare\Requests\UpdateProtectionStatusRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateProtectionStatus
+	public function updateProtectionStatus(\FoundryCo\Cloudflare\Requests\UpdateProtectionStatusRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_protection_status', \FoundryCo\Cloudflare\Responses\DosFlowtrackdApiOtherUpdateProtectionStatus::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/advanced_tcp_protection/configs/tcp_protection_status', \FoundryCo\Cloudflare\Responses\UpdateProtectionStatus::class, $request);
 	}
 }

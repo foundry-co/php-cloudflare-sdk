@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,18 +34,18 @@ class AIGatewayDynamicRoutesResource
 	public function create(
 		string $gatewayId,
 		\FoundryCo\Cloudflare\Requests\AigConfigPostGatewayDynamicRouteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesRoute
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes', \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesRoute::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes', \FoundryCo\Cloudflare\Responses\AigConfigPostGatewayDynamicRoute::class, $request);
 	}
 
 
 	/**
 	 * Get an AI Gateway Dynamic Route.
 	 */
-	public function routes(string $gatewayId, string $id): \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesRoute
+	public function routes(string $gatewayId, string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id, \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesRoute::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id, \FoundryCo\Cloudflare\Responses\AigConfigGetGatewayDynamicRoute::class, []);
 	}
 
 
@@ -87,9 +87,9 @@ class AIGatewayDynamicRoutesResource
 		string $gatewayId,
 		string $id,
 		\FoundryCo\Cloudflare\Requests\AigConfigPostGatewayDynamicRouteDeploymentRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesDeployment
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id . '/deployments', \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesDeployment::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id . '/deployments', \FoundryCo\Cloudflare\Responses\AigConfigPostGatewayDynamicRouteDeployment::class, $request);
 	}
 
 
@@ -109,21 +109,17 @@ class AIGatewayDynamicRoutesResource
 		string $gatewayId,
 		string $id,
 		\FoundryCo\Cloudflare\Requests\AigConfigPostGatewayDynamicRouteVersionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesVersion
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id . '/versions', \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesVersion::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id . '/versions', \FoundryCo\Cloudflare\Responses\AigConfigPostGatewayDynamicRouteVersion::class, $request);
 	}
 
 
 	/**
 	 * Get an AI Gateway Dynamic Route Version.
 	 */
-	public function aigConfigGetGatewayDynamicRouteVersion(
-		string $gatewayId,
-		string $id,
-		string $versionId,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesVersion
+	public function aigConfigGetGatewayDynamicRouteVersion(string $gatewayId, string $id, string $versionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id . '/versions/' . $versionId, \FoundryCo\Cloudflare\Responses\AIGatewayDynamicRoutesVersion::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/gateways/' . $gatewayId . '/routes/' . $id . '/versions/' . $versionId, \FoundryCo\Cloudflare\Responses\AigConfigGetGatewayDynamicRouteVersion::class, []);
 	}
 }

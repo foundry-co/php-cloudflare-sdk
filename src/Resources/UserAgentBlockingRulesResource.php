@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,9 +28,9 @@ class UserAgentBlockingRulesResource
 		?float $perPage = null,
 		?string $userAgent = null,
 		?bool $paused = null,
-	): \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRules
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/ua_rules', \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRules::class, ['page' => $page ?? null, 'description' => $description ?? null, 'perPage' => $perPage ?? null, 'userAgent' => $userAgent ?? null, 'paused' => $paused ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/ua_rules', \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesListUserAgentBlockingRules::class, ['page' => $page ?? null, 'description' => $description ?? null, 'perPage' => $perPage ?? null, 'userAgent' => $userAgent ?? null, 'paused' => $paused ?? null]);
 	}
 
 
@@ -39,18 +39,18 @@ class UserAgentBlockingRulesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\UserAgentBlockingRulesCreateAUserAgentBlockingRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRule
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/firewall/ua_rules', \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRule::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/firewall/ua_rules', \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesCreateAUserAgentBlockingRule::class, $request);
 	}
 
 
 	/**
 	 * Get a User Agent Blocking rule
 	 */
-	public function get(string $uaRuleId): \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRule
+	public function get(string $uaRuleId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/firewall/ua_rules/' . $uaRuleId, \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRule::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/firewall/ua_rules/' . $uaRuleId, \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesGetAUserAgentBlockingRule::class, []);
 	}
 
 
@@ -60,9 +60,9 @@ class UserAgentBlockingRulesResource
 	public function update(
 		string $uaRuleId,
 		\FoundryCo\Cloudflare\Requests\UserAgentBlockingRulesUpdateAUserAgentBlockingRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRule
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/firewall/ua_rules/' . $uaRuleId, \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesRule::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/firewall/ua_rules/' . $uaRuleId, \FoundryCo\Cloudflare\Responses\UserAgentBlockingRulesUpdateAUserAgentBlockingRule::class, $request);
 	}
 
 

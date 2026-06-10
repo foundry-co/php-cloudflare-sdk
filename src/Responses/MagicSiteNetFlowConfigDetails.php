@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,11 +13,11 @@ namespace FoundryCo\Cloudflare\Responses;
 /**
  * NetFlow configuration for a site.
  */
-readonly class MagicSiteNetFlowConfigDetails
+readonly class MagicSiteNetflowConfigDetails
 {
 	public function __construct(
 		/** IPv4 address of the NetFlow collector. */
-		public string $collectorIp,
+		public ?string $collectorIp = null,
 		/** Timeout in seconds for active flows (defaults to 30). */
 		public ?int $activeTimeout = null,
 		/** UDP port of the NetFlow collector (defaults to 2055). */

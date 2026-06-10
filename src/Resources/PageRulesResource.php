@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,29 +27,27 @@ class PageRulesResource
 		?\FoundryCo\Cloudflare\Enums\PageRulesDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\PageRulesMatch $match = null,
 		?\FoundryCo\Cloudflare\Enums\PageRulesStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\PageRulesRules
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/pagerules', \FoundryCo\Cloudflare\Responses\PageRulesRules::class, ['order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/pagerules', \FoundryCo\Cloudflare\Responses\PageRulesListPageRules::class, ['order' => $order ?? null, 'direction' => $direction ?? null, 'match' => $match ?? null, 'status' => $status ?? null]);
 	}
 
 
 	/**
 	 * Create a Page Rule
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PageRulesCreateAPageRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PageRulesRule
+	public function create(\FoundryCo\Cloudflare\Requests\PageRulesCreateAPageRuleRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/pagerules', \FoundryCo\Cloudflare\Responses\PageRulesRule::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/pagerules', \FoundryCo\Cloudflare\Responses\PageRulesCreateAPageRule::class, $request);
 	}
 
 
 	/**
 	 * Get a Page Rule
 	 */
-	public function get(string $pageruleId): \FoundryCo\Cloudflare\Responses\PageRulesRule
+	public function get(string $pageruleId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/pagerules/' . $pageruleId, \FoundryCo\Cloudflare\Responses\PageRulesRule::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/pagerules/' . $pageruleId, \FoundryCo\Cloudflare\Responses\PageRulesGetAPageRule::class, []);
 	}
 
 
@@ -59,9 +57,9 @@ class PageRulesResource
 	public function update(
 		string $pageruleId,
 		\FoundryCo\Cloudflare\Requests\PageRulesUpdateAPageRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PageRulesRule
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/pagerules/' . $pageruleId, \FoundryCo\Cloudflare\Responses\PageRulesRule::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/pagerules/' . $pageruleId, \FoundryCo\Cloudflare\Responses\PageRulesUpdateAPageRule::class, $request);
 	}
 
 
@@ -71,9 +69,9 @@ class PageRulesResource
 	public function pagerules(
 		string $pageruleId,
 		\FoundryCo\Cloudflare\Requests\PageRulesEditAPageRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PageRulesRule
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/pagerules/' . $pageruleId, \FoundryCo\Cloudflare\Responses\PageRulesRule::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/pagerules/' . $pageruleId, \FoundryCo\Cloudflare\Responses\PageRulesEditAPageRule::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class CreateManualBuildRequestSeedRepo
 {
 	public function __construct(
 		/** Git branch name. */
-		public string $branch,
-		public string $owner,
-		public string $path,
-		public \FoundryCo\Cloudflare\Enums\CreateManualBuildRequestSeedRepoProvider $provider,
-		public string $repository,
+		public ?string $branch = null,
+		public ?string $owner = null,
+		public ?string $path = null,
+		public ?\FoundryCo\Cloudflare\Enums\CreateManualBuildRequestSeedRepoProvider $provider = null,
+		public ?string $repository = null,
 		public ?array $files = null,
 	) {
 	}

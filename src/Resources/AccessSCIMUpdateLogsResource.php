@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -37,8 +37,8 @@ class AccessSCIMUpdateLogsResource
 		?array $idpResourceId = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AccessSCIMUpdateLogsLogs
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/logs/scim/updates', \FoundryCo\Cloudflare\Responses\AccessSCIMUpdateLogsLogs::class, ['limit' => $limit ?? null, 'direction' => $direction ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'idpId' => $idpId ?? null, 'status' => $status ?? null, 'resourceType' => $resourceType ?? null, 'requestMethod' => $requestMethod ?? null, 'resourceUserEmail' => $resourceUserEmail ?? null, 'resourceGroupName' => $resourceGroupName ?? null, 'cfResourceId' => $cfResourceId ?? null, 'idpResourceId' => $idpResourceId ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/logs/scim/updates', \FoundryCo\Cloudflare\Responses\AccessScimUpdateLogsListAccessScimUpdateLogs::class, ['limit' => $limit ?? null, 'direction' => $direction ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'idpId' => $idpId ?? null, 'status' => $status ?? null, 'resourceType' => $resourceType ?? null, 'requestMethod' => $requestMethod ?? null, 'resourceUserEmail' => $resourceUserEmail ?? null, 'resourceGroupName' => $resourceGroupName ?? null, 'cfResourceId' => $cfResourceId ?? null, 'idpResourceId' => $idpResourceId ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 }

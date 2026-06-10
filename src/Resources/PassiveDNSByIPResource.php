@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,8 +27,8 @@ class PassiveDNSByIPResource
 		?string $ipv4 = null,
 		?float $page = null,
 		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\PassiveDNSByIPIp
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/dns', \FoundryCo\Cloudflare\Responses\PassiveDNSByIPIp::class, ['startEndParams' => $startEndParams ?? null, 'ipv4' => $ipv4 ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/dns', \FoundryCo\Cloudflare\Responses\PassiveDnsByIpGetPassiveDnsByIp::class, ['startEndParams' => $startEndParams ?? null, 'ipv4' => $ipv4 ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 }

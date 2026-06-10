@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class AccessCustomPagesResource
 	/**
 	 * List custom pages
 	 */
-	public function list(?int $page = null, ?int $perPage = null): \FoundryCo\Cloudflare\Responses\AccessCustomPagesPages
+	public function list(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/custom_pages', \FoundryCo\Cloudflare\Responses\AccessCustomPagesPages::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/custom_pages', \FoundryCo\Cloudflare\Responses\AccessCustomPagesListCustomPages::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create a custom page
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccessCustomPagesCreateACustomPageRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessCustomPagesPage
+	public function create(\FoundryCo\Cloudflare\Requests\AccessCustomPagesCreateACustomPageRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/custom_pages', \FoundryCo\Cloudflare\Responses\AccessCustomPagesPage::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/custom_pages', \FoundryCo\Cloudflare\Responses\AccessCustomPagesCreateACustomPage::class, $request);
 	}
 
 
 	/**
 	 * Get a custom page
 	 */
-	public function get(string $customPageId): \FoundryCo\Cloudflare\Responses\AccessCustomPagesPage
+	public function get(string $customPageId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/custom_pages/' . $customPageId, \FoundryCo\Cloudflare\Responses\AccessCustomPagesPage::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/custom_pages/' . $customPageId, \FoundryCo\Cloudflare\Responses\AccessCustomPagesGetACustomPage::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class AccessCustomPagesResource
 	public function update(
 		string $customPageId,
 		\FoundryCo\Cloudflare\Requests\AccessCustomPagesUpdateACustomPageRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessCustomPagesPage
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/custom_pages/' . $customPageId, \FoundryCo\Cloudflare\Responses\AccessCustomPagesPage::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/custom_pages/' . $customPageId, \FoundryCo\Cloudflare\Responses\AccessCustomPagesUpdateACustomPage::class, $request);
 	}
 
 

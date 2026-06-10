@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,9 +28,9 @@ class TunnelVirtualNetworkResource
 		?bool $isDefault = null,
 		?bool $isDefaultNetwork = null,
 		?bool $isDeleted = null,
-	): \FoundryCo\Cloudflare\Responses\TunnelVirtualNetworkNetworks
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/teamnet/virtual_networks', \FoundryCo\Cloudflare\Responses\TunnelVirtualNetworkNetworks::class, ['id' => $id ?? null, 'name' => $name ?? null, 'isDefault' => $isDefault ?? null, 'isDefaultNetwork' => $isDefaultNetwork ?? null, 'isDeleted' => $isDeleted ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/teamnet/virtual_networks', \FoundryCo\Cloudflare\Responses\TunnelVirtualNetworkListVirtualNetworks::class, ['id' => $id ?? null, 'name' => $name ?? null, 'isDefault' => $isDefault ?? null, 'isDefaultNetwork' => $isDefaultNetwork ?? null, 'isDeleted' => $isDeleted ?? null]);
 	}
 
 

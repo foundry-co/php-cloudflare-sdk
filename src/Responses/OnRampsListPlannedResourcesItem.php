@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -10,14 +10,14 @@ declare(strict_types=1);
 
 namespace FoundryCo\Cloudflare\Responses;
 
-readonly class OnRampsListPlannedResourcesItem
+readonly class OnrampsListPlannedResourcesItem
 {
 	public function __construct(
-		public array $diff,
-		public array $keysRequireReplace,
-		public array $monthlyCostEstimateDiff,
-		public array $plannedAction,
-		public array $resource,
+		public ?OnrampsListPlannedResourcesItemDiff $diff = null,
+		public ?array $keysRequireReplace = null,
+		public ?OnrampsListPlannedResourcesItemMonthlyCostEstimateDiff $monthlyCostEstimateDiff = null,
+		public ?\FoundryCo\Cloudflare\Enums\OnrampsListPlannedResourcesItemPlannedAction $plannedAction = null,
+		public ?OnrampsListPlannedResourcesItemResource $resource = null,
 	) {
 	}
 }

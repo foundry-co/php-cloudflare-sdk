@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,9 +28,9 @@ class RadarLeakedCredentialChecksResource
 		?array $dateEnd = null,
 		?array $compromised = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksClass
+	): mixed
 	{
-		return $this->client->get('/radar/leaked_credential_checks/summary/bot_class', \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksClass::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'compromised' => $compromised ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/leaked_credential_checks/summary/bot_class', \FoundryCo\Cloudflare\Responses\RadarGetLeakedCredentialChecksSummaryByBotClass::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'compromised' => $compromised ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -44,9 +44,9 @@ class RadarLeakedCredentialChecksResource
 		?array $dateEnd = null,
 		?array $botClass = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksCompromised
+	): mixed
 	{
-		return $this->client->get('/radar/leaked_credential_checks/summary/compromised', \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksCompromised::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'botClass' => $botClass ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/leaked_credential_checks/summary/compromised', \FoundryCo\Cloudflare\Responses\RadarGetLeakedCredentialChecksSummaryByCompromised::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'botClass' => $botClass ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -66,9 +66,9 @@ class RadarLeakedCredentialChecksResource
 		?array $compromised = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksSummary
+	): mixed
 	{
-		return $this->client->get('/radar/leaked_credential_checks/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'botClass' => $botClass ?? null, 'compromised' => $compromised ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/leaked_credential_checks/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetLeakedCredentialChecksSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'botClass' => $botClass ?? null, 'compromised' => $compromised ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -83,9 +83,9 @@ class RadarLeakedCredentialChecksResource
 		?array $dateEnd = null,
 		?array $compromised = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksClass
+	): mixed
 	{
-		return $this->client->get('/radar/leaked_credential_checks/timeseries_groups/bot_class', \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksClass::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'compromised' => $compromised ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/leaked_credential_checks/timeseries_groups/bot_class', \FoundryCo\Cloudflare\Responses\RadarGetLeakedCredentialChecksTimeseriesGroupByBotClass::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'compromised' => $compromised ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -100,9 +100,9 @@ class RadarLeakedCredentialChecksResource
 		?array $dateEnd = null,
 		?array $botClass = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksCompromised
+	): mixed
 	{
-		return $this->client->get('/radar/leaked_credential_checks/timeseries_groups/compromised', \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksCompromised::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'botClass' => $botClass ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/leaked_credential_checks/timeseries_groups/compromised', \FoundryCo\Cloudflare\Responses\RadarGetLeakedCredentialChecksTimeseriesGroupByCompromised::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'botClass' => $botClass ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -125,8 +125,8 @@ class RadarLeakedCredentialChecksResource
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLeakedCredentialChecksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksGroup
+	): mixed
 	{
-		return $this->client->get('/radar/leaked_credential_checks/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarLeakedCredentialChecksGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'botClass' => $botClass ?? null, 'compromised' => $compromised ?? null, 'checkResult' => $checkResult ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/leaked_credential_checks/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetLeakedCredentialChecksTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'botClass' => $botClass ?? null, 'compromised' => $compromised ?? null, 'checkResult' => $checkResult ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 }

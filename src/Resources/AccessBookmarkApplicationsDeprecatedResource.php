@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,42 +22,36 @@ class AccessBookmarkApplicationsDeprecatedResource
 	/**
 	 * List Bookmark applications
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplications
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/bookmarks', \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplications::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/bookmarks', \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedListBookmarkApplications::class, []);
 	}
 
 
 	/**
 	 * Get a Bookmark application
 	 */
-	public function get(
-		string $bookmarkId,
-	): \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplication
+	public function get(string $bookmarkId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/bookmarks/' . $bookmarkId, \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplication::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/bookmarks/' . $bookmarkId, \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedGetABookmarkApplication::class, []);
 	}
 
 
 	/**
 	 * Create a Bookmark application
 	 */
-	public function create(
-		string $bookmarkId,
-	): \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplication
+	public function create(string $bookmarkId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/bookmarks/' . $bookmarkId, \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplication::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/bookmarks/' . $bookmarkId, \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedCreateABookmarkApplication::class, null);
 	}
 
 
 	/**
 	 * Update a Bookmark application
 	 */
-	public function update(
-		string $bookmarkId,
-	): \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplication
+	public function update(string $bookmarkId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/bookmarks/' . $bookmarkId, \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedApplication::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/bookmarks/' . $bookmarkId, \FoundryCo\Cloudflare\Responses\AccessBookmarkApplicationsDeprecatedUpdateABookmarkApplication::class, null);
 	}
 
 

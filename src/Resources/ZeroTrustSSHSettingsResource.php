@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,28 +22,26 @@ class ZeroTrustSSHSettingsResource
 	/**
 	 * Get Zero Trust SSH settings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustSSHSettingsSettings
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/audit_ssh_settings', \FoundryCo\Cloudflare\Responses\ZeroTrustSSHSettingsSettings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/audit_ssh_settings', \FoundryCo\Cloudflare\Responses\ZeroTrustGetAuditSshSettings::class, []);
 	}
 
 
 	/**
 	 * Update Zero Trust SSH settings
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\ZeroTrustUpdateAuditSshSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustSSHSettingsSettings
+	public function update(\FoundryCo\Cloudflare\Requests\ZeroTrustUpdateAuditSshSettingsRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/gateway/audit_ssh_settings', \FoundryCo\Cloudflare\Responses\ZeroTrustSSHSettingsSettings::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/gateway/audit_ssh_settings', \FoundryCo\Cloudflare\Responses\ZeroTrustUpdateAuditSshSettings::class, $request);
 	}
 
 
 	/**
 	 * Rotate Zero Trust SSH account seed
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\ZeroTrustSSHSettingsSeed
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/audit_ssh_settings/rotate_seed', \FoundryCo\Cloudflare\Responses\ZeroTrustSSHSettingsSeed::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/audit_ssh_settings/rotate_seed', \FoundryCo\Cloudflare\Responses\ZeroTrustRotateSshAccountSeed::class, null);
 	}
 }

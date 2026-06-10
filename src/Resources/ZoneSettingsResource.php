@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -40,9 +40,9 @@ class ZoneSettingsResource
 	/**
 	 * Get aegis setting
 	 */
-	public function aegis(): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	public function aegis(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/aegis', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/aegis', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsGetAegisSetting::class, []);
 	}
 
 
@@ -51,18 +51,18 @@ class ZoneSettingsResource
 	 */
 	public function zoneCacheSettingsChangeAegisSetting(
 		\FoundryCo\Cloudflare\Requests\ZoneCacheSettingsChangeAegisSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/settings/aegis', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/settings/aegis', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsChangeAegisSetting::class, $request);
 	}
 
 
 	/**
 	 * Get Cloudflare Fonts setting
 	 */
-	public function fonts(): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	public function fonts(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/fonts', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/fonts', \FoundryCo\Cloudflare\Responses\ZoneSettingsGetFontsSetting::class, []);
 	}
 
 
@@ -71,18 +71,18 @@ class ZoneSettingsResource
 	 */
 	public function zoneSettingsChangeFontsSetting(
 		\FoundryCo\Cloudflare\Requests\ZoneSettingsChangeFontsSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/settings/fonts', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/settings/fonts', \FoundryCo\Cloudflare\Responses\ZoneSettingsChangeFontsSetting::class, $request);
 	}
 
 
 	/**
 	 * Get Origin H2 Max Streams Setting
 	 */
-	public function originH2MaxStreams(): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	public function originH2MaxStreams(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/origin_h2_max_streams', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/origin_h2_max_streams', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsGetOriginH2MaxStreamsSetting::class, []);
 	}
 
 
@@ -91,18 +91,18 @@ class ZoneSettingsResource
 	 */
 	public function zoneCacheSettingsChangeOriginH2MaxStreamsSetting(
 		\FoundryCo\Cloudflare\Requests\ZoneCacheSettingsChangeOriginH2MaxStreamsSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/settings/origin_h2_max_streams', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/settings/origin_h2_max_streams', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsChangeOriginH2MaxStreamsSetting::class, $request);
 	}
 
 
 	/**
 	 * Get Origin Max HTTP Version Setting
 	 */
-	public function originMaxHttpVersion(): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	public function originMaxHttpVersion(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/origin_max_http_version', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/origin_max_http_version', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsGetOriginMaxHttpVersionSetting::class, []);
 	}
 
 
@@ -111,18 +111,18 @@ class ZoneSettingsResource
 	 */
 	public function zoneCacheSettingsChangeOriginMaxHttpVersionSetting(
 		\FoundryCo\Cloudflare\Requests\ZoneCacheSettingsChangeOriginMaxHttpVersionSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/settings/origin_max_http_version', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/settings/origin_max_http_version', \FoundryCo\Cloudflare\Responses\ZoneCacheSettingsChangeOriginMaxHttpVersionSetting::class, $request);
 	}
 
 
 	/**
 	 * Get Cloudflare Speed Brain setting
 	 */
-	public function speedBrain(): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	public function speedBrain(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/speed_brain', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/speed_brain', \FoundryCo\Cloudflare\Responses\ZoneSettingsGetSpeedBrainSetting::class, []);
 	}
 
 
@@ -131,9 +131,9 @@ class ZoneSettingsResource
 	 */
 	public function zoneSettingsChangeSpeedBrainSetting(
 		\FoundryCo\Cloudflare\Requests\ZoneSettingsChangeSpeedBrainSettingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/settings/speed_brain', \FoundryCo\Cloudflare\Responses\ZoneSettingsSetting::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/settings/speed_brain', \FoundryCo\Cloudflare\Responses\ZoneSettingsChangeSpeedBrainSetting::class, $request);
 	}
 
 

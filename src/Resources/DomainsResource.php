@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,29 +27,27 @@ class DomainsResource
 		?string $service = null,
 		?string $hostname = null,
 		?string $environment = null,
-	): \FoundryCo\Cloudflare\Responses\DomainsWorkersdomainslist
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/domains', \FoundryCo\Cloudflare\Responses\DomainsWorkersdomainslist::class, ['zoneName' => $zoneName ?? null, 'service' => $service ?? null, 'hostname' => $hostname ?? null, 'environment' => $environment ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/domains', \FoundryCo\Cloudflare\Responses\Workersdomainslist::class, ['zoneName' => $zoneName ?? null, 'service' => $service ?? null, 'hostname' => $hostname ?? null, 'environment' => $environment ?? null]);
 	}
 
 
 	/**
 	 * Attach Domain
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\WorkersdomainsupdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DomainsWorkersdomainsupdate
+	public function update(\FoundryCo\Cloudflare\Requests\WorkersdomainsupdateRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/domains', \FoundryCo\Cloudflare\Responses\DomainsWorkersdomainsupdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/domains', \FoundryCo\Cloudflare\Responses\Workersdomainsupdate::class, $request);
 	}
 
 
 	/**
 	 * Get Domain
 	 */
-	public function get(string $domainId): \FoundryCo\Cloudflare\Responses\DomainsWorkersdomainsget
+	public function get(string $domainId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/domains/' . $domainId, \FoundryCo\Cloudflare\Responses\DomainsWorkersdomainsget::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/domains/' . $domainId, \FoundryCo\Cloudflare\Responses\Workersdomainsget::class, []);
 	}
 
 

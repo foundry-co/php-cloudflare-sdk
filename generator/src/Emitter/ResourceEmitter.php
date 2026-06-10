@@ -66,6 +66,8 @@ class ResourceEmitter
 
             if ($child->scope === IrResource::SCOPE_ZONE) {
                 $method->setBody("return new \\{$child->fqn()}(\$this->client, \$this->zoneId);");
+            } elseif ($child->scope === IrResource::SCOPE_ACCOUNT) {
+                $method->setBody("return new \\{$child->fqn()}(\$this->client, \$this->accountId);");
             } else {
                 $method->setBody("return new \\{$child->fqn()}(\$this->client);");
             }
@@ -141,17 +143,9 @@ class ResourceEmitter
             return 'void';
         }
 
-        if (!$op->responseClass) {
-            return 'mixed';
-        }
-
-        $class = '\\' . ltrim($op->responseClass, '\\');
-
-        if ($op->isPaginated) {
-            return '\\' . self::PAGINATED_CLASS;
-        }
-
-        return $class;
+        // Return mixed — at runtime GET endpoints may return either the typed class
+        // or a PaginatedResponse depending on whether result_info is present in the response.
+        return 'mixed';
     }
 
     private function buildMethodBody(IrOperation $op, IrResource $resource): string

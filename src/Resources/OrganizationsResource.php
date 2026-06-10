@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -33,18 +33,16 @@ class OrganizationsResource
 		mixed $parentid = null,
 		?string $pageToken = null,
 		?int $pageSize = null,
-	): \FoundryCo\Cloudflare\Responses\OrganizationsListOrganizations
+	): mixed
 	{
-		return $this->client->get('/organizations', \FoundryCo\Cloudflare\Responses\OrganizationsListOrganizations::class, ['id' => $id ?? null, 'name' => $name ?? null, 'namestartsWith' => $namestartsWith ?? null, 'nameendsWith' => $nameendsWith ?? null, 'namecontains' => $namecontains ?? null, 'containingaccount' => $containingaccount ?? null, 'containinguser' => $containinguser ?? null, 'containingorganization' => $containingorganization ?? null, 'parentid' => $parentid ?? null, 'pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null]);
+		return $this->client->get('/organizations', \FoundryCo\Cloudflare\Responses\OrganizationListOrganizations::class, ['id' => $id ?? null, 'name' => $name ?? null, 'namestartsWith' => $namestartsWith ?? null, 'nameendsWith' => $nameendsWith ?? null, 'namecontains' => $namecontains ?? null, 'containingaccount' => $containingaccount ?? null, 'containinguser' => $containinguser ?? null, 'containingorganization' => $containingorganization ?? null, 'parentid' => $parentid ?? null, 'pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null]);
 	}
 
 
 	/**
 	 * Create organization
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\OrganizationsCreateUserOrganizationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OrganizationsCreateUserOrganization
+	public function create(\FoundryCo\Cloudflare\Requests\OrganizationsCreateUserOrganizationRequest $request): mixed
 	{
 		return $this->client->post('/organizations', \FoundryCo\Cloudflare\Responses\OrganizationsCreateUserOrganization::class, $request);
 	}
@@ -53,7 +51,7 @@ class OrganizationsResource
 	/**
 	 * Get organization
 	 */
-	public function get(string $organizationId): \FoundryCo\Cloudflare\Responses\OrganizationsRetrieve
+	public function get(string $organizationId): mixed
 	{
 		return $this->client->get('/organizations/' . $organizationId, \FoundryCo\Cloudflare\Responses\OrganizationsRetrieve::class, []);
 	}
@@ -65,7 +63,7 @@ class OrganizationsResource
 	public function update(
 		string $organizationId,
 		\FoundryCo\Cloudflare\Requests\OrganizationsModifyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OrganizationsModify
+	): mixed
 	{
 		return $this->client->put('/organizations/' . $organizationId, \FoundryCo\Cloudflare\Responses\OrganizationsModify::class, $request);
 	}
@@ -97,7 +95,7 @@ class OrganizationsResource
 		?\FoundryCo\Cloudflare\Enums\OrganizationsDirection $direction = null,
 		?string $pageToken = null,
 		?int $pageSize = null,
-	): \FoundryCo\Cloudflare\Responses\OrganizationsGetAccounts
+	): mixed
 	{
 		return $this->client->get('/organizations/' . $organizationId . '/accounts', \FoundryCo\Cloudflare\Responses\OrganizationsGetAccounts::class, ['accountPubname' => $accountPubname ?? null, 'accountPubnamestartsWith' => $accountPubnamestartsWith ?? null, 'accountPubnameendsWith' => $accountPubnameendsWith ?? null, 'accountPubnamecontains' => $accountPubnamecontains ?? null, 'name' => $name ?? null, 'namestartsWith' => $namestartsWith ?? null, 'nameendsWith' => $nameendsWith ?? null, 'namecontains' => $namecontains ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null]);
 	}
@@ -106,7 +104,7 @@ class OrganizationsResource
 	/**
 	 * Get organization profile
 	 */
-	public function profile(string $organizationId): \FoundryCo\Cloudflare\Responses\OrganizationsGetProfile
+	public function profile(string $organizationId): mixed
 	{
 		return $this->client->get('/organizations/' . $organizationId . '/profile', \FoundryCo\Cloudflare\Responses\OrganizationsGetProfile::class, []);
 	}

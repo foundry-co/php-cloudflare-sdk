@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,38 +21,36 @@ class DLSRegionalServicesResource
 	/**
 	 * List Regions
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLSRegionalServicesRegions
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/regional_hostnames/regions', \FoundryCo\Cloudflare\Responses\DLSRegionalServicesRegions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/regional_hostnames/regions', \FoundryCo\Cloudflare\Responses\DlsAccountRegionalHostnamesListRegions::class, []);
 	}
 
 
 	/**
 	 * List Regional Hostnames
 	 */
-	public function regionalHostnames(): \FoundryCo\Cloudflare\Responses\DLSRegionalServicesList
+	public function regionalHostnames(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/addressing/regional_hostnames', \FoundryCo\Cloudflare\Responses\DLSRegionalServicesList::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/addressing/regional_hostnames', \FoundryCo\Cloudflare\Responses\DlsZoneRegionalHostnamesList::class, []);
 	}
 
 
 	/**
 	 * Create Regional Hostname
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlsZoneRegionalHostnamesCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLSRegionalServicesCreate
+	public function create(\FoundryCo\Cloudflare\Requests\DlsZoneRegionalHostnamesCreateRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/addressing/regional_hostnames', \FoundryCo\Cloudflare\Responses\DLSRegionalServicesCreate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/addressing/regional_hostnames', \FoundryCo\Cloudflare\Responses\DlsZoneRegionalHostnamesCreate::class, $request);
 	}
 
 
 	/**
 	 * Fetch Regional Hostname
 	 */
-	public function get(string $hostname): \FoundryCo\Cloudflare\Responses\DLSRegionalServicesFetch
+	public function get(string $hostname): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/addressing/regional_hostnames/' . $hostname, \FoundryCo\Cloudflare\Responses\DLSRegionalServicesFetch::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/addressing/regional_hostnames/' . $hostname, \FoundryCo\Cloudflare\Responses\DlsZoneRegionalHostnamesFetch::class, []);
 	}
 
 
@@ -62,9 +60,9 @@ class DLSRegionalServicesResource
 	public function update(
 		string $hostname,
 		\FoundryCo\Cloudflare\Requests\DlsZoneRegionalHostnamesPatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLSRegionalServicesPatch
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/addressing/regional_hostnames/' . $hostname, \FoundryCo\Cloudflare\Responses\DLSRegionalServicesPatch::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/addressing/regional_hostnames/' . $hostname, \FoundryCo\Cloudflare\Responses\DlsZoneRegionalHostnamesPatch::class, $request);
 	}
 
 

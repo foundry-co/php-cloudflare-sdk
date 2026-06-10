@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,7 +21,7 @@ class TenantsResource
 	/**
 	 * Get tenant
 	 */
-	public function get(string $tenantId): \FoundryCo\Cloudflare\Responses\TenantsRetrieveTenant
+	public function get(string $tenantId): mixed
 	{
 		return $this->client->get('/tenants/' . $tenantId, \FoundryCo\Cloudflare\Responses\TenantsRetrieveTenant::class, []);
 	}
@@ -39,7 +39,7 @@ class TenantsResource
 	/**
 	 * List tenant accounts
 	 */
-	public function accounts(string $tenantId): \FoundryCo\Cloudflare\Responses\TenantsListAccounts
+	public function accounts(string $tenantId): mixed
 	{
 		return $this->client->get('/tenants/' . $tenantId . '/accounts', \FoundryCo\Cloudflare\Responses\TenantsListAccounts::class, []);
 	}
@@ -48,7 +48,7 @@ class TenantsResource
 	/**
 	 * List tenant entitlements
 	 */
-	public function entitlements(string $tenantId): \FoundryCo\Cloudflare\Responses\TenantsListEntitlements
+	public function entitlements(string $tenantId): mixed
 	{
 		return $this->client->get('/tenants/' . $tenantId . '/entitlements', \FoundryCo\Cloudflare\Responses\TenantsListEntitlements::class, []);
 	}
@@ -57,7 +57,7 @@ class TenantsResource
 	/**
 	 * List tenant memberships
 	 */
-	public function memberships(string $tenantId): \FoundryCo\Cloudflare\Responses\TenantsListMemberships
+	public function memberships(string $tenantId): mixed
 	{
 		return $this->client->get('/tenants/' . $tenantId . '/memberships', \FoundryCo\Cloudflare\Responses\TenantsListMemberships::class, []);
 	}

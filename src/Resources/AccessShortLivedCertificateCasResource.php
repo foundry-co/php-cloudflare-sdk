@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,27 +22,27 @@ class AccessShortLivedCertificateCasResource
 	/**
 	 * List short-lived certificate CAs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsAs
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/ca', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsAs::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/ca', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsListShortLivedCertificateCAs::class, []);
 	}
 
 
 	/**
 	 * Get a short-lived certificate CA
 	 */
-	public function get(string $appId): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsCa
+	public function get(string $appId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/ca', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsCa::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/ca', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsGetAShortLivedCertificateCa::class, []);
 	}
 
 
 	/**
 	 * Create a short-lived certificate CA
 	 */
-	public function create(string $appId): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsCa
+	public function create(string $appId): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/ca', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsCa::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/apps/' . $appId . '/ca', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessShortLivedCertificateCAsCreateAShortLivedCertificateCa::class, null);
 	}
 
 

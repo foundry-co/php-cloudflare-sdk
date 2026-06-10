@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class RadarDatasetsResource
 		?\FoundryCo\Cloudflare\Enums\RadarDatasetsDatasetType $datasetType = null,
 		?\DateTimeImmutable $date = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDatasetsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDatasetsDatasets
+	): mixed
 	{
-		return $this->client->get('/radar/datasets', \FoundryCo\Cloudflare\Responses\RadarDatasetsDatasets::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'datasetType' => $datasetType ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/datasets', \FoundryCo\Cloudflare\Responses\RadarGetReportsDatasets::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'datasetType' => $datasetType ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -39,9 +39,9 @@ class RadarDatasetsResource
 	public function create(
 		\FoundryCo\Cloudflare\Requests\RadarPostReportsDatasetDownloadUrlRequest $request,
 		?\FoundryCo\Cloudflare\Enums\RadarDatasetsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDatasetsUrl
+	): mixed
 	{
-		return $this->client->post('/radar/datasets/download', \FoundryCo\Cloudflare\Responses\RadarDatasetsUrl::class, $request);
+		return $this->client->post('/radar/datasets/download', \FoundryCo\Cloudflare\Responses\RadarPostReportsDatasetDownloadUrl::class, $request);
 	}
 
 

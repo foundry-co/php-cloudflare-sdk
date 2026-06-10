@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class WorkersAIResource
 	/**
 	 * Get Model Schema
 	 */
-	public function schema(?string $model = null): \FoundryCo\Cloudflare\Responses\WorkersAISchema
+	public function schema(?string $model = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai/models/schema', \FoundryCo\Cloudflare\Responses\WorkersAISchema::class, ['model' => $model ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai/models/schema', \FoundryCo\Cloudflare\Responses\WorkersAiGetModelSchema::class, ['model' => $model ?? null]);
 	}
 
 
@@ -85,17 +85,17 @@ class WorkersAIResource
 	/**
 	 * Convert Files into Markdown
 	 */
-	public function tomarkdown(): \FoundryCo\Cloudflare\Responses\WorkersAIMarkdown
+	public function tomarkdown(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai/tomarkdown', \FoundryCo\Cloudflare\Responses\WorkersAIMarkdown::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai/tomarkdown', \FoundryCo\Cloudflare\Responses\WorkersAiPostToMarkdown::class, null);
 	}
 
 
 	/**
 	 * Get all converted formats supported
 	 */
-	public function supported(): \FoundryCo\Cloudflare\Responses\WorkersAISupported
+	public function supported(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai/tomarkdown/supported', \FoundryCo\Cloudflare\Responses\WorkersAISupported::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai/tomarkdown/supported', \FoundryCo\Cloudflare\Responses\WorkersAiGetToMarkdownSupported::class, []);
 	}
 }

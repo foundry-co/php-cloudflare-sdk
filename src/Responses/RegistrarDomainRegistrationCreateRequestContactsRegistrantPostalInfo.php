@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class RegistrarDomainRegistrationCreateRequestContactsRegistrantPostalI
 {
 	public function __construct(
 		/** Physical mailing address for the registrant contact. */
-		public RegistrarDomainRegistrationCreateRequestContactsRegistrantPostalInfoAddress $address,
+		public ?RegistrarDomainRegistrationCreateRequestContactsRegistrantPostalInfoAddress $address = null,
 		/** Full legal name of the registrant (individual or authorized representative). */
-		public string $name,
+		public ?string $name = null,
 		/** Organization or company name. Optional for individual registrants. */
 		public ?string $organization = null,
 	) {

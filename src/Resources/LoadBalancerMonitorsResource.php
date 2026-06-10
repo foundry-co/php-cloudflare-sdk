@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,29 +21,27 @@ class LoadBalancerMonitorsResource
 	/**
 	 * List Monitors
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitors
+	public function list(): mixed
 	{
-		return $this->client->get('/user/load_balancers/monitors', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitors::class, []);
+		return $this->client->get('/user/load_balancers/monitors', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsListMonitors::class, []);
 	}
 
 
 	/**
 	 * Create Monitor
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\LoadBalancerMonitorsCreateMonitorRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor
+	public function create(\FoundryCo\Cloudflare\Requests\LoadBalancerMonitorsCreateMonitorRequest $request): mixed
 	{
-		return $this->client->post('/user/load_balancers/monitors', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor::class, $request);
+		return $this->client->post('/user/load_balancers/monitors', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsCreateMonitor::class, $request);
 	}
 
 
 	/**
 	 * Monitor Details
 	 */
-	public function get(string $monitorId): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsDetails
+	public function get(string $monitorId): mixed
 	{
-		return $this->client->get('/user/load_balancers/monitors/' . $monitorId, \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsDetails::class, []);
+		return $this->client->get('/user/load_balancers/monitors/' . $monitorId, \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitorDetails::class, []);
 	}
 
 
@@ -53,9 +51,9 @@ class LoadBalancerMonitorsResource
 	public function update(
 		string $monitorId,
 		\FoundryCo\Cloudflare\Requests\LoadBalancerMonitorsUpdateMonitorRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor
+	): mixed
 	{
-		return $this->client->put('/user/load_balancers/monitors/' . $monitorId, \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor::class, $request);
+		return $this->client->put('/user/load_balancers/monitors/' . $monitorId, \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsUpdateMonitor::class, $request);
 	}
 
 
@@ -65,9 +63,9 @@ class LoadBalancerMonitorsResource
 	public function monitors(
 		string $monitorId,
 		\FoundryCo\Cloudflare\Requests\LoadBalancerMonitorsPatchMonitorRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor
+	): mixed
 	{
-		return $this->client->patch('/user/load_balancers/monitors/' . $monitorId, \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor::class, $request);
+		return $this->client->patch('/user/load_balancers/monitors/' . $monitorId, \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsPatchMonitor::class, $request);
 	}
 
 
@@ -86,18 +84,18 @@ class LoadBalancerMonitorsResource
 	public function preview(
 		string $monitorId,
 		\FoundryCo\Cloudflare\Requests\LoadBalancerMonitorsPreviewMonitorRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor
+	): mixed
 	{
-		return $this->client->post('/user/load_balancers/monitors/' . $monitorId . '/preview', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsMonitor::class, $request);
+		return $this->client->post('/user/load_balancers/monitors/' . $monitorId . '/preview', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsPreviewMonitor::class, $request);
 	}
 
 
 	/**
 	 * List Monitor References
 	 */
-	public function references(string $monitorId): \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsReferences
+	public function references(string $monitorId): mixed
 	{
-		return $this->client->get('/user/load_balancers/monitors/' . $monitorId . '/references', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsReferences::class, []);
+		return $this->client->get('/user/load_balancers/monitors/' . $monitorId . '/references', \FoundryCo\Cloudflare\Responses\LoadBalancerMonitorsListMonitorReferences::class, []);
 	}
 
 

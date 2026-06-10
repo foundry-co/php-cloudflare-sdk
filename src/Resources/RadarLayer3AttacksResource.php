@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -32,9 +32,9 @@ class RadarLayer3AttacksResource
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksBitrate
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/bitrate', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksBitrate::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/bitrate', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByBitrate::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -52,9 +52,9 @@ class RadarLayer3AttacksResource
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksDuration
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/duration', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksDuration::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/duration', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByDuration::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -73,9 +73,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksIndustry
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/industry', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksIndustry::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/industry', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByIndustry::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -92,9 +92,9 @@ class RadarLayer3AttacksResource
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVersion
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByIpVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -111,9 +111,9 @@ class RadarLayer3AttacksResource
 		?array $ipVersion = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksProtocol
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/protocol', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksProtocol::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/protocol', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByProtocol::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -132,9 +132,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVector
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/vector', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVector::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/vector', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByVector::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -153,9 +153,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVertical
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/vertical', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVertical::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/vertical', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3SummaryByVertical::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -175,9 +175,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksSummary
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3Summary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -199,9 +199,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksMetric $metric = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksBytes
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksBytes::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'metric' => $metric ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesByBytes::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'metric' => $metric ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -221,9 +221,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksBitrate
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/bitrate', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksBitrate::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/bitrate', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByBitrate::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -243,9 +243,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksDuration
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/duration', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksDuration::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/duration', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByDuration::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -266,9 +266,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksIndustry
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/industry', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksIndustry::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/industry', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByIndustry::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -287,9 +287,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVersion
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByIpVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -308,9 +308,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksProtocol
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/protocol', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksProtocol::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/protocol', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByProtocol::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -331,9 +331,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVector
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/vector', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVector::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/vector', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByVector::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -354,9 +354,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVertical
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/vertical', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVertical::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/vertical', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroupByVertical::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -378,9 +378,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksDirection $direction = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksGroup
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'normalization' => $normalization ?? null, 'direction' => $direction ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -402,9 +402,9 @@ class RadarLayer3AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksMagnitude $magnitude = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksAttacks
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/top/attacks', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksAttacks::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'limitDirection' => $limitDirection ?? null, 'limitPerLocation' => $limitPerLocation ?? null, 'magnitude' => $magnitude ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/top/attacks', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TopAttacks::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'limitDirection' => $limitDirection ?? null, 'limitPerLocation' => $limitPerLocation ?? null, 'magnitude' => $magnitude ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -422,9 +422,9 @@ class RadarLayer3AttacksResource
 		?array $ipVersion = null,
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksIndustries
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/top/industry', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksIndustries::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/top/industry', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TopIndustries::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -442,9 +442,9 @@ class RadarLayer3AttacksResource
 		?array $ipVersion = null,
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksLocations
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/top/locations/origin', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/top/locations/origin', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TopOriginLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -462,9 +462,9 @@ class RadarLayer3AttacksResource
 		?array $ipVersion = null,
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksLocations
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/top/locations/target', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/top/locations/target', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TopTargetLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -482,8 +482,8 @@ class RadarLayer3AttacksResource
 		?array $ipVersion = null,
 		?array $protocol = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer3AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVerticals
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer3/top/vertical', \FoundryCo\Cloudflare\Responses\RadarLayer3AttacksVerticals::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer3/top/vertical', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer3TopVerticals::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'protocol' => $protocol ?? null, 'format' => $format ?? null]);
 	}
 }

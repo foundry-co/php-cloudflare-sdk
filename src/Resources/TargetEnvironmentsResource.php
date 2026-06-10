@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,54 +22,45 @@ class TargetEnvironmentsResource
 	/**
 	 * List Target Environments
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\TargetEnvironmentsEnvironments
+	public function list(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/target_environments', \FoundryCo\Cloudflare\Responses\TargetEnvironmentsEnvironments::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/target_environments', \FoundryCo\Cloudflare\Responses\ListTargetEnvironments::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create Target Environment
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateTargetEnvironmentRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function create(\FoundryCo\Cloudflare\Requests\CreateTargetEnvironmentRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vuln_scanner/target_environments', \FoundryCo\Cloudflare\Responses\TargetEnvironmentsEnvironment::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/vuln_scanner/target_environments', \FoundryCo\Cloudflare\Responses\CreateTargetEnvironment::class, $request);
 	}
 
 
 	/**
 	 * Get Target Environment
 	 */
-	public function get(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function get(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/target_environments/' . $targetEnvironmentId, \FoundryCo\Cloudflare\Responses\TargetEnvironmentsEnvironment::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/target_environments/' . $targetEnvironmentId, \FoundryCo\Cloudflare\Responses\GetTargetEnvironment::class, []);
 	}
 
 
 	/**
 	 * Update Target Environment
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\UpdateTargetEnvironmentRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function update(\FoundryCo\Cloudflare\Requests\UpdateTargetEnvironmentRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/vuln_scanner/target_environments/' . $targetEnvironmentId, \FoundryCo\Cloudflare\Responses\TargetEnvironmentsEnvironment::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/vuln_scanner/target_environments/' . $targetEnvironmentId, \FoundryCo\Cloudflare\Responses\UpdateTargetEnvironment::class, $request);
 	}
 
 
 	/**
 	 * Edit Target Environment
 	 */
-	public function targetEnvironments(
-		\FoundryCo\Cloudflare\Requests\EditTargetEnvironmentRequest $request,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function targetEnvironments(\FoundryCo\Cloudflare\Requests\EditTargetEnvironmentRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/vuln_scanner/target_environments/' . $targetEnvironmentId, \FoundryCo\Cloudflare\Responses\TargetEnvironmentsEnvironment::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/vuln_scanner/target_environments/' . $targetEnvironmentId, \FoundryCo\Cloudflare\Responses\EditTargetEnvironment::class, $request);
 	}
 
 

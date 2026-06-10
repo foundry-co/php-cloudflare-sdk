@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,7 +22,7 @@ class ZeroTrustApplicationsReviewStatusResource
 	/**
 	 * List applications review statuses
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustApplicationsReviewStatusList
+	public function list(): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/gateway/apps/review_status', \FoundryCo\Cloudflare\Responses\ZeroTrustApplicationsReviewStatusList::class, []);
 	}
@@ -31,9 +31,7 @@ class ZeroTrustApplicationsReviewStatusResource
 	/**
 	 * Update applications review statuses
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\ZeroTrustApplicationsReviewStatusUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustApplicationsReviewStatusUpdate
+	public function update(\FoundryCo\Cloudflare\Requests\ZeroTrustApplicationsReviewStatusUpdateRequest $request): mixed
 	{
 		return $this->client->put('/accounts/' . $this->accountId . '/gateway/apps/review_status', \FoundryCo\Cloudflare\Responses\ZeroTrustApplicationsReviewStatusUpdate::class, $request);
 	}

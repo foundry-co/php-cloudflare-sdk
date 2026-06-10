@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,8 +27,8 @@ class NotificationHistoryResource
 		?\DateTimeImmutable $before = null,
 		?float $page = null,
 		?\DateTimeImmutable $since = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/history', \FoundryCo\Cloudflare\Responses\NotificationHistoryHistory::class, ['perPage' => $perPage ?? null, 'before' => $before ?? null, 'page' => $page ?? null, 'since' => $since ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/history', \FoundryCo\Cloudflare\Responses\NotificationHistoryListHistory::class, ['perPage' => $perPage ?? null, 'before' => $before ?? null, 'page' => $page ?? null, 'since' => $since ?? null]);
 	}
 }

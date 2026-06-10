@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -10,12 +10,12 @@ declare(strict_types=1);
 
 namespace FoundryCo\Cloudflare\Responses;
 
-readonly class OAuthClientsList
+readonly class OauthClientsList
 {
 	public function __construct(
-		public mixed $clientId,
+		public mixed $clientId = null,
 		/** Visibility of the OAuth client. */
-		public \FoundryCo\Cloudflare\Enums\OAuthClientsListVisibility $visibility,
+		public ?\FoundryCo\Cloudflare\Enums\OauthClientsListVisibility $visibility = null,
 		/** Array of allowed CORS origins. */
 		public ?array $allowedCorsOrigins = null,
 		/** Human-readable name of the OAuth client. */
@@ -37,11 +37,11 @@ readonly class OAuthClientsList
 		/** Array of OAuth scopes the client is allowed to request. Colon-delimited scopes are not accepted. Dot-delimited scopes are validated against available OAuth API scopes; simple identity scopes are allowed. Protocol scopes `offline_access` and `openid` are added or removed automatically based on `grant_types` and `response_types`. */
 		public ?array $scopes = null,
 		/** The authentication method the client uses at the token endpoint. */
-		public ?\FoundryCo\Cloudflare\Enums\OAuthClientsListTokenEndpointAuthMethod $tokenEndpointAuthMethod = null,
+		public ?\FoundryCo\Cloudflare\Enums\OauthClientsListTokenEndpointAuthMethod $tokenEndpointAuthMethod = null,
 		/** URL that points to a terms of service document. */
 		public ?string $tosUri = null,
 		/** Client URI domain control verification state. */
-		public ?OAuthClientsListClientUriVerification $clientUriVerification = null,
+		public ?OauthClientsListClientUriVerification $clientUriVerification = null,
 		/** Timestamp when the OAuth client was created. */
 		public ?\DateTimeImmutable $createdAt = null,
 		/** Indicates whether the client has a rotated secret that has not yet been deleted. */

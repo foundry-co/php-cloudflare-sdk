@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -43,29 +43,27 @@ class InfrastructureAccessTargetsResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\InfrastructureAccessTargetsOrder $order = null,
 		mixed $direction = null,
-	): \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/infrastructure/targets', \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsList::class, ['hostname' => $hostname ?? null, 'hostnameContains' => $hostnameContains ?? null, 'virtualNetworkId' => $virtualNetworkId ?? null, 'ipV4' => $ipV4 ?? null, 'ipV6' => $ipV6 ?? null, 'createdBefore' => $createdBefore ?? null, 'createdAfter' => $createdAfter ?? null, 'modifiedBefore' => $modifiedBefore ?? null, 'modifiedAfter' => $modifiedAfter ?? null, 'ips' => $ips ?? null, 'targetIds' => $targetIds ?? null, 'ipLike' => $ipLike ?? null, 'ipv4Start' => $ipv4Start ?? null, 'ipv4End' => $ipv4End ?? null, 'ipv6Start' => $ipv6Start ?? null, 'ipv6End' => $ipv6End ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/infrastructure/targets', \FoundryCo\Cloudflare\Responses\InfraTargetsList::class, ['hostname' => $hostname ?? null, 'hostnameContains' => $hostnameContains ?? null, 'virtualNetworkId' => $virtualNetworkId ?? null, 'ipV4' => $ipV4 ?? null, 'ipV6' => $ipV6 ?? null, 'createdBefore' => $createdBefore ?? null, 'createdAfter' => $createdAfter ?? null, 'modifiedBefore' => $modifiedBefore ?? null, 'modifiedAfter' => $modifiedAfter ?? null, 'ips' => $ips ?? null, 'targetIds' => $targetIds ?? null, 'ipLike' => $ipLike ?? null, 'ipv4Start' => $ipv4Start ?? null, 'ipv4End' => $ipv4End ?? null, 'ipv6Start' => $ipv6Start ?? null, 'ipv6End' => $ipv6End ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create new target
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\InfraTargetsPostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsPost
+	public function create(\FoundryCo\Cloudflare\Requests\InfraTargetsPostRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/infrastructure/targets', \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsPost::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/infrastructure/targets', \FoundryCo\Cloudflare\Responses\InfraTargetsPost::class, $request);
 	}
 
 
 	/**
 	 * Create new targets
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsBatch
+	public function update(): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/infrastructure/targets/batch', \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsBatch::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/infrastructure/targets/batch', \FoundryCo\Cloudflare\Responses\InfraTargetsPutBatch::class, null);
 	}
 
 
@@ -90,21 +88,18 @@ class InfrastructureAccessTargetsResource
 	/**
 	 * Get target
 	 */
-	public function get(string $targetId): \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsGet
+	public function get(string $targetId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/infrastructure/targets/' . $targetId, \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/infrastructure/targets/' . $targetId, \FoundryCo\Cloudflare\Responses\InfraTargetsGet::class, []);
 	}
 
 
 	/**
 	 * Update target
 	 */
-	public function targets(
-		string $targetId,
-		\FoundryCo\Cloudflare\Requests\InfraTargetsPutRequest $request,
-	): \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsPut
+	public function targets(string $targetId, \FoundryCo\Cloudflare\Requests\InfraTargetsPutRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/infrastructure/targets/' . $targetId, \FoundryCo\Cloudflare\Responses\InfrastructureAccessTargetsPut::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/infrastructure/targets/' . $targetId, \FoundryCo\Cloudflare\Responses\InfraTargetsPut::class, $request);
 	}
 
 

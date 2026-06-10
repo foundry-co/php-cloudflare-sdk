@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,31 +22,27 @@ class MagicConnectorsResource
 	/**
 	 * List Connectors
 	 */
-	public function list(
-		?\FoundryCo\Cloudflare\Enums\MagicConnectorsDeviceType $deviceType = null,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsList
+	public function list(?\FoundryCo\Cloudflare\Enums\MagicConnectorsDeviceType $deviceType = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors', \FoundryCo\Cloudflare\Responses\MagicConnectorsList::class, ['deviceType' => $deviceType ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors', \FoundryCo\Cloudflare\Responses\MconnConnectorList::class, ['deviceType' => $deviceType ?? null]);
 	}
 
 
 	/**
 	 * Add a connector to your account
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\MconnConnectorCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\MconnConnectorCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/connectors', \FoundryCo\Cloudflare\Responses\MagicConnectorsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/connectors', \FoundryCo\Cloudflare\Responses\MconnConnectorCreate::class, $request);
 	}
 
 
 	/**
 	 * Fetch Connector
 	 */
-	public function get(string $connectorId): \FoundryCo\Cloudflare\Responses\MagicConnectorsFetch
+	public function get(string $connectorId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId, \FoundryCo\Cloudflare\Responses\MagicConnectorsFetch::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId, \FoundryCo\Cloudflare\Responses\MconnConnectorFetch::class, []);
 	}
 
 
@@ -56,9 +52,9 @@ class MagicConnectorsResource
 	public function update(
 		string $connectorId,
 		\FoundryCo\Cloudflare\Requests\MconnConnectorReplaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsReplace
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId, \FoundryCo\Cloudflare\Responses\MagicConnectorsReplace::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId, \FoundryCo\Cloudflare\Responses\MconnConnectorReplace::class, $request);
 	}
 
 
@@ -68,9 +64,9 @@ class MagicConnectorsResource
 	public function connectors(
 		string $connectorId,
 		\FoundryCo\Cloudflare\Requests\MconnConnectorUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsUpdate
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId, \FoundryCo\Cloudflare\Responses\MagicConnectorsUpdate::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId, \FoundryCo\Cloudflare\Responses\MconnConnectorUpdate::class, $request);
 	}
 
 
@@ -93,31 +89,27 @@ class MagicConnectorsResource
 		?float $limit = null,
 		?string $cursor = null,
 		?string $k = null,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/events', \FoundryCo\Cloudflare\Responses\MagicConnectorsList::class, ['from' => $from ?? null, 'to' => $to ?? null, 'limit' => $limit ?? null, 'cursor' => $cursor ?? null, 'k' => $k ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/events', \FoundryCo\Cloudflare\Responses\MconnConnectorTelemetryEventsList::class, ['from' => $from ?? null, 'to' => $to ?? null, 'limit' => $limit ?? null, 'cursor' => $cursor ?? null, 'k' => $k ?? null]);
 	}
 
 
 	/**
 	 * Get latest Events
 	 */
-	public function latest(string $connectorId): \FoundryCo\Cloudflare\Responses\MagicConnectorsListLatest
+	public function latest(string $connectorId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/events/latest', \FoundryCo\Cloudflare\Responses\MagicConnectorsListLatest::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/events/latest', \FoundryCo\Cloudflare\Responses\MconnConnectorTelemetryEventsListLatest::class, []);
 	}
 
 
 	/**
 	 * Get Event
 	 */
-	public function eventsEventN(
-		string $connectorId,
-		float $eventT,
-		float $eventN,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsGet
+	public function eventsEventN(string $connectorId, float $eventT, float $eventN): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/events/' . $eventT . '.' . $eventN, \FoundryCo\Cloudflare\Responses\MagicConnectorsGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/events/' . $eventT . '.' . $eventN, \FoundryCo\Cloudflare\Responses\MconnConnectorTelemetryEventsGet::class, []);
 	}
 
 
@@ -130,31 +122,26 @@ class MagicConnectorsResource
 		?float $to = null,
 		?float $limit = null,
 		?string $cursor = null,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/snapshots', \FoundryCo\Cloudflare\Responses\MagicConnectorsList::class, ['from' => $from ?? null, 'to' => $to ?? null, 'limit' => $limit ?? null, 'cursor' => $cursor ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/snapshots', \FoundryCo\Cloudflare\Responses\MconnConnectorTelemetrySnapshotsList::class, ['from' => $from ?? null, 'to' => $to ?? null, 'limit' => $limit ?? null, 'cursor' => $cursor ?? null]);
 	}
 
 
 	/**
 	 * Get latest Snapshots
 	 */
-	public function mconnConnectorTelemetrySnapshotsListLatest(
-		string $connectorId,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsListLatest
+	public function mconnConnectorTelemetrySnapshotsListLatest(string $connectorId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/snapshots/latest', \FoundryCo\Cloudflare\Responses\MagicConnectorsListLatest::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/snapshots/latest', \FoundryCo\Cloudflare\Responses\MconnConnectorTelemetrySnapshotsListLatest::class, []);
 	}
 
 
 	/**
 	 * Get Snapshot
 	 */
-	public function mconnConnectorTelemetrySnapshotsGet(
-		string $connectorId,
-		float $snapshotT,
-	): \FoundryCo\Cloudflare\Responses\MagicConnectorsGet
+	public function mconnConnectorTelemetrySnapshotsGet(string $connectorId, float $snapshotT): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/snapshots/' . $snapshotT, \FoundryCo\Cloudflare\Responses\MagicConnectorsGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/connectors/' . $connectorId . '/telemetry/snapshots/' . $snapshotT, \FoundryCo\Cloudflare\Responses\MconnConnectorTelemetrySnapshotsGet::class, []);
 	}
 }

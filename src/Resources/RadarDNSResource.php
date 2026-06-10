@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -35,9 +35,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSStatus
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/cache_hit', \FoundryCo\Cloudflare\Responses\RadarDNSStatus::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/cache_hit', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByCacheHitStatus::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -58,9 +58,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSDnssec
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/dnssec', \FoundryCo\Cloudflare\Responses\RadarDNSDnssec::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/dnssec', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByDnssec::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -81,9 +81,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSAwareness
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/dnssec_aware', \FoundryCo\Cloudflare\Responses\RadarDNSAwareness::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/dnssec_aware', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByDnssecAwareness::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -104,9 +104,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSVersion
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/dnssec_e2e', \FoundryCo\Cloudflare\Responses\RadarDNSVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/dnssec_e2e', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByDnssecE2eVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -127,9 +127,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSVersion
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarDNSVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByIpVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -150,9 +150,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSStatus
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/matching_answer', \FoundryCo\Cloudflare\Responses\RadarDNSStatus::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/matching_answer', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByMatchingAnswerStatus::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -172,9 +172,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSProtocol
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/protocol', \FoundryCo\Cloudflare\Responses\RadarDNSProtocol::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/protocol', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByProtocol::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -195,9 +195,9 @@ class RadarDNSResource
 		?array $nodata = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSType
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/query_type', \FoundryCo\Cloudflare\Responses\RadarDNSType::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/query_type', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByQueryType::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -218,9 +218,9 @@ class RadarDNSResource
 		?array $nodata = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSCode
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/response_code', \FoundryCo\Cloudflare\Responses\RadarDNSCode::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/response_code', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByResponseCode::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -241,9 +241,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSTtl
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/response_ttl', \FoundryCo\Cloudflare\Responses\RadarDNSTtl::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/response_ttl', \FoundryCo\Cloudflare\Responses\RadarGetDnsSummaryByResponseTtl::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -273,9 +273,9 @@ class RadarDNSResource
 		?array $matchingAnswer = null,
 		?array $tld = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSSummary
+	): mixed
 	{
-		return $this->client->get('/radar/dns/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarDNSSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetDnsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -304,9 +304,9 @@ class RadarDNSResource
 		?array $matchingAnswer = null,
 		?array $tld = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries', \FoundryCo\Cloudflare\Responses\RadarDNSTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -328,9 +328,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSStatus
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/cache_hit', \FoundryCo\Cloudflare\Responses\RadarDNSStatus::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/cache_hit', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByCacheHitStatus::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -352,9 +352,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSDnssec
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/dnssec', \FoundryCo\Cloudflare\Responses\RadarDNSDnssec::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/dnssec', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByDnssec::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -376,9 +376,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSAwareness
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/dnssec_aware', \FoundryCo\Cloudflare\Responses\RadarDNSAwareness::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/dnssec_aware', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByDnssecAwareness::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -400,9 +400,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSVersion
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/dnssec_e2e', \FoundryCo\Cloudflare\Responses\RadarDNSVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/dnssec_e2e', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByDnssecE2eVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -424,9 +424,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSVersion
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarDNSVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByIpVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -448,9 +448,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSStatus
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/matching_answer', \FoundryCo\Cloudflare\Responses\RadarDNSStatus::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/matching_answer', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByMatchingAnswerStatus::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -471,9 +471,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSProtocol
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/protocol', \FoundryCo\Cloudflare\Responses\RadarDNSProtocol::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/protocol', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByProtocol::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -495,9 +495,9 @@ class RadarDNSResource
 		?array $nodata = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSType
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/query_type', \FoundryCo\Cloudflare\Responses\RadarDNSType::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/query_type', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByQueryType::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -519,9 +519,9 @@ class RadarDNSResource
 		?array $nodata = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSCode
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/response_code', \FoundryCo\Cloudflare\Responses\RadarDNSCode::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/response_code', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByResponseCode::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'nodata' => $nodata ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -543,9 +543,9 @@ class RadarDNSResource
 		?array $responseCode = null,
 		?array $nodata = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSTtl
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/response_ttl', \FoundryCo\Cloudflare\Responses\RadarDNSTtl::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/response_ttl', \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroupByResponseTtl::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'queryType' => $queryType ?? null, 'protocol' => $protocol ?? null, 'responseCode' => $responseCode ?? null, 'nodata' => $nodata ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -577,9 +577,9 @@ class RadarDNSResource
 		?array $tld = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSGroup
+	): mixed
 	{
-		return $this->client->get('/radar/dns/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarDNSGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetDnsTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -608,9 +608,9 @@ class RadarDNSResource
 		?array $ipVersion = null,
 		?array $matchingAnswer = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSAses
+	): mixed
 	{
-		return $this->client->get('/radar/dns/top/ases', \FoundryCo\Cloudflare\Responses\RadarDNSAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'domain' => $domain ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/top/ases', \FoundryCo\Cloudflare\Responses\RadarGetDnsTopAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'domain' => $domain ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -640,8 +640,8 @@ class RadarDNSResource
 		?array $matchingAnswer = null,
 		?array $tld = null,
 		?\FoundryCo\Cloudflare\Enums\RadarDNSFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarDNSLocations
+	): mixed
 	{
-		return $this->client->get('/radar/dns/top/locations', \FoundryCo\Cloudflare\Responses\RadarDNSLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'domain' => $domain ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/dns/top/locations', \FoundryCo\Cloudflare\Responses\RadarGetDnsTopLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'domain' => $domain ?? null, 'cacheHit' => $cacheHit ?? null, 'nodata' => $nodata ?? null, 'protocol' => $protocol ?? null, 'queryType' => $queryType ?? null, 'responseCode' => $responseCode ?? null, 'responseTtl' => $responseTtl ?? null, 'dnssec' => $dnssec ?? null, 'dnssecAware' => $dnssecAware ?? null, 'dnssecE2e' => $dnssecE2e ?? null, 'ipVersion' => $ipVersion ?? null, 'matchingAnswer' => $matchingAnswer ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
 	}
 }

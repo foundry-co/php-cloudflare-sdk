@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,10 +22,8 @@ class KeysResource
 	/**
 	 * List keys
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\TelemetrykeyslistRequest $request,
-	): \FoundryCo\Cloudflare\Responses\KeysTelemetrykeyslist
+	public function create(\FoundryCo\Cloudflare\Requests\TelemetrykeyslistRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/telemetry/keys', \FoundryCo\Cloudflare\Responses\KeysTelemetrykeyslist::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/telemetry/keys', \FoundryCo\Cloudflare\Responses\Telemetrykeyslist::class, $request);
 	}
 }

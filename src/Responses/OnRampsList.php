@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -10,17 +10,17 @@ declare(strict_types=1);
 
 namespace FoundryCo\Cloudflare\Responses;
 
-readonly class OnRampsList
+readonly class OnrampsList
 {
 	public function __construct(
-		public \FoundryCo\Cloudflare\Enums\OnRampsListCloudType $cloudType,
-		public bool $dynamicRouting,
-		public string $id,
-		public bool $installRoutesInCloud,
-		public bool $installRoutesInMagicWan,
-		public string $name,
-		public \FoundryCo\Cloudflare\Enums\OnRampsListType $type,
-		public string $updatedAt,
+		public ?\FoundryCo\Cloudflare\Enums\OnrampsListCloudType $cloudType = null,
+		public ?bool $dynamicRouting = null,
+		public ?string $id = null,
+		public ?bool $installRoutesInCloud = null,
+		public ?bool $installRoutesInMagicWan = null,
+		public ?string $name = null,
+		public ?\FoundryCo\Cloudflare\Enums\OnrampsListType $type = null,
+		public ?string $updatedAt = null,
 		public ?array $attachedHubs = null,
 		public ?array $attachedVpcs = null,
 		public ?int $cloudAsn = null,
@@ -31,14 +31,14 @@ readonly class OnRampsList
 		public ?string $lastPlannedAt = null,
 		public ?bool $manageHubToHubAttachments = null,
 		public ?bool $manageVpcToHubAttachments = null,
-		public ?OnRampsListPlannedMonthlyCostEstimate $plannedMonthlyCostEstimate = null,
+		public ?OnrampsListPlannedMonthlyCostEstimate $plannedMonthlyCostEstimate = null,
 		public ?array $plannedResources = null,
 		public ?bool $plannedResourcesUnavailable = null,
-		public ?OnRampsListPostApplyMonthlyCostEstimate $postApplyMonthlyCostEstimate = null,
+		public ?OnrampsListPostApplyMonthlyCostEstimate $postApplyMonthlyCostEstimate = null,
 		public ?array $postApplyResources = null,
 		public ?bool $postApplyResourcesUnavailable = null,
 		public ?string $region = null,
-		public ?OnRampsListStatus $status = null,
+		public ?OnrampsListStatus $status = null,
 		public ?string $vpc = null,
 		public ?array $vpcsById = null,
 		/** The list of vpc IDs for which resource details failed to generate. */

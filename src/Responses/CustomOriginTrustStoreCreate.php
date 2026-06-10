@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,21 +14,21 @@ readonly class CustomOriginTrustStoreCreate
 {
 	public function __construct(
 		/** The root CA certificate in PEM format. Only root CA certificates are accepted; intermediate and leaf certificates are not supported. */
-		public string $certificate,
+		public ?string $certificate = null,
 		/** When the certificate expires. */
-		public \DateTimeImmutable $expiresOn,
+		public ?\DateTimeImmutable $expiresOn = null,
 		/** Identifier. */
-		public string $id,
+		public ?string $id = null,
 		/** The certificate authority that issued the certificate. */
-		public string $issuer,
+		public ?string $issuer = null,
 		/** The type of hash used for the certificate. */
-		public string $signature,
+		public ?string $signature = null,
 		/** Status of the zone's custom SSL. */
-		public \FoundryCo\Cloudflare\Enums\CustomOriginTrustStoreCreateStatus $status,
+		public ?\FoundryCo\Cloudflare\Enums\CustomOriginTrustStoreCreateStatus $status = null,
 		/** When the certificate was last modified. */
-		public \DateTimeImmutable $updatedAt,
+		public ?\DateTimeImmutable $updatedAt = null,
 		/** When the certificate was uploaded to Cloudflare. */
-		public \DateTimeImmutable $uploadedOn,
+		public ?\DateTimeImmutable $uploadedOn = null,
 	) {
 	}
 }

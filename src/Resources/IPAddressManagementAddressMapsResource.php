@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class IPAddressManagementAddressMapsResource
 	/**
 	 * List Address Maps
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsMaps
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/address_maps', \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsMaps::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/address_maps', \FoundryCo\Cloudflare\Responses\IpAddressManagementAddressMapsListAddressMaps::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class IPAddressManagementAddressMapsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementAddressMapsCreateAddressMapRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsMap
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/addressing/address_maps', \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsMap::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/addressing/address_maps', \FoundryCo\Cloudflare\Responses\IpAddressManagementAddressMapsCreateAddressMap::class, $request);
 	}
 
 
 	/**
 	 * Address Map Details
 	 */
-	public function get(string $addressMapId): \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsDetails
+	public function get(string $addressMapId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/address_maps/' . $addressMapId, \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/address_maps/' . $addressMapId, \FoundryCo\Cloudflare\Responses\IpAddressManagementAddressMapsAddressMapDetails::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class IPAddressManagementAddressMapsResource
 	public function update(
 		string $addressMapId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementAddressMapsUpdateAddressMapRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsMap
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/address_maps/' . $addressMapId, \FoundryCo\Cloudflare\Responses\IPAddressManagementAddressMapsMap::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/address_maps/' . $addressMapId, \FoundryCo\Cloudflare\Responses\IpAddressManagementAddressMapsUpdateAddressMap::class, $request);
 	}
 
 

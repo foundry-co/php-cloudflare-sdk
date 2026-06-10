@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class PostV4AccountsByAccountIdPipelinesDeprecatedRequestDestinationCre
 {
 	public function __construct(
 		/** Specifies the R2 Bucket Access Key Id. */
-		public string $accessKeyId,
+		public ?string $accessKeyId = null,
 		/** Specifies the R2 Endpoint. */
-		public string $endpoint,
+		public ?string $endpoint = null,
 		/** Specifies the R2 Bucket Secret Access Key. */
-		public string $secretAccessKey,
+		public ?string $secretAccessKey = null,
 	) {
 	}
 }

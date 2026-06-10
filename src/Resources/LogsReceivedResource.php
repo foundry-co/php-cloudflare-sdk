@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class LogsReceivedResource
 	/**
 	 * Get log retention flag
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\LogsReceivedFlag
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/logs/control/retention/flag', \FoundryCo\Cloudflare\Responses\LogsReceivedFlag::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/logs/control/retention/flag', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdLogsControlRetentionFlag::class, []);
 	}
 
 
 	/**
 	 * Update log retention flag
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogsControlRetentionFlagRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogsReceivedFlag
+	public function create(\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogsControlRetentionFlagRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logs/control/retention/flag', \FoundryCo\Cloudflare\Responses\LogsReceivedFlag::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logs/control/retention/flag', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogsControlRetentionFlag::class, $request);
 	}
 
 

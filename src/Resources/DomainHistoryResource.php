@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class DomainHistoryResource
 	/**
 	 * Get Domain History
 	 */
-	public function list(?string $domain = null): \FoundryCo\Cloudflare\Responses\DomainHistoryHistory
+	public function list(?string $domain = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/domain-history', \FoundryCo\Cloudflare\Responses\DomainHistoryHistory::class, ['domain' => $domain ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/domain-history', \FoundryCo\Cloudflare\Responses\DomainHistoryGetDomainHistory::class, ['domain' => $domain ?? null]);
 	}
 }

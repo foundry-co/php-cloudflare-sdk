@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,21 +22,18 @@ class StreamAudioTracksResource
 	/**
 	 * List additional audio tracks on a video
 	 */
-	public function get(string $identifier): \FoundryCo\Cloudflare\Responses\StreamAudioTracksTracks
+	public function get(string $identifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/' . $identifier . '/audio', \FoundryCo\Cloudflare\Responses\StreamAudioTracksTracks::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/' . $identifier . '/audio', \FoundryCo\Cloudflare\Responses\ListAudioTracks::class, []);
 	}
 
 
 	/**
 	 * Add audio tracks to a video
 	 */
-	public function create(
-		string $identifier,
-		\FoundryCo\Cloudflare\Requests\AddAudioTrackRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamAudioTracksTrack
+	public function create(string $identifier, \FoundryCo\Cloudflare\Requests\AddAudioTrackRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/audio/copy', \FoundryCo\Cloudflare\Responses\StreamAudioTracksTrack::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/audio/copy', \FoundryCo\Cloudflare\Responses\AddAudioTrack::class, $request);
 	}
 
 
@@ -47,9 +44,9 @@ class StreamAudioTracksResource
 		string $identifier,
 		string $audioIdentifier,
 		\FoundryCo\Cloudflare\Requests\EditAudioTracksRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamAudioTracksTracks
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/stream/' . $identifier . '/audio/' . $audioIdentifier, \FoundryCo\Cloudflare\Responses\StreamAudioTracksTracks::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/stream/' . $identifier . '/audio/' . $audioIdentifier, \FoundryCo\Cloudflare\Responses\EditAudioTracks::class, $request);
 	}
 
 

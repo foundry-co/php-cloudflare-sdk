@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,9 +28,9 @@ class RadarPostQuantumResource
 		?array $dateStart = null,
 		?array $dateEnd = null,
 		?\FoundryCo\Cloudflare\Enums\RadarPostQuantumFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarPostQuantumSummary
+	): mixed
 	{
-		return $this->client->get('/radar/post_quantum/origin/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarPostQuantumSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/post_quantum/origin/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetOriginPostQuantumSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -44,17 +44,17 @@ class RadarPostQuantumResource
 		?array $dateStart = null,
 		?array $dateEnd = null,
 		?\FoundryCo\Cloudflare\Enums\RadarPostQuantumFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarPostQuantumGroups
+	): mixed
 	{
-		return $this->client->get('/radar/post_quantum/origin/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarPostQuantumGroups::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/post_quantum/origin/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetOriginPostQuantumTimeseriesGroups::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'format' => $format ?? null]);
 	}
 
 
 	/**
 	 * Check Post-Quantum TLS support
 	 */
-	public function list(?string $host = null): \FoundryCo\Cloudflare\Responses\RadarPostQuantumSupport
+	public function list(?string $host = null): mixed
 	{
-		return $this->client->get('/radar/post_quantum/tls/support', \FoundryCo\Cloudflare\Responses\RadarPostQuantumSupport::class, ['host' => $host ?? null]);
+		return $this->client->get('/radar/post_quantum/tls/support', \FoundryCo\Cloudflare\Responses\RadarGetPostQuantumTlsSupport::class, ['host' => $host ?? null]);
 	}
 }

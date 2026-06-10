@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class CustomCsrsResource
 	/**
 	 * List Custom CSRs
 	 */
-	public function list(
-		?float $page = null,
-		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\CustomCSRsForAZoneCsrs
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_csrs', \FoundryCo\Cloudflare\Responses\CustomCSRsForAZoneCsrs::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_csrs', \FoundryCo\Cloudflare\Responses\CustomCsrsForAZoneListCustomCsrs::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create Custom CSR
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CustomCsrsForAZoneCreateCustomCsrRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomCSRsForAZoneCsr
+	public function create(\FoundryCo\Cloudflare\Requests\CustomCsrsForAZoneCreateCustomCsrRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/custom_csrs', \FoundryCo\Cloudflare\Responses\CustomCSRsForAZoneCsr::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/custom_csrs', \FoundryCo\Cloudflare\Responses\CustomCsrsForAZoneCreateCustomCsr::class, $request);
 	}
 
 
 	/**
 	 * Custom CSR Details
 	 */
-	public function get(string $customCsrId): \FoundryCo\Cloudflare\Responses\CustomCSRsForAZoneDetails
+	public function get(string $customCsrId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_csrs/' . $customCsrId, \FoundryCo\Cloudflare\Responses\CustomCSRsForAZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_csrs/' . $customCsrId, \FoundryCo\Cloudflare\Responses\CustomCsrsForAZoneCustomCsrDetails::class, []);
 	}
 
 

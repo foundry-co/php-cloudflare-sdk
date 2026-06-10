@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class SsltlsModeRecommendationResource
 	/**
 	 * SSL/TLS Recommendation
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SSLTLSModeRecommendationRecommendation
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/ssl/recommendation', \FoundryCo\Cloudflare\Responses\SSLTLSModeRecommendationRecommendation::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/ssl/recommendation', \FoundryCo\Cloudflare\Responses\SslTlsModeRecommendationSslTlsRecommendation::class, []);
 	}
 }

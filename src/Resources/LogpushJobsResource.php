@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,40 +31,36 @@ class LogpushJobsResource
 	/**
 	 * List Logpush jobs for a dataset
 	 */
-	public function jobs(
-		\FoundryCo\Cloudflare\Enums\LogpushJobsForAZoneDatasetId $datasetId,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneJobs
+	public function jobs(\FoundryCo\Cloudflare\Enums\LogpushJobsForAZoneDatasetId $datasetId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/logpush/datasets/' . $datasetId . '/jobs', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneJobs::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/logpush/datasets/' . $datasetId . '/jobs', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdLogpushDatasetsDatasetIdJobs::class, []);
 	}
 
 
 	/**
 	 * List Logpush jobs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneJobs
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/logpush/jobs', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneJobs::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/logpush/jobs', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdLogpushJobs::class, []);
 	}
 
 
 	/**
 	 * Create Logpush job
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushJobsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneJobs
+	public function create(\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushJobsRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/jobs', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneJobs::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/jobs', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushJobs::class, $request);
 	}
 
 
 	/**
 	 * Get Logpush job details
 	 */
-	public function getZonesZoneIdLogpushJobsJobId(int $jobId): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneId
+	public function getZonesZoneIdLogpushJobsJobId(int $jobId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/logpush/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneId::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/logpush/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\GetZonesZoneIdLogpushJobsJobId::class, []);
 	}
 
 
@@ -74,9 +70,9 @@ class LogpushJobsResource
 	public function update(
 		int $jobId,
 		\FoundryCo\Cloudflare\Requests\PutZonesZoneIdLogpushJobsJobIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneId
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/logpush/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneId::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/logpush/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\PutZonesZoneIdLogpushJobsJobId::class, $request);
 	}
 
 
@@ -92,11 +88,9 @@ class LogpushJobsResource
 	/**
 	 * Get ownership challenge
 	 */
-	public function ownership(
-		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushOwnershipRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneOwnership
+	public function ownership(\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushOwnershipRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/ownership', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneOwnership::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/ownership', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushOwnership::class, $request);
 	}
 
 
@@ -105,9 +99,9 @@ class LogpushJobsResource
 	 */
 	public function validate(
 		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushOwnershipValidateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneValidate
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/ownership/validate', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneValidate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/ownership/validate', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushOwnershipValidate::class, $request);
 	}
 
 
@@ -116,9 +110,9 @@ class LogpushJobsResource
 	 */
 	public function destination(
 		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushValidateDestinationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneDestination
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/validate/destination', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneDestination::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/validate/destination', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushValidateDestination::class, $request);
 	}
 
 
@@ -127,19 +121,17 @@ class LogpushJobsResource
 	 */
 	public function exists(
 		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushValidateDestinationExistsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneExists
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/validate/destination/exists', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneExists::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/validate/destination/exists', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushValidateDestinationExists::class, $request);
 	}
 
 
 	/**
 	 * Validate origin
 	 */
-	public function origin(
-		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushValidateOriginRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneOrigin
+	public function origin(\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushValidateOriginRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/validate/origin', \FoundryCo\Cloudflare\Responses\LogpushJobsForAZoneOrigin::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/validate/origin', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushValidateOrigin::class, $request);
 	}
 }

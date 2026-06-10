@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class EmailRoutingRoutingRulesUpdateRoutingRuleRequestActionsItem
 {
 	public function __construct(
 		/** Type of supported action. */
-		public \FoundryCo\Cloudflare\Enums\EmailRoutingRoutingRulesUpdateRoutingRuleRequestActionsItemType $type,
+		public ?\FoundryCo\Cloudflare\Enums\EmailRoutingRoutingRulesUpdateRoutingRuleRequestActionsItemType $type = null,
 		public ?array $value = null,
 	) {
 	}

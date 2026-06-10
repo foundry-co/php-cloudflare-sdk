@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,11 +21,8 @@ class RadarIPResource
 	/**
 	 * Get IP address details
 	 */
-	public function list(
-		?string $ip = null,
-		?\FoundryCo\Cloudflare\Enums\RadarIPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarIPIp
+	public function list(?string $ip = null, ?\FoundryCo\Cloudflare\Enums\RadarIPFormat $format = null): mixed
 	{
-		return $this->client->get('/radar/entities/ip', \FoundryCo\Cloudflare\Responses\RadarIPIp::class, ['ip' => $ip ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/entities/ip', \FoundryCo\Cloudflare\Responses\RadarGetEntitiesIp::class, ['ip' => $ip ?? null, 'format' => $format ?? null]);
 	}
 }

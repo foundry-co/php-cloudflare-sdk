@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -24,8 +24,8 @@ class StreamVideoClippingResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\StreamVideoClippingClipVideosGivenAStartAndEndTimeRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamVideoClippingTime
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/clip', \FoundryCo\Cloudflare\Responses\StreamVideoClippingTime::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/clip', \FoundryCo\Cloudflare\Responses\StreamVideoClippingClipVideosGivenAStartAndEndTime::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,10 +22,8 @@ class AccountRequestTracerResource
 	/**
 	 * Request Trace
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccountRequestTracerRequestTraceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountRequestTracerTrace
+	public function create(\FoundryCo\Cloudflare\Requests\AccountRequestTracerRequestTraceRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/request-tracer/trace', \FoundryCo\Cloudflare\Responses\AccountRequestTracerTrace::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/request-tracer/trace', \FoundryCo\Cloudflare\Responses\AccountRequestTracerRequestTrace::class, $request);
 	}
 }

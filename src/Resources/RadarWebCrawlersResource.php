@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -35,9 +35,9 @@ class RadarWebCrawlersResource
 		?array $responseStatus = null,
 		?array $responseStatusCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarWebCrawlersFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarWebCrawlersSummary
+	): mixed
 	{
-		return $this->client->get('/radar/bots/crawlers/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarWebCrawlersSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'botOperator' => $botOperator ?? null, 'vertical' => $vertical ?? null, 'industry' => $industry ?? null, 'clientType' => $clientType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bots/crawlers/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetCrawlersSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'botOperator' => $botOperator ?? null, 'vertical' => $vertical ?? null, 'industry' => $industry ?? null, 'clientType' => $clientType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -60,8 +60,8 @@ class RadarWebCrawlersResource
 		?array $responseStatus = null,
 		?array $responseStatusCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarWebCrawlersFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarWebCrawlersGroup
+	): mixed
 	{
-		return $this->client->get('/radar/bots/crawlers/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarWebCrawlersGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'botOperator' => $botOperator ?? null, 'vertical' => $vertical ?? null, 'industry' => $industry ?? null, 'clientType' => $clientType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bots/crawlers/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetCrawlersTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'botOperator' => $botOperator ?? null, 'vertical' => $vertical ?? null, 'industry' => $industry ?? null, 'clientType' => $clientType ?? null, 'responseStatus' => $responseStatus ?? null, 'responseStatusCategory' => $responseStatusCategory ?? null, 'format' => $format ?? null]);
 	}
 }

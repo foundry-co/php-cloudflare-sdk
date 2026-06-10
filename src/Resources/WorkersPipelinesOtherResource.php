@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -33,22 +33,18 @@ class WorkersPipelinesOtherResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\PostV4AccountsByAccountIdPipelinesDeprecatedRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherDeprecated
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pipelines', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherDeprecated::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pipelines', \FoundryCo\Cloudflare\Responses\PostV4AccountsByAccountIdPipelinesDeprecated::class, $request);
 	}
 
 
 	/**
 	 * List Pipelines
 	 */
-	public function pipelines(
-		?float $page = null,
-		?float $perPage = null,
-		?string $name = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Pipelines
+	public function pipelines(?float $page = null, ?float $perPage = null, ?string $name = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/pipelines', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Pipelines::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'name' => $name ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/pipelines', \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesV1Pipelines::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'name' => $name ?? null]);
 	}
 
 
@@ -57,18 +53,18 @@ class WorkersPipelinesOtherResource
 	 */
 	public function postV4AccountsByAccountIdPipelinesV1Pipelines(
 		\FoundryCo\Cloudflare\Requests\PostV4AccountsByAccountIdPipelinesV1PipelinesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Pipelines
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/pipelines', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Pipelines::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/pipelines', \FoundryCo\Cloudflare\Responses\PostV4AccountsByAccountIdPipelinesV1Pipelines::class, $request);
 	}
 
 
 	/**
 	 * Get Pipeline Details
 	 */
-	public function get(string $pipelineId): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId
+	public function get(string $pipelineId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/pipelines/' . $pipelineId, \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/pipelines/' . $pipelineId, \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesV1PipelinesByPipelineId::class, []);
 	}
 
 
@@ -89,9 +85,9 @@ class WorkersPipelinesOtherResource
 		?string $name = null,
 		?float $page = null,
 		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Sinks
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/sinks', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Sinks::class, ['pipelineId' => $pipelineId ?? null, 'name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/sinks', \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesV1Sinks::class, ['pipelineId' => $pipelineId ?? null, 'name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -100,20 +96,18 @@ class WorkersPipelinesOtherResource
 	 */
 	public function postV4AccountsByAccountIdPipelinesV1Sinks(
 		\FoundryCo\Cloudflare\Requests\PostV4AccountsByAccountIdPipelinesV1SinksRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Sinks
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/sinks', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Sinks::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/sinks', \FoundryCo\Cloudflare\Responses\PostV4AccountsByAccountIdPipelinesV1Sinks::class, $request);
 	}
 
 
 	/**
 	 * Get Sink Details
 	 */
-	public function getV4AccountsByAccountIdPipelinesV1SinksBySinkId(
-		string $sinkId,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId
+	public function getV4AccountsByAccountIdPipelinesV1SinksBySinkId(string $sinkId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/sinks/' . $sinkId, \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/sinks/' . $sinkId, \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesV1SinksBySinkId::class, []);
 	}
 
 
@@ -134,9 +128,9 @@ class WorkersPipelinesOtherResource
 		?string $name = null,
 		?float $page = null,
 		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Streams
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/streams', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Streams::class, ['pipelineId' => $pipelineId ?? null, 'name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/streams', \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesV1Streams::class, ['pipelineId' => $pipelineId ?? null, 'name' => $name ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -145,20 +139,18 @@ class WorkersPipelinesOtherResource
 	 */
 	public function postV4AccountsByAccountIdPipelinesV1Streams(
 		\FoundryCo\Cloudflare\Requests\PostV4AccountsByAccountIdPipelinesV1StreamsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Streams
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/streams', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherIdPipelinesV1Streams::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/streams', \FoundryCo\Cloudflare\Responses\PostV4AccountsByAccountIdPipelinesV1Streams::class, $request);
 	}
 
 
 	/**
 	 * Get Stream Details
 	 */
-	public function getV4AccountsByAccountIdPipelinesV1StreamsByStreamId(
-		string $streamId,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId
+	public function getV4AccountsByAccountIdPipelinesV1StreamsByStreamId(string $streamId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/streams/' . $streamId, \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/v1/streams/' . $streamId, \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesV1StreamsByStreamId::class, []);
 	}
 
 
@@ -168,9 +160,9 @@ class WorkersPipelinesOtherResource
 	public function update(
 		string $streamId,
 		\FoundryCo\Cloudflare\Requests\PatchV4AccountsByAccountIdPipelinesV1StreamsByStreamIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/pipelines/v1/streams/' . $streamId, \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherId::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/pipelines/v1/streams/' . $streamId, \FoundryCo\Cloudflare\Responses\PatchV4AccountsByAccountIdPipelinesV1StreamsByStreamId::class, $request);
 	}
 
 
@@ -191,20 +183,18 @@ class WorkersPipelinesOtherResource
 	 */
 	public function validateSql(
 		\FoundryCo\Cloudflare\Requests\PostV4AccountsByAccountIdPipelinesV1ValidateSqlRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherSql
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/validate_sql', \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherSql::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/pipelines/v1/validate_sql', \FoundryCo\Cloudflare\Responses\PostV4AccountsByAccountIdPipelinesV1ValidateSql::class, $request);
 	}
 
 
 	/**
 	 * [DEPRECATED] Get Pipeline
 	 */
-	public function getV4AccountsByAccountIdPipelinesByPipelineNameDeprecated(
-		string $pipelineName,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherDeprecated
+	public function getV4AccountsByAccountIdPipelinesByPipelineNameDeprecated(string $pipelineName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/' . $pipelineName, \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherDeprecated::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pipelines/' . $pipelineName, \FoundryCo\Cloudflare\Responses\GetV4AccountsByAccountIdPipelinesByPipelineNameDeprecated::class, []);
 	}
 
 
@@ -214,9 +204,9 @@ class WorkersPipelinesOtherResource
 	public function putV4AccountsByAccountIdPipelinesByPipelineNameDeprecated(
 		string $pipelineName,
 		\FoundryCo\Cloudflare\Requests\PutV4AccountsByAccountIdPipelinesByPipelineNameDeprecatedRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherDeprecated
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/pipelines/' . $pipelineName, \FoundryCo\Cloudflare\Responses\WorkersPipelinesOtherDeprecated::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/pipelines/' . $pipelineName, \FoundryCo\Cloudflare\Responses\PutV4AccountsByAccountIdPipelinesByPipelineNameDeprecated::class, $request);
 	}
 
 

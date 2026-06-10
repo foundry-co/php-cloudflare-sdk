@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,40 +22,36 @@ class RequestForInformationRFIResource
 	/**
 	 * List Requests
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIList
+	public function create(\FoundryCo\Cloudflare\Requests\CloudforceOneRequestListRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests', \FoundryCo\Cloudflare\Responses\RequestForInformationRFIList::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestList::class, $request);
 	}
 
 
 	/**
 	 * Get Request Priority, Status, and TLP constants
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIConstants
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/constants', \FoundryCo\Cloudflare\Responses\RequestForInformationRFIConstants::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/constants', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestConstants::class, []);
 	}
 
 
 	/**
 	 * Create a New Request.
 	 */
-	public function new(
-		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestNewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFINew
+	public function new(\FoundryCo\Cloudflare\Requests\CloudforceOneRequestNewRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/new', \FoundryCo\Cloudflare\Responses\RequestForInformationRFINew::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/new', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestNew::class, $request);
 	}
 
 
 	/**
 	 * Get Request Quota
 	 */
-	public function quota(): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIQuota
+	public function quota(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/quota', \FoundryCo\Cloudflare\Responses\RequestForInformationRFIQuota::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/quota', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestQuota::class, []);
 	}
 
 
@@ -71,9 +67,9 @@ class RequestForInformationRFIResource
 	/**
 	 * Get a Request
 	 */
-	public function get(string $requestId): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIGet
+	public function get(string $requestId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId, \FoundryCo\Cloudflare\Responses\RequestForInformationRFIGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId, \FoundryCo\Cloudflare\Responses\CloudforceOneRequestGet::class, []);
 	}
 
 
@@ -83,9 +79,9 @@ class RequestForInformationRFIResource
 	public function update(
 		string $requestId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId, \FoundryCo\Cloudflare\Responses\RequestForInformationRFIUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId, \FoundryCo\Cloudflare\Responses\CloudforceOneRequestUpdate::class, $request);
 	}
 
 
@@ -104,32 +100,27 @@ class RequestForInformationRFIResource
 	public function asset(
 		string $requestId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestAssetListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIList
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset', \FoundryCo\Cloudflare\Responses\RequestForInformationRFIList::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestAssetList::class, $request);
 	}
 
 
 	/**
 	 * Create a New Request Asset
 	 */
-	public function cloudforceOneRequestAssetNew(
-		string $requestId,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFINew
+	public function cloudforceOneRequestAssetNew(string $requestId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset/new', \FoundryCo\Cloudflare\Responses\RequestForInformationRFINew::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset/new', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestAssetNew::class, null);
 	}
 
 
 	/**
 	 * Get a Request Asset
 	 */
-	public function cloudforceOneRequestAssetGet(
-		string $requestId,
-		string $assetId,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIGet
+	public function cloudforceOneRequestAssetGet(string $requestId, string $assetId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset/' . $assetId, \FoundryCo\Cloudflare\Responses\RequestForInformationRFIGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset/' . $assetId, \FoundryCo\Cloudflare\Responses\CloudforceOneRequestAssetGet::class, []);
 	}
 
 
@@ -140,9 +131,9 @@ class RequestForInformationRFIResource
 		string $requestId,
 		string $assetId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestAssetUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset/' . $assetId, \FoundryCo\Cloudflare\Responses\RequestForInformationRFIUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/asset/' . $assetId, \FoundryCo\Cloudflare\Responses\CloudforceOneRequestAssetUpdate::class, $request);
 	}
 
 
@@ -161,9 +152,9 @@ class RequestForInformationRFIResource
 	public function message(
 		string $requestId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestMessageListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIList
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/message', \FoundryCo\Cloudflare\Responses\RequestForInformationRFIList::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/message', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestMessageList::class, $request);
 	}
 
 
@@ -173,9 +164,9 @@ class RequestForInformationRFIResource
 	public function cloudforceOneRequestMessageNew(
 		string $requestId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestMessageNewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFINew
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/message/new', \FoundryCo\Cloudflare\Responses\RequestForInformationRFINew::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/message/new', \FoundryCo\Cloudflare\Responses\CloudforceOneRequestMessageNew::class, $request);
 	}
 
 
@@ -186,9 +177,9 @@ class RequestForInformationRFIResource
 		string $requestId,
 		int $messageId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOneRequestMessageUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\RequestForInformationRFIUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/message/' . $messageId, \FoundryCo\Cloudflare\Responses\RequestForInformationRFIUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/' . $requestId . '/message/' . $messageId, \FoundryCo\Cloudflare\Responses\CloudforceOneRequestMessageUpdate::class, $request);
 	}
 
 

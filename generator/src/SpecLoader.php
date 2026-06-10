@@ -27,34 +27,46 @@ class SpecLoader
         $this->spec = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
 
         // Resolve all $refs in-place so the rest of the generator never sees them
-        $this->spec = $this->resolveRefs($this->spec, $this->spec);
+        $root = $this->spec;
+        $this->spec = $this->resolveRefs($this->spec, $root);
 
         return $this->spec;
     }
 
-    private function resolveRefs(mixed $node, array $root, int $depth = 0): mixed
-    {
-        // Guard against infinite recursion on circular refs
-        if ($depth > 20) {
-            return $node;
-        }
+    /** @var array<string,bool> refs currently being expanded (circular-ref guard) */
+    private array $resolving = [];
 
+    private function resolveRefs(mixed $node, array $root): mixed
+    {
         if (!is_array($node)) {
             return $node;
         }
 
         if (isset($node['$ref'])) {
-            $resolved = $this->resolveRef($node['$ref'], $root);
+            $ref = $node['$ref'];
+
+            // Skip circular refs rather than infinite-looping
+            if (isset($this->resolving[$ref])) {
+                return $node;
+            }
+
+            $resolved = $this->resolveRef($ref, $root);
+
             // Merge any sibling keys alongside the $ref (e.g. description overrides)
             $siblings = array_diff_key($node, ['$ref' => true]);
             if (!empty($siblings)) {
                 $resolved = array_merge($resolved, $siblings);
             }
-            return $this->resolveRefs($resolved, $root, $depth + 1);
+
+            $this->resolving[$ref] = true;
+            $result = $this->resolveRefs($resolved, $root);
+            unset($this->resolving[$ref]);
+
+            return $result;
         }
 
         foreach ($node as $key => $value) {
-            $node[$key] = $this->resolveRefs($value, $root, $depth + 1);
+            $node[$key] = $this->resolveRefs($value, $root);
         }
 
         return $node;

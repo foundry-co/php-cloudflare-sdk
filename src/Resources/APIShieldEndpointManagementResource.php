@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -33,16 +33,16 @@ class APIShieldEndpointManagementResource
 		?array $feature = null,
 	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/operations', null, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'host' => $host ?? null, 'method' => $method ?? null, 'endpoint' => $endpoint ?? null, 'feature' => $feature ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/operations', \FoundryCo\Cloudflare\Responses\ApiShieldEndpointManagementRetrieveInformationAboutAllOperationsOnAZone::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'host' => $host ?? null, 'method' => $method ?? null, 'endpoint' => $endpoint ?? null, 'feature' => $feature ?? null]);
 	}
 
 
 	/**
 	 * Add operations to a zone
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementZone
+	public function create(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations', \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementZone::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations', \FoundryCo\Cloudflare\Responses\ApiShieldEndpointManagementAddOperationsToAZone::class, null);
 	}
 
 
@@ -60,21 +60,18 @@ class APIShieldEndpointManagementResource
 	 */
 	public function item(
 		\FoundryCo\Cloudflare\Requests\ApiShieldEndpointManagementAddOperationToAZoneRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementZone
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations/item', \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementZone::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/api_gateway/operations/item', \FoundryCo\Cloudflare\Responses\ApiShieldEndpointManagementAddOperationToAZone::class, $request);
 	}
 
 
 	/**
 	 * Retrieve information about an operation
 	 */
-	public function get(
-		?array $feature = null,
-		?bool $withSchemas = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementOperation
+	public function get(?array $feature = null, ?bool $withSchemas = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementOperation::class, ['feature' => $feature ?? null, 'withSchemas' => $withSchemas ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/operations/' . $operationId, \FoundryCo\Cloudflare\Responses\ApiShieldEndpointManagementRetrieveInformationAboutAnOperation::class, ['feature' => $feature ?? null, 'withSchemas' => $withSchemas ?? null]);
 	}
 
 
@@ -90,11 +87,8 @@ class APIShieldEndpointManagementResource
 	/**
 	 * Retrieve operations and features as OpenAPI schemas
 	 */
-	public function schemas(
-		?array $host = null,
-		?array $feature = null,
-	): \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementSchemas
+	public function schemas(?array $host = null, ?array $feature = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/schemas', \FoundryCo\Cloudflare\Responses\APIShieldEndpointManagementSchemas::class, ['host' => $host ?? null, 'feature' => $feature ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/schemas', \FoundryCo\Cloudflare\Responses\ApiShieldEndpointManagementRetrieveOperationsAndFeaturesAsOpenApiSchemas::class, ['host' => $host ?? null, 'feature' => $feature ?? null]);
 	}
 }

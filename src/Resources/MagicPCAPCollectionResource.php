@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -40,9 +40,9 @@ class MagicPCAPCollectionResource
 	/**
 	 * List PCAPs Bucket Ownership
 	 */
-	public function ownership(): \FoundryCo\Cloudflare\Responses\MagicPCAPCollectionOwnership
+	public function ownership(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pcaps/ownership', \FoundryCo\Cloudflare\Responses\MagicPCAPCollectionOwnership::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pcaps/ownership', \FoundryCo\Cloudflare\Responses\MagicPcapCollectionListPcaPsBucketOwnership::class, []);
 	}
 
 

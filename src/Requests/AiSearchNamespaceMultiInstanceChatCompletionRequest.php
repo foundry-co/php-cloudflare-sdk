@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -18,7 +18,7 @@ readonly class AiSearchNamespaceMultiInstanceChatCompletionRequest
 	public function __construct(
 		public \FoundryCo\Cloudflare\Responses\AiSearchNamespaceMultiInstanceChatCompletionRequestAiSearchOptions $aiSearchOptions,
 		public array $messages,
-		public mixed $model = null,
+		public ?\FoundryCo\Cloudflare\Enums\AiSearchNamespaceMultiInstanceChatCompletionRequestModel $model = null,
 		public ?bool $stream = null,
 	) {
 	}
@@ -29,7 +29,7 @@ readonly class AiSearchNamespaceMultiInstanceChatCompletionRequest
 		return array_filter([
 		    'ai_search_options' => $this->aiSearchOptions->toArray(),
 		    'messages' => $this->messages,
-		    'model' => $this->model,
+		    'model' => $this->model?->value,
 		    'stream' => $this->stream,
 		], fn ($v) => $v !== null);
 	}

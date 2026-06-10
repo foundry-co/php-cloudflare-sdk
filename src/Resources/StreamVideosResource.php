@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -38,9 +38,9 @@ class StreamVideosResource
 		?\DateTimeImmutable $before = null,
 		?\DateTimeImmutable $after = null,
 		?int $limit = null,
-	): \FoundryCo\Cloudflare\Responses\StreamVideosVideos
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream', \FoundryCo\Cloudflare\Responses\StreamVideosVideos::class, ['status' => $status ?? null, 'creator' => $creator ?? null, 'type' => $type ?? null, 'asc' => $asc ?? null, 'videoName' => $videoName ?? null, 'search' => $search ?? null, 'start' => $start ?? null, 'end' => $end ?? null, 'includeCounts' => $includeCounts ?? null, 'id' => $id ?? null, 'name' => $name ?? null, 'liveInputId' => $liveInputId ?? null, 'before' => $before ?? null, 'after' => $after ?? null, 'limit' => $limit ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream', \FoundryCo\Cloudflare\Responses\StreamVideosListVideos::class, ['status' => $status ?? null, 'creator' => $creator ?? null, 'type' => $type ?? null, 'asc' => $asc ?? null, 'videoName' => $videoName ?? null, 'search' => $search ?? null, 'start' => $start ?? null, 'end' => $end ?? null, 'includeCounts' => $includeCounts ?? null, 'id' => $id ?? null, 'name' => $name ?? null, 'liveInputId' => $liveInputId ?? null, 'before' => $before ?? null, 'after' => $after ?? null, 'limit' => $limit ?? null]);
 	}
 
 
@@ -65,9 +65,9 @@ class StreamVideosResource
 	public function copy(
 		\FoundryCo\Cloudflare\Requests\StreamVideosUploadVideosFromAUrlRequest $request,
 		?string $uploadCreator = null,
-	): \FoundryCo\Cloudflare\Responses\StreamVideosUrl
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/copy', \FoundryCo\Cloudflare\Responses\StreamVideosUrl::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/copy', \FoundryCo\Cloudflare\Responses\StreamVideosUploadVideosFromAUrl::class, $request);
 	}
 
 
@@ -77,27 +77,27 @@ class StreamVideosResource
 	public function directUpload(
 		\FoundryCo\Cloudflare\Requests\StreamVideosUploadVideosViaDirectUploadUrLsRequest $request,
 		?string $uploadCreator = null,
-	): \FoundryCo\Cloudflare\Responses\StreamVideosLs
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/direct_upload', \FoundryCo\Cloudflare\Responses\StreamVideosLs::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/direct_upload', \FoundryCo\Cloudflare\Responses\StreamVideosUploadVideosViaDirectUploadUrLs::class, $request);
 	}
 
 
 	/**
 	 * Storage use
 	 */
-	public function storageUsage(?string $creator = null): \FoundryCo\Cloudflare\Responses\StreamVideosUsage
+	public function storageUsage(?string $creator = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/storage-usage', \FoundryCo\Cloudflare\Responses\StreamVideosUsage::class, ['creator' => $creator ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/storage-usage', \FoundryCo\Cloudflare\Responses\StreamVideosStorageUsage::class, ['creator' => $creator ?? null]);
 	}
 
 
 	/**
 	 * Retrieve video details
 	 */
-	public function get(string $identifier): \FoundryCo\Cloudflare\Responses\StreamVideosDetails
+	public function get(string $identifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/' . $identifier, \FoundryCo\Cloudflare\Responses\StreamVideosDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/' . $identifier, \FoundryCo\Cloudflare\Responses\StreamVideosRetrieveVideoDetails::class, []);
 	}
 
 
@@ -107,9 +107,9 @@ class StreamVideosResource
 	public function stream(
 		string $identifier,
 		\FoundryCo\Cloudflare\Requests\StreamVideosUpdateVideoDetailsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamVideosDetails
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier, \FoundryCo\Cloudflare\Responses\StreamVideosDetails::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier, \FoundryCo\Cloudflare\Responses\StreamVideosUpdateVideoDetails::class, $request);
 	}
 
 
@@ -137,8 +137,8 @@ class StreamVideosResource
 	public function token(
 		string $identifier,
 		\FoundryCo\Cloudflare\Requests\StreamVideosCreateSignedUrlTokensForVideosRequest $request,
-	): \FoundryCo\Cloudflare\Responses\StreamVideosVideos
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/token', \FoundryCo\Cloudflare\Responses\StreamVideosVideos::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/token', \FoundryCo\Cloudflare\Responses\StreamVideosCreateSignedUrlTokensForVideos::class, $request);
 	}
 }

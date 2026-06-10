@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,9 +30,9 @@ class FiltersResource
 		?float $page = null,
 		?float $perPage = null,
 		?string $id = null,
-	): \FoundryCo\Cloudflare\Responses\FiltersFilters
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/filters', \FoundryCo\Cloudflare\Responses\FiltersFilters::class, ['paused' => $paused ?? null, 'expression' => $expression ?? null, 'description' => $description ?? null, 'ref' => $ref ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'id' => $id ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/filters', \FoundryCo\Cloudflare\Responses\FiltersListFilters::class, ['paused' => $paused ?? null, 'expression' => $expression ?? null, 'description' => $description ?? null, 'ref' => $ref ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'id' => $id ?? null]);
 	}
 
 
@@ -48,9 +48,9 @@ class FiltersResource
 	/**
 	 * Update filters
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\FiltersFilters
+	public function update(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/filters', \FoundryCo\Cloudflare\Responses\FiltersFilters::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/filters', \FoundryCo\Cloudflare\Responses\FiltersUpdateFilters::class, null);
 	}
 
 
@@ -66,21 +66,18 @@ class FiltersResource
 	/**
 	 * Get a filter
 	 */
-	public function get(string $filterId): \FoundryCo\Cloudflare\Responses\FiltersFilter
+	public function get(string $filterId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\FiltersFilter::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\FiltersGetAFilter::class, []);
 	}
 
 
 	/**
 	 * Update a filter
 	 */
-	public function filters(
-		string $filterId,
-		\FoundryCo\Cloudflare\Requests\FiltersUpdateAFilterRequest $request,
-	): \FoundryCo\Cloudflare\Responses\FiltersFilter
+	public function filters(string $filterId, \FoundryCo\Cloudflare\Requests\FiltersUpdateAFilterRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\FiltersFilter::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/filters/' . $filterId, \FoundryCo\Cloudflare\Responses\FiltersUpdateAFilter::class, $request);
 	}
 
 

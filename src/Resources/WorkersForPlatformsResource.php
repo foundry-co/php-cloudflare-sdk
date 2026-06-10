@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class WorkersForPlatformsResource
 	/**
 	 * List dispatch namespaces
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces', \FoundryCo\Cloudflare\Responses\NamespaceWorkerList::class, []);
 	}
 
 
 	/**
 	 * Create dispatch namespace
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\NamespaceWorkerCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\NamespaceWorkerCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/dispatch/namespaces', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/dispatch/namespaces', \FoundryCo\Cloudflare\Responses\NamespaceWorkerCreate::class, $request);
 	}
 
 
 	/**
 	 * Get dispatch namespace
 	 */
-	public function get(string $dispatchNamespace): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsNamespace
+	public function get(string $dispatchNamespace): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace, \FoundryCo\Cloudflare\Responses\WorkersForPlatformsNamespace::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace, \FoundryCo\Cloudflare\Responses\NamespaceWorkerGetNamespace::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class WorkersForPlatformsResource
 	public function update(
 		string $dispatchNamespace,
 		\FoundryCo\Cloudflare\Requests\NamespaceWorkerPutNamespaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsNamespace
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace, \FoundryCo\Cloudflare\Responses\WorkersForPlatformsNamespace::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace, \FoundryCo\Cloudflare\Responses\NamespaceWorkerPutNamespace::class, $request);
 	}
 
 
@@ -66,9 +64,9 @@ class WorkersForPlatformsResource
 	public function namespaces(
 		string $dispatchNamespace,
 		\FoundryCo\Cloudflare\Requests\NamespaceWorkerPatchNamespaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsNamespace
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace, \FoundryCo\Cloudflare\Responses\WorkersForPlatformsNamespace::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace, \FoundryCo\Cloudflare\Responses\NamespaceWorkerPatchNamespace::class, $request);
 	}
 
 
@@ -84,12 +82,9 @@ class WorkersForPlatformsResource
 	/**
 	 * List Scripts in Namespace
 	 */
-	public function scripts(
-		string $dispatchNamespace,
-		?string $tags = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsScripts
+	public function scripts(string $dispatchNamespace, ?string $tags = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsScripts::class, ['tags' => $tags ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts', \FoundryCo\Cloudflare\Responses\NamespaceWorkerListScripts::class, ['tags' => $tags ?? null]);
 	}
 
 
@@ -109,12 +104,9 @@ class WorkersForPlatformsResource
 	/**
 	 * Worker Details
 	 */
-	public function namespaceWorkerScriptWorkerDetails(
-		string $dispatchNamespace,
-		string $scriptName,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsDetails
+	public function namespaceWorkerScriptWorkerDetails(string $dispatchNamespace, string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName, \FoundryCo\Cloudflare\Responses\WorkersForPlatformsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName, \FoundryCo\Cloudflare\Responses\NamespaceWorkerScriptWorkerDetails::class, []);
 	}
 
 
@@ -151,9 +143,9 @@ class WorkersForPlatformsResource
 		string $dispatchNamespace,
 		string $scriptName,
 		\FoundryCo\Cloudflare\Requests\NamespaceWorkerScriptUpdateCreateAssetsUploadSessionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsSession
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/assets-upload-session', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsSession::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/assets-upload-session', \FoundryCo\Cloudflare\Responses\NamespaceWorkerScriptUpdateCreateAssetsUploadSession::class, $request);
 	}
 
 
@@ -183,9 +175,9 @@ class WorkersForPlatformsResource
 		string $scriptName,
 		?string $cFWORKERBODYPART = null,
 		?string $cFWORKERMAINMODULEPART = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsContent
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/content', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsContent::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/content', \FoundryCo\Cloudflare\Responses\NamespaceWorkerPutScriptContent::class, null);
 	}
 
 
@@ -247,24 +239,18 @@ class WorkersForPlatformsResource
 	/**
 	 * Get Script Settings
 	 */
-	public function settings(
-		string $dispatchNamespace,
-		string $scriptName,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsSettings
+	public function settings(string $dispatchNamespace, string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsSettings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\NamespaceWorkerGetScriptSettings::class, []);
 	}
 
 
 	/**
 	 * Patch Script Settings
 	 */
-	public function namespaceWorkerPatchScriptSettings(
-		string $dispatchNamespace,
-		string $scriptName,
-	): \FoundryCo\Cloudflare\Responses\WorkersForPlatformsSettings
+	public function namespaceWorkerPatchScriptSettings(string $dispatchNamespace, string $scriptName): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\WorkersForPlatformsSettings::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\NamespaceWorkerPatchScriptSettings::class, null);
 	}
 
 
@@ -289,13 +275,9 @@ class WorkersForPlatformsResource
 	/**
 	 * Put Script Tag
 	 */
-	public function namespaceWorkerPutScriptTag(
-		string $dispatchNamespace,
-		string $scriptName,
-		string $tag,
-	): \FoundryCo\Cloudflare\Enums\WorkersForPlatformsTag
+	public function namespaceWorkerPutScriptTag(string $dispatchNamespace, string $scriptName, string $tag): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/tags/' . $tag, \FoundryCo\Cloudflare\Enums\WorkersForPlatformsTag::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/dispatch/namespaces/' . $dispatchNamespace . '/scripts/' . $scriptName . '/tags/' . $tag, \FoundryCo\Cloudflare\Enums\NamespaceWorkerPutScriptTag::class, null);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class SecondaryDNSPrimaryZoneResource
 	/**
 	 * Primary Zone Configuration Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SecondaryDNSPrimaryZoneDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/secondary_dns/outgoing', \FoundryCo\Cloudflare\Responses\SecondaryDNSPrimaryZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/secondary_dns/outgoing', \FoundryCo\Cloudflare\Responses\SecondaryDnsPrimaryZonePrimaryZoneConfigurationDetails::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class SecondaryDNSPrimaryZoneResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\SecondaryDnsPrimaryZoneCreatePrimaryZoneConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSPrimaryZoneConfiguration
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/secondary_dns/outgoing', \FoundryCo\Cloudflare\Responses\SecondaryDNSPrimaryZoneConfiguration::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/secondary_dns/outgoing', \FoundryCo\Cloudflare\Responses\SecondaryDnsPrimaryZoneCreatePrimaryZoneConfiguration::class, $request);
 	}
 
 
@@ -44,9 +44,9 @@ class SecondaryDNSPrimaryZoneResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\SecondaryDnsPrimaryZoneUpdatePrimaryZoneConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSPrimaryZoneConfiguration
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/secondary_dns/outgoing', \FoundryCo\Cloudflare\Responses\SecondaryDNSPrimaryZoneConfiguration::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/secondary_dns/outgoing', \FoundryCo\Cloudflare\Responses\SecondaryDnsPrimaryZoneUpdatePrimaryZoneConfiguration::class, $request);
 	}
 
 

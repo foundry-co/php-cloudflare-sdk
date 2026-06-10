@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class EmailSendingSubdomainsResource
 	/**
 	 * List sending subdomains
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomains
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomains::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsListSendingSubdomains::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class EmailSendingSubdomainsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\EmailSendingSubdomainsCreateSendingSubdomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomain
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/subdomains', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomain::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/subdomains', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsCreateSendingSubdomain::class, $request);
 	}
 
 
@@ -44,18 +44,18 @@ class EmailSendingSubdomainsResource
 	 */
 	public function preview(
 		\FoundryCo\Cloudflare\Requests\EmailSendingSubdomainsPreviewSendingSubdomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomain
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/subdomains/preview', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomain::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/subdomains/preview', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsPreviewSendingSubdomain::class, $request);
 	}
 
 
 	/**
 	 * Get a sending subdomain
 	 */
-	public function get(string $subdomainId): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomain
+	public function get(string $subdomainId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId, \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsSubdomain::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId, \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsGetSendingSubdomain::class, []);
 	}
 
 
@@ -71,28 +71,26 @@ class EmailSendingSubdomainsResource
 	/**
 	 * Get sending subdomain DNS records
 	 */
-	public function dns(string $subdomainId): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsDns
+	public function dns(string $subdomainId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId . '/dns', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsDns::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId . '/dns', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsGetSendingSubdomainDns::class, []);
 	}
 
 
 	/**
 	 * Fix sending subdomain DNS records
 	 */
-	public function emailSendingSubdomainsFixSendingSubdomainDns(
-		string $subdomainId,
-	): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsDns
+	public function emailSendingSubdomainsFixSendingSubdomainDns(string $subdomainId): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId . '/dns', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsDns::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId . '/dns', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsFixSendingSubdomainDns::class, null);
 	}
 
 
 	/**
 	 * Get sending subdomain DNS status
 	 */
-	public function status(string $subdomainId): \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsStatus
+	public function status(string $subdomainId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId . '/dns/status', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsStatus::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/subdomains/' . $subdomainId . '/dns/status', \FoundryCo\Cloudflare\Responses\EmailSendingSubdomainsGetSendingSubdomainDnsStatus::class, []);
 	}
 }

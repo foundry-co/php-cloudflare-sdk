@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,29 +27,27 @@ class QueueResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\QueueOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\QueueDirection $direction = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions', \FoundryCo\Cloudflare\Responses\QueueList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions', \FoundryCo\Cloudflare\Responses\SubscriptionsList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create Event Subscription
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SubscriptionsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueCreate
+	public function create(\FoundryCo\Cloudflare\Requests\SubscriptionsCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions', \FoundryCo\Cloudflare\Responses\QueueCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions', \FoundryCo\Cloudflare\Responses\SubscriptionsCreate::class, $request);
 	}
 
 
 	/**
 	 * Get Event Subscription
 	 */
-	public function get(string $subscriptionId): \FoundryCo\Cloudflare\Responses\QueueGet
+	public function get(string $subscriptionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions/' . $subscriptionId, \FoundryCo\Cloudflare\Responses\QueueGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions/' . $subscriptionId, \FoundryCo\Cloudflare\Responses\SubscriptionsGet::class, []);
 	}
 
 
@@ -59,9 +57,9 @@ class QueueResource
 	public function update(
 		string $subscriptionId,
 		\FoundryCo\Cloudflare\Requests\SubscriptionsPatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueuePatch
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions/' . $subscriptionId, \FoundryCo\Cloudflare\Responses\QueuePatch::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/event_subscriptions/subscriptions/' . $subscriptionId, \FoundryCo\Cloudflare\Responses\SubscriptionsPatch::class, $request);
 	}
 
 
@@ -77,41 +75,36 @@ class QueueResource
 	/**
 	 * List Queues
 	 */
-	public function queues(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function queues(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/queues', \FoundryCo\Cloudflare\Responses\QueueList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/queues', \FoundryCo\Cloudflare\Responses\QueuesList::class, []);
 	}
 
 
 	/**
 	 * Create Queue
 	 */
-	public function queuesCreate(
-		\FoundryCo\Cloudflare\Requests\QueuesCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueCreate
+	public function queuesCreate(\FoundryCo\Cloudflare\Requests\QueuesCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues', \FoundryCo\Cloudflare\Responses\QueueCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues', \FoundryCo\Cloudflare\Responses\QueuesCreate::class, $request);
 	}
 
 
 	/**
 	 * Get Queue
 	 */
-	public function queuesGet(string $queueId): \FoundryCo\Cloudflare\Responses\QueueGet
+	public function queuesGet(string $queueId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/queues/' . $queueId, \FoundryCo\Cloudflare\Responses\QueueGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/queues/' . $queueId, \FoundryCo\Cloudflare\Responses\QueuesGet::class, []);
 	}
 
 
 	/**
 	 * Update Queue
 	 */
-	public function queuesUpdate(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueUpdate
+	public function queuesUpdate(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesUpdateRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/queues/' . $queueId, \FoundryCo\Cloudflare\Responses\QueueUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/queues/' . $queueId, \FoundryCo\Cloudflare\Responses\QueuesUpdate::class, $request);
 	}
 
 
@@ -121,9 +114,9 @@ class QueueResource
 	public function queuesUpdatePartial(
 		string $queueId,
 		\FoundryCo\Cloudflare\Requests\QueuesUpdatePartialRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueuePartial
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/queues/' . $queueId, \FoundryCo\Cloudflare\Responses\QueuePartial::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/queues/' . $queueId, \FoundryCo\Cloudflare\Responses\QueuesUpdatePartial::class, $request);
 	}
 
 
@@ -184,48 +177,36 @@ class QueueResource
 	/**
 	 * Push Message
 	 */
-	public function messages(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesPushMessageRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueMessage
+	public function messages(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesPushMessageRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages', \FoundryCo\Cloudflare\Responses\QueueMessage::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages', \FoundryCo\Cloudflare\Responses\QueuesPushMessage::class, $request);
 	}
 
 
 	/**
 	 * Acknowledge + Retry Queue Messages
 	 */
-	public function ack(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesAckMessagesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueMessages
+	public function ack(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesAckMessagesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/ack', \FoundryCo\Cloudflare\Responses\QueueMessages::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/ack', \FoundryCo\Cloudflare\Responses\QueuesAckMessages::class, $request);
 	}
 
 
 	/**
 	 * Push Message Batch
 	 */
-	public function batch(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesPushMessagesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueMessages
+	public function batch(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesPushMessagesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/batch', \FoundryCo\Cloudflare\Responses\QueueMessages::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/batch', \FoundryCo\Cloudflare\Responses\QueuesPushMessages::class, $request);
 	}
 
 
 	/**
 	 * Preview Queue Messages
 	 */
-	public function preview(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesPreviewMessagesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueMessages
+	public function preview(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesPreviewMessagesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/preview', \FoundryCo\Cloudflare\Responses\QueueMessages::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/preview', \FoundryCo\Cloudflare\Responses\QueuesPreviewMessages::class, $request);
 	}
 
 
@@ -235,50 +216,44 @@ class QueueResource
 	public function queuesAckPreviewMessages(
 		string $queueId,
 		\FoundryCo\Cloudflare\Requests\QueuesAckPreviewMessagesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueMessages
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/preview/ack', \FoundryCo\Cloudflare\Responses\QueueMessages::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/preview/ack', \FoundryCo\Cloudflare\Responses\QueuesAckPreviewMessages::class, $request);
 	}
 
 
 	/**
 	 * Pull Queue Messages
 	 */
-	public function pull(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesPullMessagesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueueMessages
+	public function pull(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesPullMessagesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/pull', \FoundryCo\Cloudflare\Responses\QueueMessages::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/messages/pull', \FoundryCo\Cloudflare\Responses\QueuesPullMessages::class, $request);
 	}
 
 
 	/**
 	 * Get Queue Metrics
 	 */
-	public function metrics(string $queueId): \FoundryCo\Cloudflare\Responses\QueueMetrics
+	public function metrics(string $queueId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/queues/' . $queueId . '/metrics', \FoundryCo\Cloudflare\Responses\QueueMetrics::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/queues/' . $queueId . '/metrics', \FoundryCo\Cloudflare\Responses\QueuesGetMetrics::class, []);
 	}
 
 
 	/**
 	 * Get Queue Purge Status
 	 */
-	public function purge(string $queueId): \FoundryCo\Cloudflare\Responses\QueueGet
+	public function purge(string $queueId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/queues/' . $queueId . '/purge', \FoundryCo\Cloudflare\Responses\QueueGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/queues/' . $queueId . '/purge', \FoundryCo\Cloudflare\Responses\QueuesPurgeGet::class, []);
 	}
 
 
 	/**
 	 * Purge Queue
 	 */
-	public function queuesPurge(
-		string $queueId,
-		\FoundryCo\Cloudflare\Requests\QueuesPurgeRequest $request,
-	): \FoundryCo\Cloudflare\Responses\QueuePurge
+	public function queuesPurge(string $queueId, \FoundryCo\Cloudflare\Requests\QueuesPurgeRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/purge', \FoundryCo\Cloudflare\Responses\QueuePurge::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/queues/' . $queueId . '/purge', \FoundryCo\Cloudflare\Responses\QueuesPurge::class, $request);
 	}
 }

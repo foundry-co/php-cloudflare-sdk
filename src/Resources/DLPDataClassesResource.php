@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class DLPDataClassesResource
 	/**
 	 * Retrieve all data classes in an account
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLPDataClassesList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_classes', \FoundryCo\Cloudflare\Responses\DLPDataClassesList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_classes', \FoundryCo\Cloudflare\Responses\DlpDataClassesList::class, []);
 	}
 
 
 	/**
 	 * Creates a new data class
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpDataClassesCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDataClassesCreate
+	public function create(\FoundryCo\Cloudflare\Requests\DlpDataClassesCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/data_classes', \FoundryCo\Cloudflare\Responses\DLPDataClassesCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/data_classes', \FoundryCo\Cloudflare\Responses\DlpDataClassesCreate::class, $request);
 	}
 
 
 	/**
 	 * Retrieve a specific data class
 	 */
-	public function get(string $dataClassId): \FoundryCo\Cloudflare\Responses\DLPDataClassesRead
+	public function get(string $dataClassId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_classes/' . $dataClassId, \FoundryCo\Cloudflare\Responses\DLPDataClassesRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_classes/' . $dataClassId, \FoundryCo\Cloudflare\Responses\DlpDataClassesRead::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class DLPDataClassesResource
 	public function update(
 		string $dataClassId,
 		\FoundryCo\Cloudflare\Requests\DlpDataClassesUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDataClassesUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/data_classes/' . $dataClassId, \FoundryCo\Cloudflare\Responses\DLPDataClassesUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/data_classes/' . $dataClassId, \FoundryCo\Cloudflare\Responses\DlpDataClassesUpdate::class, $request);
 	}
 
 

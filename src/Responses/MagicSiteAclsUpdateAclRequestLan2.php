@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class MagicSiteAclsUpdateAclRequestLan2
 {
 	public function __construct(
 		/** The identifier for the LAN you want to create an ACL policy with. */
-		public string $lanId,
+		public ?string $lanId = null,
 		/** The name of the LAN based on the provided lan_id. */
 		public ?string $lanName = null,
 		/** Array of port ranges on the provided LAN that will be included in the ACL. If no ports or port rangess are provided, communication on any port on this LAN is allowed. */

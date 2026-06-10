@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,9 +14,9 @@ readonly class EmailSecurityInvestigateActionLogItem
 {
 	public function __construct(
 		/** Timestamp when action completed */
-		public \DateTimeImmutable $completedAt,
+		public ?\DateTimeImmutable $completedAt = null,
 		/** Type of action performed */
-		public \FoundryCo\Cloudflare\Enums\EmailSecurityInvestigateActionLogItemOperation $operation,
+		public ?\FoundryCo\Cloudflare\Enums\EmailSecurityInvestigateActionLogItemOperation $operation = null,
 		/** Deprecated, use `completed_at` instead. End of life: November 1, 2026. */
 		public ?string $completedTimestamp = null,
 		/** Additional properties for the action */

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,25 +28,25 @@ class AccountUserGroupMembersResource
 		?float $perPage = null,
 		?string $fuzzyEmail = null,
 		?\FoundryCo\Cloudflare\Enums\AccountUserGroupMembersDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members', \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'fuzzyEmail' => $fuzzyEmail ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members', \FoundryCo\Cloudflare\Responses\AccountUserGroupMemberList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'fuzzyEmail' => $fuzzyEmail ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Add User Group Members
 	 */
-	public function create(mixed $userGroupId): \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersCreate
+	public function create(mixed $userGroupId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members', \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersCreate::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members', \FoundryCo\Cloudflare\Responses\AccountUserGroupMemberCreate::class, null);
 	}
 
 
 	/**
 	 * Update User Group Members
 	 */
-	public function update(mixed $userGroupId): \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersUpdate
+	public function update(mixed $userGroupId): mixed
 	{
 		return $this->client->put('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members', \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersUpdate::class, null);
 	}
@@ -55,12 +55,9 @@ class AccountUserGroupMembersResource
 	/**
 	 * Get User Group Member
 	 */
-	public function members(
-		mixed $userGroupId,
-		mixed $memberId,
-	): \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersGet
+	public function members(mixed $userGroupId, mixed $memberId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members/' . $memberId, \FoundryCo\Cloudflare\Responses\AccountUserGroupMembersGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId . '/members/' . $memberId, \FoundryCo\Cloudflare\Responses\AccountUserGroupMemberGet::class, []);
 	}
 
 

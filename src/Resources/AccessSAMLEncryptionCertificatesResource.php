@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,22 +22,18 @@ class AccessSAMLEncryptionCertificatesResource
 	/**
 	 * List SAML certificate sets
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-		?string $id = null,
-	): \FoundryCo\Cloudflare\Responses\AccessSAMLEncryptionCertificatesSets
+	public function list(?int $page = null, ?int $perPage = null, ?string $id = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/saml_certificates', \FoundryCo\Cloudflare\Responses\AccessSAMLEncryptionCertificatesSets::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'id' => $id ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/saml_certificates', \FoundryCo\Cloudflare\Responses\AccessSamlCertificatesListCertificateSets::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'id' => $id ?? null]);
 	}
 
 
 	/**
 	 * Get SAML certificate set
 	 */
-	public function get(string $samlCertSetId): \FoundryCo\Cloudflare\Responses\AccessSAMLEncryptionCertificatesSet
+	public function get(string $samlCertSetId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/saml_certificates/' . $samlCertSetId, \FoundryCo\Cloudflare\Responses\AccessSAMLEncryptionCertificatesSet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/saml_certificates/' . $samlCertSetId, \FoundryCo\Cloudflare\Responses\AccessSamlCertificatesGetCertificateSet::class, []);
 	}
 
 
@@ -53,10 +49,8 @@ class AccessSAMLEncryptionCertificatesResource
 	/**
 	 * Rotate SAML certificate
 	 */
-	public function create(
-		string $samlCertSetId,
-	): \FoundryCo\Cloudflare\Responses\AccessSAMLEncryptionCertificatesCertificate
+	public function create(string $samlCertSetId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/saml_certificates/' . $samlCertSetId . '/rotate', \FoundryCo\Cloudflare\Responses\AccessSAMLEncryptionCertificatesCertificate::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/saml_certificates/' . $samlCertSetId . '/rotate', \FoundryCo\Cloudflare\Responses\AccessSamlCertificatesRotateCertificate::class, null);
 	}
 }

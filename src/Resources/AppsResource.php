@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,41 +22,36 @@ class AppsResource
 	/**
 	 * List apps
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\AppsApps
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps', \FoundryCo\Cloudflare\Responses\AppsApps::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps', \FoundryCo\Cloudflare\Responses\FlagshipListApps::class, []);
 	}
 
 
 	/**
 	 * Create app
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\FlagshipCreateAppRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AppsApp
+	public function create(\FoundryCo\Cloudflare\Requests\FlagshipCreateAppRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/flagship/apps', \FoundryCo\Cloudflare\Responses\AppsApp::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/flagship/apps', \FoundryCo\Cloudflare\Responses\FlagshipCreateApp::class, $request);
 	}
 
 
 	/**
 	 * Get app
 	 */
-	public function get(string $appId): \FoundryCo\Cloudflare\Responses\AppsApp
+	public function get(string $appId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps/' . $appId, \FoundryCo\Cloudflare\Responses\AppsApp::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps/' . $appId, \FoundryCo\Cloudflare\Responses\FlagshipGetApp::class, []);
 	}
 
 
 	/**
 	 * Update app
 	 */
-	public function update(
-		string $appId,
-		\FoundryCo\Cloudflare\Requests\FlagshipUpdateAppRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AppsApp
+	public function update(string $appId, \FoundryCo\Cloudflare\Requests\FlagshipUpdateAppRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/flagship/apps/' . $appId, \FoundryCo\Cloudflare\Responses\AppsApp::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/flagship/apps/' . $appId, \FoundryCo\Cloudflare\Responses\FlagshipUpdateApp::class, $request);
 	}
 
 

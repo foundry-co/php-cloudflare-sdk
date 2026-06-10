@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,11 +13,11 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class PostPresetsRequestUiDesignTokensColorsBrand
 {
 	public function __construct(
-		public string $t300,
-		public string $t400,
-		public string $t500,
-		public string $t600,
-		public string $t700,
+		public ?string $t300 = null,
+		public ?string $t400 = null,
+		public ?string $t500 = null,
+		public ?string $t600 = null,
+		public ?string $t700 = null,
 	) {
 	}
 }

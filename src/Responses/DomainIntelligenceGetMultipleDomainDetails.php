@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-10 02:24:37 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class DomainIntelligenceGetMultipleDomainDetails
+{
+	public function __construct(
+		/** Additional information related to the host name. */
+		public ?DomainIntelligenceGetMultipleDomainDetailsAdditionalInformation $additionalInformation = null,
+		/** Application that the hostname belongs to. */
+		public ?DomainIntelligenceGetMultipleDomainDetailsApplication $application = null,
+		public ?array $contentCategories = null,
+		public ?string $domain = null,
+		public ?array $inheritedContentCategories = null,
+		/** Domain from which `inherited_content_categories` and `inherited_risk_types` are inherited, if applicable. */
+		public ?string $inheritedFrom = null,
+		public ?array $inheritedRiskTypes = null,
+		/** Global Cloudflare 100k ranking for the last 30 days, if available for the hostname. The top ranked domain is 1, the lowest ranked domain is 100,000. */
+		public ?int $popularityRank = null,
+		/** Hostname risk score, which is a value between 0 (lowest risk) to 1 (highest risk). */
+		public ?float $riskScore = null,
+		public ?array $riskTypes = null,
+	) {
+	}
+}

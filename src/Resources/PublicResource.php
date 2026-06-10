@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,29 +26,27 @@ class PublicResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\PublicOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\PublicDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionRouting
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionRouting::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\GetPublicListSuppressionRouting::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create account email suppression
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostPublicNewSuppressionRoutingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionRouting
+	public function create(\FoundryCo\Cloudflare\Requests\PostPublicNewSuppressionRoutingRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionRouting::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\PostPublicNewSuppressionRouting::class, $request);
 	}
 
 
 	/**
 	 * Get account email suppression
 	 */
-	public function get(string $suppressionId): \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionRouting
+	public function get(string $suppressionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionRouting::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\GetPublicGetSuppressionRouting::class, []);
 	}
 
 
@@ -64,12 +62,9 @@ class PublicResource
 	/**
 	 * Get feedback emails statistics
 	 */
-	public function feedback(
-		?\DateTimeImmutable $startAt = null,
-		?\DateTimeImmutable $endAt = null,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicFeedbackStatus
+	public function feedback(?\DateTimeImmutable $startAt = null, ?\DateTimeImmutable $endAt = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/sending/feedback', \FoundryCo\Cloudflare\Responses\PublicPublicFeedbackStatus::class, ['startAt' => $startAt ?? null, 'endAt' => $endAt ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/sending/feedback', \FoundryCo\Cloudflare\Responses\GetPublicFeedbackStatus::class, ['startAt' => $startAt ?? null, 'endAt' => $endAt ?? null]);
 	}
 
 
@@ -81,9 +76,9 @@ class PublicResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\PublicOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\PublicDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionSending
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionSending::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\GetPublicListSuppressionSending::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -92,20 +87,18 @@ class PublicResource
 	 */
 	public function postPublicNewSuppressionSending(
 		\FoundryCo\Cloudflare\Requests\PostPublicNewSuppressionSendingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionSending
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionSending::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\PostPublicNewSuppressionSending::class, $request);
 	}
 
 
 	/**
 	 * Get account email suppression
 	 */
-	public function getPublicGetSuppressionSending(
-		string $suppressionId,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionSending
+	public function getPublicGetSuppressionSending(string $suppressionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/sending/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionSending::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/sending/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\GetPublicGetSuppressionSending::class, []);
 	}
 
 
@@ -126,9 +119,9 @@ class PublicResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\PublicOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\PublicDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionZoneRouting
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionZoneRouting::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\GetPublicListSuppressionZoneRouting::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -137,20 +130,18 @@ class PublicResource
 	 */
 	public function postPublicNewSuppressionZoneRouting(
 		\FoundryCo\Cloudflare\Requests\PostPublicNewSuppressionZoneRoutingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionZoneRouting
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionZoneRouting::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/routing/suppression', \FoundryCo\Cloudflare\Responses\PostPublicNewSuppressionZoneRouting::class, $request);
 	}
 
 
 	/**
 	 * Get zone email suppression
 	 */
-	public function getPublicGetSuppressionZoneRouting(
-		string $suppressionId,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionZoneRouting
+	public function getPublicGetSuppressionZoneRouting(string $suppressionId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/routing/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionZoneRouting::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/routing/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\GetPublicGetSuppressionZoneRouting::class, []);
 	}
 
 
@@ -171,9 +162,9 @@ class PublicResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\PublicOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\PublicDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionZoneSending
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicListSuppressionZoneSending::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\GetPublicListSuppressionZoneSending::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -182,20 +173,18 @@ class PublicResource
 	 */
 	public function postPublicNewSuppressionZoneSending(
 		\FoundryCo\Cloudflare\Requests\PostPublicNewSuppressionZoneSendingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionZoneSending
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\PublicPublicNewSuppressionZoneSending::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/email/sending/suppression', \FoundryCo\Cloudflare\Responses\PostPublicNewSuppressionZoneSending::class, $request);
 	}
 
 
 	/**
 	 * Get zone email suppression
 	 */
-	public function getPublicGetSuppressionZoneSending(
-		string $suppressionId,
-	): \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionZoneSending
+	public function getPublicGetSuppressionZoneSending(string $suppressionId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\PublicPublicGetSuppressionZoneSending::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/sending/suppression/' . $suppressionId, \FoundryCo\Cloudflare\Responses\GetPublicGetSuppressionZoneSending::class, []);
 	}
 
 

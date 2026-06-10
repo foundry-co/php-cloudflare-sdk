@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,9 +26,9 @@ class ZoneAnalyticsDeprecatedResource
 		mixed $until = null,
 		mixed $since = null,
 		?bool $continuous = null,
-	): \FoundryCo\Cloudflare\Responses\ZoneAnalyticsDeprecatedLocations
+	): mixed
 	{
-		return $this->client->get('/zones/' . $zoneIdentifier . '/analytics/colos', \FoundryCo\Cloudflare\Responses\ZoneAnalyticsDeprecatedLocations::class, ['until' => $until ?? null, 'since' => $since ?? null, 'continuous' => $continuous ?? null]);
+		return $this->client->get('/zones/' . $zoneIdentifier . '/analytics/colos', \FoundryCo\Cloudflare\Responses\ZoneAnalyticsDeprecatedGetAnalyticsByCoLocations::class, ['until' => $until ?? null, 'since' => $since ?? null, 'continuous' => $continuous ?? null]);
 	}
 
 
@@ -40,8 +40,8 @@ class ZoneAnalyticsDeprecatedResource
 		mixed $until = null,
 		mixed $since = null,
 		?bool $continuous = null,
-	): \FoundryCo\Cloudflare\Responses\ZoneAnalyticsDeprecatedDashboard
+	): mixed
 	{
-		return $this->client->get('/zones/' . $zoneIdentifier . '/analytics/dashboard', \FoundryCo\Cloudflare\Responses\ZoneAnalyticsDeprecatedDashboard::class, ['until' => $until ?? null, 'since' => $since ?? null, 'continuous' => $continuous ?? null]);
+		return $this->client->get('/zones/' . $zoneIdentifier . '/analytics/dashboard', \FoundryCo\Cloudflare\Responses\ZoneAnalyticsDeprecatedGetDashboard::class, ['until' => $until ?? null, 'since' => $since ?? null, 'continuous' => $continuous ?? null]);
 	}
 }

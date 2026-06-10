@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class PostPresetsRequestConfigMediaScreenshare
 {
 	public function __construct(
 		/** Frame rate of screen share */
-		public float $frameRate,
+		public ?float $frameRate = null,
 		/** Quality of screen share */
-		public \FoundryCo\Cloudflare\Enums\PostPresetsRequestConfigMediaScreenshareQuality $quality,
+		public ?\FoundryCo\Cloudflare\Enums\PostPresetsRequestConfigMediaScreenshareQuality $quality = null,
 	) {
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class AccessIdpFederationGrantsResource
 	/**
 	 * List IdP federation grants
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\AccessIdPFederationGrantsList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/idp_federation_grants', \FoundryCo\Cloudflare\Responses\AccessIdPFederationGrantsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/idp_federation_grants', \FoundryCo\Cloudflare\Responses\AccessIdpFederationGrantsList::class, []);
 	}
 
 
 	/**
 	 * Create an IdP federation grant
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccessIdpFederationGrantsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessIdPFederationGrantsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\AccessIdpFederationGrantsCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/idp_federation_grants', \FoundryCo\Cloudflare\Responses\AccessIdPFederationGrantsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/idp_federation_grants', \FoundryCo\Cloudflare\Responses\AccessIdpFederationGrantsCreate::class, $request);
 	}
 
 
 	/**
 	 * Get an IdP federation grant
 	 */
-	public function get(string $grantId): \FoundryCo\Cloudflare\Responses\AccessIdPFederationGrantsGet
+	public function get(string $grantId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/idp_federation_grants/' . $grantId, \FoundryCo\Cloudflare\Responses\AccessIdPFederationGrantsGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/idp_federation_grants/' . $grantId, \FoundryCo\Cloudflare\Responses\AccessIdpFederationGrantsGet::class, []);
 	}
 
 

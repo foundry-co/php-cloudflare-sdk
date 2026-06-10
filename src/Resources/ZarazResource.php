@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class ZarazResource
 	/**
 	 * Get Zaraz configuration
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZarazConfig
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/config', \FoundryCo\Cloudflare\Responses\ZarazConfig::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/config', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdentifierZarazConfig::class, []);
 	}
 
 
 	/**
 	 * Update Zaraz configuration
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\PutZonesZoneIdentifierZarazConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZarazConfig
+	public function update(\FoundryCo\Cloudflare\Requests\PutZonesZoneIdentifierZarazConfigRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/settings/zaraz/config', \FoundryCo\Cloudflare\Responses\ZarazConfig::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/settings/zaraz/config', \FoundryCo\Cloudflare\Responses\PutZonesZoneIdentifierZarazConfig::class, $request);
 	}
 
 
 	/**
 	 * Get default Zaraz configuration
 	 */
-	public function default(): \FoundryCo\Cloudflare\Responses\ZarazDefault
+	public function default(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/default', \FoundryCo\Cloudflare\Responses\ZarazDefault::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/default', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdentifierZarazDefault::class, []);
 	}
 
 
@@ -65,18 +63,18 @@ class ZarazResource
 		?int $limit = null,
 		?\FoundryCo\Cloudflare\Enums\ZarazSortField $sortField = null,
 		?\FoundryCo\Cloudflare\Enums\ZarazSortOrder $sortOrder = null,
-	): \FoundryCo\Cloudflare\Responses\ZarazHistory
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/history', \FoundryCo\Cloudflare\Responses\ZarazHistory::class, ['offset' => $offset ?? null, 'limit' => $limit ?? null, 'sortField' => $sortField ?? null, 'sortOrder' => $sortOrder ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/history', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdentifierZarazHistory::class, ['offset' => $offset ?? null, 'limit' => $limit ?? null, 'sortField' => $sortField ?? null, 'sortOrder' => $sortOrder ?? null]);
 	}
 
 
 	/**
 	 * Restore Zaraz historical configuration by ID
 	 */
-	public function putZonesZoneIdentifierZarazHistory(): \FoundryCo\Cloudflare\Responses\ZarazHistory
+	public function putZonesZoneIdentifierZarazHistory(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/settings/zaraz/history', \FoundryCo\Cloudflare\Responses\ZarazHistory::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/settings/zaraz/history', \FoundryCo\Cloudflare\Responses\PutZonesZoneIdentifierZarazHistory::class, null);
 	}
 
 
@@ -101,17 +99,17 @@ class ZarazResource
 	/**
 	 * Get Zaraz workflow
 	 */
-	public function workflow(): \FoundryCo\Cloudflare\Enums\ZarazWorkflow
+	public function workflow(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/workflow', \FoundryCo\Cloudflare\Enums\ZarazWorkflow::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/zaraz/workflow', \FoundryCo\Cloudflare\Enums\GetZonesZoneIdentifierZarazWorkflow::class, []);
 	}
 
 
 	/**
 	 * Update Zaraz workflow
 	 */
-	public function putZonesZoneIdentifierZarazWorkflow(): \FoundryCo\Cloudflare\Enums\ZarazWorkflow
+	public function putZonesZoneIdentifierZarazWorkflow(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/settings/zaraz/workflow', \FoundryCo\Cloudflare\Enums\ZarazWorkflow::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/settings/zaraz/workflow', \FoundryCo\Cloudflare\Enums\PutZonesZoneIdentifierZarazWorkflow::class, null);
 	}
 }

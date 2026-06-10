@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,33 +30,27 @@ class OrganizationmembersResource
 		?string $useremailendsWith = null,
 		?string $pageToken = null,
 		?int $pageSize = null,
-	): \FoundryCo\Cloudflare\Responses\OrganizationMembersList
+	): mixed
 	{
-		return $this->client->get('/organizations/' . $organizationId . '/members', \FoundryCo\Cloudflare\Responses\OrganizationMembersList::class, ['status' => $status ?? null, 'useremail' => $useremail ?? null, 'useremailcontains' => $useremailcontains ?? null, 'useremailstartsWith' => $useremailstartsWith ?? null, 'useremailendsWith' => $useremailendsWith ?? null, 'pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null]);
+		return $this->client->get('/organizations/' . $organizationId . '/members', \FoundryCo\Cloudflare\Responses\MembersList::class, ['status' => $status ?? null, 'useremail' => $useremail ?? null, 'useremailcontains' => $useremailcontains ?? null, 'useremailstartsWith' => $useremailstartsWith ?? null, 'useremailendsWith' => $useremailendsWith ?? null, 'pageToken' => $pageToken ?? null, 'pageSize' => $pageSize ?? null]);
 	}
 
 
 	/**
 	 * Create organization member
 	 */
-	public function create(
-		string $organizationId,
-		\FoundryCo\Cloudflare\Requests\MembersCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OrganizationMembersCreate
+	public function create(string $organizationId, \FoundryCo\Cloudflare\Requests\MembersCreateRequest $request): mixed
 	{
-		return $this->client->post('/organizations/' . $organizationId . '/members', \FoundryCo\Cloudflare\Responses\OrganizationMembersCreate::class, $request);
+		return $this->client->post('/organizations/' . $organizationId . '/members', \FoundryCo\Cloudflare\Responses\MembersCreate::class, $request);
 	}
 
 
 	/**
 	 * Get organization member
 	 */
-	public function members(
-		string $organizationId,
-		string $memberId,
-	): \FoundryCo\Cloudflare\Responses\OrganizationMembersRetrieve
+	public function members(string $organizationId, string $memberId): mixed
 	{
-		return $this->client->get('/organizations/' . $organizationId . '/members/' . $memberId, \FoundryCo\Cloudflare\Responses\OrganizationMembersRetrieve::class, []);
+		return $this->client->get('/organizations/' . $organizationId . '/members/' . $memberId, \FoundryCo\Cloudflare\Responses\MembersRetrieve::class, []);
 	}
 
 
@@ -79,8 +73,8 @@ class OrganizationmembersResource
 	public function membersBatchcreate(
 		string $organizationId,
 		\FoundryCo\Cloudflare\Requests\MembersBatchCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OrganizationMembersBatchCreate
+	): mixed
 	{
-		return $this->client->post('/organizations/' . $organizationId . '/members:batchCreate', \FoundryCo\Cloudflare\Responses\OrganizationMembersBatchCreate::class, $request);
+		return $this->client->post('/organizations/' . $organizationId . '/members:batchCreate', \FoundryCo\Cloudflare\Responses\MembersBatchCreate::class, $request);
 	}
 }

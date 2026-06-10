@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class IPAddressManagementPrefixDelegationResource
 	/**
 	 * List Prefix Delegations
 	 */
-	public function get(string $prefixId): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixDelegationDelegations
+	public function get(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/delegations', \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixDelegationDelegations::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/delegations', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixDelegationListPrefixDelegations::class, []);
 	}
 
 
@@ -34,9 +34,9 @@ class IPAddressManagementPrefixDelegationResource
 	public function create(
 		string $prefixId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementPrefixDelegationCreatePrefixDelegationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixDelegationDelegation
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/delegations', \FoundryCo\Cloudflare\Responses\IPAddressManagementPrefixDelegationDelegation::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/delegations', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixDelegationCreatePrefixDelegation::class, $request);
 	}
 
 

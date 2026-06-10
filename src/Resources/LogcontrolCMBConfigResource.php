@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class LogcontrolCMBConfigResource
 	/**
 	 * Get CMB config
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\LogcontrolCMBConfigForAnAccountConfig
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/logs/control/cmb/config', \FoundryCo\Cloudflare\Responses\LogcontrolCMBConfigForAnAccountConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/logs/control/cmb/config', \FoundryCo\Cloudflare\Responses\GetAccountsAccountIdLogsControlCmbConfig::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class LogcontrolCMBConfigResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\PostAccountsAccountIdLogsControlCmbConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LogcontrolCMBConfigForAnAccountConfig
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/logs/control/cmb/config', \FoundryCo\Cloudflare\Responses\LogcontrolCMBConfigForAnAccountConfig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/logs/control/cmb/config', \FoundryCo\Cloudflare\Responses\PostAccountsAccountIdLogsControlCmbConfig::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,19 +22,17 @@ class DNSSettingsResource
 	/**
 	 * Show DNS Settings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DNSSettingsForAZoneSettings
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_settings', \FoundryCo\Cloudflare\Responses\DNSSettingsForAZoneSettings::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_settings', \FoundryCo\Cloudflare\Responses\DnsSettingsForAZoneListDnsSettings::class, []);
 	}
 
 
 	/**
 	 * Update DNS Settings
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\DnsSettingsForAZoneUpdateDnsSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DNSSettingsForAZoneSettings
+	public function update(\FoundryCo\Cloudflare\Requests\DnsSettingsForAZoneUpdateDnsSettingsRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/dns_settings', \FoundryCo\Cloudflare\Responses\DNSSettingsForAZoneSettings::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/dns_settings', \FoundryCo\Cloudflare\Responses\DnsSettingsForAZoneUpdateDnsSettings::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,30 +27,27 @@ class PagesDeploymentResource
 		?\FoundryCo\Cloudflare\Enums\PagesDeploymentEnv $env = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployments
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments', \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployments::class, ['env' => $env ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments', \FoundryCo\Cloudflare\Responses\PagesDeploymentGetDeployments::class, ['env' => $env ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create deployment
 	 */
-	public function create(string $projectName): \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployment
+	public function create(string $projectName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments', \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployment::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments', \FoundryCo\Cloudflare\Responses\PagesDeploymentCreateDeployment::class, null);
 	}
 
 
 	/**
 	 * Get deployment info
 	 */
-	public function deployments(
-		string $deploymentId,
-		string $projectName,
-	): \FoundryCo\Cloudflare\Responses\PagesDeploymentInfo
+	public function deployments(string $deploymentId, string $projectName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId, \FoundryCo\Cloudflare\Responses\PagesDeploymentInfo::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId, \FoundryCo\Cloudflare\Responses\PagesDeploymentGetDeploymentInfo::class, []);
 	}
 
 
@@ -66,32 +63,26 @@ class PagesDeploymentResource
 	/**
 	 * Get deployment logs
 	 */
-	public function logs(string $deploymentId, string $projectName): \FoundryCo\Cloudflare\Responses\PagesDeploymentLogs
+	public function logs(string $deploymentId, string $projectName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId . '/history/logs', \FoundryCo\Cloudflare\Responses\PagesDeploymentLogs::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId . '/history/logs', \FoundryCo\Cloudflare\Responses\PagesDeploymentGetDeploymentLogs::class, []);
 	}
 
 
 	/**
 	 * Retry deployment
 	 */
-	public function retry(
-		string $deploymentId,
-		string $projectName,
-	): \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployment
+	public function retry(string $deploymentId, string $projectName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId . '/retry', \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployment::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId . '/retry', \FoundryCo\Cloudflare\Responses\PagesDeploymentRetryDeployment::class, null);
 	}
 
 
 	/**
 	 * Rollback deployment
 	 */
-	public function rollback(
-		string $deploymentId,
-		string $projectName,
-	): \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployment
+	public function rollback(string $deploymentId, string $projectName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId . '/rollback', \FoundryCo\Cloudflare\Responses\PagesDeploymentDeployment::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/pages/projects/' . $projectName . '/deployments/' . $deploymentId . '/rollback', \FoundryCo\Cloudflare\Responses\PagesDeploymentRollbackDeployment::class, null);
 	}
 }

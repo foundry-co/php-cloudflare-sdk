@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class StreamMp4DownloadsResource
 	/**
 	 * List downloads
 	 */
-	public function get(string $identifier): \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsDownloads
+	public function get(string $identifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/' . $identifier . '/downloads', \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsDownloads::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/' . $identifier . '/downloads', \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsListDownloads::class, []);
 	}
 
 
 	/**
 	 * Create downloads
 	 */
-	public function create(string $identifier): \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsDownloads
+	public function create(string $identifier): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/downloads', \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsDownloads::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/downloads', \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsCreateDownloads::class, null);
 	}
 
 
@@ -52,9 +52,9 @@ class StreamMp4DownloadsResource
 	public function downloads(
 		string $identifier,
 		\FoundryCo\Cloudflare\Enums\StreamMP4DownloadsDownloadType $downloadType,
-	): \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsDownloads
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/downloads/' . $downloadType, \FoundryCo\Cloudflare\Responses\StreamMP4DownloadsDownloads::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/' . $identifier . '/downloads/' . $downloadType, \FoundryCo\Cloudflare\Responses\StreamDownloadsCreateTypeSpecificDownloads::class, null);
 	}
 
 

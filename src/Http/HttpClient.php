@@ -21,7 +21,7 @@ class HttpClient
         string $baseUrl = 'https://api.cloudflare.com/client/v4',
     ) {
         $this->guzzle = new Client([
-            'base_uri' => rtrim($baseUrl, '/'),
+            'base_uri' => rtrim($baseUrl, '/') . '/',
             'headers'  => [
                 'Authorization' => "Bearer {$apiToken}",
                 'Content-Type'  => 'application/json',
@@ -31,8 +31,9 @@ class HttpClient
 
         $this->mapper = (new MapperBuilder())
             ->allowPermissiveTypes()
-            ->enableFlexibleCasting()
+            ->allowScalarValueCasting()
             ->allowSuperfluousKeys()
+            ->allowUndefinedValues()
             ->mapper();
     }
 
@@ -133,7 +134,7 @@ class HttpClient
     private function deserializePaginated(array $body, string $class): PaginatedResponse
     {
         $items = array_map(
-            fn (array $item) => $this->mapper->map($class, Source::array($item)),
+            fn (array $item) => $this->mapper->map($class, Source::array($this->stripNulls($item))->camelCaseKeys()),
             $body['result'] ?? []
         );
 
@@ -156,6 +157,19 @@ class HttpClient
     private function deserializeSingle(array $body, string $class): object
     {
         $result = $body['result'] ?? $body;
-        return $this->mapper->map($class, Source::array(is_array($result) ? $result : []));
+        $data = is_array($result) ? $this->stripNulls($result) : [];
+        return $this->mapper->map($class, Source::array($data)->camelCaseKeys());
+    }
+
+    private function stripNulls(array $data): array
+    {
+        $out = [];
+        foreach ($data as $key => $value) {
+            if ($value === null) {
+                continue;
+            }
+            $out[$key] = is_array($value) ? $this->stripNulls($value) : $value;
+        }
+        return $out;
     }
 }

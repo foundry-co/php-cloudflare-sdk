@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,9 +34,9 @@ class TunnelRoutingResource
 		?string $virtualNetworkId = null,
 		?float $perPage = null,
 		?float $page = null,
-	): \FoundryCo\Cloudflare\Responses\TunnelRoutingRoutes
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/teamnet/routes', \FoundryCo\Cloudflare\Responses\TunnelRoutingRoutes::class, ['comment' => $comment ?? null, 'isDeleted' => $isDeleted ?? null, 'networkSubset' => $networkSubset ?? null, 'networkSuperset' => $networkSuperset ?? null, 'existedAt' => $existedAt ?? null, 'tunnelId' => $tunnelId ?? null, 'routeId' => $routeId ?? null, 'tunTypes' => $tunTypes ?? null, 'virtualNetworkId' => $virtualNetworkId ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/teamnet/routes', \FoundryCo\Cloudflare\Responses\TunnelRouteListTunnelRoutes::class, ['comment' => $comment ?? null, 'isDeleted' => $isDeleted ?? null, 'networkSubset' => $networkSubset ?? null, 'networkSuperset' => $networkSuperset ?? null, 'existedAt' => $existedAt ?? null, 'tunnelId' => $tunnelId ?? null, 'routeId' => $routeId ?? null, 'tunTypes' => $tunTypes ?? null, 'virtualNetworkId' => $virtualNetworkId ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MagicSiteNetflowConfigResource
 	/**
 	 * NetFlow Configuration Details
 	 */
-	public function get(string $siteId): \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigDetails
+	public function get(string $siteId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetflowConfigDetails::class, []);
 	}
 
 
@@ -34,9 +34,9 @@ class MagicSiteNetflowConfigResource
 	public function create(
 		string $siteId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteNetflowConfigCreateNetflowConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigConfig
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigConfig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetflowConfigCreateNetflowConfig::class, $request);
 	}
 
 
@@ -46,9 +46,9 @@ class MagicSiteNetflowConfigResource
 	public function update(
 		string $siteId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteNetflowConfigUpdateNetflowConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigConfig
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigConfig::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetflowConfigUpdateNetflowConfig::class, $request);
 	}
 
 
@@ -58,9 +58,9 @@ class MagicSiteNetflowConfigResource
 	public function netflowConfig(
 		string $siteId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteNetflowConfigPatchNetflowConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigConfig
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetFlowConfigConfig::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/netflow_config', \FoundryCo\Cloudflare\Responses\MagicSiteNetflowConfigPatchNetflowConfig::class, $request);
 	}
 
 

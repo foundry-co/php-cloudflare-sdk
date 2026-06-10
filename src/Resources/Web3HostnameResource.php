@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class Web3HostnameResource
 	/**
 	 * List Web3 Hostnames
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\Web3HostnameHostnames
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames', \FoundryCo\Cloudflare\Responses\Web3HostnameHostnames::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames', \FoundryCo\Cloudflare\Responses\Web3HostnameListWeb3Hostnames::class, []);
 	}
 
 
 	/**
 	 * Create Web3 Hostname
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\Web3HostnameCreateWeb3HostnameRequest $request,
-	): \FoundryCo\Cloudflare\Responses\Web3HostnameHostname
+	public function create(\FoundryCo\Cloudflare\Requests\Web3HostnameCreateWeb3HostnameRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/web3/hostnames', \FoundryCo\Cloudflare\Responses\Web3HostnameHostname::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/web3/hostnames', \FoundryCo\Cloudflare\Responses\Web3HostnameCreateWeb3Hostname::class, $request);
 	}
 
 
 	/**
 	 * Web3 Hostname Details
 	 */
-	public function get(string $identifier): \FoundryCo\Cloudflare\Responses\Web3HostnameDetails
+	public function get(string $identifier): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier, \FoundryCo\Cloudflare\Responses\Web3HostnameDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier, \FoundryCo\Cloudflare\Responses\Web3HostnameWeb3HostnameDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class Web3HostnameResource
 	public function update(
 		string $identifier,
 		\FoundryCo\Cloudflare\Requests\Web3HostnameEditWeb3HostnameRequest $request,
-	): \FoundryCo\Cloudflare\Responses\Web3HostnameHostname
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier, \FoundryCo\Cloudflare\Responses\Web3HostnameHostname::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier, \FoundryCo\Cloudflare\Responses\Web3HostnameEditWeb3Hostname::class, $request);
 	}
 
 
@@ -72,9 +70,9 @@ class Web3HostnameResource
 	/**
 	 * IPFS Universal Path Gateway Content List Details
 	 */
-	public function contentList(string $identifier): \FoundryCo\Cloudflare\Responses\Web3HostnameDetails
+	public function contentList(string $identifier): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list', \FoundryCo\Cloudflare\Responses\Web3HostnameDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list', \FoundryCo\Cloudflare\Responses\Web3HostnameIpfsUniversalPathGatewayContentListDetails::class, []);
 	}
 
 
@@ -84,18 +82,18 @@ class Web3HostnameResource
 	public function web3HostnameUpdateIpfsUniversalPathGatewayContentList(
 		string $identifier,
 		\FoundryCo\Cloudflare\Requests\Web3HostnameUpdateIpfsUniversalPathGatewayContentListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\Web3HostnameList
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list', \FoundryCo\Cloudflare\Responses\Web3HostnameList::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list', \FoundryCo\Cloudflare\Responses\Web3HostnameUpdateIpfsUniversalPathGatewayContentList::class, $request);
 	}
 
 
 	/**
 	 * List IPFS Universal Path Gateway Content List Entries
 	 */
-	public function entries(string $identifier): \FoundryCo\Cloudflare\Responses\Web3HostnameEntries
+	public function entries(string $identifier): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries', \FoundryCo\Cloudflare\Responses\Web3HostnameEntries::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries', \FoundryCo\Cloudflare\Responses\Web3HostnameListIpfsUniversalPathGatewayContentListEntries::class, []);
 	}
 
 
@@ -105,9 +103,9 @@ class Web3HostnameResource
 	public function web3HostnameCreateIpfsUniversalPathGatewayContentListEntry(
 		string $identifier,
 		\FoundryCo\Cloudflare\Requests\Web3HostnameCreateIpfsUniversalPathGatewayContentListEntryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\Web3HostnameEntry
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries', \FoundryCo\Cloudflare\Responses\Web3HostnameEntry::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries', \FoundryCo\Cloudflare\Responses\Web3HostnameCreateIpfsUniversalPathGatewayContentListEntry::class, $request);
 	}
 
 
@@ -117,9 +115,9 @@ class Web3HostnameResource
 	public function web3HostnameIpfsUniversalPathGatewayContentListEntryDetails(
 		string $contentListEntryIdentifier,
 		string $identifier,
-	): \FoundryCo\Cloudflare\Responses\Web3HostnameDetails
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries/' . $contentListEntryIdentifier, \FoundryCo\Cloudflare\Responses\Web3HostnameDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries/' . $contentListEntryIdentifier, \FoundryCo\Cloudflare\Responses\Web3HostnameIpfsUniversalPathGatewayContentListEntryDetails::class, []);
 	}
 
 
@@ -130,9 +128,9 @@ class Web3HostnameResource
 		string $contentListEntryIdentifier,
 		string $identifier,
 		\FoundryCo\Cloudflare\Requests\Web3HostnameEditIpfsUniversalPathGatewayContentListEntryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\Web3HostnameEntry
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries/' . $contentListEntryIdentifier, \FoundryCo\Cloudflare\Responses\Web3HostnameEntry::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/web3/hostnames/' . $identifier . '/ipfs_universal_path/content_list/entries/' . $contentListEntryIdentifier, \FoundryCo\Cloudflare\Responses\Web3HostnameEditIpfsUniversalPathGatewayContentListEntry::class, $request);
 	}
 
 

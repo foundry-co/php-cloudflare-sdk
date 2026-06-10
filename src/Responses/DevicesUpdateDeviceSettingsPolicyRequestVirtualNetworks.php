@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class DevicesUpdateDeviceSettingsPolicyRequestVirtualNetworks
 {
 	public function __construct(
 		/** List of virtual network IDs the device is allowed to access. When virtual_networks is set, at least one entry is required. */
-		public array $allowed,
+		public ?array $allowed = null,
 		/** The default virtual network ID. Must be included in the `allowed` list. */
-		public string $default,
+		public ?string $default = null,
 	) {
 	}
 }

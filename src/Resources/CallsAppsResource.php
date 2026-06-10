@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,7 +22,7 @@ class CallsAppsResource
 	/**
 	 * List apps
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\CallsAppsList
+	public function list(): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/calls/apps', \FoundryCo\Cloudflare\Responses\CallsAppsList::class, []);
 	}
@@ -31,20 +31,18 @@ class CallsAppsResource
 	/**
 	 * Create a new app
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CallsAppsCreateANewAppRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CallsAppsApp
+	public function create(\FoundryCo\Cloudflare\Requests\CallsAppsCreateANewAppRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/calls/apps', \FoundryCo\Cloudflare\Responses\CallsAppsApp::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/calls/apps', \FoundryCo\Cloudflare\Responses\CallsAppsCreateANewApp::class, $request);
 	}
 
 
 	/**
 	 * Retrieve app details
 	 */
-	public function get(string $appId): \FoundryCo\Cloudflare\Responses\CallsAppsDetails
+	public function get(string $appId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/calls/apps/' . $appId, \FoundryCo\Cloudflare\Responses\CallsAppsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/calls/apps/' . $appId, \FoundryCo\Cloudflare\Responses\CallsAppsRetrieveAppDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class CallsAppsResource
 	public function update(
 		string $appId,
 		\FoundryCo\Cloudflare\Requests\CallsAppsUpdateAppDetailsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CallsAppsDetails
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/calls/apps/' . $appId, \FoundryCo\Cloudflare\Responses\CallsAppsDetails::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/calls/apps/' . $appId, \FoundryCo\Cloudflare\Responses\CallsAppsUpdateAppDetails::class, $request);
 	}
 
 

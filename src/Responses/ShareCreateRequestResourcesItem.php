@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,13 +14,13 @@ readonly class ShareCreateRequestResourcesItem
 {
 	public function __construct(
 		/** Resource Metadata. */
-		public array $meta,
+		public ?array $meta = null,
 		/** Account identifier. */
-		public string $resourceAccountId,
+		public ?string $resourceAccountId = null,
 		/** Share Resource identifier. */
-		public string $resourceId,
+		public ?string $resourceId = null,
 		/** Resource Type. */
-		public \FoundryCo\Cloudflare\Enums\ShareCreateRequestResourcesItemResourceType $resourceType,
+		public ?\FoundryCo\Cloudflare\Enums\ShareCreateRequestResourcesItemResourceType $resourceType = null,
 	) {
 	}
 }

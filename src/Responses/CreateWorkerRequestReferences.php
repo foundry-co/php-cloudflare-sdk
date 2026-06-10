@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,15 +17,15 @@ readonly class CreateWorkerRequestReferences
 {
 	public function __construct(
 		/** Other Workers that reference the Worker as an outbound for a dispatch namespace. */
-		public array $dispatchNamespaceOutbounds,
+		public ?array $dispatchNamespaceOutbounds = null,
 		/** Custom domains connected to the Worker. */
-		public array $domains,
+		public ?array $domains = null,
 		/** Other Workers that reference Durable Object classes implemented by the Worker. */
-		public array $durableObjects,
+		public ?array $durableObjects = null,
 		/** Queues that send messages to the Worker. */
-		public array $queues,
+		public ?array $queues = null,
 		/** Other Workers that reference the Worker using [service bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/). */
-		public array $workers,
+		public ?array $workers = null,
 	) {
 	}
 }

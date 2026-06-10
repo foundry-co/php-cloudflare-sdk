@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,17 +13,17 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class TenantsRetrieveTenant
 {
 	public function __construct(
-		public \DateTimeImmutable $cdate,
-		public \DateTimeImmutable $edate,
-		public TenantsRetrieveTenantTenantContacts $tenantContacts,
-		public array $tenantLabels,
-		public TenantsRetrieveTenantTenantMetadata $tenantMetadata,
-		public string $tenantName,
-		public array $tenantNetwork,
-		public string $tenantStatus,
-		public string $tenantTag,
-		public string $tenantType,
-		public array $tenantUnits,
+		public ?\DateTimeImmutable $cdate = null,
+		public ?\DateTimeImmutable $edate = null,
+		public ?TenantsRetrieveTenantTenantContacts $tenantContacts = null,
+		public ?array $tenantLabels = null,
+		public ?TenantsRetrieveTenantTenantMetadata $tenantMetadata = null,
+		public ?string $tenantName = null,
+		public ?array $tenantNetwork = null,
+		public ?string $tenantStatus = null,
+		public ?string $tenantTag = null,
+		public ?string $tenantType = null,
+		public ?array $tenantUnits = null,
 		public ?string $customerId = null,
 	) {
 	}

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class GoogleTagGatewayResource
 	/**
 	 * Get Google Tag Gateway configuration
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\GoogleTagGatewayConfig
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/settings/google-tag-gateway/config', \FoundryCo\Cloudflare\Responses\GoogleTagGatewayConfig::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/settings/google-tag-gateway/config', \FoundryCo\Cloudflare\Responses\ZoneSettingsGetGoogleTagGatewayConfig::class, []);
 	}
 
 
@@ -33,8 +33,8 @@ class GoogleTagGatewayResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ZoneSettingsChangeGoogleTagGatewayConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\GoogleTagGatewayConfig
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/settings/google-tag-gateway/config', \FoundryCo\Cloudflare\Responses\GoogleTagGatewayConfig::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/settings/google-tag-gateway/config', \FoundryCo\Cloudflare\Responses\ZoneSettingsChangeGoogleTagGatewayConfig::class, $request);
 	}
 }

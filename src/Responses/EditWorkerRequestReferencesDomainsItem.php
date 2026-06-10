@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,15 +14,15 @@ readonly class EditWorkerRequestReferencesDomainsItem
 {
 	public function __construct(
 		/** ID of the TLS certificate issued for the custom domain. */
-		public string $certificateId,
+		public ?string $certificateId = null,
 		/** Full hostname of the custom domain, including the zone name. */
-		public string $hostname,
+		public ?string $hostname = null,
 		/** ID of the custom domain. */
-		public string $id,
+		public ?string $id = null,
 		/** ID of the zone. */
-		public string $zoneId,
+		public ?string $zoneId = null,
 		/** Name of the zone. */
-		public string $zoneName,
+		public ?string $zoneName = null,
 	) {
 	}
 }

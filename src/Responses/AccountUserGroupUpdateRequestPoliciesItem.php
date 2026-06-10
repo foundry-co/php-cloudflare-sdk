@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,13 +14,13 @@ readonly class AccountUserGroupUpdateRequestPoliciesItem
 {
 	public function __construct(
 		/** Policy identifier. */
-		public string $id,
+		public ?string $id = null,
 		/** Allow or deny operations against the resources. */
-		public \FoundryCo\Cloudflare\Enums\AccountUserGroupUpdateRequestPoliciesItemAccess $access,
+		public ?\FoundryCo\Cloudflare\Enums\AccountUserGroupUpdateRequestPoliciesItemAccess $access = null,
 		/** A set of permission groups that are specified to the policy. */
-		public array $permissionGroups,
+		public ?array $permissionGroups = null,
 		/** A set of resource groups that are specified to the policy. */
-		public array $resourceGroups,
+		public ?array $resourceGroups = null,
 	) {
 	}
 }

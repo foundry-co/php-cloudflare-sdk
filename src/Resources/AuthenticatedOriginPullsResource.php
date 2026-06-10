@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class AuthenticatedOriginPullsResource
 	/**
 	 * List Certificates
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsCertificates
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsCertificates::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsListCertificates::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class AuthenticatedOriginPullsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAuthenticatedOriginPullsUploadCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsCertificate
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/origin_tls_client_auth', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsCertificate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/origin_tls_client_auth', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsUploadCertificate::class, $request);
 	}
 
 
 	/**
 	 * Get Enablement Setting for Zone
 	 */
-	public function settings(): \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsZone
+	public function settings(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/settings', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsZone::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/settings', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsGetEnablementSettingForZone::class, []);
 	}
 
 
@@ -53,18 +53,18 @@ class AuthenticatedOriginPullsResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAuthenticatedOriginPullsSetEnablementForZoneRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsZone
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/origin_tls_client_auth/settings', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsZone::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/origin_tls_client_auth/settings', \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsSetEnablementForZone::class, $request);
 	}
 
 
 	/**
 	 * Get Certificate Details
 	 */
-	public function get(string $certificateId): \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsDetails
+	public function get(string $certificateId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin_tls_client_auth/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZoneLevelAuthenticatedOriginPullsGetCertificateDetails::class, []);
 	}
 
 

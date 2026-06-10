@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class DevicePostureIntegrationsResource
 	/**
 	 * List your device posture integrations
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsIntegrations
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture/integration', \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsIntegrations::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture/integration', \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsListDevicePostureIntegrations::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class DevicePostureIntegrationsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\DevicePostureIntegrationsCreateDevicePostureIntegrationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsIntegration
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/devices/posture/integration', \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsIntegration::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/devices/posture/integration', \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsCreateDevicePostureIntegration::class, $request);
 	}
 
 
 	/**
 	 * Get device posture integration details
 	 */
-	public function get(string $integrationId): \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsDetails
+	public function get(string $integrationId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture/integration/' . $integrationId, \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture/integration/' . $integrationId, \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsDevicePostureIntegrationDetails::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class DevicePostureIntegrationsResource
 	public function update(
 		string $integrationId,
 		\FoundryCo\Cloudflare\Requests\DevicePostureIntegrationsUpdateDevicePostureIntegrationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsIntegration
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/devices/posture/integration/' . $integrationId, \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsIntegration::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/devices/posture/integration/' . $integrationId, \FoundryCo\Cloudflare\Responses\DevicePostureIntegrationsUpdateDevicePostureIntegration::class, $request);
 	}
 
 

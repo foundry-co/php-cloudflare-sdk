@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -23,7 +23,7 @@ readonly class AiSearchNamespaceCreateInstanceRequest
 		public ?bool $cache = null,
 		public ?\FoundryCo\Cloudflare\Enums\AiSearchNamespaceCreateInstanceRequestCacheThreshold $cacheThreshold = null,
 		/** Cache entry TTL in seconds. Allowed values: 600 (10min), 1800 (30min), 3600 (1h), 7200 (2h), 21600 (6h), 43200 (12h), 86400 (24h), 172800 (48h), 259200 (72h), 518400 (6d). */
-		public mixed $cacheTtl = null,
+		public ?\FoundryCo\Cloudflare\Enums\AiSearchNamespaceCreateInstanceRequestCacheTtl $cacheTtl = null,
 		public ?bool $chunk = null,
 		public ?int $chunkOverlap = null,
 		public ?int $chunkSize = null,
@@ -47,7 +47,7 @@ readonly class AiSearchNamespaceCreateInstanceRequest
 		public ?string $source = null,
 		public ?\FoundryCo\Cloudflare\Responses\AiSearchNamespaceCreateInstanceRequestSourceParams $sourceParams = null,
 		/** Interval between automatic syncs, in seconds. Allowed values: 900 (15min), 1800 (30min), 3600 (1h), 7200 (2h), 14400 (4h), 21600 (6h), 43200 (12h), 86400 (24h). */
-		public mixed $syncInterval = null,
+		public ?\FoundryCo\Cloudflare\Enums\AiSearchNamespaceCreateInstanceRequestSyncInterval $syncInterval = null,
 		public ?string $tokenId = null,
 		public ?\FoundryCo\Cloudflare\Enums\AiSearchNamespaceCreateInstanceRequestType $type = null,
 	) {
@@ -62,7 +62,7 @@ readonly class AiSearchNamespaceCreateInstanceRequest
 		    'ai_search_model' => $this->aiSearchModel?->value,
 		    'cache' => $this->cache,
 		    'cache_threshold' => $this->cacheThreshold?->value,
-		    'cache_ttl' => $this->cacheTtl,
+		    'cache_ttl' => $this->cacheTtl?->value,
 		    'chunk' => $this->chunk,
 		    'chunk_overlap' => $this->chunkOverlap,
 		    'chunk_size' => $this->chunkSize,
@@ -83,7 +83,7 @@ readonly class AiSearchNamespaceCreateInstanceRequest
 		    'score_threshold' => $this->scoreThreshold,
 		    'source' => $this->source,
 		    'source_params' => $this->sourceParams?->toArray(),
-		    'sync_interval' => $this->syncInterval,
+		    'sync_interval' => $this->syncInterval?->value,
 		    'token_id' => $this->tokenId,
 		    'type' => $this->type?->value,
 		], fn ($v) => $v !== null);

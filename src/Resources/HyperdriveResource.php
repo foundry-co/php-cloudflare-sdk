@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,41 +22,36 @@ class HyperdriveResource
 	/**
 	 * List Hyperdrives
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/hyperdrive/configs', \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/hyperdrive/configs', \FoundryCo\Cloudflare\Responses\ListHyperdrive::class, []);
 	}
 
 
 	/**
 	 * Create Hyperdrive
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateHyperdriveRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive
+	public function create(\FoundryCo\Cloudflare\Requests\CreateHyperdriveRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/hyperdrive/configs', \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/hyperdrive/configs', \FoundryCo\Cloudflare\Responses\CreateHyperdrive::class, $request);
 	}
 
 
 	/**
 	 * Get Hyperdrive
 	 */
-	public function get(string $hyperdriveId): \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive
+	public function get(string $hyperdriveId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/hyperdrive/configs/' . $hyperdriveId, \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/hyperdrive/configs/' . $hyperdriveId, \FoundryCo\Cloudflare\Responses\GetHyperdrive::class, []);
 	}
 
 
 	/**
 	 * Update Hyperdrive
 	 */
-	public function update(
-		string $hyperdriveId,
-		\FoundryCo\Cloudflare\Requests\UpdateHyperdriveRequest $request,
-	): \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive
+	public function update(string $hyperdriveId, \FoundryCo\Cloudflare\Requests\UpdateHyperdriveRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/hyperdrive/configs/' . $hyperdriveId, \FoundryCo\Cloudflare\Responses\HyperdriveHyperdrive::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/hyperdrive/configs/' . $hyperdriveId, \FoundryCo\Cloudflare\Responses\UpdateHyperdrive::class, $request);
 	}
 
 

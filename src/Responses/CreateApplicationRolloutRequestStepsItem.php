@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,8 +17,8 @@ readonly class CreateApplicationRolloutRequestStepsItem
 {
 	public function __construct(
 		/** Description of the rollout step. */
-		public string $description,
-		public CreateApplicationRolloutRequestStepsItemStepSize $stepSize,
+		public ?string $description = null,
+		public ?CreateApplicationRolloutRequestStepsItemStepSize $stepSize = null,
 	) {
 	}
 }

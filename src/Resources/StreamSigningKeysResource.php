@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class StreamSigningKeysResource
 	/**
 	 * List signing keys
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\StreamSigningKeysKeys
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/stream/keys', \FoundryCo\Cloudflare\Responses\StreamSigningKeysKeys::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/stream/keys', \FoundryCo\Cloudflare\Responses\StreamSigningKeysListSigningKeys::class, []);
 	}
 
 
 	/**
 	 * Create signing keys
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\StreamSigningKeysKeys
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/stream/keys', \FoundryCo\Cloudflare\Responses\StreamSigningKeysKeys::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/stream/keys', \FoundryCo\Cloudflare\Responses\StreamSigningKeysCreateSigningKeys::class, null);
 	}
 
 

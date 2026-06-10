@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,30 +22,27 @@ class MagicSiteAclsResource
 	/**
 	 * List Site ACLs
 	 */
-	public function get(string $siteId): \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcls
+	public function get(string $siteId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls', \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcls::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls', \FoundryCo\Cloudflare\Responses\MagicSiteAclsListAcls::class, []);
 	}
 
 
 	/**
 	 * Create a new Site ACL
 	 */
-	public function create(
-		string $siteId,
-		\FoundryCo\Cloudflare\Requests\MagicSiteAclsCreateAclRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcl
+	public function create(string $siteId, \FoundryCo\Cloudflare\Requests\MagicSiteAclsCreateAclRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls', \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcl::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls', \FoundryCo\Cloudflare\Responses\MagicSiteAclsCreateAcl::class, $request);
 	}
 
 
 	/**
 	 * Site ACL Details
 	 */
-	public function acls(string $siteId, string $aclId): \FoundryCo\Cloudflare\Responses\MagicSiteACLsDetails
+	public function acls(string $siteId, string $aclId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\MagicSiteACLsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\MagicSiteAclsAclDetails::class, []);
 	}
 
 
@@ -56,9 +53,9 @@ class MagicSiteAclsResource
 		string $siteId,
 		string $aclId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteAclsUpdateAclRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcl
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcl::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\MagicSiteAclsUpdateAcl::class, $request);
 	}
 
 
@@ -69,9 +66,9 @@ class MagicSiteAclsResource
 		string $siteId,
 		string $aclId,
 		\FoundryCo\Cloudflare\Requests\MagicSiteAclsPatchAclRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcl
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\MagicSiteACLsAcl::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/sites/' . $siteId . '/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\MagicSiteAclsPatchAcl::class, $request);
 	}
 
 

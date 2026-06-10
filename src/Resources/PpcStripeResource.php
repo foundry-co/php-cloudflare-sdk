@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,18 +22,18 @@ class PpcStripeResource
 	/**
 	 * Gets the stripe config for a crawler
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\PpcStripeCrawlcrawlerGetStripeConfig
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pay-per-crawl/crawler/stripe', \FoundryCo\Cloudflare\Responses\PpcStripeCrawlcrawlerGetStripeConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pay-per-crawl/crawler/stripe', \FoundryCo\Cloudflare\Responses\PayPerCrawlcrawlerGetStripeConfig::class, []);
 	}
 
 
 	/**
 	 * Creates the stripe config for a crawler
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\PpcStripeCrawlcrawlerCreateStripeConfig
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pay-per-crawl/crawler/stripe', \FoundryCo\Cloudflare\Responses\PpcStripeCrawlcrawlerCreateStripeConfig::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/pay-per-crawl/crawler/stripe', \FoundryCo\Cloudflare\Responses\PayPerCrawlcrawlerCreateStripeConfig::class, null);
 	}
 
 
@@ -49,19 +49,18 @@ class PpcStripeResource
 	/**
 	 * Gets the stripe config for a publisher
 	 */
-	public function stripe(): \FoundryCo\Cloudflare\Responses\PpcStripeCrawlpublisherGetStripeConfig
+	public function stripe(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/pay-per-crawl/publisher/stripe', \FoundryCo\Cloudflare\Responses\PpcStripeCrawlpublisherGetStripeConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/pay-per-crawl/publisher/stripe', \FoundryCo\Cloudflare\Responses\PayPerCrawlpublisherGetStripeConfig::class, []);
 	}
 
 
 	/**
 	 * Creates the stripe config for a publisher
 	 */
-	public function payPerCrawlpublisherCreateStripeConfig(
-	): \FoundryCo\Cloudflare\Responses\PpcStripeCrawlpublisherCreateStripeConfig
+	public function payPerCrawlpublisherCreateStripeConfig(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/pay-per-crawl/publisher/stripe', \FoundryCo\Cloudflare\Responses\PpcStripeCrawlpublisherCreateStripeConfig::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/pay-per-crawl/publisher/stripe', \FoundryCo\Cloudflare\Responses\PayPerCrawlpublisherCreateStripeConfig::class, null);
 	}
 
 

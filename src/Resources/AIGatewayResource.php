@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,38 +22,36 @@ class AIGatewayResource
 	/**
 	 * Get credit balance
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\AIGatewayBalance
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/credit-balance', \FoundryCo\Cloudflare\Responses\AIGatewayBalance::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/credit-balance', \FoundryCo\Cloudflare\Responses\AigBillingGetCreditBalance::class, []);
 	}
 
 
 	/**
 	 * Get invoice history
 	 */
-	public function invoiceHistory(
-		?\FoundryCo\Cloudflare\Enums\AIGatewayType $type = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayHistory
+	public function invoiceHistory(?\FoundryCo\Cloudflare\Enums\AIGatewayType $type = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/invoice-history', \FoundryCo\Cloudflare\Responses\AIGatewayHistory::class, ['type' => $type ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/invoice-history', \FoundryCo\Cloudflare\Responses\AigBillingGetInvoiceHistory::class, ['type' => $type ?? null]);
 	}
 
 
 	/**
 	 * Get invoice preview
 	 */
-	public function invoicePreview(): \FoundryCo\Cloudflare\Responses\AIGatewayPreview
+	public function invoicePreview(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/invoice-preview', \FoundryCo\Cloudflare\Responses\AIGatewayPreview::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/invoice-preview', \FoundryCo\Cloudflare\Responses\AigBillingGetInvoicePreview::class, []);
 	}
 
 
 	/**
 	 * Get spending limit
 	 */
-	public function spendingLimit(): \FoundryCo\Cloudflare\Responses\AIGatewayLimit
+	public function spendingLimit(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/spending-limit', \FoundryCo\Cloudflare\Responses\AIGatewayLimit::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/spending-limit', \FoundryCo\Cloudflare\Responses\AigBillingGetSpendingLimit::class, []);
 	}
 
 
@@ -78,20 +76,18 @@ class AIGatewayResource
 	/**
 	 * Create a top-up
 	 */
-	public function topup(
-		\FoundryCo\Cloudflare\Requests\AigBillingCreateTopupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayTopup
+	public function topup(\FoundryCo\Cloudflare\Requests\AigBillingCreateTopupRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/billing/topup', \FoundryCo\Cloudflare\Responses\AIGatewayTopup::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/billing/topup', \FoundryCo\Cloudflare\Responses\AigBillingCreateTopup::class, $request);
 	}
 
 
 	/**
 	 * Get auto top-up configuration
 	 */
-	public function config(): \FoundryCo\Cloudflare\Responses\AIGatewayConfig
+	public function config(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/config', \FoundryCo\Cloudflare\Responses\AIGatewayConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/config', \FoundryCo\Cloudflare\Responses\AigBillingGetTopupConfig::class, []);
 	}
 
 
@@ -100,9 +96,9 @@ class AIGatewayResource
 	 */
 	public function aigBillingSetTopupConfig(
 		\FoundryCo\Cloudflare\Requests\AigBillingSetTopupConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayConfig
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/config', \FoundryCo\Cloudflare\Responses\AIGatewayConfig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/config', \FoundryCo\Cloudflare\Responses\AigBillingSetTopupConfig::class, $request);
 	}
 
 
@@ -118,20 +114,18 @@ class AIGatewayResource
 	/**
 	 * Get account top-up limits
 	 */
-	public function limits(): \FoundryCo\Cloudflare\Responses\AIGatewayLimits
+	public function limits(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/limits', \FoundryCo\Cloudflare\Responses\AIGatewayLimits::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/limits', \FoundryCo\Cloudflare\Responses\AigBillingGetTopupLimits::class, []);
 	}
 
 
 	/**
 	 * Check top-up status
 	 */
-	public function status(
-		\FoundryCo\Cloudflare\Requests\AigBillingCheckTopupStatusRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayStatus
+	public function status(\FoundryCo\Cloudflare\Requests\AigBillingCheckTopupStatusRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/status', \FoundryCo\Cloudflare\Responses\AIGatewayStatus::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-gateway/billing/topup/status', \FoundryCo\Cloudflare\Responses\AigBillingCheckTopupStatus::class, $request);
 	}
 
 
@@ -142,8 +136,8 @@ class AIGatewayResource
 		?\FoundryCo\Cloudflare\Enums\AIGatewayValueGroupingWindow $valueGroupingWindow = null,
 		?float $startTime = null,
 		?float $endTime = null,
-	): \FoundryCo\Cloudflare\Responses\AIGatewayHistory
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/usage-history', \FoundryCo\Cloudflare\Responses\AIGatewayHistory::class, ['valueGroupingWindow' => $valueGroupingWindow ?? null, 'startTime' => $startTime ?? null, 'endTime' => $endTime ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-gateway/billing/usage-history', \FoundryCo\Cloudflare\Responses\AigBillingGetUsageHistory::class, ['valueGroupingWindow' => $valueGroupingWindow ?? null, 'startTime' => $startTime ?? null, 'endTime' => $endTime ?? null]);
 	}
 }

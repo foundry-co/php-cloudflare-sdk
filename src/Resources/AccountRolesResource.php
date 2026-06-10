@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,17 +22,17 @@ class AccountRolesResource
 	/**
 	 * List Roles
 	 */
-	public function list(?float $page = null, ?float $perPage = null): \FoundryCo\Cloudflare\Responses\AccountRolesRoles
+	public function list(?float $page = null, ?float $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/roles', \FoundryCo\Cloudflare\Responses\AccountRolesRoles::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/roles', \FoundryCo\Cloudflare\Responses\AccountRolesListRoles::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Role Details
 	 */
-	public function get(string $roleId): \FoundryCo\Cloudflare\Responses\AccountRolesDetails
+	public function get(string $roleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/roles/' . $roleId, \FoundryCo\Cloudflare\Responses\AccountRolesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/roles/' . $roleId, \FoundryCo\Cloudflare\Responses\AccountRolesRoleDetails::class, []);
 	}
 }

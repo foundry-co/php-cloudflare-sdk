@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class NotificationPoliciesResource
 	/**
 	 * List Notification policies
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicies
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/policies', \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicies::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/policies', \FoundryCo\Cloudflare\Responses\NotificationPoliciesListNotificationPolicies::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class NotificationPoliciesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\NotificationPoliciesCreateANotificationPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/policies', \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/policies', \FoundryCo\Cloudflare\Responses\NotificationPoliciesCreateANotificationPolicy::class, $request);
 	}
 
 
 	/**
 	 * Get a Notification policy
 	 */
-	public function get(string $policyId): \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy
+	public function get(string $policyId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\NotificationPoliciesGetANotificationPolicy::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class NotificationPoliciesResource
 	public function update(
 		string $policyId,
 		\FoundryCo\Cloudflare\Requests\NotificationPoliciesUpdateANotificationPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\NotificationPoliciesUpdateANotificationPolicy::class, $request);
 	}
 
 
@@ -72,13 +72,9 @@ class NotificationPoliciesResource
 	/**
 	 * Show email unsubscribe details
 	 */
-	public function unsubscribe(
-		string $policyId,
-		?string $email = null,
-		?string $token = null,
-	): \FoundryCo\Cloudflare\Responses\NotificationPoliciesDetails
+	public function unsubscribe(string $policyId, ?string $email = null, ?string $token = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId . '/email/unsubscribe', \FoundryCo\Cloudflare\Responses\NotificationPoliciesDetails::class, ['email' => $email ?? null, 'token' => $token ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId . '/email/unsubscribe', \FoundryCo\Cloudflare\Responses\NotificationPoliciesShowEmailUnsubscribeDetails::class, ['email' => $email ?? null, 'token' => $token ?? null]);
 	}
 
 
@@ -89,9 +85,9 @@ class NotificationPoliciesResource
 		string $policyId,
 		?string $email = null,
 		?string $token = null,
-	): \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId . '/email/unsubscribe', \FoundryCo\Cloudflare\Responses\NotificationPoliciesPolicy::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/alerting/v3/policies/' . $policyId . '/email/unsubscribe', \FoundryCo\Cloudflare\Responses\NotificationPoliciesUnsubscribeEmailFromNotificationPolicy::class, null);
 	}
 
 

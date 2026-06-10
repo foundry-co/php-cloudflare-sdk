@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class DLPCustomPromptTopicsResource
 	/**
 	 * List custom prompt topics
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics', \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics', \FoundryCo\Cloudflare\Responses\DlpCustomPromptTopicsList::class, []);
 	}
 
 
 	/**
 	 * Create custom prompt topic
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpCustomPromptTopicsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\DlpCustomPromptTopicsCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics', \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics', \FoundryCo\Cloudflare\Responses\DlpCustomPromptTopicsCreate::class, $request);
 	}
 
 
 	/**
 	 * Get custom prompt topic
 	 */
-	public function get(string $entryId): \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsGet
+	public function get(string $entryId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics/' . $entryId, \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics/' . $entryId, \FoundryCo\Cloudflare\Responses\DlpCustomPromptTopicsGet::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class DLPCustomPromptTopicsResource
 	public function update(
 		string $entryId,
 		\FoundryCo\Cloudflare\Requests\DlpCustomPromptTopicsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics/' . $entryId, \FoundryCo\Cloudflare\Responses\DLPCustomPromptTopicsUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/custom_prompt_topics/' . $entryId, \FoundryCo\Cloudflare\Responses\DlpCustomPromptTopicsUpdate::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,29 +27,27 @@ class MoqRelaysResource
 		?\DateTimeImmutable $createdAfter = null,
 		?int $perPage = null,
 		?bool $asc = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/moq/relays', \FoundryCo\Cloudflare\Responses\MoQRelaysRelays::class, ['createdBefore' => $createdBefore ?? null, 'createdAfter' => $createdAfter ?? null, 'perPage' => $perPage ?? null, 'asc' => $asc ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/moq/relays', \FoundryCo\Cloudflare\Responses\GetAccountsaccountIdMoqRelays::class, ['createdBefore' => $createdBefore ?? null, 'createdAfter' => $createdAfter ?? null, 'perPage' => $perPage ?? null, 'asc' => $asc ?? null]);
 	}
 
 
 	/**
 	 * Create a relay
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostAccountsaccountIdMoqRelaysRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MoQRelaysRelays
+	public function create(\FoundryCo\Cloudflare\Requests\PostAccountsaccountIdMoqRelaysRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/moq/relays', \FoundryCo\Cloudflare\Responses\MoQRelaysRelays::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/moq/relays', \FoundryCo\Cloudflare\Responses\PostAccountsaccountIdMoqRelays::class, $request);
 	}
 
 
 	/**
 	 * Get a relay
 	 */
-	public function get(string $relayId): \FoundryCo\Cloudflare\Responses\MoQRelaysId
+	public function get(string $relayId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/moq/relays/' . $relayId, \FoundryCo\Cloudflare\Responses\MoQRelaysId::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/moq/relays/' . $relayId, \FoundryCo\Cloudflare\Responses\GetAccountsaccountIdMoqRelaysrelayId::class, []);
 	}
 
 
@@ -59,9 +57,9 @@ class MoqRelaysResource
 	public function update(
 		string $relayId,
 		\FoundryCo\Cloudflare\Requests\PutAccountsaccountIdMoqRelaysrelayIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MoQRelaysId
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/moq/relays/' . $relayId, \FoundryCo\Cloudflare\Responses\MoQRelaysId::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/moq/relays/' . $relayId, \FoundryCo\Cloudflare\Responses\PutAccountsaccountIdMoqRelaysrelayId::class, $request);
 	}
 
 
@@ -80,8 +78,8 @@ class MoqRelaysResource
 	public function rotate(
 		string $relayId,
 		\FoundryCo\Cloudflare\Requests\PostAccountsaccountIdMoqRelaysrelayIdTokensRotateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MoQRelaysRotate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/moq/relays/' . $relayId . '/tokens/rotate', \FoundryCo\Cloudflare\Responses\MoQRelaysRotate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/moq/relays/' . $relayId . '/tokens/rotate', \FoundryCo\Cloudflare\Responses\PostAccountsaccountIdMoqRelaysrelayIdTokensRotate::class, $request);
 	}
 }

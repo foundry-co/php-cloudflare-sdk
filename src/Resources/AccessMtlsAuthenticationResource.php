@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class AccessMtlsAuthenticationResource
 	/**
 	 * List mTLS certificates
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificates
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/certificates', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificates::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/certificates', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMtlsAuthenticationListMtlsCertificates::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class AccessMtlsAuthenticationResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessMtlsAuthenticationAddAnMtlsCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificate
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/certificates', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/certificates', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMtlsAuthenticationAddAnMtlsCertificate::class, $request);
 	}
 
 
 	/**
 	 * List all mTLS hostname settings
 	 */
-	public function settings(): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationSettings
+	public function settings(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/certificates/settings', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationSettings::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/certificates/settings', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMtlsAuthenticationListMtlsCertificatesHostnameSettings::class, []);
 	}
 
 
@@ -62,11 +62,9 @@ class AccessMtlsAuthenticationResource
 	/**
 	 * Get an mTLS certificate
 	 */
-	public function get(
-		string $certificateId,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificate
+	public function get(string $certificateId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificate::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMtlsAuthenticationGetAnMtlsCertificate::class, []);
 	}
 
 
@@ -76,9 +74,9 @@ class AccessMtlsAuthenticationResource
 	public function certificates(
 		string $certificateId,
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessMtlsAuthenticationUpdateAnMtlsCertificateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificate
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/access/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMTLSAuthenticationCertificate::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/access/certificates/' . $certificateId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessMtlsAuthenticationUpdateAnMtlsCertificate::class, $request);
 	}
 
 

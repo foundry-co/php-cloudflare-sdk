@@ -32,11 +32,15 @@ class ClientEmitter
         $constructor->addParameter('baseUrl')->setType('string')->setDefaultValue('https://api.cloudflare.com/client/v4');
         $constructor->addParameter('http')->setType('?' . self::HTTP_CLIENT_CLASS)->setDefaultValue(null);
         $constructor->setBody(
-            "\$this->http = \$http ?? new \\" . self::HTTP_CLIENT_CLASS . "(\$apiToken, \$baseUrl);"
+            "\$this->http = \$http ?? new \\" . self::HTTP_CLIENT_CLASS . "(\$apiToken, \$baseUrl);\n"
+            . "\$this->accountId = \$accountId;"
         );
 
         $p = $class->addProperty('http');
         $p->setPrivate()->setReadOnly()->setType(self::HTTP_CLIENT_CLASS);
+
+        $p = $class->addProperty('accountId');
+        $p->setPrivate()->setReadOnly()->setType('?string');
 
         // Only emit top-level and account-scoped resources as direct accessors.
         // Zone-scoped resources are accessed via zones('id')->childResource().
@@ -65,6 +69,9 @@ class ClientEmitter
                 $method->addParameter('zoneId')->setType('?string')->setDefaultValue(null);
                 $method->setReturnType($resource->fqn());
                 $method->setBody("return new \\{$resource->fqn()}(\$this->http, \$zoneId);");
+            } elseif ($resource->scope === IrResource::SCOPE_ACCOUNT) {
+                $method->setReturnType($resource->fqn());
+                $method->setBody("return new \\{$resource->fqn()}(\$this->http, \$this->accountId);");
             } else {
                 $method->setReturnType($resource->fqn());
                 $method->setBody("return new \\{$resource->fqn()}(\$this->http);");

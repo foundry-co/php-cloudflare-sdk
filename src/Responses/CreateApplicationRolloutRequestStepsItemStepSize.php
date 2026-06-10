@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class CreateApplicationRolloutRequestStepsItemStepSize
 {
 	public function __construct(
 		/** Percentage of instances affected in this step. Min 10% and Max 100%. */
-		public int $percentage,
+		public ?int $percentage = null,
 	) {
 	}
 }

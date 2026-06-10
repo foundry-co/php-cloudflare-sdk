@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class KeylessSSLResource
 	/**
 	 * List Keyless SSL Configurations
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfigurations
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/keyless_certificates', \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfigurations::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/keyless_certificates', \FoundryCo\Cloudflare\Responses\KeylessSslForAZoneListKeylessSslConfigurations::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class KeylessSSLResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\KeylessSslForAZoneCreateKeylessSslConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfiguration
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/keyless_certificates', \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfiguration::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/keyless_certificates', \FoundryCo\Cloudflare\Responses\KeylessSslForAZoneCreateKeylessSslConfiguration::class, $request);
 	}
 
 
 	/**
 	 * Get Keyless SSL Configuration
 	 */
-	public function get(string $keylessCertificateId): \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfiguration
+	public function get(string $keylessCertificateId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/keyless_certificates/' . $keylessCertificateId, \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfiguration::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/keyless_certificates/' . $keylessCertificateId, \FoundryCo\Cloudflare\Responses\KeylessSslForAZoneGetKeylessSslConfiguration::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class KeylessSSLResource
 	public function update(
 		string $keylessCertificateId,
 		\FoundryCo\Cloudflare\Requests\KeylessSslForAZoneEditKeylessSslConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfiguration
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/keyless_certificates/' . $keylessCertificateId, \FoundryCo\Cloudflare\Responses\KeylessSSLForAZoneConfiguration::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/keyless_certificates/' . $keylessCertificateId, \FoundryCo\Cloudflare\Responses\KeylessSslForAZoneEditKeylessSslConfiguration::class, $request);
 	}
 
 

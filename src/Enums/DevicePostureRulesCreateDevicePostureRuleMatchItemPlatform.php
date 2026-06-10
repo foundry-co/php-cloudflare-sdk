@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-10 02:24:37 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Enums;
+
+enum DevicePostureRulesCreateDevicePostureRuleMatchItemPlatform: string
+{
+	case Windows = 'windows';
+	case Mac = 'mac';
+	case Linux = 'linux';
+	case Android = 'android';
+	case Ios = 'ios';
+	case Chromeos = 'chromeos';
+}

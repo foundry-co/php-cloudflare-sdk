@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class WorkerRoutesResource
 	/**
 	 * List Routes
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\WorkerRoutesRoutes
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/workers/routes', \FoundryCo\Cloudflare\Responses\WorkerRoutesRoutes::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/workers/routes', \FoundryCo\Cloudflare\Responses\WorkerRoutesListRoutes::class, []);
 	}
 
 
 	/**
 	 * Create Route
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\WorkerRoutesCreateRouteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerRoutesRoute
+	public function create(\FoundryCo\Cloudflare\Requests\WorkerRoutesCreateRouteRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/workers/routes', \FoundryCo\Cloudflare\Responses\WorkerRoutesRoute::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/workers/routes', \FoundryCo\Cloudflare\Responses\WorkerRoutesCreateRoute::class, $request);
 	}
 
 
 	/**
 	 * Get Route
 	 */
-	public function get(string $routeId): \FoundryCo\Cloudflare\Responses\WorkerRoutesRoute
+	public function get(string $routeId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/workers/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\WorkerRoutesRoute::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/workers/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\WorkerRoutesGetRoute::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class WorkerRoutesResource
 	public function update(
 		string $routeId,
 		\FoundryCo\Cloudflare\Requests\WorkerRoutesUpdateRouteRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerRoutesRoute
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/workers/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\WorkerRoutesRoute::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/workers/routes/' . $routeId, \FoundryCo\Cloudflare\Responses\WorkerRoutesUpdateRoute::class, $request);
 	}
 
 

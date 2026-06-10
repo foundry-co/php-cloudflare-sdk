@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,29 +28,27 @@ class ZeroTrustUsersResource
 		?string $search = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/users', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUsers::class, ['name' => $name ?? null, 'email' => $email ?? null, 'search' => $search ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/users', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersGetUsers::class, ['name' => $name ?? null, 'email' => $email ?? null, 'search' => $search ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create a user
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZeroTrustUsersCreateUserRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUser
+	public function create(\FoundryCo\Cloudflare\Requests\ZeroTrustUsersCreateUserRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/users', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUser::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/users', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersCreateUser::class, $request);
 	}
 
 
 	/**
 	 * Get a user
 	 */
-	public function get(string $userId): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUser
+	public function get(string $userId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId, \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUser::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId, \FoundryCo\Cloudflare\Responses\ZeroTrustUsersGetUser::class, []);
 	}
 
 
@@ -60,9 +58,9 @@ class ZeroTrustUsersResource
 	public function update(
 		string $userId,
 		\FoundryCo\Cloudflare\Requests\ZeroTrustUsersUpdateUserRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUser
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/users/' . $userId, \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUser::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/users/' . $userId, \FoundryCo\Cloudflare\Responses\ZeroTrustUsersUpdateUser::class, $request);
 	}
 
 
@@ -78,39 +76,36 @@ class ZeroTrustUsersResource
 	/**
 	 * Get active sessions
 	 */
-	public function activeSessions(string $userId): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersSessions
+	public function activeSessions(string $userId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/active_sessions', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersSessions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/active_sessions', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersGetActiveSessions::class, []);
 	}
 
 
 	/**
 	 * Get single active session
 	 */
-	public function zeroTrustUsersGetActiveSession(
-		string $userId,
-		string $nonce,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersSession
+	public function zeroTrustUsersGetActiveSession(string $userId, string $nonce): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/active_sessions/' . $nonce, \FoundryCo\Cloudflare\Responses\ZeroTrustUsersSession::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/active_sessions/' . $nonce, \FoundryCo\Cloudflare\Responses\ZeroTrustUsersGetActiveSession::class, []);
 	}
 
 
 	/**
 	 * Get failed logins
 	 */
-	public function failedLogins(string $userId): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersLogins
+	public function failedLogins(string $userId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/failed_logins', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersLogins::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/failed_logins', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersGetFailedLogins::class, []);
 	}
 
 
 	/**
 	 * Get last seen identity
 	 */
-	public function lastSeenIdentity(string $userId): \FoundryCo\Cloudflare\Responses\ZeroTrustUsersIdentity
+	public function lastSeenIdentity(string $userId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/last_seen_identity', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersIdentity::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/users/' . $userId . '/last_seen_identity', \FoundryCo\Cloudflare\Responses\ZeroTrustUsersGetLastSeenIdentity::class, []);
 	}
 
 

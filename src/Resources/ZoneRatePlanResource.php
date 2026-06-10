@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,26 +22,26 @@ class ZoneRatePlanResource
 	/**
 	 * List Available Plans
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneRatePlanPlans
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/available_plans', \FoundryCo\Cloudflare\Responses\ZoneRatePlanPlans::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/available_plans', \FoundryCo\Cloudflare\Responses\ZoneRatePlanListAvailablePlans::class, []);
 	}
 
 
 	/**
 	 * Available Plan Details
 	 */
-	public function get(string $planIdentifier): \FoundryCo\Cloudflare\Responses\ZoneRatePlanDetails
+	public function get(string $planIdentifier): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/available_plans/' . $planIdentifier, \FoundryCo\Cloudflare\Responses\ZoneRatePlanDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/available_plans/' . $planIdentifier, \FoundryCo\Cloudflare\Responses\ZoneRatePlanAvailablePlanDetails::class, []);
 	}
 
 
 	/**
 	 * List Available Rate Plans
 	 */
-	public function availableRatePlans(): \FoundryCo\Cloudflare\Responses\ZoneRatePlanPlans
+	public function availableRatePlans(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/available_rate_plans', \FoundryCo\Cloudflare\Responses\ZoneRatePlanPlans::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/available_rate_plans', \FoundryCo\Cloudflare\Responses\ZoneRatePlanListAvailableRatePlans::class, []);
 	}
 }

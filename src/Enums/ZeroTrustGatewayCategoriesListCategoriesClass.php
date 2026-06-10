@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-10 02:24:37 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Enums;
+
+enum ZeroTrustGatewayCategoriesListCategoriesClass: string
+{
+	case Free = 'free';
+	case Premium = 'premium';
+	case Blocked = 'blocked';
+	case RemovalPending = 'removalPending';
+	case NoBlock = 'noBlock';
+}

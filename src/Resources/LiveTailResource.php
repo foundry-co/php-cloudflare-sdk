@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,9 @@ class LiveTailResource
 	/**
 	 * Prepare live tail
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\TelemetryliveTailpostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\LiveTailTailpost
+	public function create(\FoundryCo\Cloudflare\Requests\TelemetryliveTailpostRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/telemetry/live-tail', \FoundryCo\Cloudflare\Responses\LiveTailTailpost::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/telemetry/live-tail', \FoundryCo\Cloudflare\Responses\TelemetryliveTailpost::class, $request);
 	}
 
 

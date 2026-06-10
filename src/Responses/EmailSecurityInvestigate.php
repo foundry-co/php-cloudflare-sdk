@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,18 +14,18 @@ readonly class EmailSecurityInvestigate
 {
 	public function __construct(
 		/** Deprecated, use `GET /investigate/{investigate_id}/action_log` instead. End of life: November 1, 2026. */
-		public array $actionLog,
-		public array $clientRecipients,
-		public array $detectionReasons,
-		public mixed $id,
-		public bool $isPhishSubmission,
-		public bool $isQuarantined,
+		public ?array $actionLog = null,
+		public ?array $clientRecipients = null,
+		public ?array $detectionReasons = null,
+		public mixed $id = null,
+		public ?bool $isPhishSubmission = null,
+		public ?bool $isQuarantined = null,
 		/** The identifier of the message */
-		public string $postfixId,
+		public ?string $postfixId = null,
 		/** Message processing properties */
-		public EmailSecurityInvestigateProperties $properties,
+		public ?EmailSecurityInvestigateProperties $properties = null,
 		/** Deprecated, use `scanned_at` instead. End of life: November 1, 2026. */
-		public string $ts,
+		public ?string $ts = null,
 		public ?string $alertId = null,
 		public ?\FoundryCo\Cloudflare\Enums\EmailSecurityInvestigateDeliveryMode $deliveryMode = null,
 		public ?array $deliveryStatus = null,

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,11 +17,11 @@ readonly class OriginCloudRegionsUpsertValueItem
 {
 	public function __construct(
 		/** The origin IP address (IPv4 or IPv6, canonicalized). */
-		public string $originIp,
+		public ?string $originIp = null,
 		/** Cloud vendor region identifier. */
-		public string $region,
+		public ?string $region = null,
 		/** Cloud vendor hosting the origin. */
-		public \FoundryCo\Cloudflare\Enums\OriginCloudRegionsUpsertValueItemVendor $vendor,
+		public ?\FoundryCo\Cloudflare\Enums\OriginCloudRegionsUpsertValueItemVendor $vendor = null,
 		/** Time this mapping was last modified. */
 		public ?\DateTimeImmutable $modifiedOn = null,
 	) {

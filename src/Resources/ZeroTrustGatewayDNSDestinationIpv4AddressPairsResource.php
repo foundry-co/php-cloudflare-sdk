@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class ZeroTrustGatewayDNSDestinationIpv4AddressPairsResource
 	/**
 	 * List Zero Trust Gateway DNS destination IPv4 address pairs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayDNSDestinationIPv4AddressPairsIps
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/dns_destination_ips', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayDNSDestinationIPv4AddressPairsIps::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/dns_destination_ips', \FoundryCo\Cloudflare\Responses\ZeroTrustDnsDestinationIpsListDnsDestinationIps::class, []);
 	}
 }

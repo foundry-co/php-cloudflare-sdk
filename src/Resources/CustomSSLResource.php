@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,20 +27,18 @@ class CustomSSLResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\CustomSSLForAZoneMatch $match = null,
 		?\FoundryCo\Cloudflare\Enums\CustomSSLForAZoneStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneConfigurations
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_certificates', \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneConfigurations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'match' => $match ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_certificates', \FoundryCo\Cloudflare\Responses\CustomSslForAZoneListSslConfigurations::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'match' => $match ?? null, 'status' => $status ?? null]);
 	}
 
 
 	/**
 	 * Create SSL Configuration
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CustomSslForAZoneCreateSslConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneConfiguration
+	public function create(\FoundryCo\Cloudflare\Requests\CustomSslForAZoneCreateSslConfigurationRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/custom_certificates', \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneConfiguration::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/custom_certificates', \FoundryCo\Cloudflare\Responses\CustomSslForAZoneCreateSslConfiguration::class, $request);
 	}
 
 
@@ -49,18 +47,18 @@ class CustomSSLResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\CustomSslForAZoneRePrioritizeSslCertificatesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneCertificates
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/custom_certificates/prioritize', \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneCertificates::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/custom_certificates/prioritize', \FoundryCo\Cloudflare\Responses\CustomSslForAZoneRePrioritizeSslCertificates::class, $request);
 	}
 
 
 	/**
 	 * SSL Configuration Details
 	 */
-	public function get(string $customCertificateId): \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneDetails
+	public function get(string $customCertificateId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_certificates/' . $customCertificateId, \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_certificates/' . $customCertificateId, \FoundryCo\Cloudflare\Responses\CustomSslForAZoneSslConfigurationDetails::class, []);
 	}
 
 
@@ -70,9 +68,9 @@ class CustomSSLResource
 	public function customCertificates(
 		string $customCertificateId,
 		\FoundryCo\Cloudflare\Requests\CustomSslForAZoneEditSslConfigurationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneConfiguration
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/custom_certificates/' . $customCertificateId, \FoundryCo\Cloudflare\Responses\CustomSSLForAZoneConfiguration::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/custom_certificates/' . $customCertificateId, \FoundryCo\Cloudflare\Responses\CustomSslForAZoneEditSslConfiguration::class, $request);
 	}
 
 

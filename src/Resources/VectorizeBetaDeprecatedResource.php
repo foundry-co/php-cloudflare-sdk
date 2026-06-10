@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,20 +31,18 @@ class VectorizeBetaDeprecatedResource
 	/**
 	 * Create Vectorize Index (Deprecated)
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\VectorizeDeprecatedCreateVectorizeIndexRequest $request,
-	): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedIndex
+	public function create(\FoundryCo\Cloudflare\Requests\VectorizeDeprecatedCreateVectorizeIndexRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes', \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedIndex::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes', \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedCreateVectorizeIndex::class, $request);
 	}
 
 
 	/**
 	 * Get Vectorize Index (Deprecated)
 	 */
-	public function get(string $indexName): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedIndex
+	public function get(string $indexName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName, \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedIndex::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName, \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedGetVectorizeIndex::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class VectorizeBetaDeprecatedResource
 	public function update(
 		string $indexName,
 		\FoundryCo\Cloudflare\Requests\VectorizeDeprecatedUpdateVectorizeIndexRequest $request,
-	): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedIndex
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName, \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedIndex::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName, \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedUpdateVectorizeIndex::class, $request);
 	}
 
 
@@ -75,9 +73,9 @@ class VectorizeBetaDeprecatedResource
 	public function deleteByIds(
 		string $indexName,
 		\FoundryCo\Cloudflare\Requests\VectorizeDeprecatedDeleteVectorsByIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedId
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/delete-by-ids', \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedId::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/delete-by-ids', \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedDeleteVectorsById::class, $request);
 	}
 
 
@@ -87,18 +85,18 @@ class VectorizeBetaDeprecatedResource
 	public function getByIds(
 		string $indexName,
 		\FoundryCo\Cloudflare\Requests\VectorizeDeprecatedGetVectorsByIdRequest $request,
-	): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedId
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/get-by-ids', \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedId::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/get-by-ids', \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedGetVectorsById::class, $request);
 	}
 
 
 	/**
 	 * Insert Vectors (Deprecated)
 	 */
-	public function insert(string $indexName): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedVector
+	public function insert(string $indexName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/insert', \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedVector::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/insert', \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedInsertVector::class, null);
 	}
 
 
@@ -108,17 +106,17 @@ class VectorizeBetaDeprecatedResource
 	public function query(
 		string $indexName,
 		\FoundryCo\Cloudflare\Requests\VectorizeDeprecatedQueryVectorRequest $request,
-	): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedVector
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/query', \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedVector::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/query', \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedQueryVector::class, $request);
 	}
 
 
 	/**
 	 * Upsert Vectors (Deprecated)
 	 */
-	public function upsert(string $indexName): \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedVector
+	public function upsert(string $indexName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/upsert', \FoundryCo\Cloudflare\Responses\VectorizeBetaDeprecatedVector::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/vectorize/indexes/' . $indexName . '/upsert', \FoundryCo\Cloudflare\Responses\VectorizeDeprecatedUpsertVector::class, null);
 	}
 }

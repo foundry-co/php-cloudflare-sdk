@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,9 +34,9 @@ class ZeroTrustSubnetsResource
 		?\FoundryCo\Cloudflare\Enums\ZeroTrustSubnetsSubnetTypes $subnetTypes = null,
 		?float $perPage = null,
 		?float $page = null,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustSubnetsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/zerotrust/subnets', \FoundryCo\Cloudflare\Responses\ZeroTrustSubnetsList::class, ['name' => $name ?? null, 'comment' => $comment ?? null, 'network' => $network ?? null, 'existedAt' => $existedAt ?? null, 'addressFamily' => $addressFamily ?? null, 'isDefaultNetwork' => $isDefaultNetwork ?? null, 'isDeleted' => $isDeleted ?? null, 'sortOrder' => $sortOrder ?? null, 'subnetTypes' => $subnetTypes ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/zerotrust/subnets', \FoundryCo\Cloudflare\Responses\ZeroTrustNetworksSubnetsList::class, ['name' => $name ?? null, 'comment' => $comment ?? null, 'network' => $network ?? null, 'existedAt' => $existedAt ?? null, 'addressFamily' => $addressFamily ?? null, 'isDefaultNetwork' => $isDefaultNetwork ?? null, 'isDeleted' => $isDeleted ?? null, 'sortOrder' => $sortOrder ?? null, 'subnetTypes' => $subnetTypes ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
 	}
 
 

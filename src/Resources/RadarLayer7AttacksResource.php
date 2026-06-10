@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,9 +34,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksMethod
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/http_method', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksMethod::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/http_method', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByHttpMethod::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -55,9 +55,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/http_version', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/http_version', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByHttpVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -78,9 +78,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksIndustry
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/industry', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksIndustry::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/industry', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByIndustry::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -99,9 +99,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByIpVersion::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -122,9 +122,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksRules
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/managed_rules', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksRules::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/managed_rules', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByManagedRules::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -144,9 +144,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksProduct
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/mitigation_product', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksProduct::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/mitigation_product', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByMitigationProduct::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -167,9 +167,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVertical
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/vertical', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVertical::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/vertical', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7SummaryByVertical::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -191,9 +191,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksSummary
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7Summary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -215,9 +215,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'normalization' => $normalization ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7Timeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'normalization' => $normalization ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -239,9 +239,9 @@ class RadarLayer7AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksMethod
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/http_method', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksMethod::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/http_method', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByHttpMethod::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -262,9 +262,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/http_version', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/http_version', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByHttpVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -287,9 +287,9 @@ class RadarLayer7AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksIndustry
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/industry', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksIndustry::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/industry', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByIndustry::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -310,9 +310,9 @@ class RadarLayer7AttacksResource
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/ip_version', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByIpVersion::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -335,9 +335,9 @@ class RadarLayer7AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksRules
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/managed_rules', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksRules::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/managed_rules', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByManagedRules::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -359,9 +359,9 @@ class RadarLayer7AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksProduct
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/mitigation_product', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksProduct::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/mitigation_product', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByMitigationProduct::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -384,9 +384,9 @@ class RadarLayer7AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVertical
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/vertical', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVertical::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/vertical', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroupByVertical::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -410,9 +410,9 @@ class RadarLayer7AttacksResource
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksGroup
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'normalization' => $normalization ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -432,9 +432,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksAs
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/top/ases/origin', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksAs::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/top/ases/origin', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TopOriginAs::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -455,9 +455,9 @@ class RadarLayer7AttacksResource
 		?int $limitPerLocation = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksAttacks
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/top/attacks', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksAttacks::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitDirection' => $limitDirection ?? null, 'limitPerLocation' => $limitPerLocation ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/top/attacks', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TopAttacks::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'limitDirection' => $limitDirection ?? null, 'limitPerLocation' => $limitPerLocation ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -478,9 +478,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksIndustries
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/top/industry', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksIndustries::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/top/industry', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TopIndustries::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -500,9 +500,9 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksLocation
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/top/locations/origin', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksLocation::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/top/locations/origin', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TopOriginLocation::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -518,9 +518,9 @@ class RadarLayer7AttacksResource
 		?array $continent = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksLocation
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/top/locations/target', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksLocation::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'continent' => $continent ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/top/locations/target', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TopTargetLocation::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'continent' => $continent ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -541,8 +541,8 @@ class RadarLayer7AttacksResource
 		?array $httpMethod = null,
 		?array $mitigationProduct = null,
 		?\FoundryCo\Cloudflare\Enums\RadarLayer7AttacksFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVerticals
+	): mixed
 	{
-		return $this->client->get('/radar/attacks/layer7/top/vertical', \FoundryCo\Cloudflare\Responses\RadarLayer7AttacksVerticals::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/attacks/layer7/top/vertical', \FoundryCo\Cloudflare\Responses\RadarGetAttacksLayer7TopVerticals::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'ipVersion' => $ipVersion ?? null, 'httpVersion' => $httpVersion ?? null, 'httpMethod' => $httpMethod ?? null, 'mitigationProduct' => $mitigationProduct ?? null, 'format' => $format ?? null]);
 	}
 }

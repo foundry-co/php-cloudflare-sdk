@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,7 +22,11 @@ class ConnectivityServicesResource
 	/**
 	 * List Workers VPC connectivity services
 	 */
-	public function list(mixed $type = null, ?int $page = null, ?int $perPage = null): mixed
+	public function list(
+		?\FoundryCo\Cloudflare\Enums\ConnectivityServicesType $type = null,
+		?int $page = null,
+		?int $perPage = null,
+	): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/connectivity/directory/services', null, ['type' => $type ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}

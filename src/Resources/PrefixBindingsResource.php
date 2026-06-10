@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class PrefixBindingsResource
 	/**
 	 * List DLS prefix bindings for an account
 	 */
-	public function list(
-		?string $cursor = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicListPrefixBindings
+	public function list(?string $cursor = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings', \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicListPrefixBindings::class, ['cursor' => $cursor ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings', \FoundryCo\Cloudflare\Responses\PublicListPrefixBindings::class, ['cursor' => $cursor ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create a DLS prefix binding
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PublicCreatePrefixBindingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicCreatePrefixBinding
+	public function create(\FoundryCo\Cloudflare\Requests\PublicCreatePrefixBindingRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings', \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicCreatePrefixBinding::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings', \FoundryCo\Cloudflare\Responses\PublicCreatePrefixBinding::class, $request);
 	}
 
 
 	/**
 	 * Get a DLS prefix binding
 	 */
-	public function get(string $bindingId): \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicGetPrefixBinding
+	public function get(string $bindingId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings/' . $bindingId, \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicGetPrefixBinding::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings/' . $bindingId, \FoundryCo\Cloudflare\Responses\PublicGetPrefixBinding::class, []);
 	}
 
 
@@ -57,9 +52,9 @@ class PrefixBindingsResource
 	public function update(
 		string $bindingId,
 		\FoundryCo\Cloudflare\Requests\PublicPatchPrefixBindingRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicPatchPrefixBinding
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings/' . $bindingId, \FoundryCo\Cloudflare\Responses\PrefixBindingsPublicPatchPrefixBinding::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/dls/regional_services/prefix_bindings/' . $bindingId, \FoundryCo\Cloudflare\Responses\PublicPatchPrefixBinding::class, $request);
 	}
 
 

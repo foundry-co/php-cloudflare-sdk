@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,12 +13,12 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class ZonesEnvironmentsEditRequestEnvironmentsItem
 {
 	public function __construct(
-		public string $expression,
-		public bool $lockedOnDeployment,
-		public string $name,
-		public ZonesEnvironmentsEditRequestEnvironmentsItemPosition $position,
-		public string $ref,
-		public int $version,
+		public ?string $expression = null,
+		public ?bool $lockedOnDeployment = null,
+		public ?string $name = null,
+		public ?ZonesEnvironmentsEditRequestEnvironmentsItemPosition $position = null,
+		public ?string $ref = null,
+		public ?int $version = null,
 		public ?string $httpApplicationId = null,
 	) {
 	}

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -40,18 +40,18 @@ class ContentScanningResource
 	/**
 	 * List Existing Custom Scan Expressions
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ContentScanningExpressions
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/content-upload-scan/payloads', \FoundryCo\Cloudflare\Responses\ContentScanningExpressions::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/content-upload-scan/payloads', \FoundryCo\Cloudflare\Responses\WafContentScanningListCustomScanExpressions::class, []);
 	}
 
 
 	/**
 	 * Add Custom Scan Expressions
 	 */
-	public function payloads(): \FoundryCo\Cloudflare\Responses\ContentScanningExpressions
+	public function payloads(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/content-upload-scan/payloads', \FoundryCo\Cloudflare\Responses\ContentScanningExpressions::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/content-upload-scan/payloads', \FoundryCo\Cloudflare\Responses\WafContentScanningAddCustomScanExpressions::class, null);
 	}
 
 
@@ -67,19 +67,17 @@ class ContentScanningResource
 	/**
 	 * Get Content Scanning Status
 	 */
-	public function settings(): \FoundryCo\Cloudflare\Responses\ContentScanningStatus
+	public function settings(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/content-upload-scan/settings', \FoundryCo\Cloudflare\Responses\ContentScanningStatus::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/content-upload-scan/settings', \FoundryCo\Cloudflare\Responses\WafContentScanningGetStatus::class, []);
 	}
 
 
 	/**
 	 * Update Content Scanning Status
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\WafContentScanningUpdateSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ContentScanningSettings
+	public function update(\FoundryCo\Cloudflare\Requests\WafContentScanningUpdateSettingsRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/content-upload-scan/settings', \FoundryCo\Cloudflare\Responses\ContentScanningSettings::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/content-upload-scan/settings', \FoundryCo\Cloudflare\Responses\WafContentScanningUpdateSettings::class, $request);
 	}
 }

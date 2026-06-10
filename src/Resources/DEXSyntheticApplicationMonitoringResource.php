@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,9 +26,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $from = null,
 		?string $to = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringSortBy $sortBy = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringColos
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/colos', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringColos::class, ['from' => $from ?? null, 'to' => $to ?? null, 'sortBy' => $sortBy ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/colos', \FoundryCo\Cloudflare\Responses\DexEndpointsListColos::class, ['from' => $from ?? null, 'to' => $to ?? null, 'sortBy' => $sortBy ?? null]);
 	}
 
 
@@ -40,29 +40,27 @@ class DEXSyntheticApplicationMonitoringResource
 		?float $perPage = null,
 		?string $testName = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringKind $kind = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDetails
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/devices/dex_tests', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDetails::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'testName' => $testName ?? null, 'kind' => $kind ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/devices/dex_tests', \FoundryCo\Cloudflare\Responses\DeviceDexTestDetails::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'testName' => $testName ?? null, 'kind' => $kind ?? null]);
 	}
 
 
 	/**
 	 * Create Device DEX test
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DeviceDexTestCreateDeviceDexTestRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTest
+	public function create(\FoundryCo\Cloudflare\Requests\DeviceDexTestCreateDeviceDexTestRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dex/devices/dex_tests', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTest::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dex/devices/dex_tests', \FoundryCo\Cloudflare\Responses\DeviceDexTestCreateDeviceDexTest::class, $request);
 	}
 
 
 	/**
 	 * Get Device DEX test
 	 */
-	public function get(string $dexTestId): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTest
+	public function get(string $dexTestId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/devices/dex_tests/' . $dexTestId, \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTest::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/devices/dex_tests/' . $dexTestId, \FoundryCo\Cloudflare\Responses\DeviceDexTestGetDeviceDexTest::class, []);
 	}
 
 
@@ -72,9 +70,9 @@ class DEXSyntheticApplicationMonitoringResource
 	public function update(
 		string $dexTestId,
 		\FoundryCo\Cloudflare\Requests\DeviceDexTestUpdateDeviceDexTestRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTest
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dex/devices/dex_tests/' . $dexTestId, \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTest::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dex/devices/dex_tests/' . $dexTestId, \FoundryCo\Cloudflare\Responses\DeviceDexTestUpdateDeviceDexTest::class, $request);
 	}
 
 
@@ -113,9 +111,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringSortOrder $sortOrder = null,
 		?\DateTimeImmutable $from = null,
 		?\DateTimeImmutable $to = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringIsps
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/devices/' . $deviceId . '/isps', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringIsps::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'from' => $from ?? null, 'to' => $to ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/devices/' . $deviceId . '/isps', \FoundryCo\Cloudflare\Responses\DexEndpointsListDeviceIsps::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'from' => $from ?? null, 'to' => $to ?? null]);
 	}
 
 
@@ -135,20 +133,18 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $platform = null,
 		?string $version = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringSource $source = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDevices
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/fleet-status/devices', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDevices::class, ['to' => $to ?? null, 'from' => $from ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'sortBy' => $sortBy ?? null, 'colo' => $colo ?? null, 'deviceId' => $deviceId ?? null, 'mode' => $mode ?? null, 'status' => $status ?? null, 'platform' => $platform ?? null, 'version' => $version ?? null, 'source' => $source ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/fleet-status/devices', \FoundryCo\Cloudflare\Responses\DexFleetStatusDevices::class, ['to' => $to ?? null, 'from' => $from ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'sortBy' => $sortBy ?? null, 'colo' => $colo ?? null, 'deviceId' => $deviceId ?? null, 'mode' => $mode ?? null, 'status' => $status ?? null, 'platform' => $platform ?? null, 'version' => $version ?? null, 'source' => $source ?? null]);
 	}
 
 
 	/**
 	 * List fleet status details by dimension
 	 */
-	public function dexFleetStatusLive(
-		?float $sinceMinutes = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringLive
+	public function dexFleetStatusLive(?float $sinceMinutes = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/fleet-status/live', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringLive::class, ['sinceMinutes' => $sinceMinutes ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/fleet-status/live', \FoundryCo\Cloudflare\Responses\DexFleetStatusLive::class, ['sinceMinutes' => $sinceMinutes ?? null]);
 	}
 
 
@@ -160,9 +156,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $from = null,
 		?string $colo = null,
 		?string $deviceId = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTime
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/fleet-status/over-time', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringTime::class, ['to' => $to ?? null, 'from' => $from ?? null, 'colo' => $colo ?? null, 'deviceId' => $deviceId ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/fleet-status/over-time', \FoundryCo\Cloudflare\Responses\DexFleetStatusOverTime::class, ['to' => $to ?? null, 'from' => $from ?? null, 'colo' => $colo ?? null, 'deviceId' => $deviceId ?? null]);
 	}
 
 
@@ -176,9 +172,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $to = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringInterval $interval = null,
 		?string $colo = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDetails
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/http-tests/' . $testId, \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDetails::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'interval' => $interval ?? null, 'colo' => $colo ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/http-tests/' . $testId, \FoundryCo\Cloudflare\Responses\DexEndpointsHttpTestDetails::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'interval' => $interval ?? null, 'colo' => $colo ?? null]);
 	}
 
 
@@ -191,9 +187,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $from = null,
 		?string $to = null,
 		?string $colo = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPercentiles
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/http-tests/' . $testId . '/percentiles', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPercentiles::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'colo' => $colo ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/http-tests/' . $testId . '/percentiles', \FoundryCo\Cloudflare\Responses\DexEndpointsHttpTestPercentiles::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'colo' => $colo ?? null]);
 	}
 
 
@@ -208,32 +204,27 @@ class DEXSyntheticApplicationMonitoringResource
 		?float $page = null,
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringKind $kind = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringOverview
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/tests/overview', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringOverview::class, ['colo' => $colo ?? null, 'testName' => $testName ?? null, 'deviceId' => $deviceId ?? null, 'registrationId' => $registrationId ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'kind' => $kind ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/tests/overview', \FoundryCo\Cloudflare\Responses\DexEndpointsListTestsOverview::class, ['colo' => $colo ?? null, 'testName' => $testName ?? null, 'deviceId' => $deviceId ?? null, 'registrationId' => $registrationId ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'kind' => $kind ?? null]);
 	}
 
 
 	/**
 	 * Get count of devices targeted
 	 */
-	public function uniqueDevices(
-		?string $testName = null,
-		?array $deviceId = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDevices
+	public function uniqueDevices(?string $testName = null, ?array $deviceId = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/tests/unique-devices', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDevices::class, ['testName' => $testName ?? null, 'deviceId' => $deviceId ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/tests/unique-devices', \FoundryCo\Cloudflare\Responses\DexEndpointsTestsUniqueDevices::class, ['testName' => $testName ?? null, 'deviceId' => $deviceId ?? null]);
 	}
 
 
 	/**
 	 * Get details for a specific traceroute test run
 	 */
-	public function networkPath(
-		string $testResultId,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPath
+	public function networkPath(string $testResultId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-test-results/' . $testResultId . '/network-path', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPath::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-test-results/' . $testResultId . '/network-path', \FoundryCo\Cloudflare\Responses\DexEndpointsTracerouteTestResultNetworkPath::class, []);
 	}
 
 
@@ -247,9 +238,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $to = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringInterval $interval = null,
 		?string $colo = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDetails
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-tests/' . $testId, \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringDetails::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'interval' => $interval ?? null, 'colo' => $colo ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-tests/' . $testId, \FoundryCo\Cloudflare\Responses\DexEndpointsTracerouteTestDetails::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'interval' => $interval ?? null, 'colo' => $colo ?? null]);
 	}
 
 
@@ -262,9 +253,9 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $from = null,
 		?string $to = null,
 		?\FoundryCo\Cloudflare\Enums\DEXSyntheticApplicationMonitoringInterval $interval = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPath
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-tests/' . $testId . '/network-path', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPath::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'interval' => $interval ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-tests/' . $testId . '/network-path', \FoundryCo\Cloudflare\Responses\DexEndpointsTracerouteTestNetworkPath::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'interval' => $interval ?? null]);
 	}
 
 
@@ -277,8 +268,8 @@ class DEXSyntheticApplicationMonitoringResource
 		?string $from = null,
 		?string $to = null,
 		?string $colo = null,
-	): \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPercentiles
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-tests/' . $testId . '/percentiles', \FoundryCo\Cloudflare\Responses\DEXSyntheticApplicationMonitoringPercentiles::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'colo' => $colo ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/traceroute-tests/' . $testId . '/percentiles', \FoundryCo\Cloudflare\Responses\DexEndpointsTracerouteTestPercentiles::class, ['deviceId' => $deviceId ?? null, 'from' => $from ?? null, 'to' => $to ?? null, 'colo' => $colo ?? null]);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class WorkerSubdomainResource
 	/**
 	 * Get Subdomain
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\WorkerSubdomainSubdomain
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/subdomain', \FoundryCo\Cloudflare\Responses\WorkerSubdomainSubdomain::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/subdomain', \FoundryCo\Cloudflare\Responses\WorkerSubdomainGetSubdomain::class, []);
 	}
 
 
 	/**
 	 * Create Subdomain
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\WorkerSubdomainCreateSubdomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerSubdomainSubdomain
+	public function update(\FoundryCo\Cloudflare\Requests\WorkerSubdomainCreateSubdomainRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/subdomain', \FoundryCo\Cloudflare\Responses\WorkerSubdomainSubdomain::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/subdomain', \FoundryCo\Cloudflare\Responses\WorkerSubdomainCreateSubdomain::class, $request);
 	}
 
 

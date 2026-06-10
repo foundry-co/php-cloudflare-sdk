@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,22 +22,17 @@ class SharedResource
 	/**
 	 * Create a sharable link to a query result
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SharedquerypostRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SharedSharedquerypost
+	public function create(\FoundryCo\Cloudflare\Requests\SharedquerypostRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/shared/query', \FoundryCo\Cloudflare\Responses\SharedSharedquerypost::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/shared/query', \FoundryCo\Cloudflare\Responses\Sharedquerypost::class, $request);
 	}
 
 
 	/**
 	 * View a query that has been shared
 	 */
-	public function get(
-		string $id,
-		?\FoundryCo\Cloudflare\Enums\SharedView $view = null,
-	): \FoundryCo\Cloudflare\Responses\SharedSharedqueryget
+	public function get(string $id, ?\FoundryCo\Cloudflare\Enums\SharedView $view = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/observability/shared/query/' . $id, \FoundryCo\Cloudflare\Responses\SharedSharedqueryget::class, ['view' => $view ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/observability/shared/query/' . $id, \FoundryCo\Cloudflare\Responses\Sharedqueryget::class, ['view' => $view ?? null]);
 	}
 }

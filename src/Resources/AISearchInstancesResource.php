@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,41 +29,36 @@ class AISearchInstancesResource
 		?string $namespace = null,
 		?\FoundryCo\Cloudflare\Enums\AISearchInstancesOrderBy $orderBy = null,
 		?\FoundryCo\Cloudflare\Enums\AISearchInstancesOrderByDirection $orderByDirection = null,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstances
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/instances', \FoundryCo\Cloudflare\Responses\AISearchInstancesInstances::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'namespace' => $namespace ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/instances', \FoundryCo\Cloudflare\Responses\AiSearchListInstances::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'namespace' => $namespace ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null]);
 	}
 
 
 	/**
 	 * Create new instance.
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AiSearchCreateInstanceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance
+	public function create(\FoundryCo\Cloudflare\Requests\AiSearchCreateInstanceRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/instances', \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/instances', \FoundryCo\Cloudflare\Responses\AiSearchCreateInstance::class, $request);
 	}
 
 
 	/**
 	 * Read instance.
 	 */
-	public function get(string $id): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance
+	public function get(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/instances/' . $id, \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/instances/' . $id, \FoundryCo\Cloudflare\Responses\AiSearchFetchInstance::class, []);
 	}
 
 
 	/**
 	 * Update instance.
 	 */
-	public function update(
-		string $id,
-		\FoundryCo\Cloudflare\Requests\AiSearchUpdateInstanceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance
+	public function update(string $id, \FoundryCo\Cloudflare\Requests\AiSearchUpdateInstanceRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/ai-search/instances/' . $id, \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/ai-search/instances/' . $id, \FoundryCo\Cloudflare\Responses\AiSearchUpdateInstance::class, $request);
 	}
 
 
@@ -91,21 +86,18 @@ class AISearchInstancesResource
 	/**
 	 * Search
 	 */
-	public function search(
-		string $id,
-		\FoundryCo\Cloudflare\Requests\AiSearchInstanceSearchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesSearch
+	public function search(string $id, \FoundryCo\Cloudflare\Requests\AiSearchInstanceSearchRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/instances/' . $id . '/search', \FoundryCo\Cloudflare\Responses\AISearchInstancesSearch::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/instances/' . $id . '/search', \FoundryCo\Cloudflare\Responses\AiSearchInstanceSearch::class, $request);
 	}
 
 
 	/**
 	 * Stats
 	 */
-	public function stats(string $id): \FoundryCo\Cloudflare\Responses\AISearchInstancesStats
+	public function stats(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/instances/' . $id . '/stats', \FoundryCo\Cloudflare\Responses\AISearchInstancesStats::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/instances/' . $id . '/stats', \FoundryCo\Cloudflare\Responses\AiSearchStats::class, []);
 	}
 
 
@@ -120,9 +112,9 @@ class AISearchInstancesResource
 		?string $namespace = null,
 		?\FoundryCo\Cloudflare\Enums\AISearchInstancesOrderBy $orderBy = null,
 		?\FoundryCo\Cloudflare\Enums\AISearchInstancesOrderByDirection $orderByDirection = null,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstances
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances', \FoundryCo\Cloudflare\Responses\AISearchInstancesInstances::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'namespace' => $namespace ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances', \FoundryCo\Cloudflare\Responses\AiSearchNamespaceListInstances::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'namespace' => $namespace ?? null, 'orderBy' => $orderBy ?? null, 'orderByDirection' => $orderByDirection ?? null]);
 	}
 
 
@@ -132,21 +124,18 @@ class AISearchInstancesResource
 	public function aiSearchNamespaceCreateInstance(
 		string $name,
 		\FoundryCo\Cloudflare\Requests\AiSearchNamespaceCreateInstanceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances', \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances', \FoundryCo\Cloudflare\Responses\AiSearchNamespaceCreateInstance::class, $request);
 	}
 
 
 	/**
 	 * Read instance.
 	 */
-	public function aiSearchNamespaceFetchInstance(
-		string $id,
-		string $name,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance
+	public function aiSearchNamespaceFetchInstance(string $id, string $name): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id, \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id, \FoundryCo\Cloudflare\Responses\AiSearchNamespaceFetchInstance::class, []);
 	}
 
 
@@ -157,9 +146,9 @@ class AISearchInstancesResource
 		string $id,
 		string $name,
 		\FoundryCo\Cloudflare\Requests\AiSearchNamespaceUpdateInstanceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id, \FoundryCo\Cloudflare\Responses\AISearchInstancesInstance::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id, \FoundryCo\Cloudflare\Responses\AiSearchNamespaceUpdateInstance::class, $request);
 	}
 
 
@@ -192,20 +181,17 @@ class AISearchInstancesResource
 		string $id,
 		string $name,
 		\FoundryCo\Cloudflare\Requests\AiSearchNamespaceInstanceSearchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesSearch
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id . '/search', \FoundryCo\Cloudflare\Responses\AISearchInstancesSearch::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id . '/search', \FoundryCo\Cloudflare\Responses\AiSearchNamespaceInstanceSearch::class, $request);
 	}
 
 
 	/**
 	 * Stats
 	 */
-	public function aiSearchNamespaceStats(
-		string $id,
-		string $name,
-	): \FoundryCo\Cloudflare\Responses\AISearchInstancesStats
+	public function aiSearchNamespaceStats(string $id, string $name): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id . '/stats', \FoundryCo\Cloudflare\Responses\AISearchInstancesStats::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name . '/instances/' . $id . '/stats', \FoundryCo\Cloudflare\Responses\AiSearchNamespaceStats::class, []);
 	}
 }

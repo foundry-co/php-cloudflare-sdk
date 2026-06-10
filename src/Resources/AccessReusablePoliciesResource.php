@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,12 +22,9 @@ class AccessReusablePoliciesResource
 	/**
 	 * List Access reusable policies
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicies
+	public function list(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/policies', \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicies::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/policies', \FoundryCo\Cloudflare\Responses\AccessPoliciesListAccessReusablePolicies::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -36,18 +33,18 @@ class AccessReusablePoliciesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\AccessPoliciesCreateAnAccessReusablePolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicy
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/access/policies', \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicy::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/access/policies', \FoundryCo\Cloudflare\Responses\AccessPoliciesCreateAnAccessReusablePolicy::class, $request);
 	}
 
 
 	/**
 	 * Get an Access reusable policy
 	 */
-	public function get(string $policyId): \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicy
+	public function get(string $policyId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicy::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessPoliciesGetAnAccessReusablePolicy::class, []);
 	}
 
 
@@ -57,9 +54,9 @@ class AccessReusablePoliciesResource
 	public function update(
 		string $policyId,
 		\FoundryCo\Cloudflare\Requests\AccessPoliciesUpdateAnAccessReusablePolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicy
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/access/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessReusablePoliciesPolicy::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/access/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\AccessPoliciesUpdateAnAccessReusablePolicy::class, $request);
 	}
 
 

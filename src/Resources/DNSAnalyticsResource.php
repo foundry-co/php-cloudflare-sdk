@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -30,9 +30,9 @@ class DNSAnalyticsResource
 		?int $limit = null,
 		?string $sort = null,
 		?string $filters = null,
-	): \FoundryCo\Cloudflare\Responses\DNSAnalyticsTable
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_analytics/report', \FoundryCo\Cloudflare\Responses\DNSAnalyticsTable::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_analytics/report', \FoundryCo\Cloudflare\Responses\DnsAnalyticsTable::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null]);
 	}
 
 
@@ -48,8 +48,8 @@ class DNSAnalyticsResource
 		?string $sort = null,
 		?string $filters = null,
 		?\FoundryCo\Cloudflare\Enums\DNSAnalyticsTimeDelta $timeDelta = null,
-	): \FoundryCo\Cloudflare\Responses\DNSAnalyticsTime
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/dns_analytics/report/bytime', \FoundryCo\Cloudflare\Responses\DNSAnalyticsTime::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null, 'timeDelta' => $timeDelta ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/dns_analytics/report/bytime', \FoundryCo\Cloudflare\Responses\DnsAnalyticsByTime::class, ['metrics' => $metrics ?? null, 'dimensions' => $dimensions ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'limit' => $limit ?? null, 'sort' => $sort ?? null, 'filters' => $filters ?? null, 'timeDelta' => $timeDelta ?? null]);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -38,9 +38,9 @@ class RadarBGPResource
 		?\FoundryCo\Cloudflare\Enums\RadarBGPSortBy $sortBy = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPSortOrder $sortOrder = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPEvents
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/hijacks/events', \FoundryCo\Cloudflare\Responses\RadarBGPEvents::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'eventId' => $eventId ?? null, 'hijackerAsn' => $hijackerAsn ?? null, 'victimAsn' => $victimAsn ?? null, 'involvedAsn' => $involvedAsn ?? null, 'involvedCountry' => $involvedCountry ?? null, 'prefix' => $prefix ?? null, 'minConfidence' => $minConfidence ?? null, 'maxConfidence' => $maxConfidence ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/hijacks/events', \FoundryCo\Cloudflare\Responses\RadarGetBgpHijacksEvents::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'eventId' => $eventId ?? null, 'hijackerAsn' => $hijackerAsn ?? null, 'victimAsn' => $victimAsn ?? null, 'involvedAsn' => $involvedAsn ?? null, 'involvedCountry' => $involvedCountry ?? null, 'prefix' => $prefix ?? null, 'minConfidence' => $minConfidence ?? null, 'maxConfidence' => $maxConfidence ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -57,9 +57,9 @@ class RadarBGPResource
 		?array $ipVersion = null,
 		?bool $includeDelay = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/ips/timeseries', \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'ipVersion' => $ipVersion ?? null, 'includeDelay' => $includeDelay ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/ips/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetBgpIpsTimeseries::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'ipVersion' => $ipVersion ?? null, 'includeDelay' => $includeDelay ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -72,9 +72,9 @@ class RadarBGPResource
 		?\FoundryCo\Cloudflare\Enums\RadarBGPMetric $metric = null,
 		?string $country = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPAses
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/ips/top/ases', \FoundryCo\Cloudflare\Responses\RadarBGPAses::class, ['date' => $date ?? null, 'limit' => $limit ?? null, 'metric' => $metric ?? null, 'country' => $country ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/ips/top/ases', \FoundryCo\Cloudflare\Responses\RadarGetBgpIpsTopAses::class, ['date' => $date ?? null, 'limit' => $limit ?? null, 'metric' => $metric ?? null, 'country' => $country ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -94,9 +94,9 @@ class RadarBGPResource
 		?\FoundryCo\Cloudflare\Enums\RadarBGPSortBy $sortBy = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPSortOrder $sortOrder = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPEvents
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/leaks/events', \FoundryCo\Cloudflare\Responses\RadarBGPEvents::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'eventId' => $eventId ?? null, 'leakAsn' => $leakAsn ?? null, 'involvedAsn' => $involvedAsn ?? null, 'involvedCountry' => $involvedCountry ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/leaks/events', \FoundryCo\Cloudflare\Responses\RadarGetBgpRouteLeakEvents::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'eventId' => $eventId ?? null, 'leakAsn' => $leakAsn ?? null, 'involvedAsn' => $involvedAsn ?? null, 'involvedCountry' => $involvedCountry ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -109,9 +109,9 @@ class RadarBGPResource
 		?\FoundryCo\Cloudflare\Enums\RadarBGPSortBy $sortBy = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPSortOrder $sortOrder = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPAsns
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/routes/ases', \FoundryCo\Cloudflare\Responses\RadarBGPAsns::class, ['location' => $location ?? null, 'limit' => $limit ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/routes/ases', \FoundryCo\Cloudflare\Responses\RadarGetBgpRoutesAsns::class, ['location' => $location ?? null, 'limit' => $limit ?? null, 'sortBy' => $sortBy ?? null, 'sortOrder' => $sortOrder ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -123,9 +123,9 @@ class RadarBGPResource
 		?string $prefix = null,
 		?bool $invalidOnly = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPMoas
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/routes/moas', \FoundryCo\Cloudflare\Responses\RadarBGPMoas::class, ['origin' => $origin ?? null, 'prefix' => $prefix ?? null, 'invalidOnly' => $invalidOnly ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/routes/moas', \FoundryCo\Cloudflare\Responses\RadarGetBgpPfx2asMoas::class, ['origin' => $origin ?? null, 'prefix' => $prefix ?? null, 'invalidOnly' => $invalidOnly ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -138,21 +138,18 @@ class RadarBGPResource
 		?\FoundryCo\Cloudflare\Enums\RadarBGPRpkiStatus $rpkiStatus = null,
 		?bool $longestPrefixMatch = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPPfx2as
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/routes/pfx2as', \FoundryCo\Cloudflare\Responses\RadarBGPPfx2as::class, ['prefix' => $prefix ?? null, 'origin' => $origin ?? null, 'rpkiStatus' => $rpkiStatus ?? null, 'longestPrefixMatch' => $longestPrefixMatch ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/routes/pfx2as', \FoundryCo\Cloudflare\Responses\RadarGetBgpPfx2as::class, ['prefix' => $prefix ?? null, 'origin' => $origin ?? null, 'rpkiStatus' => $rpkiStatus ?? null, 'longestPrefixMatch' => $longestPrefixMatch ?? null, 'format' => $format ?? null]);
 	}
 
 
 	/**
 	 * Get real-time BGP routes for a prefix
 	 */
-	public function realtime(
-		?string $prefix = null,
-		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPRealtime
+	public function realtime(?string $prefix = null, ?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null): mixed
 	{
-		return $this->client->get('/radar/bgp/routes/realtime', \FoundryCo\Cloudflare\Responses\RadarBGPRealtime::class, ['prefix' => $prefix ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/routes/realtime', \FoundryCo\Cloudflare\Responses\RadarGetBgpRoutesRealtime::class, ['prefix' => $prefix ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -163,9 +160,9 @@ class RadarBGPResource
 		?int $asn = null,
 		?string $location = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPStats
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/routes/stats', \FoundryCo\Cloudflare\Responses\RadarBGPStats::class, ['asn' => $asn ?? null, 'location' => $location ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/routes/stats', \FoundryCo\Cloudflare\Responses\RadarGetBgpRoutesStats::class, ['asn' => $asn ?? null, 'location' => $location ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -178,9 +175,9 @@ class RadarBGPResource
 		?int $asn = null,
 		?bool $includeAsnInfo = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPChanges
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/rpki/aspa/changes', \FoundryCo\Cloudflare\Responses\RadarBGPChanges::class, ['dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'includeAsnInfo' => $includeAsnInfo ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/rpki/aspa/changes', \FoundryCo\Cloudflare\Responses\RadarGetBgpRpkiAspaChanges::class, ['dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'includeAsnInfo' => $includeAsnInfo ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -193,9 +190,9 @@ class RadarBGPResource
 		?\DateTimeImmutable $date = null,
 		?bool $includeAsnInfo = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPSnapshot
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/rpki/aspa/snapshot', \FoundryCo\Cloudflare\Responses\RadarBGPSnapshot::class, ['customerAsn' => $customerAsn ?? null, 'providerAsn' => $providerAsn ?? null, 'date' => $date ?? null, 'includeAsnInfo' => $includeAsnInfo ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/rpki/aspa/snapshot', \FoundryCo\Cloudflare\Responses\RadarGetBgpRpkiAspaSnapshot::class, ['customerAsn' => $customerAsn ?? null, 'providerAsn' => $providerAsn ?? null, 'date' => $date ?? null, 'includeAsnInfo' => $includeAsnInfo ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -209,9 +206,9 @@ class RadarBGPResource
 		?array $rir = null,
 		?array $location = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/rpki/aspa/timeseries', \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries::class, ['dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'name' => $name ?? null, 'rir' => $rir ?? null, 'location' => $location ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/rpki/aspa/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetBgpRpkiAspaTimeseries::class, ['dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'name' => $name ?? null, 'rir' => $rir ?? null, 'location' => $location ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -226,9 +223,9 @@ class RadarBGPResource
 		?array $location = null,
 		?array $name = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/rpki/roas/timeseries', \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries::class, ['dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'metric' => $metric ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'name' => $name ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/rpki/roas/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetBgpRpkiRoasTimeseries::class, ['dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'metric' => $metric ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'name' => $name ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -245,9 +242,9 @@ class RadarBGPResource
 		?array $updateType = null,
 		?array $asn = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/timeseries', \FoundryCo\Cloudflare\Responses\RadarBGPTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'prefix' => $prefix ?? null, 'updateType' => $updateType ?? null, 'asn' => $asn ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetBgpTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'prefix' => $prefix ?? null, 'updateType' => $updateType ?? null, 'asn' => $asn ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -264,9 +261,9 @@ class RadarBGPResource
 		?array $prefix = null,
 		?array $updateType = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPAses
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/top/ases', \FoundryCo\Cloudflare\Responses\RadarBGPAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'prefix' => $prefix ?? null, 'updateType' => $updateType ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/top/ases', \FoundryCo\Cloudflare\Responses\RadarGetBgpTopAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'prefix' => $prefix ?? null, 'updateType' => $updateType ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -277,9 +274,9 @@ class RadarBGPResource
 		?string $country = null,
 		?int $limit = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPPrefixes
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/top/ases/prefixes', \FoundryCo\Cloudflare\Responses\RadarBGPPrefixes::class, ['country' => $country ?? null, 'limit' => $limit ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/top/ases/prefixes', \FoundryCo\Cloudflare\Responses\RadarGetBgpTopAsnsByPrefixes::class, ['country' => $country ?? null, 'limit' => $limit ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -295,8 +292,8 @@ class RadarBGPResource
 		?array $asn = null,
 		?array $updateType = null,
 		?\FoundryCo\Cloudflare\Enums\RadarBGPFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarBGPPrefixes
+	): mixed
 	{
-		return $this->client->get('/radar/bgp/top/prefixes', \FoundryCo\Cloudflare\Responses\RadarBGPPrefixes::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'updateType' => $updateType ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/bgp/top/prefixes', \FoundryCo\Cloudflare\Responses\RadarGetBgpTopPrefixes::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'updateType' => $updateType ?? null, 'format' => $format ?? null]);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,33 +22,27 @@ class ApplicationsResource
 	/**
 	 * List Applications associated with your account
 	 */
-	public function list(
-		?string $name = null,
-		?string $image = null,
-		?array $label = null,
-	): \FoundryCo\Cloudflare\Responses\ApplicationsListApplications
+	public function list(?string $name = null, ?string $image = null, ?array $label = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/containers/applications', \FoundryCo\Cloudflare\Responses\ApplicationsListApplications::class, ['name' => $name ?? null, 'image' => $image ?? null, 'label' => $label ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/containers/applications', \FoundryCo\Cloudflare\Responses\ListApplications::class, ['name' => $name ?? null, 'image' => $image ?? null, 'label' => $label ?? null]);
 	}
 
 
 	/**
 	 * Create a new application
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateApplicationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ApplicationsCreateApplication
+	public function create(\FoundryCo\Cloudflare\Requests\CreateApplicationRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/containers/applications', \FoundryCo\Cloudflare\Responses\ApplicationsCreateApplication::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/containers/applications', \FoundryCo\Cloudflare\Responses\CreateApplication::class, $request);
 	}
 
 
 	/**
 	 * Get a single application by id
 	 */
-	public function get(string $applicationId): \FoundryCo\Cloudflare\Responses\ApplicationsGetApplication
+	public function get(string $applicationId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId, \FoundryCo\Cloudflare\Responses\ApplicationsGetApplication::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId, \FoundryCo\Cloudflare\Responses\GetApplication::class, []);
 	}
 
 
@@ -58,9 +52,9 @@ class ApplicationsResource
 	public function update(
 		string $applicationId,
 		\FoundryCo\Cloudflare\Requests\ModifyApplicationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ApplicationsModifyApplication
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId, \FoundryCo\Cloudflare\Responses\ApplicationsModifyApplication::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId, \FoundryCo\Cloudflare\Responses\ModifyApplication::class, $request);
 	}
 
 
@@ -79,18 +73,18 @@ class ApplicationsResource
 	public function rollouts(
 		string $applicationId,
 		\FoundryCo\Cloudflare\Requests\CreateApplicationRolloutRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ApplicationsCreateApplicationRollout
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId . '/rollouts', \FoundryCo\Cloudflare\Responses\ApplicationsCreateApplicationRollout::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId . '/rollouts', \FoundryCo\Cloudflare\Responses\CreateApplicationRollout::class, $request);
 	}
 
 
 	/**
 	 * List all application versions
 	 */
-	public function versions(string $applicationId): \FoundryCo\Cloudflare\Responses\ApplicationsListApplicationVersions
+	public function versions(string $applicationId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId . '/versions', \FoundryCo\Cloudflare\Responses\ApplicationsListApplicationVersions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/containers/applications/' . $applicationId . '/versions', \FoundryCo\Cloudflare\Responses\ListApplicationVersions::class, []);
 	}
 
 
@@ -103,17 +97,17 @@ class ApplicationsResource
 		?int $offset = null,
 		?string $orderBy = null,
 		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\ApplicationsGetApplications
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/applications', \FoundryCo\Cloudflare\Responses\ApplicationsGetApplications::class, ['filter' => $filter ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null, 'orderBy' => $orderBy ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/applications', \FoundryCo\Cloudflare\Responses\GetApplications::class, ['filter' => $filter ?? null, 'limit' => $limit ?? null, 'offset' => $offset ?? null, 'orderBy' => $orderBy ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Get application
 	 */
-	public function getApplicationById(string $id): \FoundryCo\Cloudflare\Responses\ApplicationsGetApplicationById
+	public function getApplicationById(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/applications/' . $id, \FoundryCo\Cloudflare\Responses\ApplicationsGetApplicationById::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/applications/' . $id, \FoundryCo\Cloudflare\Responses\GetApplicationById::class, []);
 	}
 }

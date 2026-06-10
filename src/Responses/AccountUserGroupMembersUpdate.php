@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class AccountUserGroupMembersUpdate
 {
 	public function __construct(
 		/** Account member identifier. */
-		public string $id,
+		public ?string $id = null,
 		/** The contact email address of the user. */
 		public ?string $email = null,
 		/** The member's status in the account. */

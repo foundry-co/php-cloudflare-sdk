@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,9 +21,9 @@ class TenantLevelCustomNameserversResource
 	/**
 	 * List Tenant Custom Nameservers
 	 */
-	public function get(string $tenantTag): \FoundryCo\Cloudflare\Responses\TenantLevelCustomNameserversNameservers
+	public function get(string $tenantTag): mixed
 	{
-		return $this->client->get('/tenants/' . $tenantTag . '/custom_ns', \FoundryCo\Cloudflare\Responses\TenantLevelCustomNameserversNameservers::class, []);
+		return $this->client->get('/tenants/' . $tenantTag . '/custom_ns', \FoundryCo\Cloudflare\Responses\TenantLevelCustomNameserversListTenantCustomNameservers::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class TenantLevelCustomNameserversResource
 	public function create(
 		string $tenantTag,
 		\FoundryCo\Cloudflare\Requests\TenantLevelCustomNameserversAddTenantCustomNameserverRequest $request,
-	): \FoundryCo\Cloudflare\Responses\TenantLevelCustomNameserversNameserver
+	): mixed
 	{
-		return $this->client->post('/tenants/' . $tenantTag . '/custom_ns', \FoundryCo\Cloudflare\Responses\TenantLevelCustomNameserversNameserver::class, $request);
+		return $this->client->post('/tenants/' . $tenantTag . '/custom_ns', \FoundryCo\Cloudflare\Responses\TenantLevelCustomNameserversAddTenantCustomNameserver::class, $request);
 	}
 
 

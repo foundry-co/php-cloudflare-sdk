@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class ZeroTrustGatewayRulesUpdateZeroTrustGatewayRuleRequestRuleSetting
 {
 	public function __construct(
 		/** Specify the IPv4 address of the upstream resolver. */
-		public string $ip,
+		public ?string $ip = null,
 		/** Specify a port number to use for the upstream resolver. Defaults to 53 if unspecified. */
 		public ?int $port = null,
 		/** Indicate whether to connect to this resolver over a private network. Must set when vnet_id set. */

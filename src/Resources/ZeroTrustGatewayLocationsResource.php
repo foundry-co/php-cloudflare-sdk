@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class ZeroTrustGatewayLocationsResource
 	/**
 	 * List Zero Trust Gateway locations
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsLocations
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/locations', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsLocations::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/locations', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsListZeroTrustGatewayLocations::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class ZeroTrustGatewayLocationsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZeroTrustGatewayLocationsCreateZeroTrustGatewayLocationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsLocation
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/locations', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsLocation::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/locations', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsCreateZeroTrustGatewayLocation::class, $request);
 	}
 
 
 	/**
 	 * Get Zero Trust Gateway location details
 	 */
-	public function get(string $locationId): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsDetails
+	public function get(string $locationId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/locations/' . $locationId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/locations/' . $locationId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsZeroTrustGatewayLocationDetails::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class ZeroTrustGatewayLocationsResource
 	public function update(
 		string $locationId,
 		\FoundryCo\Cloudflare\Requests\ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsLocation
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/gateway/locations/' . $locationId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsLocation::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/gateway/locations/' . $locationId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocation::class, $request);
 	}
 
 

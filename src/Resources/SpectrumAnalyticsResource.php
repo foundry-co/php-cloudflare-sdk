@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,12 +22,9 @@ class SpectrumAnalyticsResource
 	/**
 	 * Get current aggregated analytics
 	 */
-	public function list(
-		?string $appID = null,
-		?string $coloName = null,
-	): \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsAnalytics
+	public function list(?string $appID = null, ?string $coloName = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/spectrum/analytics/aggregate/current', \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsAnalytics::class, ['appID' => $appID ?? null, 'coloName' => $coloName ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/spectrum/analytics/aggregate/current', \FoundryCo\Cloudflare\Responses\SpectrumAggregateAnalyticsGetCurrentAggregatedAnalytics::class, ['appID' => $appID ?? null, 'coloName' => $coloName ?? null]);
 	}
 
 
@@ -42,9 +39,9 @@ class SpectrumAnalyticsResource
 		?string $filters = null,
 		mixed $since = null,
 		?\FoundryCo\Cloudflare\Enums\SpectrumAnalyticsTimeDelta $timeDelta = null,
-	): \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsTime
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/spectrum/analytics/events/bytime', \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsTime::class, ['dimensions' => $dimensions ?? null, 'sort' => $sort ?? null, 'until' => $until ?? null, 'metrics' => $metrics ?? null, 'filters' => $filters ?? null, 'since' => $since ?? null, 'timeDelta' => $timeDelta ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/spectrum/analytics/events/bytime', \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsByTimeGetAnalyticsByTime::class, ['dimensions' => $dimensions ?? null, 'sort' => $sort ?? null, 'until' => $until ?? null, 'metrics' => $metrics ?? null, 'filters' => $filters ?? null, 'since' => $since ?? null, 'timeDelta' => $timeDelta ?? null]);
 	}
 
 
@@ -58,8 +55,8 @@ class SpectrumAnalyticsResource
 		?array $metrics = null,
 		?string $filters = null,
 		mixed $since = null,
-	): \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsSummary
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/spectrum/analytics/events/summary', \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsSummary::class, ['dimensions' => $dimensions ?? null, 'sort' => $sort ?? null, 'until' => $until ?? null, 'metrics' => $metrics ?? null, 'filters' => $filters ?? null, 'since' => $since ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/spectrum/analytics/events/summary', \FoundryCo\Cloudflare\Responses\SpectrumAnalyticsSummaryGetAnalyticsSummary::class, ['dimensions' => $dimensions ?? null, 'sort' => $sort ?? null, 'until' => $until ?? null, 'metrics' => $metrics ?? null, 'filters' => $filters ?? null, 'since' => $since ?? null]);
 	}
 }

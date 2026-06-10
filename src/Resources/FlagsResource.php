@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,34 +22,27 @@ class FlagsResource
 	/**
 	 * List flags
 	 */
-	public function get(
-		string $appId,
-		?string $limit = null,
-		?string $cursor = null,
-	): \FoundryCo\Cloudflare\Responses\FlagsFlags
+	public function get(string $appId, ?string $limit = null, ?string $cursor = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags', \FoundryCo\Cloudflare\Responses\FlagsFlags::class, ['limit' => $limit ?? null, 'cursor' => $cursor ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags', \FoundryCo\Cloudflare\Responses\FlagshipListFlags::class, ['limit' => $limit ?? null, 'cursor' => $cursor ?? null]);
 	}
 
 
 	/**
 	 * Create flag
 	 */
-	public function create(
-		string $appId,
-		\FoundryCo\Cloudflare\Requests\FlagshipCreateFlagRequest $request,
-	): \FoundryCo\Cloudflare\Responses\FlagsFlag
+	public function create(string $appId, \FoundryCo\Cloudflare\Requests\FlagshipCreateFlagRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags', \FoundryCo\Cloudflare\Responses\FlagsFlag::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags', \FoundryCo\Cloudflare\Responses\FlagshipCreateFlag::class, $request);
 	}
 
 
 	/**
 	 * Get flag
 	 */
-	public function flags(string $appId, string $flagKey): \FoundryCo\Cloudflare\Responses\FlagsFlag
+	public function flags(string $appId, string $flagKey): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags/' . $flagKey, \FoundryCo\Cloudflare\Responses\FlagsFlag::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags/' . $flagKey, \FoundryCo\Cloudflare\Responses\FlagshipGetFlag::class, []);
 	}
 
 
@@ -60,9 +53,9 @@ class FlagsResource
 		string $appId,
 		string $flagKey,
 		\FoundryCo\Cloudflare\Requests\FlagshipUpdateFlagRequest $request,
-	): \FoundryCo\Cloudflare\Responses\FlagsFlag
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags/' . $flagKey, \FoundryCo\Cloudflare\Responses\FlagsFlag::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/flagship/apps/' . $appId . '/flags/' . $flagKey, \FoundryCo\Cloudflare\Responses\FlagshipUpdateFlag::class, $request);
 	}
 
 

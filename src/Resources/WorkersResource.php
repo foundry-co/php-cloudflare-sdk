@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -45,53 +45,45 @@ class WorkersResource
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\WorkersOrderBy $orderBy = null,
 		?\FoundryCo\Cloudflare\Enums\WorkersOrder $order = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersListWorkers
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers', \FoundryCo\Cloudflare\Responses\WorkersListWorkers::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers', \FoundryCo\Cloudflare\Responses\ListWorkers::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'order' => $order ?? null]);
 	}
 
 
 	/**
 	 * Create Worker
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateWorkerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersCreateWorker
+	public function create(\FoundryCo\Cloudflare\Requests\CreateWorkerRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/workers', \FoundryCo\Cloudflare\Responses\WorkersCreateWorker::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/workers', \FoundryCo\Cloudflare\Responses\CreateWorker::class, $request);
 	}
 
 
 	/**
 	 * Get Worker
 	 */
-	public function workers(string $workerId): \FoundryCo\Cloudflare\Responses\WorkersGetWorker
+	public function workers(string $workerId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers/' . $workerId, \FoundryCo\Cloudflare\Responses\WorkersGetWorker::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/workers/' . $workerId, \FoundryCo\Cloudflare\Responses\GetWorker::class, []);
 	}
 
 
 	/**
 	 * Update Worker
 	 */
-	public function update(
-		string $workerId,
-		\FoundryCo\Cloudflare\Requests\UpdateWorkerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersUpdateWorker
+	public function update(string $workerId, \FoundryCo\Cloudflare\Requests\UpdateWorkerRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/workers/' . $workerId, \FoundryCo\Cloudflare\Responses\WorkersUpdateWorker::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/workers/' . $workerId, \FoundryCo\Cloudflare\Responses\UpdateWorker::class, $request);
 	}
 
 
 	/**
 	 * Edit Worker
 	 */
-	public function editWorker(
-		string $workerId,
-		\FoundryCo\Cloudflare\Requests\EditWorkerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersEditWorker
+	public function editWorker(string $workerId, \FoundryCo\Cloudflare\Requests\EditWorkerRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/workers/' . $workerId, \FoundryCo\Cloudflare\Responses\WorkersEditWorker::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/workers/' . $workerId, \FoundryCo\Cloudflare\Responses\EditWorker::class, $request);
 	}
 
 

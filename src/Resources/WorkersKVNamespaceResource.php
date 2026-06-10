@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,29 +27,27 @@ class WorkersKVNamespaceResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\WorkersKVNamespaceOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\WorkersKVNamespaceDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespaces
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/storage/kv/namespaces', \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespaces::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/storage/kv/namespaces', \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceListNamespaces::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create a Namespace
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\WorkersKvNamespaceCreateANamespaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespace
+	public function create(\FoundryCo\Cloudflare\Requests\WorkersKvNamespaceCreateANamespaceRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/storage/kv/namespaces', \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespace::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/storage/kv/namespaces', \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceCreateANamespace::class, $request);
 	}
 
 
 	/**
 	 * Get a Namespace
 	 */
-	public function get(string $namespaceId): \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespace
+	public function get(string $namespaceId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId, \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespace::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId, \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceGetANamespace::class, []);
 	}
 
 
@@ -59,9 +57,9 @@ class WorkersKVNamespaceResource
 	public function update(
 		string $namespaceId,
 		\FoundryCo\Cloudflare\Requests\WorkersKvNamespaceRenameANamespaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespace
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId, \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceNamespace::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId, \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceRenameANamespace::class, $request);
 	}
 
 
@@ -77,9 +75,9 @@ class WorkersKVNamespaceResource
 	/**
 	 * Write multiple key-value pairs
 	 */
-	public function bulk(string $namespaceId): \FoundryCo\Cloudflare\Responses\WorkersKVNamespacePairs
+	public function bulk(string $namespaceId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId . '/bulk', \FoundryCo\Cloudflare\Responses\WorkersKVNamespacePairs::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId . '/bulk', \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceWriteMultipleKeyValuePairs::class, null);
 	}
 
 
@@ -95,11 +93,9 @@ class WorkersKVNamespaceResource
 	/**
 	 * Delete multiple key-value pairs
 	 */
-	public function workersKvNamespaceDeleteMultipleKeyValuePairs(
-		string $namespaceId,
-	): \FoundryCo\Cloudflare\Responses\WorkersKVNamespacePairs
+	public function workersKvNamespaceDeleteMultipleKeyValuePairs(string $namespaceId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId . '/bulk/delete', \FoundryCo\Cloudflare\Responses\WorkersKVNamespacePairs::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId . '/bulk/delete', \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceDeleteMultipleKeyValuePairs::class, null);
 	}
 
 
@@ -123,9 +119,9 @@ class WorkersKVNamespaceResource
 		?float $limit = null,
 		?string $prefix = null,
 		?string $cursor = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId . '/keys', \FoundryCo\Cloudflare\Responses\WorkersKVNamespaceKeys::class, ['limit' => $limit ?? null, 'prefix' => $prefix ?? null, 'cursor' => $cursor ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/storage/kv/namespaces/' . $namespaceId . '/keys', \FoundryCo\Cloudflare\Responses\WorkersKvNamespaceListANamespaceSKeys::class, ['limit' => $limit ?? null, 'prefix' => $prefix ?? null, 'cursor' => $cursor ?? null]);
 	}
 
 

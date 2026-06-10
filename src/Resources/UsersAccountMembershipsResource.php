@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -38,9 +38,9 @@ class UsersAccountMembershipsResource
 	/**
 	 * Membership Details
 	 */
-	public function get(string $membershipId): \FoundryCo\Cloudflare\Responses\UsersAccountMembershipsDetails
+	public function get(string $membershipId): mixed
 	{
-		return $this->client->get('/memberships/' . $membershipId, \FoundryCo\Cloudflare\Responses\UsersAccountMembershipsDetails::class, []);
+		return $this->client->get('/memberships/' . $membershipId, \FoundryCo\Cloudflare\Responses\UserSAccountMembershipsMembershipDetails::class, []);
 	}
 
 
@@ -50,9 +50,9 @@ class UsersAccountMembershipsResource
 	public function update(
 		string $membershipId,
 		\FoundryCo\Cloudflare\Requests\UserSAccountMembershipsUpdateMembershipRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UsersAccountMembershipsMembership
+	): mixed
 	{
-		return $this->client->put('/memberships/' . $membershipId, \FoundryCo\Cloudflare\Responses\UsersAccountMembershipsMembership::class, $request);
+		return $this->client->put('/memberships/' . $membershipId, \FoundryCo\Cloudflare\Responses\UserSAccountMembershipsUpdateMembership::class, $request);
 	}
 
 

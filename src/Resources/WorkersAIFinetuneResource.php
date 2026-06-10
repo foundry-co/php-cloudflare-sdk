@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,33 +22,27 @@ class WorkersAIFinetuneResource
 	/**
 	 * List Finetunes
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\WorkersAIFinetuneFinetunes
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai/finetunes', \FoundryCo\Cloudflare\Responses\WorkersAIFinetuneFinetunes::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai/finetunes', \FoundryCo\Cloudflare\Responses\WorkersAiListFinetunes::class, []);
 	}
 
 
 	/**
 	 * Create a new Finetune
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\WorkersAiCreateFinetuneRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkersAIFinetuneFinetune
+	public function create(\FoundryCo\Cloudflare\Requests\WorkersAiCreateFinetuneRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai/finetunes', \FoundryCo\Cloudflare\Responses\WorkersAIFinetuneFinetune::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai/finetunes', \FoundryCo\Cloudflare\Responses\WorkersAiCreateFinetune::class, $request);
 	}
 
 
 	/**
 	 * List Public Finetunes
 	 */
-	public function public(
-		?float $limit = null,
-		?float $offset = null,
-		?string $orderBy = null,
-	): \FoundryCo\Cloudflare\Responses\WorkersAIFinetuneFinetunes
+	public function public(?float $limit = null, ?float $offset = null, ?string $orderBy = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai/finetunes/public', \FoundryCo\Cloudflare\Responses\WorkersAIFinetuneFinetunes::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'orderBy' => $orderBy ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai/finetunes/public', \FoundryCo\Cloudflare\Responses\WorkersAiListPublicFinetunes::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'orderBy' => $orderBy ?? null]);
 	}
 
 

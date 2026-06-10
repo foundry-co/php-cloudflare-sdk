@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,7 +13,18 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class EmailSecurityBatchTrustedDomainsRequestPatchesItem
 {
 	public function __construct(
-		public mixed $id,
+		public mixed $id = null,
+		public ?string $comments = null,
+		public mixed $createdAt = null,
+		/** Select to prevent recently registered domains from triggering a Suspicious or Malicious disposition. */
+		public ?bool $isRecent = null,
+		public ?bool $isRegex = null,
+		/** Select for partner or other approved domains that have similar spelling to your connected domains. Prevents listed domains from triggering a Spoof disposition. */
+		public ?bool $isSimilarity = null,
+		/** Deprecated, use `modified_at` instead. End of life: November 1, 2026. */
+		public mixed $lastModified = null,
+		public mixed $modifiedAt = null,
+		public ?string $pattern = null,
 	) {
 	}
 }

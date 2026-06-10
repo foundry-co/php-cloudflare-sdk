@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,30 +22,27 @@ class CollectionsResource
 	/**
 	 * List collections
 	 */
-	public function list(
-		?float $page = null,
-		?float $limit = null,
-	): \FoundryCo\Cloudflare\Responses\CollectionsCollectionList
+	public function list(?float $page = null, ?float $limit = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections', \FoundryCo\Cloudflare\Responses\CollectionsCollectionList::class, ['page' => $page ?? null, 'limit' => $limit ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections', \FoundryCo\Cloudflare\Responses\GetCollectionList::class, ['page' => $page ?? null, 'limit' => $limit ?? null]);
 	}
 
 
 	/**
 	 * Create a new collection
 	 */
-	public function create(): \FoundryCo\Cloudflare\Responses\CollectionsCollectionCreate
+	public function create(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections', \FoundryCo\Cloudflare\Responses\CollectionsCollectionCreate::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections', \FoundryCo\Cloudflare\Responses\PostCollectionCreate::class, null);
 	}
 
 
 	/**
 	 * Get collection
 	 */
-	public function get(string $collectionId): \FoundryCo\Cloudflare\Responses\CollectionsCollectionGet
+	public function get(string $collectionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId, \FoundryCo\Cloudflare\Responses\CollectionsCollectionGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId, \FoundryCo\Cloudflare\Responses\GetCollectionGet::class, []);
 	}
 
 
@@ -55,9 +52,9 @@ class CollectionsResource
 	public function update(
 		string $collectionId,
 		\FoundryCo\Cloudflare\Requests\PatchCollectionUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CollectionsCollectionUpdate
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId, \FoundryCo\Cloudflare\Responses\CollectionsCollectionUpdate::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId, \FoundryCo\Cloudflare\Responses\PatchCollectionUpdate::class, $request);
 	}
 
 
@@ -73,12 +70,9 @@ class CollectionsResource
 	/**
 	 * Add column to collection
 	 */
-	public function columns(
-		string $collectionId,
-		\FoundryCo\Cloudflare\Requests\PostColumnAddRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CollectionsColumnAdd
+	public function columns(string $collectionId, \FoundryCo\Cloudflare\Requests\PostColumnAddRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/columns', \FoundryCo\Cloudflare\Responses\CollectionsColumnAdd::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/columns', \FoundryCo\Cloudflare\Responses\PostColumnAdd::class, $request);
 	}
 
 
@@ -89,9 +83,9 @@ class CollectionsResource
 		string $collectionId,
 		string $columnId,
 		\FoundryCo\Cloudflare\Requests\PatchColumnUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CollectionsColumnUpdate
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/columns/' . $columnId, \FoundryCo\Cloudflare\Responses\CollectionsColumnUpdate::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/columns/' . $columnId, \FoundryCo\Cloudflare\Responses\PatchColumnUpdate::class, $request);
 	}
 
 
@@ -116,22 +110,18 @@ class CollectionsResource
 	/**
 	 * Query collection items
 	 */
-	public function items(
-		string $collectionId,
-		?string $cursor = null,
-		?float $limit = null,
-	): \FoundryCo\Cloudflare\Responses\CollectionsItemQuery
+	public function items(string $collectionId, ?string $cursor = null, ?float $limit = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/items', \FoundryCo\Cloudflare\Responses\CollectionsItemQuery::class, ['cursor' => $cursor ?? null, 'limit' => $limit ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/items', \FoundryCo\Cloudflare\Responses\GetItemQuery::class, ['cursor' => $cursor ?? null, 'limit' => $limit ?? null]);
 	}
 
 
 	/**
 	 * Get collection item
 	 */
-	public function getItemGet(string $collectionId, string $itemId): \FoundryCo\Cloudflare\Responses\CollectionsItemGet
+	public function getItemGet(string $collectionId, string $itemId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/items/' . $itemId, \FoundryCo\Cloudflare\Responses\CollectionsItemGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/items/' . $itemId, \FoundryCo\Cloudflare\Responses\GetItemGet::class, []);
 	}
 
 
@@ -142,9 +132,9 @@ class CollectionsResource
 		string $collectionId,
 		string $itemId,
 		\FoundryCo\Cloudflare\Requests\PatchItemUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CollectionsItemUpdate
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/items/' . $itemId, \FoundryCo\Cloudflare\Responses\CollectionsItemUpdate::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/v2/collections/' . $collectionId . '/items/' . $itemId, \FoundryCo\Cloudflare\Responses\PatchItemUpdate::class, $request);
 	}
 
 

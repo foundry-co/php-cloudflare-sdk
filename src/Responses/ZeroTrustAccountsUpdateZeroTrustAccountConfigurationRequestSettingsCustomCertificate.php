@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class ZeroTrustAccountsUpdateZeroTrustAccountConfigurationRequestSettin
 {
 	public function __construct(
 		/** Specify whether to enable a custom certificate authority for signing Gateway traffic. */
-		public bool $enabled,
+		public ?bool $enabled = null,
 		/** Indicate the internal certificate status. */
 		public ?string $bindingStatus = null,
 		/** Specify the UUID of the certificate (ID from MTLS certificate store). */

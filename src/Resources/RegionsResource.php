@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -26,17 +26,17 @@ class RegionsResource
 		?string $cursor = null,
 		?int $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\RegionsType $type = null,
-	): \FoundryCo\Cloudflare\Responses\RegionsPublicListRegions
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dls/regions', \FoundryCo\Cloudflare\Responses\RegionsPublicListRegions::class, ['cursor' => $cursor ?? null, 'perPage' => $perPage ?? null, 'type' => $type ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dls/regions', \FoundryCo\Cloudflare\Responses\PublicListRegions::class, ['cursor' => $cursor ?? null, 'perPage' => $perPage ?? null, 'type' => $type ?? null]);
 	}
 
 
 	/**
 	 * Get a DLS region
 	 */
-	public function get(string $regionId): \FoundryCo\Cloudflare\Responses\RegionsPublicGetRegion
+	public function get(string $regionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dls/regions/' . $regionId, \FoundryCo\Cloudflare\Responses\RegionsPublicGetRegion::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dls/regions/' . $regionId, \FoundryCo\Cloudflare\Responses\PublicGetRegion::class, []);
 	}
 }

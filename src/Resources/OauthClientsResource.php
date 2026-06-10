@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,29 +21,27 @@ class OauthClientsResource
 	/**
 	 * List OAuth Clients
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\OAuthClientsList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/oauth_clients', \FoundryCo\Cloudflare\Responses\OAuthClientsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/oauth_clients', \FoundryCo\Cloudflare\Responses\OauthClientsList::class, []);
 	}
 
 
 	/**
 	 * Create OAuth Client
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\OauthClientsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OAuthClientsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\OauthClientsCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/oauth_clients', \FoundryCo\Cloudflare\Responses\OAuthClientsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/oauth_clients', \FoundryCo\Cloudflare\Responses\OauthClientsCreate::class, $request);
 	}
 
 
 	/**
 	 * OAuth Client Details
 	 */
-	public function get(string $oauthClientId): \FoundryCo\Cloudflare\Responses\OAuthClientsGet
+	public function get(string $oauthClientId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/oauth_clients/' . $oauthClientId, \FoundryCo\Cloudflare\Responses\OAuthClientsGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/oauth_clients/' . $oauthClientId, \FoundryCo\Cloudflare\Responses\OauthClientsGet::class, []);
 	}
 
 
@@ -53,9 +51,9 @@ class OauthClientsResource
 	public function update(
 		string $oauthClientId,
 		\FoundryCo\Cloudflare\Requests\OauthClientsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OAuthClientsUpdate
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/oauth_clients/' . $oauthClientId, \FoundryCo\Cloudflare\Responses\OAuthClientsUpdate::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/oauth_clients/' . $oauthClientId, \FoundryCo\Cloudflare\Responses\OauthClientsUpdate::class, $request);
 	}
 
 
@@ -71,9 +69,9 @@ class OauthClientsResource
 	/**
 	 * Rotate OAuth Client Secret
 	 */
-	public function rotateSecret(string $oauthClientId): \FoundryCo\Cloudflare\Responses\OAuthClientsSecret
+	public function rotateSecret(string $oauthClientId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/oauth_clients/' . $oauthClientId . '/rotate_secret', \FoundryCo\Cloudflare\Responses\OAuthClientsSecret::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/oauth_clients/' . $oauthClientId . '/rotate_secret', \FoundryCo\Cloudflare\Responses\OauthClientsRotateSecret::class, null);
 	}
 
 
@@ -89,8 +87,8 @@ class OauthClientsResource
 	/**
 	 * List OAuth Scopes
 	 */
-	public function scopes(): \FoundryCo\Cloudflare\Responses\OAuthClientsList
+	public function scopes(): mixed
 	{
-		return $this->client->get('/oauth/scopes', \FoundryCo\Cloudflare\Responses\OAuthClientsList::class, []);
+		return $this->client->get('/oauth/scopes', \FoundryCo\Cloudflare\Responses\OauthScopesList::class, []);
 	}
 }

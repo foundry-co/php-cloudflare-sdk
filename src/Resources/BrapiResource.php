@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -46,9 +46,9 @@ class BrapiResource
 		?\FoundryCo\Cloudflare\Enums\BrapiStatus $status = null,
 		?float $cursor = null,
 		?float $limit = null,
-	): \FoundryCo\Cloudflare\Responses\BrapiCrawlResult
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/browser-rendering/crawl/' . $jobId, \FoundryCo\Cloudflare\Responses\BrapiCrawlResult::class, ['cacheTTL' => $cacheTTL ?? null, 'status' => $status ?? null, 'cursor' => $cursor ?? null, 'limit' => $limit ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/browser-rendering/crawl/' . $jobId, \FoundryCo\Cloudflare\Responses\BrapiGetCrawlResult::class, ['cacheTTL' => $cacheTTL ?? null, 'status' => $status ?? null, 'cursor' => $cursor ?? null, 'limit' => $limit ?? null]);
 	}
 
 
@@ -245,9 +245,9 @@ class BrapiResource
 	/**
 	 * Scrape elements.
 	 */
-	public function scrape(?float $cacheTTL = null): \FoundryCo\Cloudflare\Responses\BrapiScrape
+	public function scrape(?float $cacheTTL = null): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/browser-rendering/scrape', \FoundryCo\Cloudflare\Responses\BrapiScrape::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/browser-rendering/scrape', \FoundryCo\Cloudflare\Responses\BrapiPostScrape::class, null);
 	}
 
 
@@ -263,8 +263,8 @@ class BrapiResource
 	/**
 	 * Get HTML content and screenshot.
 	 */
-	public function snapshot(?float $cacheTTL = null): \FoundryCo\Cloudflare\Responses\BrapiSnapshot
+	public function snapshot(?float $cacheTTL = null): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/browser-rendering/snapshot', \FoundryCo\Cloudflare\Responses\BrapiSnapshot::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/browser-rendering/snapshot', \FoundryCo\Cloudflare\Responses\BrapiPostSnapshot::class, null);
 	}
 }

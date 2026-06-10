@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class IPAddressManagementBGPPrefixesResource
 	/**
 	 * List BGP Prefixes
 	 */
-	public function get(string $prefixId): \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefixes
+	public function get(string $prefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes', \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefixes::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesListBgpPrefixes::class, []);
 	}
 
 
@@ -34,21 +34,18 @@ class IPAddressManagementBGPPrefixesResource
 	public function create(
 		string $prefixId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementPrefixesCreateBgpPrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefix
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes', \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefix::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes', \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesCreateBgpPrefix::class, $request);
 	}
 
 
 	/**
 	 * Fetch BGP Prefix
 	 */
-	public function prefixes(
-		string $prefixId,
-		string $bgpPrefixId,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefix
+	public function prefixes(string $prefixId, string $bgpPrefixId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes/' . $bgpPrefixId, \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefix::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes/' . $bgpPrefixId, \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesFetchBgpPrefix::class, []);
 	}
 
 
@@ -59,9 +56,9 @@ class IPAddressManagementBGPPrefixesResource
 		string $prefixId,
 		string $bgpPrefixId,
 		\FoundryCo\Cloudflare\Requests\IpAddressManagementPrefixesUpdateBgpPrefixRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefix
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes/' . $bgpPrefixId, \FoundryCo\Cloudflare\Responses\IPAddressManagementBGPPrefixesPrefix::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/addressing/prefixes/' . $prefixId . '/bgp/prefixes/' . $bgpPrefixId, \FoundryCo\Cloudflare\Responses\IpAddressManagementPrefixesUpdateBgpPrefix::class, $request);
 	}
 
 

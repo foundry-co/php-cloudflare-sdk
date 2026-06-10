@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -42,8 +42,8 @@ class AccessAuthenticationLogsResource
 		?\FoundryCo\Cloudflare\Enums\AccessAuthenticationLogsNonIdentityOp $nonIdentityOp = null,
 		?\FoundryCo\Cloudflare\Enums\AccessAuthenticationLogsUserIdOp $userIdOp = null,
 		?string $fields = null,
-	): \FoundryCo\Cloudflare\Responses\AccessAuthenticationLogsLogs
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/access/logs/access_requests', \FoundryCo\Cloudflare\Responses\AccessAuthenticationLogsLogs::class, ['limit' => $limit ?? null, 'direction' => $direction ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'email' => $email ?? null, 'emailExact' => $emailExact ?? null, 'userId' => $userId ?? null, 'allowedOp' => $allowedOp ?? null, 'countryCodeOp' => $countryCodeOp ?? null, 'appTypeOp' => $appTypeOp ?? null, 'appUidOp' => $appUidOp ?? null, 'rayIdOp' => $rayIdOp ?? null, 'emailOp' => $emailOp ?? null, 'idpOp' => $idpOp ?? null, 'nonIdentityOp' => $nonIdentityOp ?? null, 'userIdOp' => $userIdOp ?? null, 'fields' => $fields ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/access/logs/access_requests', \FoundryCo\Cloudflare\Responses\AccessAuthenticationLogsGetAccessAuthenticationLogs::class, ['limit' => $limit ?? null, 'direction' => $direction ?? null, 'since' => $since ?? null, 'until' => $until ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'email' => $email ?? null, 'emailExact' => $emailExact ?? null, 'userId' => $userId ?? null, 'allowedOp' => $allowedOp ?? null, 'countryCodeOp' => $countryCodeOp ?? null, 'appTypeOp' => $appTypeOp ?? null, 'appUidOp' => $appUidOp ?? null, 'rayIdOp' => $rayIdOp ?? null, 'emailOp' => $emailOp ?? null, 'idpOp' => $idpOp ?? null, 'nonIdentityOp' => $nonIdentityOp ?? null, 'userIdOp' => $userIdOp ?? null, 'fields' => $fields ?? null]);
 	}
 }

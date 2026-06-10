@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -33,9 +33,9 @@ class ResourceSharingResource
 		?bool $includeResources = null,
 		?bool $includeRecipientCounts = null,
 		?array $tag = null,
-	): \FoundryCo\Cloudflare\Responses\ResourceSharingList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/shares', \FoundryCo\Cloudflare\Responses\ResourceSharingList::class, ['status' => $status ?? null, 'kind' => $kind ?? null, 'targetType' => $targetType ?? null, 'resourceTypes' => $resourceTypes ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'includeResources' => $includeResources ?? null, 'includeRecipientCounts' => $includeRecipientCounts ?? null, 'tag' => $tag ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/shares', \FoundryCo\Cloudflare\Responses\SharesList::class, ['status' => $status ?? null, 'kind' => $kind ?? null, 'targetType' => $targetType ?? null, 'resourceTypes' => $resourceTypes ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'includeResources' => $includeResources ?? null, 'includeRecipientCounts' => $includeRecipientCounts ?? null, 'tag' => $tag ?? null]);
 	}
 
 
@@ -83,9 +83,9 @@ class ResourceSharingResource
 		?bool $includeResources = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\ResourceSharingList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/shares/' . $shareId . '/recipients', \FoundryCo\Cloudflare\Responses\ResourceSharingList::class, ['includeResources' => $includeResources ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/shares/' . $shareId . '/recipients', \FoundryCo\Cloudflare\Responses\ShareRecipientsList::class, ['includeResources' => $includeResources ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -137,9 +137,9 @@ class ResourceSharingResource
 		?\FoundryCo\Cloudflare\Enums\ResourceSharingResourceType $resourceType = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\ResourceSharingList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/shares/' . $shareId . '/resources', \FoundryCo\Cloudflare\Responses\ResourceSharingList::class, ['status' => $status ?? null, 'resourceType' => $resourceType ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/shares/' . $shareId . '/resources', \FoundryCo\Cloudflare\Responses\ShareResourcesList::class, ['status' => $status ?? null, 'resourceType' => $resourceType ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -199,8 +199,8 @@ class ResourceSharingResource
 		?\FoundryCo\Cloudflare\Enums\ResourceSharingDirection $direction = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\ResourceSharingList
+	): mixed
 	{
-		return $this->client->get('/organizations/' . $organizationId . '/shares', \FoundryCo\Cloudflare\Responses\ResourceSharingList::class, ['status' => $status ?? null, 'kind' => $kind ?? null, 'targetType' => $targetType ?? null, 'resourceTypes' => $resourceTypes ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/organizations/' . $organizationId . '/shares', \FoundryCo\Cloudflare\Responses\OrganizationSharesList::class, ['status' => $status ?? null, 'kind' => $kind ?? null, 'targetType' => $targetType ?? null, 'resourceTypes' => $resourceTypes ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 }

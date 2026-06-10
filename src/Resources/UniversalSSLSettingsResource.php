@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class UniversalSSLSettingsResource
 	/**
 	 * Universal SSL Settings Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\UniversalSSLSettingsForAZoneDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/ssl/universal/settings', \FoundryCo\Cloudflare\Responses\UniversalSSLSettingsForAZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/ssl/universal/settings', \FoundryCo\Cloudflare\Responses\UniversalSslSettingsForAZoneUniversalSslSettingsDetails::class, []);
 	}
 
 
@@ -33,8 +33,8 @@ class UniversalSSLSettingsResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\UniversalSslSettingsForAZoneEditUniversalSslSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UniversalSSLSettingsForAZoneSettings
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/ssl/universal/settings', \FoundryCo\Cloudflare\Responses\UniversalSSLSettingsForAZoneSettings::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/ssl/universal/settings', \FoundryCo\Cloudflare\Responses\UniversalSslSettingsForAZoneEditUniversalSslSettings::class, $request);
 	}
 }

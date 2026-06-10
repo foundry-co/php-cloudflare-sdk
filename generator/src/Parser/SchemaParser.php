@@ -43,6 +43,54 @@ class SchemaParser
         return $nullable && !str_ends_with($type, 'null') ? "?{$type}" : $type;
     }
 
+    /**
+     * Handle oneOf / anyOf. If every branch is an enum (or the schema itself has 'enum'),
+     * merge all cases into a single enum. Otherwise return mixed.
+     */
+    private function resolvePolyType(array $branches, string $hint): string
+    {
+        $allCases = [];
+        $backingType = 'string';
+
+        foreach ($branches as $branch) {
+            if (!empty($branch['enum'])) {
+                foreach ($branch['enum'] as $case) {
+                    $allCases[] = (string) $case;
+                }
+                if (($branch['type'] ?? 'string') === 'integer') {
+                    $backingType = 'int';
+                }
+            } else {
+                // Non-enum branch — can't model as a single enum, use mixed
+                return 'mixed';
+            }
+        }
+
+        if (empty($allCases)) {
+            return 'mixed';
+        }
+
+        $allCases = array_values(array_unique($allCases));
+        $name = $this->schemaHintToClassName($hint);
+        if (empty($name)) {
+            return 'string';
+        }
+
+        $namespace = self::BASE_NAMESPACE . '\\Enums';
+        $fqn = $namespace . '\\' . $name;
+
+        if (!isset($this->enums[$fqn])) {
+            $this->enums[$fqn] = new IrEnum(
+                name: $name,
+                namespace: $namespace,
+                backingType: $backingType,
+                cases: $allCases,
+            );
+        }
+
+        return '\\' . $fqn;
+    }
+
     private function resolveType(array $schema, string $hint): string
     {
         // allOf: merge all schemas into one DTO
@@ -50,9 +98,10 @@ class SchemaParser
             return $this->resolveAllOf($schema['allOf'], $schema['properties'] ?? [], $hint);
         }
 
-        // oneOf / anyOf: too complex to type — use mixed
+        // oneOf / anyOf: if all branches are enums, merge their cases into one enum.
+        // Otherwise fall back to mixed.
         if (isset($schema['oneOf']) || isset($schema['anyOf'])) {
-            return 'mixed';
+            return $this->resolvePolyType($schema['oneOf'] ?? $schema['anyOf'], $hint);
         }
 
         $type = $schema['type'] ?? 'object';
@@ -109,16 +158,10 @@ class SchemaParser
 
     private function resolveAllOf(array $allOf, array $extraProps, string $hint): string
     {
-        // Merge all properties from all allOf entries
         $merged = ['properties' => [], 'required' => []];
 
         foreach ($allOf as $entry) {
-            if (!empty($entry['properties'])) {
-                $merged['properties'] = array_merge($merged['properties'], $entry['properties']);
-            }
-            if (!empty($entry['required'])) {
-                $merged['required'] = array_merge($merged['required'], $entry['required']);
-            }
+            $this->mergeSchemaProperties($entry, $merged);
         }
 
         // Merge any properties defined alongside allOf
@@ -131,6 +174,40 @@ class SchemaParser
         }
 
         return $this->registerDto($merged, $hint, $merged['properties'], $merged['required']);
+    }
+
+    /**
+     * Recursively extract all properties from a schema node, following
+     * allOf, anyOf, and oneOf at any nesting depth. First occurrence of a
+     * key wins so more-specific types aren't overwritten by base types.
+     *
+     * $refs are already fully resolved by SpecLoader before we get here.
+     */
+    private function mergeSchemaProperties(array $schema, array &$merged): void
+    {
+        if (!empty($schema['properties'])) {
+            foreach ($schema['properties'] as $key => $propSchema) {
+                if (!isset($merged['properties'][$key])) {
+                    $merged['properties'][$key] = $propSchema;
+                } elseif (!empty($propSchema['enum']) && !empty($merged['properties'][$key]['enum'])) {
+                    // Merge enum values across discriminated branches (e.g. DNS record `type`)
+                    $merged['properties'][$key]['enum'] = array_values(array_unique(
+                        array_merge($merged['properties'][$key]['enum'], $propSchema['enum'])
+                    ));
+                }
+            }
+        }
+        if (!empty($schema['required'])) {
+            $merged['required'] = array_merge($merged['required'], $schema['required']);
+        }
+
+        foreach ($schema['allOf'] ?? [] as $entry) {
+            $this->mergeSchemaProperties($entry, $merged);
+        }
+
+        foreach (array_merge($schema['anyOf'] ?? [], $schema['oneOf'] ?? []) as $branch) {
+            $this->mergeSchemaProperties($branch, $merged);
+        }
     }
 
     private function registerEnum(array $schema, string $hint): string

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,7 +13,11 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class PostV4AccountsByAccountIdPipelinesV1SinksRequestSchemaFieldsItem
 {
 	public function __construct(
-		public string $name,
+		public ?\FoundryCo\Cloudflare\Enums\PostV4AccountsByAccountIdPipelinesV1SinksRequestSchemaFieldsItemType $type = null,
+		public ?array $fields = null,
+		public ?string $name = null,
+		public ?array $items = null,
+		public ?\FoundryCo\Cloudflare\Enums\PostV4AccountsByAccountIdPipelinesV1SinksRequestSchemaFieldsItemUnit $unit = null,
 		public ?string $metadataKey = null,
 		public ?bool $required = null,
 		public ?string $sqlName = null,

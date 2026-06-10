@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class ZeroTrustSeatsResource
 	/**
 	 * Update a user seat
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\ZeroTrustSeatsSeat
+	public function update(): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/access/seats', \FoundryCo\Cloudflare\Responses\ZeroTrustSeatsSeat::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/access/seats', \FoundryCo\Cloudflare\Responses\ZeroTrustSeatsUpdateAUserSeat::class, null);
 	}
 }

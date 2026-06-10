@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -16,9 +16,9 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class PagesProjectUpdateProjectRequestSource
 {
 	public function __construct(
-		public PagesProjectUpdateProjectRequestSourceConfig $config,
+		public ?PagesProjectUpdateProjectRequestSourceConfig $config = null,
 		/** The source control management provider. */
-		public \FoundryCo\Cloudflare\Enums\PagesProjectUpdateProjectRequestSourceType $type,
+		public ?\FoundryCo\Cloudflare\Enums\PagesProjectUpdateProjectRequestSourceType $type = null,
 	) {
 	}
 }

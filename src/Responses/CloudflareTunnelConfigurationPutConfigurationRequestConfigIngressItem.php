@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,11 +17,11 @@ readonly class CloudflareTunnelConfigurationPutConfigurationRequestConfigIngress
 {
 	public function __construct(
 		/** Public hostname for this service. */
-		public string $hostname,
+		public ?string $hostname = null,
 		/**
 		 * Protocol and address of destination server. Supported protocols: http://, https://, unix://, tcp://, ssh://, rdp://, unix+tls://, smb://. Alternatively can return a HTTP status code http_status:[code] e.g. 'http_status:404'.
 		 */
-		public string $service,
+		public ?string $service = null,
 		/** Configuration parameters for the public hostname specific connection settings between cloudflared and origin server. */
 		public ?CloudflareTunnelConfigurationPutConfigurationRequestConfigIngressItemOriginRequest $originRequest = null,
 		/** Requests with this path route to this public hostname. */

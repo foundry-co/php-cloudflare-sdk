@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,32 +22,27 @@ class ScansResource
 	/**
 	 * List Scan Configs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ScansConfigFetch
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/scans/config', \FoundryCo\Cloudflare\Responses\ScansConfigFetch::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/scans/config', \FoundryCo\Cloudflare\Responses\GetConfigFetch::class, []);
 	}
 
 
 	/**
 	 * Create a new Scan Config
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostConfigCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ScansConfigCreate
+	public function create(\FoundryCo\Cloudflare\Requests\PostConfigCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/scans/config', \FoundryCo\Cloudflare\Responses\ScansConfigCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/scans/config', \FoundryCo\Cloudflare\Responses\PostConfigCreate::class, $request);
 	}
 
 
 	/**
 	 * Update an existing Scan Config
 	 */
-	public function update(
-		string $configId,
-		\FoundryCo\Cloudflare\Requests\PostConfigUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ScansConfigUpdate
+	public function update(string $configId, \FoundryCo\Cloudflare\Requests\PostConfigUpdateRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/scans/config/' . $configId, \FoundryCo\Cloudflare\Responses\ScansConfigUpdate::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/cloudforce-one/scans/config/' . $configId, \FoundryCo\Cloudflare\Responses\PostConfigUpdate::class, $request);
 	}
 
 
@@ -63,36 +58,36 @@ class ScansResource
 	/**
 	 * Get the Latest Scan Result
 	 */
-	public function get(string $configId): \FoundryCo\Cloudflare\Responses\ScansGetOpenPorts
+	public function get(string $configId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/scans/results/' . $configId, \FoundryCo\Cloudflare\Responses\ScansGetOpenPorts::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/scans/results/' . $configId, \FoundryCo\Cloudflare\Responses\GetGetOpenPorts::class, []);
 	}
 
 
 	/**
 	 * List Scans
 	 */
-	public function scans(?int $page = null, ?int $perPage = null): \FoundryCo\Cloudflare\Responses\ScansScans
+	public function scans(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/scans', \FoundryCo\Cloudflare\Responses\ScansScans::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/scans', \FoundryCo\Cloudflare\Responses\ListScans::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create Scan
 	 */
-	public function createScan(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function createScan(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/vuln_scanner/scans', \FoundryCo\Cloudflare\Responses\ScansScan::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/vuln_scanner/scans', \FoundryCo\Cloudflare\Responses\CreateScan::class, null);
 	}
 
 
 	/**
 	 * Get Scan
 	 */
-	public function getScan(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function getScan(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/scans/' . $scanId, \FoundryCo\Cloudflare\Responses\ScansScan::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/vuln_scanner/scans/' . $scanId, \FoundryCo\Cloudflare\Responses\GetScan::class, []);
 	}
 
 

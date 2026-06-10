@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,7 +14,7 @@ readonly class ZeroTrustGatewayLocationsUpdateZeroTrustGatewayLocationRequestNet
 {
 	public function __construct(
 		/** Specify the IPv4 address or IPv4 CIDR. Limit IPv4 CIDRs to a maximum of /24. */
-		public string $network,
+		public ?string $network = null,
 	) {
 	}
 }

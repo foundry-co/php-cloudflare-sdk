@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class MagicRedundancyGroupsResource
 	/**
 	 * List Redundancy Groups
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroups
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/redundancy_groups', \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroups::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/redundancy_groups', \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsListRedundancyGroups::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class MagicRedundancyGroupsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\MagicRedundancyGroupsCreateRedundancyGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroup
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/redundancy_groups', \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroup::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/redundancy_groups', \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsCreateRedundancyGroup::class, $request);
 	}
 
 
 	/**
 	 * Get Redundancy Group Details
 	 */
-	public function get(string $redundancyGroupId): \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroup
+	public function get(string $redundancyGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/redundancy_groups/' . $redundancyGroupId, \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroup::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/redundancy_groups/' . $redundancyGroupId, \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGetRedundancyGroup::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class MagicRedundancyGroupsResource
 	public function update(
 		string $redundancyGroupId,
 		\FoundryCo\Cloudflare\Requests\MagicRedundancyGroupsUpdateRedundancyGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroup
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/redundancy_groups/' . $redundancyGroupId, \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsGroup::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/redundancy_groups/' . $redundancyGroupId, \FoundryCo\Cloudflare\Responses\MagicRedundancyGroupsUpdateRedundancyGroup::class, $request);
 	}
 
 

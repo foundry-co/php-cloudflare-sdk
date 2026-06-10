@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * This file is auto-generated. Do not edit manually.
+ * Generated: 2026-06-10 02:24:37 UTC
+ * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
+ */
+
+declare(strict_types=1);
+
+namespace FoundryCo\Cloudflare\Responses;
+
+readonly class AutoragConfigSearchDataItem
+{
+	public function __construct(
+		public ?float $score = null,
+		public ?array $attributes = null,
+		public ?array $content = null,
+		public ?string $fileId = null,
+		public ?string $filename = null,
+	) {
+	}
+}

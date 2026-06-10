@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class R2SuperSlurperResource
 	/**
 	 * List jobs
 	 */
-	public function list(?int $limit = null, ?int $offset = null): \FoundryCo\Cloudflare\Responses\R2SuperSlurperJobs
+	public function list(?int $limit = null, ?int $offset = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs', \FoundryCo\Cloudflare\Responses\R2SuperSlurperJobs::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs', \FoundryCo\Cloudflare\Responses\SlurperListJobs::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null]);
 	}
 
 
 	/**
 	 * Create a job
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SlurperCreateJobRequest $request,
-	): \FoundryCo\Cloudflare\Responses\R2SuperSlurperJob
+	public function create(\FoundryCo\Cloudflare\Requests\SlurperCreateJobRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/slurper/jobs', \FoundryCo\Cloudflare\Responses\R2SuperSlurperJob::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/slurper/jobs', \FoundryCo\Cloudflare\Responses\SlurperCreateJob::class, $request);
 	}
 
 
@@ -51,9 +49,9 @@ class R2SuperSlurperResource
 	/**
 	 * Get job details
 	 */
-	public function get(string $jobId): \FoundryCo\Cloudflare\Responses\R2SuperSlurperJob
+	public function get(string $jobId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\R2SuperSlurperJob::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs/' . $jobId, \FoundryCo\Cloudflare\Responses\SlurperGetJob::class, []);
 	}
 
 
@@ -78,13 +76,9 @@ class R2SuperSlurperResource
 	/**
 	 * Get job logs
 	 */
-	public function logs(
-		string $jobId,
-		?int $limit = null,
-		?int $offset = null,
-	): \FoundryCo\Cloudflare\Responses\R2SuperSlurperLogs
+	public function logs(string $jobId, ?int $limit = null, ?int $offset = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs/' . $jobId . '/logs', \FoundryCo\Cloudflare\Responses\R2SuperSlurperLogs::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs/' . $jobId . '/logs', \FoundryCo\Cloudflare\Responses\SlurperGetJobLogs::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null]);
 	}
 
 
@@ -100,9 +94,9 @@ class R2SuperSlurperResource
 	/**
 	 * Get job progress
 	 */
-	public function progress(string $jobId): \FoundryCo\Cloudflare\Responses\R2SuperSlurperProgress
+	public function progress(string $jobId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs/' . $jobId . '/progress', \FoundryCo\Cloudflare\Responses\R2SuperSlurperProgress::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/slurper/jobs/' . $jobId . '/progress', \FoundryCo\Cloudflare\Responses\SlurperGetJobProgress::class, []);
 	}
 
 
@@ -118,9 +112,9 @@ class R2SuperSlurperResource
 	/**
 	 * Check source connectivity
 	 */
-	public function connectivityPrecheck(): \FoundryCo\Cloudflare\Responses\R2SuperSlurperConnectivity
+	public function connectivityPrecheck(): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/slurper/source/connectivity-precheck', \FoundryCo\Cloudflare\Responses\R2SuperSlurperConnectivity::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/slurper/source/connectivity-precheck', \FoundryCo\Cloudflare\Responses\SlurperCheckSourceConnectivity::class, null);
 	}
 
 
@@ -129,8 +123,8 @@ class R2SuperSlurperResource
 	 */
 	public function slurperCheckTargetConnectivity(
 		\FoundryCo\Cloudflare\Requests\SlurperCheckTargetConnectivityRequest $request,
-	): \FoundryCo\Cloudflare\Responses\R2SuperSlurperConnectivity
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/slurper/target/connectivity-precheck', \FoundryCo\Cloudflare\Responses\R2SuperSlurperConnectivity::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/slurper/target/connectivity-precheck', \FoundryCo\Cloudflare\Responses\SlurperCheckTargetConnectivity::class, $request);
 	}
 }

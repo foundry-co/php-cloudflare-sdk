@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,8 +17,8 @@ readonly class CloudflareTunnelConfigurationPutConfigurationRequestConfigIngress
 {
 	public function __construct(
 		/** Access applications that are allowed to reach this hostname for this Tunnel. Audience tags can be identified in the dashboard or via the List Access policies API. */
-		public array $audTag,
-		public string $teamName,
+		public ?array $audTag = null,
+		public ?string $teamName = null,
 		/** Deny traffic that has not fulfilled Access authorization. */
 		public ?bool $required = null,
 	) {

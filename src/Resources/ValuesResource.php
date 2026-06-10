@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,10 +22,8 @@ class ValuesResource
 	/**
 	 * List values
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\TelemetryvalueslistRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ValuesTelemetryvalueslist
+	public function create(\FoundryCo\Cloudflare\Requests\TelemetryvalueslistRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/telemetry/values', \FoundryCo\Cloudflare\Responses\ValuesTelemetryvalueslist::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/observability/telemetry/values', \FoundryCo\Cloudflare\Responses\Telemetryvalueslist::class, $request);
 	}
 }

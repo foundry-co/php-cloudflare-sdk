@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class DLPProfilesResource
 	/**
 	 * List all custom profiles
 	 */
-	public function custom(): \FoundryCo\Cloudflare\Responses\DLPProfilesProfiles
+	public function custom(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/profiles/custom', \FoundryCo\Cloudflare\Responses\DLPProfilesProfiles::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/profiles/custom', \FoundryCo\Cloudflare\Responses\DlpProfilesListAllCustomProfiles::class, []);
 	}
 
 
@@ -118,9 +118,9 @@ class DLPProfilesResource
 	/**
 	 * Get predefined profile config
 	 */
-	public function config(string $profileId): \FoundryCo\Cloudflare\Responses\DLPProfilesConfig
+	public function config(string $profileId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/profiles/predefined/' . $profileId . '/config', \FoundryCo\Cloudflare\Responses\DLPProfilesConfig::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/profiles/predefined/' . $profileId . '/config', \FoundryCo\Cloudflare\Responses\DlpProfilesGetPredefinedProfileConfig::class, []);
 	}
 
 
@@ -130,9 +130,9 @@ class DLPProfilesResource
 	public function dlpProfilesCreatePredefinedProfileConfig(
 		string $profileId,
 		\FoundryCo\Cloudflare\Requests\DlpProfilesCreatePredefinedProfileConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPProfilesConfig
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/profiles/predefined/' . $profileId . '/config', \FoundryCo\Cloudflare\Responses\DLPProfilesConfig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/profiles/predefined/' . $profileId . '/config', \FoundryCo\Cloudflare\Responses\DlpProfilesCreatePredefinedProfileConfig::class, $request);
 	}
 
 
@@ -142,9 +142,9 @@ class DLPProfilesResource
 	public function dlpProfilesUpdatePredefinedProfileConfig(
 		string $profileId,
 		\FoundryCo\Cloudflare\Requests\DlpProfilesUpdatePredefinedProfileConfigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPProfilesConfig
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/profiles/predefined/' . $profileId . '/config', \FoundryCo\Cloudflare\Responses\DLPProfilesConfig::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/profiles/predefined/' . $profileId . '/config', \FoundryCo\Cloudflare\Responses\DlpProfilesUpdatePredefinedProfileConfig::class, $request);
 	}
 
 

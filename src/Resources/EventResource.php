@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -133,9 +133,9 @@ class EventResource
 	public function postEventTagCreate(
 		string $eventId,
 		\FoundryCo\Cloudflare\Requests\PostEventTagCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EventEventTagCreate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/events/event_tag/' . $eventId . '/create', \FoundryCo\Cloudflare\Responses\EventEventTagCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/events/event_tag/' . $eventId . '/create', \FoundryCo\Cloudflare\Responses\PostEventTagCreate::class, $request);
 	}
 
 
@@ -232,9 +232,9 @@ class EventResource
 	public function postEventReferenceCreate(
 		string $eventId,
 		\FoundryCo\Cloudflare\Requests\PostEventReferenceCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EventEventReferenceCreate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/events/relate/' . $eventId . '/create', \FoundryCo\Cloudflare\Responses\EventEventReferenceCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/events/relate/' . $eventId . '/create', \FoundryCo\Cloudflare\Responses\PostEventReferenceCreate::class, $request);
 	}
 
 

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -31,9 +31,9 @@ class RadarNetflowsResource
 		?array $continent = null,
 		?array $geoId = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarNetFlowsDeprecated
+	): mixed
 	{
-		return $this->client->get('/radar/netflows/summary', \FoundryCo\Cloudflare\Responses\RadarNetFlowsDeprecated::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/netflows/summary', \FoundryCo\Cloudflare\Responses\RadarGetNetflowsSummaryDeprecated::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -53,9 +53,9 @@ class RadarNetflowsResource
 		?array $product = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarNetFlowsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/netflows/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarNetFlowsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'product' => $product ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/netflows/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetNetflowsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'product' => $product ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -75,9 +75,9 @@ class RadarNetflowsResource
 		?array $geoId = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarNetFlowsTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/netflows/timeseries', \FoundryCo\Cloudflare\Responses\RadarNetFlowsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'product' => $product ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/netflows/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetNetflowsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'product' => $product ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -99,9 +99,9 @@ class RadarNetflowsResource
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsNormalization $normalization = null,
 		?array $product = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarNetFlowsGroup
+	): mixed
 	{
-		return $this->client->get('/radar/netflows/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarNetFlowsGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'product' => $product ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/netflows/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetNetflowsTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'normalization' => $normalization ?? null, 'product' => $product ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -119,9 +119,9 @@ class RadarNetflowsResource
 		?array $continent = null,
 		?array $geoId = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarNetFlowsAses
+	): mixed
 	{
-		return $this->client->get('/radar/netflows/top/ases', \FoundryCo\Cloudflare\Responses\RadarNetFlowsAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/netflows/top/ases', \FoundryCo\Cloudflare\Responses\RadarGetNetflowsTopAses::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -139,8 +139,8 @@ class RadarNetflowsResource
 		?array $continent = null,
 		?array $geoId = null,
 		?\FoundryCo\Cloudflare\Enums\RadarNetFlowsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarNetFlowsLocations
+	): mixed
 	{
-		return $this->client->get('/radar/netflows/top/locations', \FoundryCo\Cloudflare\Responses\RadarNetFlowsLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/netflows/top/locations', \FoundryCo\Cloudflare\Responses\RadarGetNetflowsTopLocations::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'geoId' => $geoId ?? null, 'format' => $format ?? null]);
 	}
 }

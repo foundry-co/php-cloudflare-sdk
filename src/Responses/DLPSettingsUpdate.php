@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,14 +13,14 @@ namespace FoundryCo\Cloudflare\Responses;
 /**
  * DLP account-level settings response.
  */
-readonly class DLPSettingsUpdate
+readonly class DlpSettingsUpdate
 {
 	public function __construct(
 		/** Whether AI context analysis is enabled at the account level. */
-		public bool $aiContextAnalysis,
+		public ?bool $aiContextAnalysis = null,
 		/** Whether OCR is enabled at the account level. */
-		public bool $ocr,
-		public DLPSettingsUpdatePayloadLogging $payloadLogging,
+		public ?bool $ocr = null,
+		public ?DlpSettingsUpdatePayloadLogging $payloadLogging = null,
 	) {
 	}
 }

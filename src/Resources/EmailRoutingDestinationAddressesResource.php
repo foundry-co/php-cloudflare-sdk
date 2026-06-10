@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class EmailRoutingDestinationAddressesResource
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\EmailRoutingDestinationAddressesDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\EmailRoutingDestinationAddressesVerified $verified = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/addresses', \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesAddresses::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null, 'verified' => $verified ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/addresses', \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesListDestinationAddresses::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null, 'verified' => $verified ?? null]);
 	}
 
 
@@ -38,20 +38,18 @@ class EmailRoutingDestinationAddressesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\EmailRoutingDestinationAddressesCreateADestinationAddressRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesAddress
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email/routing/addresses', \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesAddress::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email/routing/addresses', \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesCreateADestinationAddress::class, $request);
 	}
 
 
 	/**
 	 * Get a destination address
 	 */
-	public function get(
-		string $destinationAddressIdentifier,
-	): \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesAddress
+	public function get(string $destinationAddressIdentifier): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/addresses/' . $destinationAddressIdentifier, \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesAddress::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email/routing/addresses/' . $destinationAddressIdentifier, \FoundryCo\Cloudflare\Responses\EmailRoutingDestinationAddressesGetADestinationAddress::class, []);
 	}
 
 

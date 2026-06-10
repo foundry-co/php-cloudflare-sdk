@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,9 +14,9 @@ readonly class AiSearchUpdateInstanceRequestSourceParamsWebCrawlerParseOptionsCo
 {
 	public function __construct(
 		/** Glob pattern to match against the page URL path. Uses standard glob syntax: * matches within a segment, ** crosses directories. */
-		public string $path,
+		public ?string $path = null,
 		/** CSS selector to extract content from pages matching the path pattern. Must not contain disallowed characters (;, `, $, {, }, \). Must target a single element; if multiple elements match, the selector is ignored and the full page is used. */
-		public string $selector,
+		public ?string $selector = null,
 	) {
 	}
 }

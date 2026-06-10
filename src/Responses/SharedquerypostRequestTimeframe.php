@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,9 +17,9 @@ readonly class SharedquerypostRequestTimeframe
 {
 	public function __construct(
 		/** Start timestamp for the query timeframe (Unix timestamp in milliseconds) */
-		public float $from,
+		public ?float $from = null,
 		/** End timestamp for the query timeframe (Unix timestamp in milliseconds) */
-		public float $to,
+		public ?float $to = null,
 	) {
 	}
 }

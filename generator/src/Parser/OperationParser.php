@@ -336,8 +336,7 @@ class OperationParser
 
     private function operationIdToResponseHint(string $operationId, string $tag): string
     {
-        // Prefer a name derived from the tag + last segment of operation
-        return $this->toPascalCase($tag) . $this->toPascalCase($this->operationIdToMethodName($operationId));
+        return $this->toPascalCase($operationId);
     }
 
     private function toPascalCase(string $str): string

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,41 +28,36 @@ class DEXRulesResource
 		?\FoundryCo\Cloudflare\Enums\DEXRulesSortOrder $sortOrder = null,
 		?\FoundryCo\Cloudflare\Enums\DEXRulesSortBy $sortBy = null,
 		?string $name = null,
-	): \FoundryCo\Cloudflare\Responses\DEXRulesRules
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/rules', \FoundryCo\Cloudflare\Responses\DEXRulesRules::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'sortOrder' => $sortOrder ?? null, 'sortBy' => $sortBy ?? null, 'name' => $name ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/rules', \FoundryCo\Cloudflare\Responses\ListDexRules::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'sortOrder' => $sortOrder ?? null, 'sortBy' => $sortBy ?? null, 'name' => $name ?? null]);
 	}
 
 
 	/**
 	 * Create a DEX Rule
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateDexRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DEXRulesRule
+	public function create(\FoundryCo\Cloudflare\Requests\CreateDexRuleRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dex/rules', \FoundryCo\Cloudflare\Responses\DEXRulesRule::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dex/rules', \FoundryCo\Cloudflare\Responses\CreateDexRule::class, $request);
 	}
 
 
 	/**
 	 * Get DEX Rule
 	 */
-	public function get(string $ruleId): \FoundryCo\Cloudflare\Responses\DEXRulesRule
+	public function get(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dex/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DEXRulesRule::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dex/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\GetDexRule::class, []);
 	}
 
 
 	/**
 	 * Update a DEX Rule
 	 */
-	public function update(
-		string $ruleId,
-		\FoundryCo\Cloudflare\Requests\UpdateDexRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DEXRulesRule
+	public function update(string $ruleId, \FoundryCo\Cloudflare\Requests\UpdateDexRuleRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/dex/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\DEXRulesRule::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/dex/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\UpdateDexRule::class, $request);
 	}
 
 

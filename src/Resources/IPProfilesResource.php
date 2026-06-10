@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,41 +22,36 @@ class IPProfilesResource
 	/**
 	 * List IP profiles
 	 */
-	public function list(?int $perPage = null): \FoundryCo\Cloudflare\Responses\IPProfilesProfiles
+	public function list(?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/ip-profiles', \FoundryCo\Cloudflare\Responses\IPProfilesProfiles::class, ['perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/ip-profiles', \FoundryCo\Cloudflare\Responses\ListIpProfiles::class, ['perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Create IP profile
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateIpProfileRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPProfilesProfile
+	public function create(\FoundryCo\Cloudflare\Requests\CreateIpProfileRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/devices/ip-profiles', \FoundryCo\Cloudflare\Responses\IPProfilesProfile::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/devices/ip-profiles', \FoundryCo\Cloudflare\Responses\CreateIpProfile::class, $request);
 	}
 
 
 	/**
 	 * Get IP profile
 	 */
-	public function get(string $profileId): \FoundryCo\Cloudflare\Responses\IPProfilesProfile
+	public function get(string $profileId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/ip-profiles/' . $profileId, \FoundryCo\Cloudflare\Responses\IPProfilesProfile::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/ip-profiles/' . $profileId, \FoundryCo\Cloudflare\Responses\GetIpProfile::class, []);
 	}
 
 
 	/**
 	 * Update IP profile
 	 */
-	public function update(
-		string $profileId,
-		\FoundryCo\Cloudflare\Requests\UpdateIpProfileRequest $request,
-	): \FoundryCo\Cloudflare\Responses\IPProfilesProfile
+	public function update(string $profileId, \FoundryCo\Cloudflare\Requests\UpdateIpProfileRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/devices/ip-profiles/' . $profileId, \FoundryCo\Cloudflare\Responses\IPProfilesProfile::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/devices/ip-profiles/' . $profileId, \FoundryCo\Cloudflare\Responses\UpdateIpProfile::class, $request);
 	}
 
 

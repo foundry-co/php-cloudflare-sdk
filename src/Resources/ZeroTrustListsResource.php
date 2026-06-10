@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,40 +22,36 @@ class ZeroTrustListsResource
 	/**
 	 * List Zero Trust lists
 	 */
-	public function list(
-		?\FoundryCo\Cloudflare\Enums\ZeroTrustListsType $type = null,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustListsLists
+	public function list(?\FoundryCo\Cloudflare\Enums\ZeroTrustListsType $type = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/lists', \FoundryCo\Cloudflare\Responses\ZeroTrustListsLists::class, ['type' => $type ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/lists', \FoundryCo\Cloudflare\Responses\ZeroTrustListsListZeroTrustLists::class, ['type' => $type ?? null]);
 	}
 
 
 	/**
 	 * Create Zero Trust list
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZeroTrustListsCreateZeroTrustListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustListsList
+	public function create(\FoundryCo\Cloudflare\Requests\ZeroTrustListsCreateZeroTrustListRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/lists', \FoundryCo\Cloudflare\Responses\ZeroTrustListsList::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/lists', \FoundryCo\Cloudflare\Responses\ZeroTrustListsCreateZeroTrustList::class, $request);
 	}
 
 
 	/**
 	 * Create Zero Trust list from CSV
 	 */
-	public function upload(): \FoundryCo\Cloudflare\Responses\ZeroTrustListsCsv
+	public function upload(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/lists/upload', \FoundryCo\Cloudflare\Responses\ZeroTrustListsCsv::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/lists/upload', \FoundryCo\Cloudflare\Responses\ZeroTrustListsCreateZeroTrustListFromCsv::class, null);
 	}
 
 
 	/**
 	 * Get Zero Trust list details
 	 */
-	public function get(string $listId): \FoundryCo\Cloudflare\Responses\ZeroTrustListsDetails
+	public function get(string $listId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ZeroTrustListsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ZeroTrustListsZeroTrustListDetails::class, []);
 	}
 
 
@@ -65,9 +61,9 @@ class ZeroTrustListsResource
 	public function update(
 		string $listId,
 		\FoundryCo\Cloudflare\Requests\ZeroTrustListsUpdateZeroTrustListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustListsList
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/gateway/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ZeroTrustListsList::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/gateway/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ZeroTrustListsUpdateZeroTrustList::class, $request);
 	}
 
 
@@ -77,9 +73,9 @@ class ZeroTrustListsResource
 	public function lists(
 		string $listId,
 		\FoundryCo\Cloudflare\Requests\ZeroTrustListsPatchZeroTrustListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustListsList
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/gateway/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ZeroTrustListsList::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/gateway/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ZeroTrustListsPatchZeroTrustList::class, $request);
 	}
 
 
@@ -95,8 +91,8 @@ class ZeroTrustListsResource
 	/**
 	 * Get Zero Trust list items
 	 */
-	public function items(string $listId): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function items(string $listId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/lists/' . $listId . '/items', \FoundryCo\Cloudflare\Responses\ZeroTrustListsItems::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/lists/' . $listId . '/items', \FoundryCo\Cloudflare\Responses\ZeroTrustListsZeroTrustListItems::class, []);
 	}
 }

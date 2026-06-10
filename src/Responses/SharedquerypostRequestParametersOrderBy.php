@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,7 +17,7 @@ readonly class SharedquerypostRequestParametersOrderBy
 {
 	public function __construct(
 		/** Alias of the calculation to order results by. Must match the alias (or operator) of a calculation in the query. */
-		public string $value,
+		public ?string $value = null,
 		/** Sort direction: 'asc' for ascending, 'desc' for descending. */
 		public ?\FoundryCo\Cloudflare\Enums\SharedquerypostRequestParametersOrderByOrder $order = null,
 	) {

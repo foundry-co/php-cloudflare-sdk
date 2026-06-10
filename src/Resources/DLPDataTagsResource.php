@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,30 +22,27 @@ class DLPDataTagsResource
 	/**
 	 * Retrieve all data tags in a data tag category
 	 */
-	public function get(string $categoryId): \FoundryCo\Cloudflare\Responses\DLPDataTagsList
+	public function get(string $categoryId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags', \FoundryCo\Cloudflare\Responses\DLPDataTagsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags', \FoundryCo\Cloudflare\Responses\DlpDataTagsList::class, []);
 	}
 
 
 	/**
 	 * Creates a new data tag.
 	 */
-	public function create(
-		string $categoryId,
-		\FoundryCo\Cloudflare\Requests\DlpDataTagsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDataTagsCreate
+	public function create(string $categoryId, \FoundryCo\Cloudflare\Requests\DlpDataTagsCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags', \FoundryCo\Cloudflare\Responses\DLPDataTagsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags', \FoundryCo\Cloudflare\Responses\DlpDataTagsCreate::class, $request);
 	}
 
 
 	/**
 	 * Retrieve a specific data tag.
 	 */
-	public function dataTags(string $categoryId, string $tagId): \FoundryCo\Cloudflare\Responses\DLPDataTagsRead
+	public function dataTags(string $categoryId, string $tagId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags/' . $tagId, \FoundryCo\Cloudflare\Responses\DLPDataTagsRead::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags/' . $tagId, \FoundryCo\Cloudflare\Responses\DlpDataTagsRead::class, []);
 	}
 
 
@@ -56,9 +53,9 @@ class DLPDataTagsResource
 		string $categoryId,
 		string $tagId,
 		\FoundryCo\Cloudflare\Requests\DlpDataTagsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPDataTagsUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags/' . $tagId, \FoundryCo\Cloudflare\Responses\DLPDataTagsUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/dlp/data_tag_categories/' . $categoryId . '/data_tags/' . $tagId, \FoundryCo\Cloudflare\Responses\DlpDataTagsUpdate::class, $request);
 	}
 
 

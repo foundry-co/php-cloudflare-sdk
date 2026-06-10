@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -16,7 +16,7 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class ZeroTrustGatewayRulesUpdateZeroTrustGatewayRuleRequestExpiration
 {
 	public function __construct(
-		public mixed $expiresAt,
+		public mixed $expiresAt = null,
 		/** Defines the default duration a policy active in minutes. Must set in order to use the `reset_expiration` endpoint on this rule. */
 		public ?int $duration = null,
 		/** Indicates whether the policy is expired. */

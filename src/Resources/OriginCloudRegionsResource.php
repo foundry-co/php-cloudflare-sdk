@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,7 +22,7 @@ class OriginCloudRegionsResource
 	/**
 	 * List origin cloud region mappings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsList
+	public function list(): mixed
 	{
 		return $this->client->get('/zones/' . $this->zoneId . '/cache/origin_cloud_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsList::class, []);
 	}
@@ -31,9 +31,7 @@ class OriginCloudRegionsResource
 	/**
 	 * Create an origin cloud region mapping
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\OriginCloudRegionsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\OriginCloudRegionsCreateRequest $request): mixed
 	{
 		return $this->client->post('/zones/' . $this->zoneId . '/cache/origin_cloud_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsCreate::class, $request);
 	}
@@ -42,9 +40,7 @@ class OriginCloudRegionsResource
 	/**
 	 * Create or update an origin cloud region mapping
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\OriginCloudRegionsUpsertRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert
+	public function update(\FoundryCo\Cloudflare\Requests\OriginCloudRegionsUpsertRequest $request): mixed
 	{
 		return $this->client->patch('/zones/' . $this->zoneId . '/cache/origin_cloud_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert::class, $request);
 	}
@@ -53,9 +49,9 @@ class OriginCloudRegionsResource
 	/**
 	 * Batch create or update origin cloud region mappings
 	 */
-	public function batch(): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert
+	public function batch(): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/cache/origin_cloud_regions/batch', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert::class, null);
+		return $this->client->patch('/zones/' . $this->zoneId . '/cache/origin_cloud_regions/batch', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsBatchUpsert::class, null);
 	}
 
 
@@ -71,16 +67,16 @@ class OriginCloudRegionsResource
 	/**
 	 * List supported cloud vendors and regions
 	 */
-	public function supportedRegions(): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsRegions
+	public function supportedRegions(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/cache/origin_cloud_regions/supported_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsRegions::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/cache/origin_cloud_regions/supported_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsSupportedRegions::class, []);
 	}
 
 
 	/**
 	 * Get an origin cloud region mapping
 	 */
-	public function get(string $originIp): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsGet
+	public function get(string $originIp): mixed
 	{
 		return $this->client->get('/zones/' . $this->zoneId . '/cache/origin_cloud_regions/' . $originIp, \FoundryCo\Cloudflare\Responses\OriginCloudRegionsGet::class, []);
 	}
@@ -98,21 +94,18 @@ class OriginCloudRegionsResource
 	/**
 	 * List origin cloud region mappings
 	 */
-	public function cloudRegions(
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function cloudRegions(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin/cloud_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsList::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin/cloud_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsV2List::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Batch create or replace origin cloud region mappings
 	 */
-	public function originCloudRegionsV2BatchUpsert(): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert
+	public function originCloudRegionsV2BatchUpsert(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/origin/cloud_regions/batch', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/origin/cloud_regions/batch', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsV2BatchUpsert::class, null);
 	}
 
 
@@ -128,18 +121,18 @@ class OriginCloudRegionsResource
 	/**
 	 * List supported cloud vendors and regions
 	 */
-	public function originCloudRegionsV2SupportedRegions(): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsRegions
+	public function originCloudRegionsV2SupportedRegions(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin/cloud_regions/supported_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsRegions::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin/cloud_regions/supported_regions', \FoundryCo\Cloudflare\Responses\OriginCloudRegionsV2SupportedRegions::class, []);
 	}
 
 
 	/**
 	 * Get an origin cloud region mapping
 	 */
-	public function originCloudRegionsV2Get(string $originIp): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsGet
+	public function originCloudRegionsV2Get(string $originIp): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/origin/cloud_regions/' . $originIp, \FoundryCo\Cloudflare\Responses\OriginCloudRegionsGet::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/origin/cloud_regions/' . $originIp, \FoundryCo\Cloudflare\Responses\OriginCloudRegionsV2Get::class, []);
 	}
 
 
@@ -149,9 +142,9 @@ class OriginCloudRegionsResource
 	public function originCloudRegionsV2Upsert(
 		string $originIp,
 		\FoundryCo\Cloudflare\Requests\OriginCloudRegionsV2UpsertRequest $request,
-	): \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/origin/cloud_regions/' . $originIp, \FoundryCo\Cloudflare\Responses\OriginCloudRegionsUpsert::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/origin/cloud_regions/' . $originIp, \FoundryCo\Cloudflare\Responses\OriginCloudRegionsV2Upsert::class, $request);
 	}
 
 

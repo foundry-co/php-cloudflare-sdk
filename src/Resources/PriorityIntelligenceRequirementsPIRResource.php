@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,40 +22,36 @@ class PriorityIntelligenceRequirementsPIRResource
 	/**
 	 * List Priority Intelligence Requirements
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CloudforceOnePriorityListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRList
+	public function create(\FoundryCo\Cloudflare\Requests\CloudforceOnePriorityListRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority', \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRList::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority', \FoundryCo\Cloudflare\Responses\CloudforceOnePriorityList::class, $request);
 	}
 
 
 	/**
 	 * Create a New Priority Intelligence Requirement
 	 */
-	public function new(
-		\FoundryCo\Cloudflare\Requests\CloudforceOnePriorityNewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRNew
+	public function new(\FoundryCo\Cloudflare\Requests\CloudforceOnePriorityNewRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/new', \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRNew::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/new', \FoundryCo\Cloudflare\Responses\CloudforceOnePriorityNew::class, $request);
 	}
 
 
 	/**
 	 * Get Priority Intelligence Requirement Quota
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRQuota
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/quota', \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRQuota::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/quota', \FoundryCo\Cloudflare\Responses\CloudforceOnePriorityQuota::class, []);
 	}
 
 
 	/**
 	 * Get a Priority Intelligence Requirement
 	 */
-	public function get(string $priorityId): \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRGet
+	public function get(string $priorityId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/' . $priorityId, \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRGet::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/' . $priorityId, \FoundryCo\Cloudflare\Responses\CloudforceOnePriorityGet::class, []);
 	}
 
 
@@ -65,9 +61,9 @@ class PriorityIntelligenceRequirementsPIRResource
 	public function update(
 		string $priorityId,
 		\FoundryCo\Cloudflare\Requests\CloudforceOnePriorityUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/' . $priorityId, \FoundryCo\Cloudflare\Responses\PriorityIntelligenceRequirementsPIRUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/cloudforce-one/requests/priority/' . $priorityId, \FoundryCo\Cloudflare\Responses\CloudforceOnePriorityUpdate::class, $request);
 	}
 
 

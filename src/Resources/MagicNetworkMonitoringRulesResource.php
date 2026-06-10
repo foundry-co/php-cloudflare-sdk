@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,40 +22,36 @@ class MagicNetworkMonitoringRulesResource
 	/**
 	 * List rules
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRules
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mnm/rules', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRules::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/mnm/rules', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesListRules::class, []);
 	}
 
 
 	/**
 	 * Create rules
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringRulesCreateRulesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRules
+	public function create(\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringRulesCreateRulesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/mnm/rules', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRules::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/mnm/rules', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesCreateRules::class, $request);
 	}
 
 
 	/**
 	 * Update rules
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringRulesUpdateRulesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRules
+	public function update(\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringRulesUpdateRulesRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/mnm/rules', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRules::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/mnm/rules', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesUpdateRules::class, $request);
 	}
 
 
 	/**
 	 * Get rule
 	 */
-	public function get(string $ruleId): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRule
+	public function get(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/mnm/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRule::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/mnm/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesGetRule::class, []);
 	}
 
 
@@ -65,9 +61,9 @@ class MagicNetworkMonitoringRulesResource
 	public function rules(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\MagicNetworkMonitoringRulesUpdateRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRule
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/mnm/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRule::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/mnm/rules/' . $ruleId, \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesUpdateRule::class, $request);
 	}
 
 
@@ -83,8 +79,8 @@ class MagicNetworkMonitoringRulesResource
 	/**
 	 * Update advertisement for rule
 	 */
-	public function advertisement(string $ruleId): \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRule
+	public function advertisement(string $ruleId): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/mnm/rules/' . $ruleId . '/advertisement', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesRule::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/mnm/rules/' . $ruleId . '/advertisement', \FoundryCo\Cloudflare\Responses\MagicNetworkMonitoringRulesUpdateAdvertisementForRule::class, null);
 	}
 }

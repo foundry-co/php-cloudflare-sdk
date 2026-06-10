@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,13 +14,13 @@ readonly class SecretsStoreList
 {
 	public function __construct(
 		/** Whenthe secret was created. */
-		public \DateTimeImmutable $created,
+		public ?\DateTimeImmutable $created = null,
 		/** Store Identifier */
-		public string $id,
+		public ?string $id = null,
 		/** When the secret was modified. */
-		public \DateTimeImmutable $modified,
+		public ?\DateTimeImmutable $modified = null,
 		/** The name of the store */
-		public string $name,
+		public ?string $name = null,
 		/** Account Identifier */
 		public ?string $accountId = null,
 	) {

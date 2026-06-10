@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,9 +14,9 @@ readonly class TelemetryqueryRequestParametersGroupBysItem
 {
 	public function __construct(
 		/** Data type of the group-by field. */
-		public \FoundryCo\Cloudflare\Enums\TelemetryqueryRequestParametersGroupBysItemType $type,
+		public ?\FoundryCo\Cloudflare\Enums\TelemetryqueryRequestParametersGroupBysItemType $type = null,
 		/** Field name to group results by (e.g. $metadata.service, $metadata.statusCode). */
-		public string $value,
+		public ?string $value = null,
 	) {
 	}
 }

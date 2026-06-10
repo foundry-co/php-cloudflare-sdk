@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -33,9 +33,9 @@ class RadarTrafficAnomaliesResource
 		?string $location = null,
 		?string $origin = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTrafficAnomaliesFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTrafficAnomaliesAnomalies
+	): mixed
 	{
-		return $this->client->get('/radar/traffic_anomalies', \FoundryCo\Cloudflare\Responses\RadarTrafficAnomaliesAnomalies::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'status' => $status ?? null, 'type' => $type ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'origin' => $origin ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/traffic_anomalies', \FoundryCo\Cloudflare\Responses\RadarGetTrafficAnomalies::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'status' => $status ?? null, 'type' => $type ?? null, 'asn' => $asn ?? null, 'location' => $location ?? null, 'origin' => $origin ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -49,8 +49,8 @@ class RadarTrafficAnomaliesResource
 		?\DateTimeImmutable $dateEnd = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTrafficAnomaliesStatus $status = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTrafficAnomaliesFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTrafficAnomaliesTop
+	): mixed
 	{
-		return $this->client->get('/radar/traffic_anomalies/locations', \FoundryCo\Cloudflare\Responses\RadarTrafficAnomaliesTop::class, ['limit' => $limit ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'status' => $status ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/traffic_anomalies/locations', \FoundryCo\Cloudflare\Responses\RadarGetTrafficAnomaliesTop::class, ['limit' => $limit ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'status' => $status ?? null, 'format' => $format ?? null]);
 	}
 }

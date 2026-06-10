@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -25,9 +25,9 @@ class RadarOriginsResource
 		?int $limit = null,
 		?int $offset = null,
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarOriginsOrigins
+	): mixed
 	{
-		return $this->client->get('/radar/origins', \FoundryCo\Cloudflare\Responses\RadarOriginsOrigins::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/origins', \FoundryCo\Cloudflare\Responses\RadarGetOrigins::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -45,9 +45,9 @@ class RadarOriginsResource
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsMetric $metric = null,
 		?array $region = null,
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarOriginsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/origins/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarOriginsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'origin' => $origin ?? null, 'metric' => $metric ?? null, 'region' => $region ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/origins/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetOriginsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'origin' => $origin ?? null, 'metric' => $metric ?? null, 'region' => $region ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -64,9 +64,9 @@ class RadarOriginsResource
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsMetric $metric = null,
 		?array $region = null,
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarOriginsTimeseries
+	): mixed
 	{
-		return $this->client->get('/radar/origins/timeseries', \FoundryCo\Cloudflare\Responses\RadarOriginsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'origin' => $origin ?? null, 'metric' => $metric ?? null, 'region' => $region ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/origins/timeseries', \FoundryCo\Cloudflare\Responses\RadarGetOriginsTimeseries::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'origin' => $origin ?? null, 'metric' => $metric ?? null, 'region' => $region ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -86,9 +86,9 @@ class RadarOriginsResource
 		?array $region = null,
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsNormalization $normalization = null,
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarOriginsGroup
+	): mixed
 	{
-		return $this->client->get('/radar/origins/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarOriginsGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'origin' => $origin ?? null, 'metric' => $metric ?? null, 'region' => $region ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/origins/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetOriginsTimeseriesGroup::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'origin' => $origin ?? null, 'metric' => $metric ?? null, 'region' => $region ?? null, 'normalization' => $normalization ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -98,8 +98,8 @@ class RadarOriginsResource
 	public function getGet(
 		\FoundryCo\Cloudflare\Enums\RadarOriginsSlug $slug,
 		?\FoundryCo\Cloudflare\Enums\RadarOriginsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarOriginsDetails
+	): mixed
 	{
-		return $this->client->get('/radar/origins/' . $slug, \FoundryCo\Cloudflare\Responses\RadarOriginsDetails::class, ['format' => $format ?? null]);
+		return $this->client->get('/radar/origins/' . $slug, \FoundryCo\Cloudflare\Responses\RadarGetOriginDetails::class, ['format' => $format ?? null]);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,17 +28,17 @@ class AccountPermissionGroupsResource
 		?string $label = null,
 		?float $page = null,
 		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AccountPermissionGroupsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/permission_groups', \FoundryCo\Cloudflare\Responses\AccountPermissionGroupsList::class, ['id' => $id ?? null, 'name' => $name ?? null, 'label' => $label ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/permission_groups', \FoundryCo\Cloudflare\Responses\AccountPermissionGroupList::class, ['id' => $id ?? null, 'name' => $name ?? null, 'label' => $label ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Permission Group Details
 	 */
-	public function get(mixed $permissionGroupId): \FoundryCo\Cloudflare\Responses\AccountPermissionGroupsDetails
+	public function get(mixed $permissionGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/permission_groups/' . $permissionGroupId, \FoundryCo\Cloudflare\Responses\AccountPermissionGroupsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/permission_groups/' . $permissionGroupId, \FoundryCo\Cloudflare\Responses\AccountPermissionGroupDetails::class, []);
 	}
 }

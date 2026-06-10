@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class ImageRegistriesResource
 	/**
 	 * Get the list of configured registries in the account
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ImageRegistriesListImageRegistries
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/containers/registries', \FoundryCo\Cloudflare\Responses\ImageRegistriesListImageRegistries::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/containers/registries', \FoundryCo\Cloudflare\Responses\ListImageRegistries::class, []);
 	}
 
 
 	/**
 	 * Add a new image registry configuration
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\CreateImageRegistryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ImageRegistriesCreateImageRegistry
+	public function create(\FoundryCo\Cloudflare\Requests\CreateImageRegistryRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/containers/registries', \FoundryCo\Cloudflare\Responses\ImageRegistriesCreateImageRegistry::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/containers/registries', \FoundryCo\Cloudflare\Responses\CreateImageRegistry::class, $request);
 	}
 
 
@@ -54,8 +52,8 @@ class ImageRegistriesResource
 	public function credentials(
 		string $domain,
 		\FoundryCo\Cloudflare\Requests\GenerateImageRegistryCredentialsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ImageRegistriesGenerateImageRegistryCredentials
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/containers/registries/' . $domain . '/credentials', \FoundryCo\Cloudflare\Responses\ImageRegistriesGenerateImageRegistryCredentials::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/containers/registries/' . $domain . '/credentials', \FoundryCo\Cloudflare\Responses\GenerateImageRegistryCredentials::class, $request);
 	}
 }

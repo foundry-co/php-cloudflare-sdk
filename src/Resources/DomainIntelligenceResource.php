@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,17 @@ class DomainIntelligenceResource
 	/**
 	 * Get Domain Details
 	 */
-	public function list(
-		?string $domain = null,
-		?bool $skipDns = null,
-	): \FoundryCo\Cloudflare\Responses\DomainIntelligenceDetails
+	public function list(?string $domain = null, ?bool $skipDns = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/domain', \FoundryCo\Cloudflare\Responses\DomainIntelligenceDetails::class, ['domain' => $domain ?? null, 'skipDns' => $skipDns ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/domain', \FoundryCo\Cloudflare\Responses\DomainIntelligenceGetDomainDetails::class, ['domain' => $domain ?? null, 'skipDns' => $skipDns ?? null]);
 	}
 
 
 	/**
 	 * Get Multiple Domain Details
 	 */
-	public function bulk(?array $domain = null): \FoundryCo\Cloudflare\Responses\DomainIntelligenceDetails
+	public function bulk(?array $domain = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/domain/bulk', \FoundryCo\Cloudflare\Responses\DomainIntelligenceDetails::class, ['domain' => $domain ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/domain/bulk', \FoundryCo\Cloudflare\Responses\DomainIntelligenceGetMultipleDomainDetails::class, ['domain' => $domain ?? null]);
 	}
 }

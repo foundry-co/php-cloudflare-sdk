@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,42 +22,36 @@ class ZoneEnvironmentsResource
 	/**
 	 * List zone environments
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsList
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsList::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZonesEnvironmentsList::class, []);
 	}
 
 
 	/**
 	 * Create zone environments
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZonesEnvironmentsCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\ZonesEnvironmentsCreateRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsCreate::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZonesEnvironmentsCreate::class, $request);
 	}
 
 
 	/**
 	 * Upsert zone environments
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\ZonesEnvironmentsUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsUpdate
+	public function update(\FoundryCo\Cloudflare\Requests\ZonesEnvironmentsUpdateRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsUpdate::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZonesEnvironmentsUpdate::class, $request);
 	}
 
 
 	/**
 	 * Partially update zone environments
 	 */
-	public function environments(
-		\FoundryCo\Cloudflare\Requests\ZonesEnvironmentsEditRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsEdit
+	public function environments(\FoundryCo\Cloudflare\Requests\ZonesEnvironmentsEditRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsEdit::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/environments', \FoundryCo\Cloudflare\Responses\ZonesEnvironmentsEdit::class, $request);
 	}
 
 
@@ -73,8 +67,8 @@ class ZoneEnvironmentsResource
 	/**
 	 * Roll back zone environment
 	 */
-	public function rollback(): \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsRollback
+	public function rollback(): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/environments/' . $environmentId . '/rollback', \FoundryCo\Cloudflare\Responses\ZoneEnvironmentsZonesEnvironmentsRollback::class, null);
+		return $this->client->post('/zones/' . $this->zoneId . '/environments/' . $environmentId . '/rollback', \FoundryCo\Cloudflare\Responses\ZonesEnvironmentsRollback::class, null);
 	}
 }

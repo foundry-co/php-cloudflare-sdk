@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class PageShieldResource
 	/**
 	 * Get Page Shield settings
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\PageShieldSettings
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield', \FoundryCo\Cloudflare\Responses\PageShieldSettings::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield', \FoundryCo\Cloudflare\Responses\PageShieldGetSettings::class, []);
 	}
 
 
 	/**
 	 * Update Page Shield settings
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\PageShieldUpdateSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PageShieldSettings
+	public function update(\FoundryCo\Cloudflare\Requests\PageShieldUpdateSettingsRequest $request): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/page_shield', \FoundryCo\Cloudflare\Responses\PageShieldSettings::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/page_shield', \FoundryCo\Cloudflare\Responses\PageShieldUpdateSettings::class, $request);
 	}
 
 
@@ -55,18 +53,18 @@ class PageShieldResource
 		?string $status = null,
 		?string $pageUrl = null,
 		?\FoundryCo\Cloudflare\Enums\PageShieldExport $export = null,
-	): \FoundryCo\Cloudflare\Responses\PageShieldConnections
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/connections', \FoundryCo\Cloudflare\Responses\PageShieldConnections::class, ['excludeUrls' => $excludeUrls ?? null, 'urls' => $urls ?? null, 'hosts' => $hosts ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'prioritizeMalicious' => $prioritizeMalicious ?? null, 'excludeCdnCgi' => $excludeCdnCgi ?? null, 'status' => $status ?? null, 'pageUrl' => $pageUrl ?? null, 'export' => $export ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/connections', \FoundryCo\Cloudflare\Responses\PageShieldListConnections::class, ['excludeUrls' => $excludeUrls ?? null, 'urls' => $urls ?? null, 'hosts' => $hosts ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'prioritizeMalicious' => $prioritizeMalicious ?? null, 'excludeCdnCgi' => $excludeCdnCgi ?? null, 'status' => $status ?? null, 'pageUrl' => $pageUrl ?? null, 'export' => $export ?? null]);
 	}
 
 
 	/**
 	 * Get a Page Shield connection
 	 */
-	public function get(string $connectionId): \FoundryCo\Cloudflare\Responses\PageShieldConnection
+	public function get(string $connectionId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/connections/' . $connectionId, \FoundryCo\Cloudflare\Responses\PageShieldConnection::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/connections/' . $connectionId, \FoundryCo\Cloudflare\Responses\PageShieldGetConnection::class, []);
 	}
 
 
@@ -88,47 +86,45 @@ class PageShieldResource
 		?\FoundryCo\Cloudflare\Enums\PageShieldType $type = null,
 		?string $path = null,
 		?string $domain = null,
-	): \FoundryCo\Cloudflare\Responses\PageShieldCookies
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/cookies', \FoundryCo\Cloudflare\Responses\PageShieldCookies::class, ['hosts' => $hosts ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'pageUrl' => $pageUrl ?? null, 'export' => $export ?? null, 'name' => $name ?? null, 'secure' => $secure ?? null, 'httpOnly' => $httpOnly ?? null, 'sameSite' => $sameSite ?? null, 'type' => $type ?? null, 'path' => $path ?? null, 'domain' => $domain ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/cookies', \FoundryCo\Cloudflare\Responses\PageShieldListCookies::class, ['hosts' => $hosts ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'pageUrl' => $pageUrl ?? null, 'export' => $export ?? null, 'name' => $name ?? null, 'secure' => $secure ?? null, 'httpOnly' => $httpOnly ?? null, 'sameSite' => $sameSite ?? null, 'type' => $type ?? null, 'path' => $path ?? null, 'domain' => $domain ?? null]);
 	}
 
 
 	/**
 	 * Get a Page Shield cookie
 	 */
-	public function pageShieldGetCookie(string $cookieId): \FoundryCo\Cloudflare\Responses\PageShieldCookie
+	public function pageShieldGetCookie(string $cookieId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/cookies/' . $cookieId, \FoundryCo\Cloudflare\Responses\PageShieldCookie::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/cookies/' . $cookieId, \FoundryCo\Cloudflare\Responses\PageShieldGetCookie::class, []);
 	}
 
 
 	/**
 	 * List Page Shield policies
 	 */
-	public function policies(): \FoundryCo\Cloudflare\Responses\PageShieldPolicies
+	public function policies(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/policies', \FoundryCo\Cloudflare\Responses\PageShieldPolicies::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/policies', \FoundryCo\Cloudflare\Responses\PageShieldListPolicies::class, []);
 	}
 
 
 	/**
 	 * Create a Page Shield policy
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PageShieldCreatePolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PageShieldPolicy
+	public function create(\FoundryCo\Cloudflare\Requests\PageShieldCreatePolicyRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/page_shield/policies', \FoundryCo\Cloudflare\Responses\PageShieldPolicy::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/page_shield/policies', \FoundryCo\Cloudflare\Responses\PageShieldCreatePolicy::class, $request);
 	}
 
 
 	/**
 	 * Get a Page Shield policy
 	 */
-	public function pageShieldGetPolicy(string $policyId): \FoundryCo\Cloudflare\Responses\PageShieldPolicy
+	public function pageShieldGetPolicy(string $policyId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\PageShieldPolicy::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\PageShieldGetPolicy::class, []);
 	}
 
 
@@ -138,9 +134,9 @@ class PageShieldResource
 	public function pageShieldUpdatePolicy(
 		string $policyId,
 		\FoundryCo\Cloudflare\Requests\PageShieldUpdatePolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\PageShieldPolicy
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/page_shield/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\PageShieldPolicy::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/page_shield/policies/' . $policyId, \FoundryCo\Cloudflare\Responses\PageShieldUpdatePolicy::class, $request);
 	}
 
 
@@ -170,17 +166,17 @@ class PageShieldResource
 		?string $status = null,
 		?string $pageUrl = null,
 		?\FoundryCo\Cloudflare\Enums\PageShieldExport $export = null,
-	): \FoundryCo\Cloudflare\Responses\PageShieldScripts
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/scripts', \FoundryCo\Cloudflare\Responses\PageShieldScripts::class, ['excludeUrls' => $excludeUrls ?? null, 'urls' => $urls ?? null, 'hosts' => $hosts ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'prioritizeMalicious' => $prioritizeMalicious ?? null, 'excludeCdnCgi' => $excludeCdnCgi ?? null, 'excludeDuplicates' => $excludeDuplicates ?? null, 'status' => $status ?? null, 'pageUrl' => $pageUrl ?? null, 'export' => $export ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/scripts', \FoundryCo\Cloudflare\Responses\PageShieldListScripts::class, ['excludeUrls' => $excludeUrls ?? null, 'urls' => $urls ?? null, 'hosts' => $hosts ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'orderBy' => $orderBy ?? null, 'direction' => $direction ?? null, 'prioritizeMalicious' => $prioritizeMalicious ?? null, 'excludeCdnCgi' => $excludeCdnCgi ?? null, 'excludeDuplicates' => $excludeDuplicates ?? null, 'status' => $status ?? null, 'pageUrl' => $pageUrl ?? null, 'export' => $export ?? null]);
 	}
 
 
 	/**
 	 * Get a Page Shield script
 	 */
-	public function pageShieldGetScript(string $scriptId): \FoundryCo\Cloudflare\Responses\PageShieldScript
+	public function pageShieldGetScript(string $scriptId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/scripts/' . $scriptId, \FoundryCo\Cloudflare\Responses\PageShieldScript::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/page_shield/scripts/' . $scriptId, \FoundryCo\Cloudflare\Responses\PageShieldGetScript::class, []);
 	}
 }

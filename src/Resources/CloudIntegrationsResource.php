@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class CloudIntegrationsResource
 		?string $orderBy = null,
 		?bool $desc = null,
 		?bool $cloudflare = null,
-	): \FoundryCo\Cloudflare\Responses\CloudIntegrationsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/providers', \FoundryCo\Cloudflare\Responses\CloudIntegrationsList::class, ['status' => $status ?? null, 'orderBy' => $orderBy ?? null, 'desc' => $desc ?? null, 'cloudflare' => $cloudflare ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/providers', \FoundryCo\Cloudflare\Responses\ProvidersList::class, ['status' => $status ?? null, 'orderBy' => $orderBy ?? null, 'desc' => $desc ?? null, 'cloudflare' => $cloudflare ?? null]);
 	}
 
 
@@ -39,9 +39,9 @@ class CloudIntegrationsResource
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ProvidersCreateRequest $request,
 		?string $forwarded = null,
-	): \FoundryCo\Cloudflare\Responses\CloudIntegrationsCreate
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/magic/cloud/providers', \FoundryCo\Cloudflare\Responses\CloudIntegrationsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/magic/cloud/providers', \FoundryCo\Cloudflare\Responses\ProvidersCreate::class, $request);
 	}
 
 
@@ -57,33 +57,27 @@ class CloudIntegrationsResource
 	/**
 	 * Read Cloud Integration
 	 */
-	public function get(string $providerId, ?bool $status = null): \FoundryCo\Cloudflare\Responses\CloudIntegrationsRead
+	public function get(string $providerId, ?bool $status = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/providers/' . $providerId, \FoundryCo\Cloudflare\Responses\CloudIntegrationsRead::class, ['status' => $status ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/magic/cloud/providers/' . $providerId, \FoundryCo\Cloudflare\Responses\ProvidersRead::class, ['status' => $status ?? null]);
 	}
 
 
 	/**
 	 * Update Cloud Integration
 	 */
-	public function update(
-		string $providerId,
-		\FoundryCo\Cloudflare\Requests\ProvidersUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudIntegrationsUpdate
+	public function update(string $providerId, \FoundryCo\Cloudflare\Requests\ProvidersUpdateRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/magic/cloud/providers/' . $providerId, \FoundryCo\Cloudflare\Responses\CloudIntegrationsUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/magic/cloud/providers/' . $providerId, \FoundryCo\Cloudflare\Responses\ProvidersUpdate::class, $request);
 	}
 
 
 	/**
 	 * Patch Cloud Integration
 	 */
-	public function providers(
-		string $providerId,
-		\FoundryCo\Cloudflare\Requests\ProvidersPatchRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CloudIntegrationsPatch
+	public function providers(string $providerId, \FoundryCo\Cloudflare\Requests\ProvidersPatchRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/magic/cloud/providers/' . $providerId, \FoundryCo\Cloudflare\Responses\CloudIntegrationsPatch::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/magic/cloud/providers/' . $providerId, \FoundryCo\Cloudflare\Responses\ProvidersPatch::class, $request);
 	}
 
 

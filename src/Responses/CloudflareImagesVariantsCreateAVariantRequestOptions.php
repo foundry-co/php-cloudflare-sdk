@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -17,13 +17,13 @@ readonly class CloudflareImagesVariantsCreateAVariantRequestOptions
 {
 	public function __construct(
 		/** The fit property describes how the width and height dimensions should be interpreted. */
-		public \FoundryCo\Cloudflare\Enums\CloudflareImagesVariantsCreateAVariantRequestOptionsFit $fit,
+		public ?\FoundryCo\Cloudflare\Enums\CloudflareImagesVariantsCreateAVariantRequestOptionsFit $fit = null,
 		/** Maximum height in image pixels. */
-		public float $height,
+		public ?float $height = null,
 		/** What EXIF data should be preserved in the output image. */
-		public \FoundryCo\Cloudflare\Enums\CloudflareImagesVariantsCreateAVariantRequestOptionsMetadata $metadata,
+		public ?\FoundryCo\Cloudflare\Enums\CloudflareImagesVariantsCreateAVariantRequestOptionsMetadata $metadata = null,
 		/** Maximum width in image pixels. */
-		public float $width,
+		public ?float $width = null,
 	) {
 	}
 }

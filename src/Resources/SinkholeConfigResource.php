@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,29 +21,27 @@ class SinkholeConfigResource
 	/**
 	 * List sinkholes owned by this account
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SinkholeConfigSinkholes
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/sinkholes', \FoundryCo\Cloudflare\Responses\SinkholeConfigSinkholes::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/sinkholes', \FoundryCo\Cloudflare\Responses\SinkholeConfigListSinkholes::class, []);
 	}
 
 
 	/**
 	 * Create a new sinkhole for your account
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SinkholeConfigCreateSinkholeRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SinkholeConfigSinkhole
+	public function create(\FoundryCo\Cloudflare\Requests\SinkholeConfigCreateSinkholeRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/intel/sinkholes', \FoundryCo\Cloudflare\Responses\SinkholeConfigSinkhole::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/intel/sinkholes', \FoundryCo\Cloudflare\Responses\SinkholeConfigCreateSinkhole::class, $request);
 	}
 
 
 	/**
 	 * Get a sinkhole
 	 */
-	public function get(string $sinkholeId): \FoundryCo\Cloudflare\Responses\SinkholeConfigSinkhole
+	public function get(string $sinkholeId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/sinkholes/' . $sinkholeId, \FoundryCo\Cloudflare\Responses\SinkholeConfigSinkhole::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/sinkholes/' . $sinkholeId, \FoundryCo\Cloudflare\Responses\SinkholeConfigGetSinkhole::class, []);
 	}
 
 
@@ -71,9 +69,9 @@ class SinkholeConfigResource
 	/**
 	 * List ingresses for a sinkhole
 	 */
-	public function ingresses(string $sinkholeId): \FoundryCo\Cloudflare\Responses\SinkholeConfigIngresses
+	public function ingresses(string $sinkholeId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/sinkholes/' . $sinkholeId . '/ingresses', \FoundryCo\Cloudflare\Responses\SinkholeConfigIngresses::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/sinkholes/' . $sinkholeId . '/ingresses', \FoundryCo\Cloudflare\Responses\SinkholeConfigListSinkholeIngresses::class, []);
 	}
 
 
@@ -83,21 +81,18 @@ class SinkholeConfigResource
 	public function sinkholeConfigCreateIngress(
 		string $sinkholeId,
 		\FoundryCo\Cloudflare\Requests\SinkholeConfigCreateIngressRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SinkholeConfigIngress
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/intel/sinkholes/' . $sinkholeId . '/ingresses', \FoundryCo\Cloudflare\Responses\SinkholeConfigIngress::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/intel/sinkholes/' . $sinkholeId . '/ingresses', \FoundryCo\Cloudflare\Responses\SinkholeConfigCreateIngress::class, $request);
 	}
 
 
 	/**
 	 * Get an ingress rule
 	 */
-	public function sinkholeConfigGetIngress(
-		string $sinkholeId,
-		string $ingressId,
-	): \FoundryCo\Cloudflare\Responses\SinkholeConfigIngress
+	public function sinkholeConfigGetIngress(string $sinkholeId, string $ingressId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/intel/sinkholes/' . $sinkholeId . '/ingresses/' . $ingressId, \FoundryCo\Cloudflare\Responses\SinkholeConfigIngress::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/intel/sinkholes/' . $sinkholeId . '/ingresses/' . $ingressId, \FoundryCo\Cloudflare\Responses\SinkholeConfigGetIngress::class, []);
 	}
 
 

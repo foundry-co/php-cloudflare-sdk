@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,19 +22,17 @@ class InstantLogsJobsResource
 	/**
 	 * List Instant Logs jobs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\InstantLogsJobsForAZoneJobs
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/logpush/edge/jobs', \FoundryCo\Cloudflare\Responses\InstantLogsJobsForAZoneJobs::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/logpush/edge/jobs', \FoundryCo\Cloudflare\Responses\GetZonesZoneIdLogpushEdgeJobs::class, []);
 	}
 
 
 	/**
 	 * Create Instant Logs job
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushEdgeJobsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\InstantLogsJobsForAZoneJobs
+	public function create(\FoundryCo\Cloudflare\Requests\PostZonesZoneIdLogpushEdgeJobsRequest $request): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/logpush/edge/jobs', \FoundryCo\Cloudflare\Responses\InstantLogsJobsForAZoneJobs::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/logpush/edge/jobs', \FoundryCo\Cloudflare\Responses\PostZonesZoneIdLogpushEdgeJobs::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -36,9 +36,9 @@ class CustomHostnameResource
 		?bool $wildcard = null,
 		?string $customOriginServer = null,
 		?\FoundryCo\Cloudflare\Enums\CustomHostnameForAZoneSsl $ssl = null,
-	): \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneHostnames
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_hostnames', \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneHostnames::class, ['hostname' => $hostname ?? null, 'hostnamecontain' => $hostnamecontain ?? null, 'id' => $id ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'sslStatus' => $sslStatus ?? null, 'hostnameStatus' => $hostnameStatus ?? null, 'certificateAuthority' => $certificateAuthority ?? null, 'wildcard' => $wildcard ?? null, 'customOriginServer' => $customOriginServer ?? null, 'ssl' => $ssl ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_hostnames', \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneListCustomHostnames::class, ['hostname' => $hostname ?? null, 'hostnamecontain' => $hostnamecontain ?? null, 'id' => $id ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'sslStatus' => $sslStatus ?? null, 'hostnameStatus' => $hostnameStatus ?? null, 'certificateAuthority' => $certificateAuthority ?? null, 'wildcard' => $wildcard ?? null, 'customOriginServer' => $customOriginServer ?? null, 'ssl' => $ssl ?? null]);
 	}
 
 
@@ -47,18 +47,18 @@ class CustomHostnameResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\CustomHostnameForAZoneCreateCustomHostnameRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneHostname
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/custom_hostnames', \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneHostname::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/custom_hostnames', \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneCreateCustomHostname::class, $request);
 	}
 
 
 	/**
 	 * Custom Hostname Details
 	 */
-	public function get(string $customHostnameId): \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneDetails
+	public function get(string $customHostnameId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/custom_hostnames/' . $customHostnameId, \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneDetails::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/custom_hostnames/' . $customHostnameId, \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneCustomHostnameDetails::class, []);
 	}
 
 
@@ -68,9 +68,9 @@ class CustomHostnameResource
 	public function update(
 		string $customHostnameId,
 		\FoundryCo\Cloudflare\Requests\CustomHostnameForAZoneEditCustomHostnameRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneHostname
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/custom_hostnames/' . $customHostnameId, \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneHostname::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/custom_hostnames/' . $customHostnameId, \FoundryCo\Cloudflare\Responses\CustomHostnameForAZoneEditCustomHostname::class, $request);
 	}
 
 

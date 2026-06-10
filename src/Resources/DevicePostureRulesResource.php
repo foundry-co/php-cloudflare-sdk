@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class DevicePostureRulesResource
 	/**
 	 * List device posture rules
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\DevicePostureRulesRules
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture', \FoundryCo\Cloudflare\Responses\DevicePostureRulesRules::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture', \FoundryCo\Cloudflare\Responses\DevicePostureRulesListDevicePostureRules::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class DevicePostureRulesResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\DevicePostureRulesCreateDevicePostureRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicePostureRulesRule
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/devices/posture', \FoundryCo\Cloudflare\Responses\DevicePostureRulesRule::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/devices/posture', \FoundryCo\Cloudflare\Responses\DevicePostureRulesCreateDevicePostureRule::class, $request);
 	}
 
 
 	/**
 	 * Get device posture rule details
 	 */
-	public function get(string $ruleId): \FoundryCo\Cloudflare\Responses\DevicePostureRulesDetails
+	public function get(string $ruleId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture/' . $ruleId, \FoundryCo\Cloudflare\Responses\DevicePostureRulesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/devices/posture/' . $ruleId, \FoundryCo\Cloudflare\Responses\DevicePostureRulesDevicePostureRulesDetails::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class DevicePostureRulesResource
 	public function update(
 		string $ruleId,
 		\FoundryCo\Cloudflare\Requests\DevicePostureRulesUpdateDevicePostureRuleRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DevicePostureRulesRule
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/devices/posture/' . $ruleId, \FoundryCo\Cloudflare\Responses\DevicePostureRulesRule::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/devices/posture/' . $ruleId, \FoundryCo\Cloudflare\Responses\DevicePostureRulesUpdateDevicePostureRule::class, $request);
 	}
 
 

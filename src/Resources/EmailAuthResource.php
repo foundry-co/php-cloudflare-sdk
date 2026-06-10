@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,28 +22,26 @@ class EmailAuthResource
 	/**
 	 * Get DMARC Report Status
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\EmailAuthStatus
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/auth/dmarc-reports', \FoundryCo\Cloudflare\Responses\EmailAuthStatus::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/auth/dmarc-reports', \FoundryCo\Cloudflare\Responses\GetDmarcReportsStatus::class, []);
 	}
 
 
 	/**
 	 * Configure DMARC Reports
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\ConfigureDmarcReportsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailAuthReports
+	public function update(\FoundryCo\Cloudflare\Requests\ConfigureDmarcReportsRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/email/auth/dmarc-reports', \FoundryCo\Cloudflare\Responses\EmailAuthReports::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/email/auth/dmarc-reports', \FoundryCo\Cloudflare\Responses\ConfigureDmarcReports::class, $request);
 	}
 
 
 	/**
 	 * Inspect SPF Record
 	 */
-	public function inspect(?string $id = null): \FoundryCo\Cloudflare\Responses\EmailAuthSpf
+	public function inspect(?string $id = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/email/auth/spf/inspect', \FoundryCo\Cloudflare\Responses\EmailAuthSpf::class, ['id' => $id ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/email/auth/spf/inspect', \FoundryCo\Cloudflare\Responses\InspectSpf::class, ['id' => $id ?? null]);
 	}
 }

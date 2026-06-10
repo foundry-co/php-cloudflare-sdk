@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class ZeroTrustGatewayPACFilesResource
 	/**
 	 * List PAC files
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesList
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/pacfiles', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/pacfiles', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPacfilesList::class, []);
 	}
 
 
 	/**
 	 * Create a PAC file
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ZeroTrustGatewayPacfilesCreatePacfileRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesPacfile
+	public function create(\FoundryCo\Cloudflare\Requests\ZeroTrustGatewayPacfilesCreatePacfileRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/gateway/pacfiles', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesPacfile::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/gateway/pacfiles', \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPacfilesCreatePacfile::class, $request);
 	}
 
 
 	/**
 	 * Get a PAC file
 	 */
-	public function get(string $pacfileId): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesDetails
+	public function get(string $pacfileId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/gateway/pacfiles/' . $pacfileId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/gateway/pacfiles/' . $pacfileId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPacfilesDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class ZeroTrustGatewayPACFilesResource
 	public function update(
 		string $pacfileId,
 		\FoundryCo\Cloudflare\Requests\ZeroTrustGatewayPacfilesUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/gateway/pacfiles/' . $pacfileId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPACFilesUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/gateway/pacfiles/' . $pacfileId, \FoundryCo\Cloudflare\Responses\ZeroTrustGatewayPacfilesUpdate::class, $request);
 	}
 
 

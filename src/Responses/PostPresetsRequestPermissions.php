@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,33 +14,33 @@ readonly class PostPresetsRequestPermissions
 {
 	public function __construct(
 		/** Whether this participant can accept waiting requests */
-		public bool $acceptWaitingRequests,
-		public bool $canAcceptProductionRequests,
-		public bool $canChangeParticipantPermissions,
-		public bool $canEditDisplayName,
-		public bool $canLivestream,
-		public bool $canRecord,
-		public bool $canSpotlight,
-		public PostPresetsRequestPermissionsChat $chat,
-		public PostPresetsRequestPermissionsConnectedMeetings $connectedMeetings,
-		public bool $disableParticipantAudio,
-		public bool $disableParticipantScreensharing,
-		public bool $disableParticipantVideo,
+		public ?bool $acceptWaitingRequests = null,
+		public ?bool $canAcceptProductionRequests = null,
+		public ?bool $canChangeParticipantPermissions = null,
+		public ?bool $canEditDisplayName = null,
+		public ?bool $canLivestream = null,
+		public ?bool $canRecord = null,
+		public ?bool $canSpotlight = null,
+		public ?PostPresetsRequestPermissionsChat $chat = null,
+		public ?PostPresetsRequestPermissionsConnectedMeetings $connectedMeetings = null,
+		public ?bool $disableParticipantAudio = null,
+		public ?bool $disableParticipantScreensharing = null,
+		public ?bool $disableParticipantVideo = null,
 		/** Whether this participant is visible to others or not */
-		public bool $hiddenParticipant,
-		public bool $kickParticipant,
+		public ?bool $hiddenParticipant = null,
+		public ?bool $kickParticipant = null,
 		/** Media permissions */
-		public PostPresetsRequestPermissionsMedia $media,
-		public bool $pinParticipant,
+		public ?PostPresetsRequestPermissionsMedia $media = null,
+		public ?bool $pinParticipant = null,
 		/** Plugin permissions */
-		public PostPresetsRequestPermissionsPlugins $plugins,
+		public ?PostPresetsRequestPermissionsPlugins $plugins = null,
 		/** Poll permissions */
-		public PostPresetsRequestPermissionsPolls $polls,
+		public ?PostPresetsRequestPermissionsPolls $polls = null,
 		/** Type of the recording peer */
-		public \FoundryCo\Cloudflare\Enums\PostPresetsRequestPermissionsRecorderType $recorderType,
-		public bool $showParticipantList,
+		public ?\FoundryCo\Cloudflare\Enums\PostPresetsRequestPermissionsRecorderType $recorderType = null,
+		public ?bool $showParticipantList = null,
 		/** Waiting room type */
-		public \FoundryCo\Cloudflare\Enums\PostPresetsRequestPermissionsWaitingRoomType $waitingRoomType,
+		public ?\FoundryCo\Cloudflare\Enums\PostPresetsRequestPermissionsWaitingRoomType $waitingRoomType = null,
 		public ?bool $acceptStageRequests = null,
 		public ?bool $isRecorder = null,
 		public ?\FoundryCo\Cloudflare\Enums\PostPresetsRequestPermissionsStageAccess $stageAccess = null,

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class APIShieldSettingsResource
 	/**
 	 * Retrieve information about specific configuration properties
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\APIShieldSettingsProperties
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/configuration', \FoundryCo\Cloudflare\Responses\APIShieldSettingsProperties::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/api_gateway/configuration', \FoundryCo\Cloudflare\Responses\ApiShieldSettingsRetrieveInformationAboutSpecificConfigurationProperties::class, []);
 	}
 
 
@@ -33,8 +33,8 @@ class APIShieldSettingsResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ApiShieldSettingsSetConfigurationPropertiesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\APIShieldSettingsProperties
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/configuration', \FoundryCo\Cloudflare\Responses\APIShieldSettingsProperties::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/api_gateway/configuration', \FoundryCo\Cloudflare\Responses\ApiShieldSettingsSetConfigurationProperties::class, $request);
 	}
 }

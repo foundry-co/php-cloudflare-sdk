@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,22 +22,18 @@ class WorkflowsResource
 	/**
 	 * List all Workflows
 	 */
-	public function list(
-		?float $perPage = null,
-		?float $page = null,
-		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsWorkflows
+	public function list(?float $perPage = null, ?float $page = null, ?string $search = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows', \FoundryCo\Cloudflare\Responses\WorkflowsWorkflows::class, ['perPage' => $perPage ?? null, 'page' => $page ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows', \FoundryCo\Cloudflare\Responses\WorListWorkflows::class, ['perPage' => $perPage ?? null, 'page' => $page ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Get Workflow details
 	 */
-	public function get(string $workflowName): \FoundryCo\Cloudflare\Responses\WorkflowsDetails
+	public function get(string $workflowName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName, \FoundryCo\Cloudflare\Responses\WorkflowsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName, \FoundryCo\Cloudflare\Responses\WorGetWorkflowDetails::class, []);
 	}
 
 
@@ -47,9 +43,9 @@ class WorkflowsResource
 	public function update(
 		string $workflowName,
 		\FoundryCo\Cloudflare\Requests\WorCreateOrModifyWorkflowRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsWorkflow
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workflows/' . $workflowName, \FoundryCo\Cloudflare\Responses\WorkflowsWorkflow::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workflows/' . $workflowName, \FoundryCo\Cloudflare\Responses\WorCreateOrModifyWorkflow::class, $request);
 	}
 
 
@@ -74,9 +70,9 @@ class WorkflowsResource
 		?\FoundryCo\Cloudflare\Enums\WorkflowsStatus $status = null,
 		?\DateTimeImmutable $dateStart = null,
 		?\DateTimeImmutable $dateEnd = null,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsInstances
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances', \FoundryCo\Cloudflare\Responses\WorkflowsInstances::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'direction' => $direction ?? null, 'status' => $status ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances', \FoundryCo\Cloudflare\Responses\WorListWorkflowInstances::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'cursor' => $cursor ?? null, 'direction' => $direction ?? null, 'status' => $status ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null]);
 	}
 
 
@@ -86,38 +82,36 @@ class WorkflowsResource
 	public function create(
 		string $workflowName,
 		\FoundryCo\Cloudflare\Requests\WorCreateNewWorkflowInstanceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsInstance
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances', \FoundryCo\Cloudflare\Responses\WorkflowsInstance::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances', \FoundryCo\Cloudflare\Responses\WorCreateNewWorkflowInstance::class, $request);
 	}
 
 
 	/**
 	 * Batch create new Workflow instances
 	 */
-	public function batch(string $workflowName): \FoundryCo\Cloudflare\Responses\WorkflowsInstance
+	public function batch(string $workflowName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/batch', \FoundryCo\Cloudflare\Responses\WorkflowsInstance::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/batch', \FoundryCo\Cloudflare\Responses\WorBatchCreateWorkflowInstance::class, null);
 	}
 
 
 	/**
 	 * Batch terminate instances of a workflow
 	 */
-	public function terminate(string $workflowName): \FoundryCo\Cloudflare\Responses\WorkflowsInstances
+	public function terminate(string $workflowName): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/batch/terminate', \FoundryCo\Cloudflare\Responses\WorkflowsInstances::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/batch/terminate', \FoundryCo\Cloudflare\Responses\WorBatchTerminateWorkflowInstances::class, null);
 	}
 
 
 	/**
 	 * Get status of the job responsible for terminate all instances of a workflow
 	 */
-	public function worStatusTerminateWorkflowInstances(
-		string $workflowName,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsInstances
+	public function worStatusTerminateWorkflowInstances(string $workflowName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/terminate', \FoundryCo\Cloudflare\Responses\WorkflowsInstances::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/terminate', \FoundryCo\Cloudflare\Responses\WorStatusTerminateWorkflowInstances::class, []);
 	}
 
 
@@ -129,9 +123,9 @@ class WorkflowsResource
 		string $instanceId,
 		?\FoundryCo\Cloudflare\Enums\WorkflowsSimple $simple = null,
 		?\FoundryCo\Cloudflare\Enums\WorkflowsOrder $order = null,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsInstance
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/' . $instanceId, \FoundryCo\Cloudflare\Responses\WorkflowsInstance::class, ['simple' => $simple ?? null, 'order' => $order ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/' . $instanceId, \FoundryCo\Cloudflare\Responses\WorDescribeWorkflowInstance::class, ['simple' => $simple ?? null, 'order' => $order ?? null]);
 	}
 
 
@@ -147,9 +141,9 @@ class WorkflowsResource
 	/**
 	 * Change status of instance
 	 */
-	public function status(string $workflowName, string $instanceId): \FoundryCo\Cloudflare\Responses\WorkflowsInstance
+	public function status(string $workflowName, string $instanceId): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/' . $instanceId . '/status', \FoundryCo\Cloudflare\Responses\WorkflowsInstance::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/' . $instanceId . '/status', \FoundryCo\Cloudflare\Responses\WorChangeStatusWorkflowInstance::class, null);
 	}
 
 
@@ -162,51 +156,44 @@ class WorkflowsResource
 		?string $name = null,
 		?\FoundryCo\Cloudflare\Enums\WorkflowsType $type = null,
 		?int $attempt = null,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsStep
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/' . $instanceId . '/step', \FoundryCo\Cloudflare\Responses\WorkflowsStep::class, ['name' => $name ?? null, 'type' => $type ?? null, 'attempt' => $attempt ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/instances/' . $instanceId . '/step', \FoundryCo\Cloudflare\Responses\WorGetWorkflowInstanceStep::class, ['name' => $name ?? null, 'type' => $type ?? null, 'attempt' => $attempt ?? null]);
 	}
 
 
 	/**
 	 * List deployed Workflow versions
 	 */
-	public function versions(
-		string $workflowName,
-		?float $perPage = null,
-		?float $page = null,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsVersions
+	public function versions(string $workflowName, ?float $perPage = null, ?float $page = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions', \FoundryCo\Cloudflare\Responses\WorkflowsVersions::class, ['perPage' => $perPage ?? null, 'page' => $page ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions', \FoundryCo\Cloudflare\Responses\WorListWorkflowVersions::class, ['perPage' => $perPage ?? null, 'page' => $page ?? null]);
 	}
 
 
 	/**
 	 * Get Workflow version details
 	 */
-	public function worDescribeWorkflowVersions(
-		string $workflowName,
-		string $versionId,
-	): \FoundryCo\Cloudflare\Responses\WorkflowsVersions
+	public function worDescribeWorkflowVersions(string $workflowName, string $versionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions/' . $versionId, \FoundryCo\Cloudflare\Responses\WorkflowsVersions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions/' . $versionId, \FoundryCo\Cloudflare\Responses\WorDescribeWorkflowVersions::class, []);
 	}
 
 
 	/**
 	 * Get Workflow version dag
 	 */
-	public function dag(string $workflowName, string $versionId): \FoundryCo\Cloudflare\Responses\WorkflowsDag
+	public function dag(string $workflowName, string $versionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions/' . $versionId . '/dag', \FoundryCo\Cloudflare\Responses\WorkflowsDag::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions/' . $versionId . '/dag', \FoundryCo\Cloudflare\Responses\WorDescribeWorkflowVersionsDag::class, []);
 	}
 
 
 	/**
 	 * Get Workflow version graph
 	 */
-	public function graph(string $workflowName, string $versionId): \FoundryCo\Cloudflare\Responses\WorkflowsGraph
+	public function graph(string $workflowName, string $versionId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions/' . $versionId . '/graph', \FoundryCo\Cloudflare\Responses\WorkflowsGraph::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workflows/' . $workflowName . '/versions/' . $versionId . '/graph', \FoundryCo\Cloudflare\Responses\WorDescribeWorkflowVersionsGraph::class, []);
 	}
 }

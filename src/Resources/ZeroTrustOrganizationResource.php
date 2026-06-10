@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class ZeroTrustOrganizationResource
 	/**
 	 * Get your Zero Trust organization
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationOrganization
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/organizations', \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationOrganization::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/organizations', \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationGetYourZeroTrustOrganization::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class ZeroTrustOrganizationResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelZeroTrustOrganizationCreateYourZeroTrustOrganizationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationOrganization
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/organizations', \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationOrganization::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/organizations', \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationCreateYourZeroTrustOrganization::class, $request);
 	}
 
 
@@ -44,9 +44,9 @@ class ZeroTrustOrganizationResource
 	 */
 	public function update(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelZeroTrustOrganizationUpdateYourZeroTrustOrganizationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationOrganization
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/access/organizations', \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationOrganization::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/access/organizations', \FoundryCo\Cloudflare\Responses\ZoneLevelZeroTrustOrganizationUpdateYourZeroTrustOrganization::class, $request);
 	}
 
 
@@ -55,8 +55,8 @@ class ZeroTrustOrganizationResource
 	 */
 	public function revokeUser(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelZeroTrustOrganizationRevokeAllAccessTokensForAUserRequest $request,
-	): \FoundryCo\Cloudflare\Enums\ZoneLevelZeroTrustOrganizationUser
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/organizations/revoke_user', \FoundryCo\Cloudflare\Enums\ZoneLevelZeroTrustOrganizationUser::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/organizations/revoke_user', \FoundryCo\Cloudflare\Enums\ZoneLevelZeroTrustOrganizationRevokeAllAccessTokensForAUser::class, $request);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,8 +22,8 @@ class ZoneCloudConnectorRulesPUTResource
 	/**
 	 * Put Rules
 	 */
-	public function update(): \FoundryCo\Cloudflare\Responses\ZoneCloudConnectorRulesPUTPut
+	public function update(): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/cloud_connector/rules', \FoundryCo\Cloudflare\Responses\ZoneCloudConnectorRulesPUTPut::class, null);
+		return $this->client->put('/zones/' . $this->zoneId . '/cloud_connector/rules', \FoundryCo\Cloudflare\Responses\ZoneCloudConenctorRulesPut::class, null);
 	}
 }

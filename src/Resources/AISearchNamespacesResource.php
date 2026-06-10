@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,45 +22,36 @@ class AISearchNamespacesResource
 	/**
 	 * List namespaces.
 	 */
-	public function list(
-		?int $page = null,
-		?int $perPage = null,
-		?string $search = null,
-	): \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespaces
+	public function list(?int $page = null, ?int $perPage = null, ?string $search = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces', \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespaces::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces', \FoundryCo\Cloudflare\Responses\AiSearchListNamespaces::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null]);
 	}
 
 
 	/**
 	 * Create namespace.
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AiSearchCreateNamespaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespace
+	public function create(\FoundryCo\Cloudflare\Requests\AiSearchCreateNamespaceRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces', \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespace::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/ai-search/namespaces', \FoundryCo\Cloudflare\Responses\AiSearchCreateNamespace::class, $request);
 	}
 
 
 	/**
 	 * Read namespace.
 	 */
-	public function get(string $name): \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespace
+	public function get(string $name): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name, \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespace::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name, \FoundryCo\Cloudflare\Responses\AiSearchFetchNamespace::class, []);
 	}
 
 
 	/**
 	 * Update namespace.
 	 */
-	public function update(
-		string $name,
-		\FoundryCo\Cloudflare\Requests\AiSearchUpdateNamespaceRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespace
+	public function update(string $name, \FoundryCo\Cloudflare\Requests\AiSearchUpdateNamespaceRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name, \FoundryCo\Cloudflare\Responses\AISearchNamespacesNamespace::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/ai-search/namespaces/' . $name, \FoundryCo\Cloudflare\Responses\AiSearchUpdateNamespace::class, $request);
 	}
 
 

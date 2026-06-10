@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class CustomIndicatorFeedsResource
 	/**
 	 * Get indicator feeds owned by this account
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsFeeds
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsFeeds::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsGetIndicatorFeeds::class, []);
 	}
 
 
@@ -33,20 +33,18 @@ class CustomIndicatorFeedsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsCreateIndicatorFeedsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsFeeds
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/intel/indicator-feeds', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsFeeds::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/intel/indicator-feeds', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsCreateIndicatorFeeds::class, $request);
 	}
 
 
 	/**
 	 * Grant permission to indicator feed
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsAddPermissionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsPermission
+	public function update(\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsAddPermissionRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/add', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsPermission::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/add', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsAddPermission::class, $request);
 	}
 
 
@@ -55,38 +53,36 @@ class CustomIndicatorFeedsResource
 	 */
 	public function createprovider(
 		\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsCreateProviderRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsProvider
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/createProvider', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsProvider::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/createProvider', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsCreateProvider::class, $request);
 	}
 
 
 	/**
 	 * Revoke permission to indicator feed
 	 */
-	public function remove(
-		\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsRemovePermissionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsPermission
+	public function remove(\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsRemovePermissionRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/remove', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsPermission::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/remove', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsRemovePermission::class, $request);
 	}
 
 
 	/**
 	 * List indicator feed permissions
 	 */
-	public function view(): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsPermissions
+	public function view(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/view', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsPermissions::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds/permissions/view', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsViewPermissions::class, []);
 	}
 
 
 	/**
 	 * Get indicator feed metadata
 	 */
-	public function get(int $feedId): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsMetadata
+	public function get(int $feedId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId, \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsMetadata::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId, \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsGetIndicatorFeedMetadata::class, []);
 	}
 
 
@@ -96,9 +92,9 @@ class CustomIndicatorFeedsResource
 	public function indicatorFeeds(
 		int $feedId,
 		\FoundryCo\Cloudflare\Requests\CustomIndicatorFeedsUpdateIndicatorFeedMetadataRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsMetadata
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId, \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsMetadata::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId, \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsUpdateIndicatorFeedMetadata::class, $request);
 	}
 
 
@@ -114,17 +110,17 @@ class CustomIndicatorFeedsResource
 	/**
 	 * Download indicator feed data
 	 */
-	public function download(int $feedId): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsData
+	public function download(int $feedId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId . '/download', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsData::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId . '/download', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsDownloadIndicatorFeedData::class, []);
 	}
 
 
 	/**
 	 * Update indicator feed data
 	 */
-	public function snapshot(int $feedId): \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsData
+	public function snapshot(int $feedId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId . '/snapshot', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsData::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/intel/indicator-feeds/' . $feedId . '/snapshot', \FoundryCo\Cloudflare\Responses\CustomIndicatorFeedsUpdateIndicatorFeedData::class, null);
 	}
 }

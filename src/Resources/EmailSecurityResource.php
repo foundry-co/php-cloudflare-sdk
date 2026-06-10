@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -40,7 +40,7 @@ class EmailSecurityResource
 		?string $cursor = null,
 		?int $perPage = null,
 		?int $page = null,
-	): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate', \FoundryCo\Cloudflare\Responses\EmailSecurityInvestigate::class, ['start' => $start ?? null, 'end' => $end ?? null, 'query' => $query ?? null, 'detectionsOnly' => $detectionsOnly ?? null, 'finalDisposition' => $finalDisposition ?? null, 'metric' => $metric ?? null, 'messageAction' => $messageAction ?? null, 'recipient' => $recipient ?? null, 'sender' => $sender ?? null, 'alertId' => $alertId ?? null, 'domain' => $domain ?? null, 'messageId' => $messageId ?? null, 'subject' => $subject ?? null, 'deliveryStatus' => $deliveryStatus ?? null, 'cursor' => $cursor ?? null, 'perPage' => $perPage ?? null, 'page' => $page ?? null]);
 	}
@@ -49,87 +49,81 @@ class EmailSecurityResource
 	/**
 	 * Move multiple messages
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\EmailSecurityPostBulkMoveRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecurityMove
+	public function create(\FoundryCo\Cloudflare\Requests\EmailSecurityPostBulkMoveRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/move', \FoundryCo\Cloudflare\Responses\EmailSecurityMove::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/move', \FoundryCo\Cloudflare\Responses\EmailSecurityPostBulkMove::class, $request);
 	}
 
 
 	/**
 	 * Preview for non-detection messages
 	 */
-	public function preview(
-		\FoundryCo\Cloudflare\Requests\EmailSecurityPostPreviewRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecurityPreview
+	public function preview(\FoundryCo\Cloudflare\Requests\EmailSecurityPostPreviewRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/preview', \FoundryCo\Cloudflare\Responses\EmailSecurityPreview::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/preview', \FoundryCo\Cloudflare\Responses\EmailSecurityPostPreview::class, $request);
 	}
 
 
 	/**
 	 * Release messages from quarantine
 	 */
-	public function release(): \FoundryCo\Cloudflare\Responses\EmailSecurityRelease
+	public function release(): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/release', \FoundryCo\Cloudflare\Responses\EmailSecurityRelease::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/release', \FoundryCo\Cloudflare\Responses\EmailSecurityPostRelease::class, null);
 	}
 
 
 	/**
 	 * Get message details
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\EmailSecurityMessage
+	public function get(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId, \FoundryCo\Cloudflare\Responses\EmailSecurityMessage::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetMessage::class, []);
 	}
 
 
 	/**
 	 * Get action log for a message
 	 */
-	public function actionLog(): \FoundryCo\Cloudflare\Responses\EmailSecurityLog
+	public function actionLog(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/action_log', \FoundryCo\Cloudflare\Responses\EmailSecurityLog::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/action_log', \FoundryCo\Cloudflare\Responses\EmailSecurityGetMessageActionLog::class, []);
 	}
 
 
 	/**
 	 * Get message detection details
 	 */
-	public function detections(): \FoundryCo\Cloudflare\Responses\EmailSecurityDetections
+	public function detections(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/detections', \FoundryCo\Cloudflare\Responses\EmailSecurityDetections::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/detections', \FoundryCo\Cloudflare\Responses\EmailSecurityGetMessageDetections::class, []);
 	}
 
 
 	/**
 	 * Move a message
 	 */
-	public function move(
-		\FoundryCo\Cloudflare\Requests\EmailSecurityPostMessageMoveRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecurityMove
+	public function move(\FoundryCo\Cloudflare\Requests\EmailSecurityPostMessageMoveRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/move', \FoundryCo\Cloudflare\Responses\EmailSecurityMove::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/move', \FoundryCo\Cloudflare\Responses\EmailSecurityPostMessageMove::class, $request);
 	}
 
 
 	/**
 	 * Get email preview
 	 */
-	public function emailSecurityGetMessagePreview(): \FoundryCo\Cloudflare\Responses\EmailSecurityPreview
+	public function emailSecurityGetMessagePreview(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/preview', \FoundryCo\Cloudflare\Responses\EmailSecurityPreview::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/preview', \FoundryCo\Cloudflare\Responses\EmailSecurityGetMessagePreview::class, []);
 	}
 
 
 	/**
 	 * Get raw email content
 	 */
-	public function raw(): \FoundryCo\Cloudflare\Responses\EmailSecurityRaw
+	public function raw(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/raw', \FoundryCo\Cloudflare\Responses\EmailSecurityRaw::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/raw', \FoundryCo\Cloudflare\Responses\EmailSecurityGetMessageRaw::class, []);
 	}
 
 
@@ -145,9 +139,9 @@ class EmailSecurityResource
 	/**
 	 * Get email trace
 	 */
-	public function trace(): \FoundryCo\Cloudflare\Responses\EmailSecurityTrace
+	public function trace(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/trace', \FoundryCo\Cloudflare\Responses\EmailSecurityTrace::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/investigate/' . $investigateId . '/trace', \FoundryCo\Cloudflare\Responses\EmailSecurityGetMessageTrace::class, []);
 	}
 
 
@@ -159,9 +153,9 @@ class EmailSecurityResource
 		?\DateTimeImmutable $end = null,
 		?\DateTimeImmutable $fromDate = null,
 		?\DateTimeImmutable $toDate = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecurityReports
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/phishguard/reports', \FoundryCo\Cloudflare\Responses\EmailSecurityReports::class, ['start' => $start ?? null, 'end' => $end ?? null, 'fromDate' => $fromDate ?? null, 'toDate' => $toDate ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/phishguard/reports', \FoundryCo\Cloudflare\Responses\EmailSecurityGetPhishguardReports::class, ['start' => $start ?? null, 'end' => $end ?? null, 'fromDate' => $fromDate ?? null, 'toDate' => $toDate ?? null]);
 	}
 
 
@@ -181,7 +175,7 @@ class EmailSecurityResource
 		?bool $escalatedFromUser = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySubmissions
+	): mixed
 	{
 		return $this->client->get('/accounts/' . $this->accountId . '/email-security/submissions', \FoundryCo\Cloudflare\Responses\EmailSecuritySubmissions::class, ['start' => $start ?? null, 'end' => $end ?? null, 'type' => $type ?? null, 'submissionId' => $submissionId ?? null, 'originalDisposition' => $originalDisposition ?? null, 'requestedDisposition' => $requestedDisposition ?? null, 'outcomeDisposition' => $outcomeDisposition ?? null, 'status' => $status ?? null, 'query' => $query ?? null, 'escalatedFromUser' => $escalatedFromUser ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}

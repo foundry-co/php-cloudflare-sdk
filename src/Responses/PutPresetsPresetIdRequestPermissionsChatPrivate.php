@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,10 +13,10 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class PutPresetsPresetIdRequestPermissionsChatPrivate
 {
 	public function __construct(
-		public bool $canReceive,
-		public bool $canSend,
-		public bool $files,
-		public bool $text,
+		public ?bool $canReceive = null,
+		public ?bool $canSend = null,
+		public ?bool $files = null,
+		public ?bool $text = null,
 	) {
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -88,20 +88,17 @@ class CategoryResource
 	/**
 	 * List application categories
 	 */
-	public function getCategories(
-		?int $limit = null,
-		?int $offset = null,
-	): \FoundryCo\Cloudflare\Responses\CategoryGetCategories
+	public function getCategories(?int $limit = null, ?int $offset = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/categories', \FoundryCo\Cloudflare\Responses\CategoryGetCategories::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/categories', \FoundryCo\Cloudflare\Responses\GetCategories::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null]);
 	}
 
 
 	/**
 	 * Get application category
 	 */
-	public function getCategoryById(string $id): \FoundryCo\Cloudflare\Responses\CategoryGetCategoryById
+	public function getCategoryById(string $id): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/categories/' . $id, \FoundryCo\Cloudflare\Responses\CategoryGetCategoryById::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/resource-library/categories/' . $id, \FoundryCo\Cloudflare\Responses\GetCategoryById::class, []);
 	}
 }

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class WorkerScriptResource
 	/**
 	 * Upload Assets
 	 */
-	public function create(
-		?\FoundryCo\Cloudflare\Enums\WorkerScriptBase64 $base64 = null,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptUpload
+	public function create(?\FoundryCo\Cloudflare\Enums\WorkerScriptBase64 $base64 = null): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/assets/upload', \FoundryCo\Cloudflare\Responses\WorkerScriptUpload::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/assets/upload', \FoundryCo\Cloudflare\Responses\WorkerAssetsUpload::class, null);
 	}
 
 
 	/**
 	 * List Workers
 	 */
-	public function list(?string $tags = null): \FoundryCo\Cloudflare\Responses\WorkerScriptWorkers
+	public function list(?string $tags = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts', \FoundryCo\Cloudflare\Responses\WorkerScriptWorkers::class, ['tags' => $tags ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts', \FoundryCo\Cloudflare\Responses\WorkerScriptListWorkers::class, ['tags' => $tags ?? null]);
 	}
 
 
@@ -48,9 +46,9 @@ class WorkerScriptResource
 		?\FoundryCo\Cloudflare\Enums\WorkerScriptOrderBy $orderBy = null,
 		?int $page = null,
 		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptWorkers
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts-search', \FoundryCo\Cloudflare\Responses\WorkerScriptWorkers::class, ['name' => $name ?? null, 'id' => $id ?? null, 'orderBy' => $orderBy ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts-search', \FoundryCo\Cloudflare\Responses\WorkerScriptSearchWorkers::class, ['name' => $name ?? null, 'id' => $id ?? null, 'orderBy' => $orderBy ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -90,9 +88,9 @@ class WorkerScriptResource
 	public function assetsUploadSession(
 		string $scriptName,
 		\FoundryCo\Cloudflare\Requests\WorkerScriptUpdateCreateAssetsUploadSessionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptSession
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/assets-upload-session', \FoundryCo\Cloudflare\Responses\WorkerScriptSession::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/assets-upload-session', \FoundryCo\Cloudflare\Responses\WorkerScriptUpdateCreateAssetsUploadSession::class, $request);
 	}
 
 
@@ -103,9 +101,9 @@ class WorkerScriptResource
 		string $scriptName,
 		?string $cFWORKERBODYPART = null,
 		?string $cFWORKERMAINMODULEPART = null,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptContent
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/content', \FoundryCo\Cloudflare\Responses\WorkerScriptContent::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/content', \FoundryCo\Cloudflare\Responses\WorkerScriptPutContent::class, null);
 	}
 
 
@@ -121,9 +119,9 @@ class WorkerScriptResource
 	/**
 	 * Get Script Settings
 	 */
-	public function scriptSettings(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerScriptSettings
+	public function scriptSettings(string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/script-settings', \FoundryCo\Cloudflare\Responses\WorkerScriptSettings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/script-settings', \FoundryCo\Cloudflare\Responses\WorkerScriptSettingsGetSettings::class, []);
 	}
 
 
@@ -133,9 +131,9 @@ class WorkerScriptResource
 	public function workerScriptSettingsPatchSettings(
 		string $scriptName,
 		\FoundryCo\Cloudflare\Requests\WorkerScriptSettingsPatchSettingsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptSettings
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/script-settings', \FoundryCo\Cloudflare\Responses\WorkerScriptSettings::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/script-settings', \FoundryCo\Cloudflare\Responses\WorkerScriptSettingsPatchSettings::class, $request);
 	}
 
 
@@ -187,27 +185,27 @@ class WorkerScriptResource
 	/**
 	 * Get Settings
 	 */
-	public function settings(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerScriptSettings
+	public function settings(string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerScriptSettings::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerScriptGetSettings::class, []);
 	}
 
 
 	/**
 	 * Patch Settings
 	 */
-	public function workerScriptPatchSettings(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerScriptSettings
+	public function workerScriptPatchSettings(string $scriptName): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerScriptSettings::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/settings', \FoundryCo\Cloudflare\Responses\WorkerScriptPatchSettings::class, null);
 	}
 
 
 	/**
 	 * Get Worker subdomain
 	 */
-	public function subdomain(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerScriptSubdomain
+	public function subdomain(string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/subdomain', \FoundryCo\Cloudflare\Responses\WorkerScriptSubdomain::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/subdomain', \FoundryCo\Cloudflare\Responses\WorkerScriptGetSubdomain::class, []);
 	}
 
 
@@ -217,9 +215,9 @@ class WorkerScriptResource
 	public function workerScriptPostSubdomain(
 		string $scriptName,
 		\FoundryCo\Cloudflare\Requests\WorkerScriptPostSubdomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptSubdomain
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/subdomain', \FoundryCo\Cloudflare\Responses\WorkerScriptSubdomain::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/subdomain', \FoundryCo\Cloudflare\Responses\WorkerScriptPostSubdomain::class, $request);
 	}
 
 
@@ -235,9 +233,9 @@ class WorkerScriptResource
 	/**
 	 * Fetch Usage Model
 	 */
-	public function usageModel(string $scriptName): \FoundryCo\Cloudflare\Responses\WorkerScriptModel
+	public function usageModel(string $scriptName): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/usage-model', \FoundryCo\Cloudflare\Responses\WorkerScriptModel::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/usage-model', \FoundryCo\Cloudflare\Responses\WorkerScriptFetchUsageModel::class, []);
 	}
 
 
@@ -247,8 +245,8 @@ class WorkerScriptResource
 	public function workerScriptUpdateUsageModel(
 		string $scriptName,
 		\FoundryCo\Cloudflare\Requests\WorkerScriptUpdateUsageModelRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WorkerScriptModel
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/usage-model', \FoundryCo\Cloudflare\Responses\WorkerScriptModel::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/workers/scripts/' . $scriptName . '/usage-model', \FoundryCo\Cloudflare\Responses\WorkerScriptUpdateUsageModel::class, $request);
 	}
 }

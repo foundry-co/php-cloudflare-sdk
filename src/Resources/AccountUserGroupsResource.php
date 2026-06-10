@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -29,29 +29,27 @@ class AccountUserGroupsResource
 		?float $page = null,
 		?float $perPage = null,
 		?\FoundryCo\Cloudflare\Enums\AccountUserGroupsDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\AccountUserGroupsList
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups', \FoundryCo\Cloudflare\Responses\AccountUserGroupsList::class, ['id' => $id ?? null, 'name' => $name ?? null, 'fuzzyName' => $fuzzyName ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups', \FoundryCo\Cloudflare\Responses\AccountUserGroupList::class, ['id' => $id ?? null, 'name' => $name ?? null, 'fuzzyName' => $fuzzyName ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null, 'direction' => $direction ?? null]);
 	}
 
 
 	/**
 	 * Create User Group
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\AccountUserGroupCreateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountUserGroupsCreate
+	public function create(\FoundryCo\Cloudflare\Requests\AccountUserGroupCreateRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/iam/user_groups', \FoundryCo\Cloudflare\Responses\AccountUserGroupsCreate::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/iam/user_groups', \FoundryCo\Cloudflare\Responses\AccountUserGroupCreate::class, $request);
 	}
 
 
 	/**
 	 * User Group Details
 	 */
-	public function get(mixed $userGroupId): \FoundryCo\Cloudflare\Responses\AccountUserGroupsDetails
+	public function get(mixed $userGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId, \FoundryCo\Cloudflare\Responses\AccountUserGroupsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId, \FoundryCo\Cloudflare\Responses\AccountUserGroupDetails::class, []);
 	}
 
 
@@ -61,9 +59,9 @@ class AccountUserGroupsResource
 	public function update(
 		mixed $userGroupId,
 		\FoundryCo\Cloudflare\Requests\AccountUserGroupUpdateRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountUserGroupsUpdate
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId, \FoundryCo\Cloudflare\Responses\AccountUserGroupsUpdate::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/iam/user_groups/' . $userGroupId, \FoundryCo\Cloudflare\Responses\AccountUserGroupUpdate::class, $request);
 	}
 
 

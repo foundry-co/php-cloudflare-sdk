@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -13,8 +13,8 @@ namespace FoundryCo\Cloudflare\Responses;
 readonly class AigConfigUpdateGatewayRequestOtelItem
 {
 	public function __construct(
-		public array $headers,
-		public string $url,
+		public ?array $headers = null,
+		public ?string $url = null,
 		public ?string $authorization = null,
 		public ?\FoundryCo\Cloudflare\Enums\AigConfigUpdateGatewayRequestOtelItemContentType $contentType = null,
 	) {

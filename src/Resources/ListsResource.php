@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,20 +22,18 @@ class ListsResource
 	/**
 	 * Get lists
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ListsLists
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/rules/lists', \FoundryCo\Cloudflare\Responses\ListsLists::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/rules/lists', \FoundryCo\Cloudflare\Responses\ListsGetLists::class, []);
 	}
 
 
 	/**
 	 * Create a list
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\ListsCreateAListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ListsList
+	public function create(\FoundryCo\Cloudflare\Requests\ListsCreateAListRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/rules/lists', \FoundryCo\Cloudflare\Responses\ListsList::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/rules/lists', \FoundryCo\Cloudflare\Responses\ListsCreateAList::class, $request);
 	}
 
 
@@ -51,21 +49,18 @@ class ListsResource
 	/**
 	 * Get a list
 	 */
-	public function lists(string $listId): \FoundryCo\Cloudflare\Responses\ListsList
+	public function lists(string $listId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/rules/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ListsList::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/rules/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ListsGetAList::class, []);
 	}
 
 
 	/**
 	 * Update a list
 	 */
-	public function update(
-		string $listId,
-		\FoundryCo\Cloudflare\Requests\ListsUpdateAListRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ListsList
+	public function update(string $listId, \FoundryCo\Cloudflare\Requests\ListsUpdateAListRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/rules/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ListsList::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/rules/lists/' . $listId, \FoundryCo\Cloudflare\Responses\ListsUpdateAList::class, $request);
 	}
 
 
@@ -90,18 +85,18 @@ class ListsResource
 	/**
 	 * Create list items
 	 */
-	public function listsCreateListItems(string $listId): \FoundryCo\Cloudflare\Responses\ListsItems
+	public function listsCreateListItems(string $listId): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/rules/lists/' . $listId . '/items', \FoundryCo\Cloudflare\Responses\ListsItems::class, null);
+		return $this->client->post('/accounts/' . $this->accountId . '/rules/lists/' . $listId . '/items', \FoundryCo\Cloudflare\Responses\ListsCreateListItems::class, null);
 	}
 
 
 	/**
 	 * Update all list items
 	 */
-	public function listsUpdateAllListItems(string $listId): \FoundryCo\Cloudflare\Responses\ListsItems
+	public function listsUpdateAllListItems(string $listId): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/rules/lists/' . $listId . '/items', \FoundryCo\Cloudflare\Responses\ListsItems::class, null);
+		return $this->client->put('/accounts/' . $this->accountId . '/rules/lists/' . $listId . '/items', \FoundryCo\Cloudflare\Responses\ListsUpdateAllListItems::class, null);
 	}
 
 

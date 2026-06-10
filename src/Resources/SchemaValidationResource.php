@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class SchemaValidationResource
 		?int $perPage = null,
 		?bool $omitSource = null,
 		?bool $validationEnabled = null,
-	): \FoundryCo\Cloudflare\Responses\SchemaValidationPaginated
+	): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/schemas', \FoundryCo\Cloudflare\Responses\SchemaValidationPaginated::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'omitSource' => $omitSource ?? null, 'validationEnabled' => $validationEnabled ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/schemas', \FoundryCo\Cloudflare\Responses\SchemaValidationListSchemasPaginated::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'omitSource' => $omitSource ?? null, 'validationEnabled' => $validationEnabled ?? null]);
 	}
 
 
@@ -45,29 +45,27 @@ class SchemaValidationResource
 	/**
 	 * List hosts covered by uploaded schemas
 	 */
-	public function hosts(?int $page = null, ?int $perPage = null): \FoundryCo\Cloudflare\Responses\SchemaValidationHosts
+	public function hosts(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/schemas/hosts', \FoundryCo\Cloudflare\Responses\SchemaValidationHosts::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/schemas/hosts', \FoundryCo\Cloudflare\Responses\SchemaValidationListSchemaHosts::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
 	/**
 	 * Get details of a schema
 	 */
-	public function get(?bool $omitSource = null): \FoundryCo\Cloudflare\Responses\SchemaValidationSchema
+	public function get(?bool $omitSource = null): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\SchemaValidationSchema::class, ['omitSource' => $omitSource ?? null]);
+		return $this->client->get('/zones/' . $this->zoneId . '/schema_validation/schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\SchemaValidationGetSchema::class, ['omitSource' => $omitSource ?? null]);
 	}
 
 
 	/**
 	 * Edit details of a schema to enable validation
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\SchemaValidationEditSchemaRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SchemaValidationSchema
+	public function update(\FoundryCo\Cloudflare\Requests\SchemaValidationEditSchemaRequest $request): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/schema_validation/schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\SchemaValidationSchema::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/schema_validation/schemas/' . $schemaId, \FoundryCo\Cloudflare\Responses\SchemaValidationEditSchema::class, $request);
 	}
 
 

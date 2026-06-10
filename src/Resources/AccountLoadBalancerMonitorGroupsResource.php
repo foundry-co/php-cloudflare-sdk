@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class AccountLoadBalancerMonitorGroupsResource
 	/**
 	 * List Monitor Groups
 	 */
-	public function list(): \FoundryCo\Cloudflare\Support\PaginatedResponse
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/monitor_groups', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroups::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/monitor_groups', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsListMonitorGroups::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class AccountLoadBalancerMonitorGroupsResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\AccountLoadBalancerMonitorGroupsCreateMonitorGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroup
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/load_balancers/monitor_groups', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroup::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/load_balancers/monitor_groups', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsCreateMonitorGroup::class, $request);
 	}
 
 
 	/**
 	 * Monitor Group Details
 	 */
-	public function get(string $monitorGroupId): \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsDetails
+	public function get(string $monitorGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId, \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId, \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsMonitorGroupDetails::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class AccountLoadBalancerMonitorGroupsResource
 	public function update(
 		string $monitorGroupId,
 		\FoundryCo\Cloudflare\Requests\AccountLoadBalancerMonitorGroupsUpdateMonitorGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroup
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId, \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroup::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId, \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsUpdateMonitorGroup::class, $request);
 	}
 
 
@@ -66,9 +66,9 @@ class AccountLoadBalancerMonitorGroupsResource
 	public function monitorGroups(
 		string $monitorGroupId,
 		\FoundryCo\Cloudflare\Requests\AccountLoadBalancerMonitorGroupsPatchMonitorGroupRequest $request,
-	): \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroup
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId, \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsGroup::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId, \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsPatchMonitorGroup::class, $request);
 	}
 
 
@@ -84,10 +84,8 @@ class AccountLoadBalancerMonitorGroupsResource
 	/**
 	 * List Monitor Group References
 	 */
-	public function references(
-		string $monitorGroupId,
-	): \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsReferences
+	public function references(string $monitorGroupId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId . '/references', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsReferences::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/monitor_groups/' . $monitorGroupId . '/references', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerMonitorGroupsListMonitorGroupReferences::class, []);
 	}
 }

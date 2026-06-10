@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,9 +28,9 @@ class RadarTopLevelDomainsResource
 		?\FoundryCo\Cloudflare\Enums\RadarTopLevelDomainsTldType $tldType = null,
 		?string $tld = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTopLevelDomainsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsTlds
+	): mixed
 	{
-		return $this->client->get('/radar/tlds', \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsTlds::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'tldManager' => $tldManager ?? null, 'tldType' => $tldType ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/tlds', \FoundryCo\Cloudflare\Responses\RadarGetTlds::class, ['limit' => $limit ?? null, 'offset' => $offset ?? null, 'tldManager' => $tldManager ?? null, 'tldType' => $tldType ?? null, 'tld' => $tld ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -49,9 +49,9 @@ class RadarTopLevelDomainsResource
 		?string $nameserver = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTopLevelDomainsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsSummary
+	): mixed
 	{
-		return $this->client->get('/radar/tlds/performance/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'nameserver' => $nameserver ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/tlds/performance/summary/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetTldsPerformanceSummary::class, ['name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'nameserver' => $nameserver ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -71,20 +71,17 @@ class RadarTopLevelDomainsResource
 		?string $nameserver = null,
 		?int $limitPerGroup = null,
 		?\FoundryCo\Cloudflare\Enums\RadarTopLevelDomainsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsGroups
+	): mixed
 	{
-		return $this->client->get('/radar/tlds/performance/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsGroups::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'nameserver' => $nameserver ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/tlds/performance/timeseries_groups/' . $dimension, \FoundryCo\Cloudflare\Responses\RadarGetTldsPerformanceTimeseriesGroups::class, ['aggInterval' => $aggInterval ?? null, 'name' => $name ?? null, 'dateRange' => $dateRange ?? null, 'dateStart' => $dateStart ?? null, 'dateEnd' => $dateEnd ?? null, 'location' => $location ?? null, 'continent' => $continent ?? null, 'tld' => $tld ?? null, 'nameserver' => $nameserver ?? null, 'limitPerGroup' => $limitPerGroup ?? null, 'format' => $format ?? null]);
 	}
 
 
 	/**
 	 * Get TLD details
 	 */
-	public function getGet(
-		string $tld,
-		?\FoundryCo\Cloudflare\Enums\RadarTopLevelDomainsFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsDetails
+	public function getGet(string $tld, ?\FoundryCo\Cloudflare\Enums\RadarTopLevelDomainsFormat $format = null): mixed
 	{
-		return $this->client->get('/radar/tlds/' . $tld, \FoundryCo\Cloudflare\Responses\RadarTopLevelDomainsDetails::class, ['format' => $format ?? null]);
+		return $this->client->get('/radar/tlds/' . $tld, \FoundryCo\Cloudflare\Responses\RadarGetTldDetails::class, ['format' => $format ?? null]);
 	}
 }

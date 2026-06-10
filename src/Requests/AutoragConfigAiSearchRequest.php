@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -19,7 +19,7 @@ readonly class AutoragConfigAiSearchRequest
 		public string $query,
 		public mixed $filters = null,
 		public ?int $maxNumResults = null,
-		public mixed $model = null,
+		public ?\FoundryCo\Cloudflare\Enums\AutoragConfigAiSearchRequestModel $model = null,
 		public ?\FoundryCo\Cloudflare\Responses\AutoragConfigAiSearchRequestRankingOptions $rankingOptions = null,
 		public ?\FoundryCo\Cloudflare\Responses\AutoragConfigAiSearchRequestReranking $reranking = null,
 		public ?bool $rewriteQuery = null,
@@ -35,7 +35,7 @@ readonly class AutoragConfigAiSearchRequest
 		    'query' => $this->query,
 		    'filters' => $this->filters,
 		    'max_num_results' => $this->maxNumResults,
-		    'model' => $this->model,
+		    'model' => $this->model?->value,
 		    'ranking_options' => $this->rankingOptions?->toArray(),
 		    'reranking' => $this->reranking?->toArray(),
 		    'rewrite_query' => $this->rewriteQuery,

@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,9 +27,9 @@ class RadarRobotstxtResource
 		?\FoundryCo\Cloudflare\Enums\RadarRobotstxtUserAgentCategory $userAgentCategory = null,
 		?array $date = null,
 		?\FoundryCo\Cloudflare\Enums\RadarRobotstxtFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarRobotstxtParsed
+	): mixed
 	{
-		return $this->client->get('/radar/robots_txt/top/domain_categories', \FoundryCo\Cloudflare\Responses\RadarRobotstxtParsed::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'userAgentCategory' => $userAgentCategory ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/robots_txt/top/domain_categories', \FoundryCo\Cloudflare\Responses\RadarGetRobotsTxtTopDomainCategoriesByFilesParsed::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'userAgentCategory' => $userAgentCategory ?? null, 'date' => $date ?? null, 'format' => $format ?? null]);
 	}
 
 
@@ -44,8 +44,8 @@ class RadarRobotstxtResource
 		?array $domainCategory = null,
 		?\FoundryCo\Cloudflare\Enums\RadarRobotstxtDirective $directive = null,
 		?\FoundryCo\Cloudflare\Enums\RadarRobotstxtFormat $format = null,
-	): \FoundryCo\Cloudflare\Responses\RadarRobotstxtDirective
+	): mixed
 	{
-		return $this->client->get('/radar/robots_txt/top/user_agents/directive', \FoundryCo\Cloudflare\Responses\RadarRobotstxtDirective::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'userAgentCategory' => $userAgentCategory ?? null, 'date' => $date ?? null, 'domainCategory' => $domainCategory ?? null, 'directive' => $directive ?? null, 'format' => $format ?? null]);
+		return $this->client->get('/radar/robots_txt/top/user_agents/directive', \FoundryCo\Cloudflare\Responses\RadarGetRobotsTxtTopUserAgentsByDirective::class, ['limit' => $limit ?? null, 'name' => $name ?? null, 'userAgentCategory' => $userAgentCategory ?? null, 'date' => $date ?? null, 'domainCategory' => $domainCategory ?? null, 'directive' => $directive ?? null, 'format' => $format ?? null]);
 	}
 }

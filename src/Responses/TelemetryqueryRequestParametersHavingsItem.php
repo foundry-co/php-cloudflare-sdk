@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -14,11 +14,11 @@ readonly class TelemetryqueryRequestParametersHavingsItem
 {
 	public function __construct(
 		/** Calculation alias or operator to filter on after aggregation. */
-		public string $key,
+		public ?string $key = null,
 		/** Numeric comparison operator: eq, neq, gt, gte, lt, lte. */
-		public \FoundryCo\Cloudflare\Enums\TelemetryqueryRequestParametersHavingsItemOperation $operation,
+		public ?\FoundryCo\Cloudflare\Enums\TelemetryqueryRequestParametersHavingsItemOperation $operation = null,
 		/** Threshold value to compare the calculation result against. */
-		public float $value,
+		public ?float $value = null,
 	) {
 	}
 }

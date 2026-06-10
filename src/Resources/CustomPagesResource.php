@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,9 +21,9 @@ class CustomPagesResource
 	/**
 	 * List custom pages
 	 */
-	public function get(string $zoneIdentifier): \FoundryCo\Cloudflare\Responses\CustomPagesForAZonePages
+	public function get(string $zoneIdentifier): mixed
 	{
-		return $this->client->get('/zones/' . $zoneIdentifier . '/custom_pages', \FoundryCo\Cloudflare\Responses\CustomPagesForAZonePages::class, []);
+		return $this->client->get('/zones/' . $zoneIdentifier . '/custom_pages', \FoundryCo\Cloudflare\Responses\CustomPagesForAZoneListCustomPages::class, []);
 	}
 
 
@@ -33,9 +33,9 @@ class CustomPagesResource
 	public function create(
 		string $zoneIdentifier,
 		\FoundryCo\Cloudflare\Requests\CustomPagesForAZoneCreatePreviewTokenRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomPagesForAZoneToken
+	): mixed
 	{
-		return $this->client->post('/zones/' . $zoneIdentifier . '/custom_pages/preview_tokens', \FoundryCo\Cloudflare\Responses\CustomPagesForAZoneToken::class, $request);
+		return $this->client->post('/zones/' . $zoneIdentifier . '/custom_pages/preview_tokens', \FoundryCo\Cloudflare\Responses\CustomPagesForAZoneCreatePreviewToken::class, $request);
 	}
 
 
@@ -58,8 +58,8 @@ class CustomPagesResource
 		\FoundryCo\Cloudflare\Enums\CustomPagesForAZoneIdentifier $identifier,
 		string $zoneIdentifier,
 		\FoundryCo\Cloudflare\Requests\CustomPagesForAZoneUpdateACustomPageRequest $request,
-	): \FoundryCo\Cloudflare\Responses\CustomPagesForAZonePage
+	): mixed
 	{
-		return $this->client->put('/zones/' . $zoneIdentifier . '/custom_pages/' . $identifier, \FoundryCo\Cloudflare\Responses\CustomPagesForAZonePage::class, $request);
+		return $this->client->put('/zones/' . $zoneIdentifier . '/custom_pages/' . $identifier, \FoundryCo\Cloudflare\Responses\CustomPagesForAZoneUpdateACustomPage::class, $request);
 	}
 }

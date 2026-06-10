@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -27,8 +27,8 @@ class AccountLoadBalancerSearchResource
 		?\FoundryCo\Cloudflare\Enums\AccountLoadBalancerSearchReferences $references = null,
 		?float $page = null,
 		?float $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\AccountLoadBalancerSearchResources
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/search', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerSearchResources::class, ['query' => $query ?? null, 'references' => $references ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/load_balancers/search', \FoundryCo\Cloudflare\Responses\AccountLoadBalancerSearchSearchResources::class, ['query' => $query ?? null, 'references' => $references ?? null, 'page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 }

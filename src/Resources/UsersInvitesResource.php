@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,18 +21,18 @@ class UsersInvitesResource
 	/**
 	 * List Invitations
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\UsersInvitesInvitations
+	public function list(): mixed
 	{
-		return $this->client->get('/user/invites', \FoundryCo\Cloudflare\Responses\UsersInvitesInvitations::class, []);
+		return $this->client->get('/user/invites', \FoundryCo\Cloudflare\Responses\UserSInvitesListInvitations::class, []);
 	}
 
 
 	/**
 	 * Invitation Details
 	 */
-	public function get(string $inviteId): \FoundryCo\Cloudflare\Responses\UsersInvitesDetails
+	public function get(string $inviteId): mixed
 	{
-		return $this->client->get('/user/invites/' . $inviteId, \FoundryCo\Cloudflare\Responses\UsersInvitesDetails::class, []);
+		return $this->client->get('/user/invites/' . $inviteId, \FoundryCo\Cloudflare\Responses\UserSInvitesInvitationDetails::class, []);
 	}
 
 
@@ -42,8 +42,8 @@ class UsersInvitesResource
 	public function update(
 		string $inviteId,
 		\FoundryCo\Cloudflare\Requests\UserSInvitesRespondToInvitationRequest $request,
-	): \FoundryCo\Cloudflare\Responses\UsersInvitesInvitation
+	): mixed
 	{
-		return $this->client->patch('/user/invites/' . $inviteId, \FoundryCo\Cloudflare\Responses\UsersInvitesInvitation::class, $request);
+		return $this->client->patch('/user/invites/' . $inviteId, \FoundryCo\Cloudflare\Responses\UserSInvitesRespondToInvitation::class, $request);
 	}
 }

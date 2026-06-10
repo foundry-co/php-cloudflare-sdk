@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -28,17 +28,17 @@ class AutoragRAGResource
 		?int $perPage = null,
 		?string $search = null,
 		?\FoundryCo\Cloudflare\Enums\AutoRAGRAGStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\AutoRAGRAGFiles
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/files', \FoundryCo\Cloudflare\Responses\AutoRAGRAGFiles::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/files', \FoundryCo\Cloudflare\Responses\AutoragConfigFiles::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'status' => $status ?? null]);
 	}
 
 
 	/**
 	 * Sync
 	 */
-	public function update(string $id): \FoundryCo\Cloudflare\Responses\AutoRAGRAGSync
+	public function update(string $id): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/sync', \FoundryCo\Cloudflare\Responses\AutoRAGRAGSync::class, null);
+		return $this->client->patch('/accounts/' . $this->accountId . '/autorag/rags/' . $id . '/sync', \FoundryCo\Cloudflare\Responses\AutoragConfigSync::class, null);
 	}
 }

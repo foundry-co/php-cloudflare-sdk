@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,9 +22,9 @@ class AccessServiceTokensResource
 	/**
 	 * List service tokens
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensTokens
+	public function list(): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/service_tokens', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensTokens::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/service_tokens', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensListServiceTokens::class, []);
 	}
 
 
@@ -33,18 +33,18 @@ class AccessServiceTokensResource
 	 */
 	public function create(
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessServiceTokensCreateAServiceTokenRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensToken
+	): mixed
 	{
-		return $this->client->post('/zones/' . $this->zoneId . '/access/service_tokens', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensToken::class, $request);
+		return $this->client->post('/zones/' . $this->zoneId . '/access/service_tokens', \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensCreateAServiceToken::class, $request);
 	}
 
 
 	/**
 	 * Get a service token
 	 */
-	public function get(string $serviceTokenId): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensToken
+	public function get(string $serviceTokenId): mixed
 	{
-		return $this->client->get('/zones/' . $this->zoneId . '/access/service_tokens/' . $serviceTokenId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensToken::class, []);
+		return $this->client->get('/zones/' . $this->zoneId . '/access/service_tokens/' . $serviceTokenId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensGetAServiceToken::class, []);
 	}
 
 
@@ -54,9 +54,9 @@ class AccessServiceTokensResource
 	public function update(
 		string $serviceTokenId,
 		\FoundryCo\Cloudflare\Requests\ZoneLevelAccessServiceTokensUpdateAServiceTokenRequest $request,
-	): \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensToken
+	): mixed
 	{
-		return $this->client->put('/zones/' . $this->zoneId . '/access/service_tokens/' . $serviceTokenId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensToken::class, $request);
+		return $this->client->put('/zones/' . $this->zoneId . '/access/service_tokens/' . $serviceTokenId, \FoundryCo\Cloudflare\Responses\ZoneLevelAccessServiceTokensUpdateAServiceToken::class, $request);
 	}
 
 

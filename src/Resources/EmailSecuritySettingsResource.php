@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -34,51 +34,45 @@ class EmailSecuritySettingsResource
 		?bool $verifySender = null,
 		mixed $patternType = null,
 		?string $pattern = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicies
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/allow_policies', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicies::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'isExemptRecipient' => $isExemptRecipient ?? null, 'isTrustedSender' => $isTrustedSender ?? null, 'isAcceptableSender' => $isAcceptableSender ?? null, 'verifySender' => $verifySender ?? null, 'patternType' => $patternType ?? null, 'pattern' => $pattern ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/allow_policies', \FoundryCo\Cloudflare\Responses\EmailSecurityListAllowPolicies::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'isExemptRecipient' => $isExemptRecipient ?? null, 'isTrustedSender' => $isTrustedSender ?? null, 'isAcceptableSender' => $isAcceptableSender ?? null, 'verifySender' => $verifySender ?? null, 'patternType' => $patternType ?? null, 'pattern' => $pattern ?? null]);
 	}
 
 
 	/**
 	 * Create email allow policy
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\EmailSecurityCreateAllowPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicy
+	public function create(\FoundryCo\Cloudflare\Requests\EmailSecurityCreateAllowPolicyRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/allow_policies', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicy::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/allow_policies', \FoundryCo\Cloudflare\Responses\EmailSecurityCreateAllowPolicy::class, $request);
 	}
 
 
 	/**
 	 * Batch allow policies operations
 	 */
-	public function batch(
-		\FoundryCo\Cloudflare\Requests\EmailSecurityBatchAllowPoliciesRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicies
+	public function batch(\FoundryCo\Cloudflare\Requests\EmailSecurityBatchAllowPoliciesRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/allow_policies/batch', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicies::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/allow_policies/batch', \FoundryCo\Cloudflare\Responses\EmailSecurityBatchAllowPolicies::class, $request);
 	}
 
 
 	/**
 	 * Get an email allow policy
 	 */
-	public function get(): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicy
+	public function get(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/allow_policies/' . $policyId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicy::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/allow_policies/' . $policyId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetAllowPolicy::class, []);
 	}
 
 
 	/**
 	 * Update an email allow policy
 	 */
-	public function update(
-		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateAllowPolicyRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicy
+	public function update(\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateAllowPolicyRequest $request): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/allow_policies/' . $policyId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPolicy::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/allow_policies/' . $policyId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateAllowPolicy::class, $request);
 	}
 
 
@@ -102,9 +96,9 @@ class EmailSecuritySettingsResource
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsDirection $direction = null,
 		mixed $patternType = null,
 		?string $pattern = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSenders
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/block_senders', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSenders::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'patternType' => $patternType ?? null, 'pattern' => $pattern ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/block_senders', \FoundryCo\Cloudflare\Responses\EmailSecurityListBlockedSenders::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'patternType' => $patternType ?? null, 'pattern' => $pattern ?? null]);
 	}
 
 
@@ -113,9 +107,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityCreateBlockedSender(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityCreateBlockedSenderRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSender
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/block_senders', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSender::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/block_senders', \FoundryCo\Cloudflare\Responses\EmailSecurityCreateBlockedSender::class, $request);
 	}
 
 
@@ -124,18 +118,18 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityBatchBlockedSenders(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityBatchBlockedSendersRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSenders
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/block_senders/batch', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSenders::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/block_senders/batch', \FoundryCo\Cloudflare\Responses\EmailSecurityBatchBlockedSenders::class, $request);
 	}
 
 
 	/**
 	 * Get a blocked email sender
 	 */
-	public function emailSecurityGetBlockedSender(): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSender
+	public function emailSecurityGetBlockedSender(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/block_senders/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSender::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/block_senders/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetBlockedSender::class, []);
 	}
 
 
@@ -144,9 +138,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityUpdateBlockedSender(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateBlockedSenderRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSender
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/block_senders/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsSender::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/block_senders/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateBlockedSender::class, $request);
 	}
 
 
@@ -173,18 +167,18 @@ class EmailSecuritySettingsResource
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsActiveDeliveryMode $activeDeliveryMode = null,
 		?string $integrationId = null,
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsStatus $status = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomains
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/domains', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomains::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'allowedDeliveryMode' => $allowedDeliveryMode ?? null, 'domain' => $domain ?? null, 'activeDeliveryMode' => $activeDeliveryMode ?? null, 'integrationId' => $integrationId ?? null, 'status' => $status ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/domains', \FoundryCo\Cloudflare\Responses\EmailSecurityListDomains::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'allowedDeliveryMode' => $allowedDeliveryMode ?? null, 'domain' => $domain ?? null, 'activeDeliveryMode' => $activeDeliveryMode ?? null, 'integrationId' => $integrationId ?? null, 'status' => $status ?? null]);
 	}
 
 
 	/**
 	 * Get an email domain
 	 */
-	public function emailSecurityGetDomain(): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain
+	public function emailSecurityGetDomain(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/domains/' . $domainId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/domains/' . $domainId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetDomain::class, []);
 	}
 
 
@@ -193,9 +187,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityUpdateDomain(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateDomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/domains/' . $domainId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/domains/' . $domainId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateDomain::class, $request);
 	}
 
 
@@ -218,9 +212,9 @@ class EmailSecuritySettingsResource
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsDirection $direction = null,
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsProvenance $provenance = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'provenance' => $provenance ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry', \FoundryCo\Cloudflare\Responses\EmailSecurityListImpersonationRegistry::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'provenance' => $provenance ?? null]);
 	}
 
 
@@ -229,19 +223,18 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityCreateImpersonationRegistry(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityCreateImpersonationRegistryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry', \FoundryCo\Cloudflare\Responses\EmailSecurityCreateImpersonationRegistry::class, $request);
 	}
 
 
 	/**
 	 * Get an impersonation registry entry
 	 */
-	public function emailSecurityGetImpersonationRegistry(
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry
+	public function emailSecurityGetImpersonationRegistry(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry/' . $impersonationRegistryId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry/' . $impersonationRegistryId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetImpersonationRegistry::class, []);
 	}
 
 
@@ -250,9 +243,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityUpdateImpersonationRegistry(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateImpersonationRegistryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry/' . $impersonationRegistryId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRegistry::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/impersonation_registry/' . $impersonationRegistryId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateImpersonationRegistry::class, $request);
 	}
 
 
@@ -274,9 +267,9 @@ class EmailSecuritySettingsResource
 		?string $search = null,
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsOrder $order = null,
 		?\FoundryCo\Cloudflare\Enums\EmailSecuritySettingsDirection $direction = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestrictions
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestrictions::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions', \FoundryCo\Cloudflare\Responses\EmailSecurityListSendingDomainRestrictions::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null]);
 	}
 
 
@@ -285,9 +278,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityCreateSendingDomainRestriction(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityCreateSendingDomainRestrictionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestriction
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestriction::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions', \FoundryCo\Cloudflare\Responses\EmailSecurityCreateSendingDomainRestriction::class, $request);
 	}
 
 
@@ -296,19 +289,18 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityBatchSendingDomainRestrictions(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityBatchSendingDomainRestrictionsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestrictions
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions/batch', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestrictions::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions/batch', \FoundryCo\Cloudflare\Responses\EmailSecurityBatchSendingDomainRestrictions::class, $request);
 	}
 
 
 	/**
 	 * Get a sending domain restriction
 	 */
-	public function emailSecurityGetSendingDomainRestriction(
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestriction
+	public function emailSecurityGetSendingDomainRestriction(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions/' . $sendingDomainRestrictionId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestriction::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions/' . $sendingDomainRestrictionId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetSendingDomainRestriction::class, []);
 	}
 
 
@@ -317,9 +309,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityUpdateSendingDomainRestriction(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateSendingDomainRestrictionRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestriction
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions/' . $sendingDomainRestrictionId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsRestriction::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/sending_domain_restrictions/' . $sendingDomainRestrictionId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateSendingDomainRestriction::class, $request);
 	}
 
 
@@ -344,9 +336,9 @@ class EmailSecuritySettingsResource
 		?bool $isRecent = null,
 		?bool $isSimilarity = null,
 		?string $pattern = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomains
+	): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomains::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'isRecent' => $isRecent ?? null, 'isSimilarity' => $isSimilarity ?? null, 'pattern' => $pattern ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains', \FoundryCo\Cloudflare\Responses\EmailSecurityListTrustedDomains::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null, 'search' => $search ?? null, 'order' => $order ?? null, 'direction' => $direction ?? null, 'isRecent' => $isRecent ?? null, 'isSimilarity' => $isSimilarity ?? null, 'pattern' => $pattern ?? null]);
 	}
 
 
@@ -355,9 +347,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityCreateTrustedDomain(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityCreateTrustedDomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains', \FoundryCo\Cloudflare\Responses\EmailSecurityCreateTrustedDomain::class, $request);
 	}
 
 
@@ -366,18 +358,18 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityBatchTrustedDomains(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityBatchTrustedDomainsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomains
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains/batch', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomains::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains/batch', \FoundryCo\Cloudflare\Responses\EmailSecurityBatchTrustedDomains::class, $request);
 	}
 
 
 	/**
 	 * Get a trusted email domain
 	 */
-	public function emailSecurityGetTrustedDomain(): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain
+	public function emailSecurityGetTrustedDomain(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains/' . $trustedDomainId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains/' . $trustedDomainId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetTrustedDomain::class, []);
 	}
 
 
@@ -386,9 +378,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityUpdateTrustedDomain(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateTrustedDomainRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains/' . $trustedDomainId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsDomain::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/trusted_domains/' . $trustedDomainId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateTrustedDomain::class, $request);
 	}
 
 
@@ -404,12 +396,9 @@ class EmailSecuritySettingsResource
 	/**
 	 * List URL ignore patterns
 	 */
-	public function urlIgnorePatterns(
-		?int $page = null,
-		?int $perPage = null,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPatterns
+	public function urlIgnorePatterns(?int $page = null, ?int $perPage = null): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPatterns::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns', \FoundryCo\Cloudflare\Responses\EmailSecurityListUrlIgnorePatterns::class, ['page' => $page ?? null, 'perPage' => $perPage ?? null]);
 	}
 
 
@@ -418,9 +407,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityCreateUrlIgnorePattern(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityCreateUrlIgnorePatternRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPattern
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPattern::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns', \FoundryCo\Cloudflare\Responses\EmailSecurityCreateUrlIgnorePattern::class, $request);
 	}
 
 
@@ -429,18 +418,18 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityBatchUrlIgnorePatterns(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityBatchUrlIgnorePatternsRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPatterns
+	): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns/batch', \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPatterns::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns/batch', \FoundryCo\Cloudflare\Responses\EmailSecurityBatchUrlIgnorePatterns::class, $request);
 	}
 
 
 	/**
 	 * Get a URL ignore pattern
 	 */
-	public function emailSecurityGetUrlIgnorePattern(): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPattern
+	public function emailSecurityGetUrlIgnorePattern(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPattern::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecurityGetUrlIgnorePattern::class, []);
 	}
 
 
@@ -449,9 +438,9 @@ class EmailSecuritySettingsResource
 	 */
 	public function emailSecurityUpdateUrlIgnorePattern(
 		\FoundryCo\Cloudflare\Requests\EmailSecurityUpdateUrlIgnorePatternRequest $request,
-	): \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPattern
+	): mixed
 	{
-		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecuritySettingsPattern::class, $request);
+		return $this->client->patch('/accounts/' . $this->accountId . '/email-security/settings/url_ignore_patterns/' . $patternId, \FoundryCo\Cloudflare\Responses\EmailSecurityUpdateUrlIgnorePattern::class, $request);
 	}
 
 

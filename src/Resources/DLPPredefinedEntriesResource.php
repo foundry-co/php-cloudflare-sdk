@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,11 +22,9 @@ class DLPPredefinedEntriesResource
 	/**
 	 * Create predefined entry
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\DlpEntriesCreatePredefinedEntryRequest $request,
-	): \FoundryCo\Cloudflare\Responses\DLPPredefinedEntriesEntry
+	public function create(\FoundryCo\Cloudflare\Requests\DlpEntriesCreatePredefinedEntryRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/dlp/entries/predefined', \FoundryCo\Cloudflare\Responses\DLPPredefinedEntriesEntry::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/dlp/entries/predefined', \FoundryCo\Cloudflare\Responses\DlpEntriesCreatePredefinedEntry::class, $request);
 	}
 
 

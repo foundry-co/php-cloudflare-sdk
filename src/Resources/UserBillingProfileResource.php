@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -21,8 +21,8 @@ class UserBillingProfileResource
 	/**
 	 * Billing Profile Details
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\UserBillingProfileDetails
+	public function list(): mixed
 	{
-		return $this->client->get('/user/billing/profile', \FoundryCo\Cloudflare\Responses\UserBillingProfileDetails::class, []);
+		return $this->client->get('/user/billing/profile', \FoundryCo\Cloudflare\Responses\UserBillingProfileDeprecatedBillingProfileDetails::class, []);
 	}
 }

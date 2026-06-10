@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class SecondaryDNSPeerResource
 	/**
 	 * List Peers
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerPeers
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/peers', \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerPeers::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/peers', \FoundryCo\Cloudflare\Responses\SecondaryDnsPeerListPeers::class, []);
 	}
 
 
 	/**
 	 * Create Peer
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SecondaryDnsPeerCreatePeerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerPeer
+	public function create(\FoundryCo\Cloudflare\Requests\SecondaryDnsPeerCreatePeerRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/secondary_dns/peers', \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerPeer::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/secondary_dns/peers', \FoundryCo\Cloudflare\Responses\SecondaryDnsPeerCreatePeer::class, $request);
 	}
 
 
 	/**
 	 * Peer Details
 	 */
-	public function get(string $peerId): \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerDetails
+	public function get(string $peerId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/peers/' . $peerId, \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/peers/' . $peerId, \FoundryCo\Cloudflare\Responses\SecondaryDnsPeerPeerDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class SecondaryDNSPeerResource
 	public function update(
 		string $peerId,
 		\FoundryCo\Cloudflare\Requests\SecondaryDnsPeerUpdatePeerRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerPeer
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/secondary_dns/peers/' . $peerId, \FoundryCo\Cloudflare\Responses\SecondaryDNSPeerPeer::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/secondary_dns/peers/' . $peerId, \FoundryCo\Cloudflare\Responses\SecondaryDnsPeerUpdatePeer::class, $request);
 	}
 
 

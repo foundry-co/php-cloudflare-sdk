@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,41 +22,36 @@ class SecondaryDNSACLResource
 	/**
 	 * List ACLs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SecondaryDNSACLLs
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/acls', \FoundryCo\Cloudflare\Responses\SecondaryDNSACLLs::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/acls', \FoundryCo\Cloudflare\Responses\SecondaryDnsAclListAcLs::class, []);
 	}
 
 
 	/**
 	 * Create ACL
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SecondaryDnsAclCreateAclRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSACLAcl
+	public function create(\FoundryCo\Cloudflare\Requests\SecondaryDnsAclCreateAclRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/secondary_dns/acls', \FoundryCo\Cloudflare\Responses\SecondaryDNSACLAcl::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/secondary_dns/acls', \FoundryCo\Cloudflare\Responses\SecondaryDnsAclCreateAcl::class, $request);
 	}
 
 
 	/**
 	 * ACL Details
 	 */
-	public function get(string $aclId): \FoundryCo\Cloudflare\Responses\SecondaryDNSACLDetails
+	public function get(string $aclId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\SecondaryDNSACLDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\SecondaryDnsAclAclDetails::class, []);
 	}
 
 
 	/**
 	 * Update ACL
 	 */
-	public function update(
-		string $aclId,
-		\FoundryCo\Cloudflare\Requests\SecondaryDnsAclUpdateAclRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSACLAcl
+	public function update(string $aclId, \FoundryCo\Cloudflare\Requests\SecondaryDnsAclUpdateAclRequest $request): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/secondary_dns/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\SecondaryDNSACLAcl::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/secondary_dns/acls/' . $aclId, \FoundryCo\Cloudflare\Responses\SecondaryDnsAclUpdateAcl::class, $request);
 	}
 
 

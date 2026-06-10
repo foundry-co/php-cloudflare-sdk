@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -22,29 +22,27 @@ class SecondaryDNSTSIGResource
 	/**
 	 * List TSIGs
 	 */
-	public function list(): \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGGs
+	public function list(): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/tsigs', \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGGs::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/tsigs', \FoundryCo\Cloudflare\Responses\SecondaryDnsTsigListTsiGs::class, []);
 	}
 
 
 	/**
 	 * Create TSIG
 	 */
-	public function create(
-		\FoundryCo\Cloudflare\Requests\SecondaryDnsTsigCreateTsigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGTsig
+	public function create(\FoundryCo\Cloudflare\Requests\SecondaryDnsTsigCreateTsigRequest $request): mixed
 	{
-		return $this->client->post('/accounts/' . $this->accountId . '/secondary_dns/tsigs', \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGTsig::class, $request);
+		return $this->client->post('/accounts/' . $this->accountId . '/secondary_dns/tsigs', \FoundryCo\Cloudflare\Responses\SecondaryDnsTsigCreateTsig::class, $request);
 	}
 
 
 	/**
 	 * TSIG Details
 	 */
-	public function get(string $tsigId): \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGDetails
+	public function get(string $tsigId): mixed
 	{
-		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/tsigs/' . $tsigId, \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGDetails::class, []);
+		return $this->client->get('/accounts/' . $this->accountId . '/secondary_dns/tsigs/' . $tsigId, \FoundryCo\Cloudflare\Responses\SecondaryDnsTsigTsigDetails::class, []);
 	}
 
 
@@ -54,9 +52,9 @@ class SecondaryDNSTSIGResource
 	public function update(
 		string $tsigId,
 		\FoundryCo\Cloudflare\Requests\SecondaryDnsTsigUpdateTsigRequest $request,
-	): \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGTsig
+	): mixed
 	{
-		return $this->client->put('/accounts/' . $this->accountId . '/secondary_dns/tsigs/' . $tsigId, \FoundryCo\Cloudflare\Responses\SecondaryDNSTSIGTsig::class, $request);
+		return $this->client->put('/accounts/' . $this->accountId . '/secondary_dns/tsigs/' . $tsigId, \FoundryCo\Cloudflare\Responses\SecondaryDnsTsigUpdateTsig::class, $request);
 	}
 
 

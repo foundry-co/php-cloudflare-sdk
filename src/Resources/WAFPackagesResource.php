@@ -2,7 +2,7 @@
 
 /**
  * This file is auto-generated. Do not edit manually.
- * Generated: 2026-06-09 21:41:47 UTC
+ * Generated: 2026-06-10 02:24:37 UTC
  * Spec: https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.json
  */
 
@@ -50,8 +50,8 @@ class WAFPackagesResource
 	public function update(
 		string $packageId,
 		\FoundryCo\Cloudflare\Requests\WafPackagesUpdateAWafPackageRequest $request,
-	): \FoundryCo\Cloudflare\Responses\WAFPackagesPackage
+	): mixed
 	{
-		return $this->client->patch('/zones/' . $this->zoneId . '/firewall/waf/packages/' . $packageId, \FoundryCo\Cloudflare\Responses\WAFPackagesPackage::class, $request);
+		return $this->client->patch('/zones/' . $this->zoneId . '/firewall/waf/packages/' . $packageId, \FoundryCo\Cloudflare\Responses\WafPackagesUpdateAWafPackage::class, $request);
 	}
 }
