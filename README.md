@@ -14,6 +14,58 @@ A PHP SDK for the [Cloudflare API](https://developers.cloudflare.com/api/), auto
 composer require foundry-co/cloudflare
 ```
 
+## Laravel
+
+The package includes first-class Laravel support via a service provider and facade that are auto-discovered by Laravel's package auto-discovery.
+
+### Installation
+
+```bash
+composer require foundry-co/cloudflare
+```
+
+Add the following to your `.env`:
+
+```env
+CLOUDFLARE_API_TOKEN=your-api-token
+CLOUDFLARE_ACCOUNT_ID=your-account-id   # optional
+CLOUDFLARE_BASE_URL=https://api.cloudflare.com/client/v4  # optional
+```
+
+That's it — the `CloudflareServiceProvider` is registered automatically and the `Cloudflare` facade is available immediately.
+
+### Publishing the config
+
+```bash
+php artisan vendor:publish --tag=cloudflare-config
+```
+
+This copies `config/cloudflare.php` into your application's config directory.
+
+### Usage
+
+```php
+use FoundryCo\Cloudflare\Laravel\Facades\Cloudflare;
+
+// Via facade
+$records = Cloudflare::zone('zone-id')->dnsRecords()->list();
+
+// Via dependency injection
+use FoundryCo\Cloudflare\CloudflareClient;
+
+class MyController extends Controller
+{
+    public function __construct(private CloudflareClient $cloudflare) {}
+
+    public function index()
+    {
+        return $this->cloudflare->zone('zone-id')->dnsRecords()->list();
+    }
+}
+```
+
+---
+
 ## Authentication
 
 All requests authenticate with a Cloudflare API Token. Create tokens in the Cloudflare dashboard under **My Profile > API Tokens**.
